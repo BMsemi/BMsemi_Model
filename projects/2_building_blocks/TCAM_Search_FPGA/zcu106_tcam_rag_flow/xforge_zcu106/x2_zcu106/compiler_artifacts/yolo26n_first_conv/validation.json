@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+  "program": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\compiler_artifacts\\yolo26n_first_conv",
+  "source_op_index": 2,
+  "input_mode": "random-0-1",
+  "seed": 20260727,
+  "activation_scale": 0.007874015748031496,
+  "layer_input": {
+    "shape": [
+      1,
+      642,
+      642,
+      3
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.9999990463256836
+  },
+  "reference_output": {
+    "shape": [
+      1,
+      320,
+      320,
+      16
+    ],
+    "dtype": "float32",
+    "min": -53.726558685302734,
+    "max": 52.856502532958984
+  },
+  "error": {
+    "mae": 0.04695252329111099,
+    "rmse": 0.06540469825267792,
+    "max_abs": 0.49054431915283203,
+    "reference_abs_mean": 7.103546142578125
+  },
+  "execution": {
+    "litert_full_model_invoke_s": 47.40288409998175,
+    "x2_numpy_layer_s": 0.19261389994062483,
+    "backend_calls": 3200,
+    "input_words": 1062400,
+    "output_words": 1638400,
+    "logical_macs": 44236800,
+    "accumulator_sha256": "07afc58622f5527a6bea551074ecf33d71f0632cf19b3bbd935642e707c7c527"
+  },
+  "notes": [
+    "The X2 integer accumulator path is covered by exact unit tests.",
+    "The error reported here is the expected float-activation-to-INT8 bridge error.",
+    "The measured X2 time uses the NumPy backend, not physical FPGA timing."
+  ]
+}

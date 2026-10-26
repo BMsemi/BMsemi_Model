@@ -1,0 +1,3 @@
+# Workstation-only bundle export. The board runtime needs NumPy + its PYNQ image.
+numpy
+tokenizers

@@ -1,0 +1,10 @@
+flowchart TD
+    A["Crossbar + digital output"] --> B["Tensor 1x84x8400"]
+    B --> C["4 box rows"]
+    B --> D["80 class-score rows"]
+    C --> E["Box scale to original image"]
+    D --> F["Class argmax + confidence"]
+    E --> G["NMS"]
+    F --> G
+    G --> H["detections.csv / detections.json"]
+    G --> I["detected_bus.jpg"]

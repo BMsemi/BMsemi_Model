@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+  <defs>
+    <style>
+      .bg { fill: #fbfcff; }
+      .grid { stroke: #e8edf4; stroke-width: 1; }
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #075d66; }
+      .subtitle { font: 600 20px Arial, Helvetica, sans-serif; fill: #314155; }
+      .label { font: 600 17px Arial, Helvetica, sans-serif; fill: #111827; }
+      .small { font: 500 14px Arial, Helvetica, sans-serif; fill: #273449; }
+      .tiny { font: 500 12px Arial, Helvetica, sans-serif; fill: #334155; }
+      .blue { fill: #eef6ff; stroke: #1f6feb; stroke-width: 2; }
+      .teal { fill: #eaffff; stroke: #07818a; stroke-width: 2; }
+      .green { fill: #effbef; stroke: #2f9e44; stroke-width: 2; }
+      .orange { fill: #fff8e8; stroke: #f08c00; stroke-width: 2; }
+      .purple { fill: #f6efff; stroke: #7c3aed; stroke-width: 2; }
+      .gray { fill: #f8fafc; stroke: #64748b; stroke-width: 2; }
+      .white { fill: #ffffff; stroke: #475569; stroke-width: 1.6; }
+      .callout { fill: #fff7ed; stroke: #f97316; stroke-width: 2; stroke-dasharray: 8 6; }
+      .arrow { stroke: #111827; stroke-width: 2.8; fill: none; marker-end: url(#arrow); }
+      .arrowBlue { stroke: #0b4ed0; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+      .arrowTeal { stroke: #07818a; stroke-width: 3; fill: none; marker-end: url(#arrowTeal); }
+      .arrowGreen { stroke: #2f9e44; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .arrowOrange { stroke: #f08c00; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+      .arrowPurple { stroke: #7c3aed; stroke-width: 3; fill: none; stroke-dasharray: 9 7; marker-end: url(#arrowPurple); }
+      .arrowUpdate { stroke: #7c3aed; stroke-width: 3; fill: none; stroke-dasharray: 10 8; marker-end: url(#arrowPurple); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b4ed0"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#07818a"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f9e44"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f08c00"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1120"/>
+  <g opacity="0.75">
+    <path class="grid" d="M 0 80 H 1800 M 0 160 H 1800 M 0 240 H 1800 M 0 320 H 1800 M 0 400 H 1800 M 0 480 H 1800 M 0 560 H 1800 M 0 640 H 1800 M 0 720 H 1800 M 0 800 H 1800 M 0 880 H 1800 M 0 960 H 1800 M 0 1040 H 1800"/>
+    <path class="grid" d="M 80 0 V 1120 M 160 0 V 1120 M 240 0 V 1120 M 320 0 V 1120 M 400 0 V 1120 M 480 0 V 1120 M 560 0 V 1120 M 640 0 V 1120 M 720 0 V 1120 M 800 0 V 1120 M 880 0 V 1120 M 960 0 V 1120 M 1040 0 V 1120 M 1120 0 V 1120 M 1200 0 V 1120 M 1280 0 V 1120 M 1360 0 V 1120 M 1440 0 V 1120 M 1520 0 V 1120 M 1600 0 V 1120 M 1680 0 V 1120 M 1760 0 V 1120"/>
+  </g>
+
+  <text class="title" x="900" y="54" text-anchor="middle">General TCAM RAG + YOLO/MLIR Flow</text>
+  <text class="subtitle" x="900" y="88" text-anchor="middle">Fingerprint and TCAM hit/miss are inside the runtime/manifest flow; Engine 0/1 keep TCAM resident, Engine 2/3/4/5 run YOLO Layer 0/1/2/3 on miss.</text>
+
+  <!-- Input -->
+  <rect class="blue" x="56" y="170" width="210" height="86" rx="12"/>
+  <text class="label" x="161" y="204" text-anchor="middle">Input Image</text>
+  <text class="small" x="161" y="229" text-anchor="middle">or query batch</text>
+
+  <!-- Manifest -->
+  <rect class="blue" x="340" y="135" width="310" height="145" rx="12"/>
+  <text class="label" x="495" y="165" text-anchor="middle">Constants &amp; Manifest</text>
+  <text class="small" x="495" y="192" text-anchor="middle">+ TCAM Cache Index</text>
+  <text class="tiny" x="365" y="222">- MLIR tile constants</text>
+  <text class="tiny" x="365" y="244">- TCAM keys / care masks</text>
+  <text class="tiny" x="365" y="266">- slot -> chunk ID map</text>
+
+  <!-- Scheduler -->
+  <rect class="green" x="340" y="360" width="330" height="170" rx="14"/>
+  <text class="label" x="505" y="390" text-anchor="middle">Hybrid Runtime Scheduler</text>
+  <text class="small" x="505" y="417" text-anchor="middle">+ Fingerprint / TCAM Hit-Miss</text>
+  <text class="tiny" x="365" y="450">- generate image fingerprints</text>
+  <text class="tiny" x="365" y="472">- batch TCAM queries</text>
+  <text class="tiny" x="365" y="494">- route TCAM to Engine 0/1; YOLO L0/L1/L2/L3 to 2/3/4/5</text>
+  <text class="tiny" x="365" y="516">- skip or run YOLO/MLIR</text>
+
+  <!-- Six-engine PE partition -->
+  <rect class="orange" x="780" y="145" width="390" height="420" rx="16"/>
+  <text class="label" x="975" y="178" text-anchor="middle">Six-Engine PE Partition</text>
+  <text class="small" x="975" y="204" text-anchor="middle">TCAM resident; YOLO Layer 0/1/2/3 on miss</text>
+  <rect class="white" x="812" y="218" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="238" text-anchor="middle">Engine 0 (32x32)</text>
+  <text class="small" x="975" y="256" text-anchor="middle">TCAM slots 0-15</text>
+  <rect class="white" x="812" y="270" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="290" text-anchor="middle">Engine 1 (32x32)</text>
+  <text class="small" x="975" y="308" text-anchor="middle">TCAM slots 16-31</text>
+  <rect class="white" x="812" y="322" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="342" text-anchor="middle">Engine 2 (32x32)</text>
+  <text class="small" x="975" y="360" text-anchor="middle">YOLO Layer 0 on miss, 4 lanes</text>
+  <rect class="white" x="812" y="374" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="394" text-anchor="middle">Engine 3 (32x32)</text>
+  <text class="small" x="975" y="412" text-anchor="middle">YOLO Layer 1 on miss, 4 lanes</text>
+  <rect class="white" x="812" y="426" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="446" text-anchor="middle">Engine 4 (32x32)</text>
+  <text class="small" x="975" y="464" text-anchor="middle">YOLO Layer 2 on miss, 4 lanes</text>
+  <rect class="white" x="812" y="478" width="326" height="44" rx="9"/>
+  <text class="label" x="975" y="498" text-anchor="middle">Engine 5 (32x32)</text>
+  <text class="small" x="975" y="516" text-anchor="middle">YOLO Layer 3 on miss, 4 lanes</text>
+  <text class="tiny" x="975" y="546" text-anchor="middle">TCAM E0/E1: 8 lanes + TDC; YOLO E2-E5: 4 lanes, TDC off</text>
+
+  <!-- Emulator and CPU -->
+  <rect class="purple" x="780" y="600" width="390" height="96" rx="14"/>
+  <text class="label" x="975" y="635" text-anchor="middle">Neuromorphic Emulator</text>
+  <text class="small" x="975" y="662" text-anchor="middle">remaining YOLO layers after Layer 3</text>
+
+  <rect class="purple" x="780" y="730" width="390" height="86" rx="14"/>
+  <text class="label" x="975" y="765" text-anchor="middle">CPU Path</text>
+  <text class="small" x="975" y="792" text-anchor="middle">depthwise / digital operators</text>
+
+  <!-- Match / decision / cache / results -->
+  <rect class="teal" x="1238" y="250" width="170" height="90" rx="12"/>
+  <text class="label" x="1323" y="286" text-anchor="middle">Match</text>
+  <text class="label" x="1323" y="314" text-anchor="middle">+ Chunk ID</text>
+
+  <polygon class="teal" points="1490,288 1560,358 1490,428 1420,358"/>
+  <text class="label" x="1490" y="350" text-anchor="middle">TCAM</text>
+  <text class="label" x="1490" y="376" text-anchor="middle">HIT?</text>
+
+  <rect class="teal" x="1610" y="232" width="160" height="116" rx="12"/>
+  <text class="label" x="1690" y="272" text-anchor="middle">Cached</text>
+  <text class="label" x="1690" y="299" text-anchor="middle">Detection</text>
+  <text class="label" x="1690" y="326" text-anchor="middle">Chunk</text>
+
+  <rect class="gray" x="1610" y="520" width="160" height="112" rx="12"/>
+  <text class="label" x="1690" y="560" text-anchor="middle">Detections</text>
+  <text class="label" x="1690" y="588" text-anchor="middle">/ Results</text>
+
+  <!-- MLIR miss path -->
+  <rect class="blue" x="90" y="795" width="170" height="92" rx="12"/>
+  <text class="label" x="175" y="830" text-anchor="middle">YOLO TFLite</text>
+  <text class="label" x="175" y="858" text-anchor="middle">Model</text>
+
+  <rect class="blue" x="310" y="795" width="170" height="92" rx="12"/>
+  <text class="label" x="395" y="830" text-anchor="middle">TFLite</text>
+  <text class="label" x="395" y="858" text-anchor="middle">Frontend</text>
+
+  <rect class="blue" x="530" y="795" width="185" height="92" rx="12"/>
+  <text class="label" x="622" y="824" text-anchor="middle">MLIR</text>
+  <text class="small" x="622" y="851" text-anchor="middle">Compiled Ops</text>
+  <text class="tiny" x="622" y="873" text-anchor="middle">tile programs</text>
+
+  <rect class="blue" x="765" y="795" width="205" height="92" rx="12"/>
+  <text class="label" x="868" y="824" text-anchor="middle">Constants</text>
+  <text class="label" x="868" y="851" text-anchor="middle">+ Manifest</text>
+
+  <!-- Callout -->
+  <rect class="callout" x="1210" y="650" width="430" height="132" rx="14"/>
+  <text class="label" x="1425" y="686" text-anchor="middle">Scheduling Rule</text>
+  <text class="small" x="1238" y="720">1. TCAM lookup is attempted before MLIR inference.</text>
+  <text class="small" x="1238" y="747">2. Engine 0/1 handle TCAM queries that fit.</text>
+  <text class="small" x="1238" y="774">3. Engine 2/3/4/5 handle YOLO Layer 0/1/2/3 on miss.</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M 266 213 H 340"/>
+  <path class="arrowBlue" d="M 495 280 V 360"/>
+  <path class="arrow" d="M 505 530 V 795 H 90"/>
+
+  <path class="arrowOrange" d="M 670 430 C 705 430, 720 310, 780 310"/>
+  <text class="tiny" x="690" y="290" text-anchor="middle" fill="#f08c00">TCAM queries that fit</text>
+  <path class="arrowPurple" d="M 670 505 C 720 610, 725 648, 780 648"/>
+  <text class="tiny" x="705" y="600" text-anchor="middle" fill="#7c3aed">remaining layers</text>
+  <path class="arrowOrange" d="M 1170 310 H 1238"/>
+  <path class="arrowPurple" d="M 1170 648 C 1215 648, 1215 338, 1238 310"/>
+  <path class="arrowTeal" d="M 1408 295 C 1450 295, 1450 358, 1420 358"/>
+  <path class="arrowTeal" d="M 1560 358 C 1580 358, 1580 290, 1610 290"/>
+  <text class="small" x="1592" y="246" text-anchor="middle" fill="#07818a">HIT: skip YOLO/MLIR</text>
+  <path class="arrow" d="M 1690 348 V 520"/>
+
+  <path class="arrowBlue" d="M 1490 428 V 840 H 970"/>
+  <text class="small" x="1518" y="474" fill="#0b4ed0">MISS: run YOLO + MLIR</text>
+  <path class="arrow" d="M 260 841 H 310"/>
+  <path class="arrow" d="M 480 841 H 530"/>
+  <path class="arrow" d="M 715 841 H 765"/>
+  <path class="arrow" d="M 970 841 C 1030 841, 1030 530, 670 500"/>
+  <path class="arrowOrange" d="M 970 795 C 1070 790, 1190 478, 1170 410"/>
+  <text class="tiny" x="1164" y="500" fill="#f08c00">YOLO Layer 0/1/2/3 on Engine 2/3/4/5 after miss</text>
+  <path class="arrowPurple" d="M 670 505 C 720 665, 725 648, 780 648"/>
+  <path class="arrowPurple" d="M 670 515 C 720 775, 725 773, 780 773"/>
+  <path class="arrow" d="M 1170 648 H 1610 V 576"/>
+  <path class="arrow" d="M 1170 773 C 1390 773, 1390 576, 1610 576"/>
+
+  <path class="arrowUpdate" d="M 1690 632 V 1010 H 495 V 530"/>
+  <text class="small" x="1060" y="1000" text-anchor="middle" fill="#7c3aed">Store Key -> Chunk ID after first inference or cache update</text>
+
+  <!-- Bottom phase bands -->
+  <rect class="teal" x="40" y="940" width="250" height="58" rx="8" opacity="0.2"/>
+  <text class="small" x="165" y="975" text-anchor="middle" fill="#075d66">Image Query + Runtime TCAM</text>
+  <rect class="blue" x="310" y="940" width="420" height="58" rx="8" opacity="0.17"/>
+  <text class="small" x="520" y="975" text-anchor="middle" fill="#0b4ed0">Model Processing + MLIR</text>
+  <rect class="orange" x="750" y="940" width="430" height="58" rx="8" opacity="0.16"/>
+  <text class="small" x="965" y="975" text-anchor="middle" fill="#c25a00">Six-Engine PE Partition</text>
+  <rect class="purple" x="1200" y="940" width="260" height="58" rx="8" opacity="0.16"/>
+  <text class="small" x="1330" y="975" text-anchor="middle" fill="#6d28d9">Emulator / CPU Fallback</text>
+  <rect class="gray" x="1480" y="940" width="280" height="58" rx="8" opacity="0.26"/>
+  <text class="small" x="1620" y="975" text-anchor="middle">Results + Cache Update</text>
+
+  <!-- Legend -->
+  <rect class="white" x="190" y="1030" width="1420" height="62" rx="12"/>
+  <path class="arrow" d="M 220 1061 H 275"/>
+  <text class="tiny" x="292" y="1066">Data flow</text>
+  <path class="arrowUpdate" d="M 390 1061 H 445"/>
+  <text class="tiny" x="465" y="1066">Control/update flow</text>
+  <rect class="blue" x="620" y="1048" width="28" height="28" rx="4"/>
+  <text class="tiny" x="660" y="1068">Manifest / MLIR software</text>
+  <rect class="green" x="850" y="1048" width="28" height="28" rx="4"/>
+  <text class="tiny" x="890" y="1068">Runtime scheduler</text>
+  <rect class="orange" x="1050" y="1048" width="28" height="28" rx="4"/>
+  <text class="tiny" x="1090" y="1068">Shared FPGA PE hardware</text>
+  <rect class="purple" x="1295" y="1048" width="28" height="28" rx="4"/>
+  <text class="tiny" x="1335" y="1068">Emulator / CPU</text>
+  <rect class="gray" x="1485" y="1048" width="28" height="28" rx="4"/>
+  <text class="tiny" x="1525" y="1068">Results</text>
+</svg>

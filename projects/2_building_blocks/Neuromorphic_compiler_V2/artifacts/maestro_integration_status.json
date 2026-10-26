@@ -1,0 +1,9 @@
+{
+  "generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m",
+  "json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json",
+  "json_reference_matches_generated": true,
+  "num_layers": 17,
+  "reference_matches_generated": true,
+  "repo_json_reference_path": "/tmp/nc_v2_maestro/maestro/layer_dataflow_reference.json",
+  "repo_reference_path": "/tmp/nc_v2_maestro/maestro/MobilenetV2_clustered.m"
+}

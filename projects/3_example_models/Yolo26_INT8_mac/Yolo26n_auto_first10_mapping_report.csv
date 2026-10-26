@@ -1,0 +1,11 @@
+Layer,Optimizer,LatencyWeight,AreaWeight,LoopOrder,K,C,R,S,Y,X,StrideY,StrideX,KTile,CTile,UsesCluster,ClusterSize,KGroups,Kwaves,Cfolds,Cwaves,RowFold,FoldProgram,FoldCompute,Reduction,Finalize,LatencyCycles,AreaCost,Score,ActivePEs,UtilizationPct
+Conv2D,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,16,3,3,3,640,640,2,2,8,3,False,1,2,1,1,1,27,1,56,0,3,6144000,2,6144000.002000,2,0.3906
+Conv2D_1,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,32,16,3,3,320,320,2,2,8,4,True,4,4,1,4,1,36,1,74,2,3,2048000,16,2048000.016000,16,3.1250
+Conv2D_2,exhaustive_discrete_search,1.0,0.001,K->C->YXRS,32,32,1,1,160,160,1,1,8,8,True,4,4,1,4,1,8,1,18,2,3,614400,16,614400.016000,16,3.1250
+Conv2D_3,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,8,16,3,3,160,160,1,1,8,4,False,1,1,1,4,4,36,1,74,0,3,7756800,1,7756800.001000,1,0.1953
+Conv2D_4,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,16,8,3,3,160,160,1,1,8,1,True,8,2,1,8,1,9,1,20,3,3,691200,16,691200.016000,16,3.1250
+Conv2D_5,exhaustive_discrete_search,1.0,0.001,K->C->YXRS,64,48,1,1,160,160,1,1,8,24,True,2,8,1,2,1,24,1,50,1,3,1408000,16,1408000.016000,16,3.1250
+Conv2D_6,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,64,64,3,3,160,160,2,2,8,4,True,2,8,1,16,8,36,1,74,1,3,3910400,16,3910400.016000,16,3.1250
+Conv2D_7,exhaustive_discrete_search,1.0,0.001,K->C->YXRS,64,64,1,1,80,80,1,1,8,32,True,2,8,1,2,1,32,1,66,1,3,454400,16,454400.016000,16,3.1250
+Conv2D_8,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,16,32,3,3,80,80,1,1,8,4,True,8,2,1,8,1,36,1,74,3,3,518400,16,518400.016000,16,3.1250
+Conv2D_9,exhaustive_discrete_search,1.0,0.001,K->C->RSYX,32,16,3,3,80,80,1,1,8,4,True,4,4,1,4,1,36,1,74,2,3,512000,16,512000.016000,16,3.1250

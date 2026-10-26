@@ -1,0 +1,7 @@
+flowchart LR
+    A["Feature map"] --> B["im2col patches"]
+    B --> C["patch matrix: N x C*R*S"]
+    D["crossbar weights: C*R*S x K"] --> E["matrix multiply"]
+    C --> E
+    E --> F["output: N x K"]
+    F --> G["reshape to H x W x K"]

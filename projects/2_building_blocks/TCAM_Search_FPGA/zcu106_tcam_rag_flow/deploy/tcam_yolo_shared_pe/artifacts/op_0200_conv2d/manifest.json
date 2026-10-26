@@ -1,0 +1,777 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_200",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 1600,
+    "k": 192,
+    "n": 128
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 128,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 5,
+      "k_start": 160,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 6,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 7,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 8,
+      "k_start": 64,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 9,
+      "k_start": 96,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 10,
+      "k_start": 128,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 11,
+      "k_start": 160,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 12,
+      "k_start": 0,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n64",
+      "accumulate": false
+    },
+    {
+      "tile_id": 13,
+      "k_start": 32,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 14,
+      "k_start": 64,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 15,
+      "k_start": 96,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 16,
+      "k_start": 128,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 17,
+      "k_start": 160,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 18,
+      "k_start": 0,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n96",
+      "accumulate": false
+    },
+    {
+      "tile_id": 19,
+      "k_start": 32,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 20,
+      "k_start": 64,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 21,
+      "k_start": 96,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 22,
+      "k_start": 128,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 23,
+      "k_start": 160,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n96",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 200,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 443,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_13;1",
+        "shape": [
+          1,
+          40,
+          40,
+          192
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 180,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_13/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          128,
+          1,
+          1,
+          192
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.0026556425727903843,
+          0.004640791565179825,
+          0.0029151677154004574,
+          0.0036802992690354586,
+          0.0033939715940505266,
+          0.0015110454987734556,
+          0.0026602880097925663,
+          0.002482231007888913,
+          0.0035934799816459417,
+          0.004214892163872719,
+          0.003790537128224969,
+          0.0014337722677737474,
+          0.0017152026994153857,
+          0.0036526969633996487,
+          0.002536347135901451,
+          0.0025077825412154198,
+          0.002270233817398548,
+          0.002292103134095669,
+          0.0066289822570979595,
+          0.002761041047051549,
+          0.002899018581956625,
+          0.0016723375301808119,
+          0.0016229328466579318,
+          0.0036057760007679462,
+          0.0019694070797413588,
+          0.0022448368836194277,
+          0.002252233913168311,
+          0.003063176292926073,
+          0.0016637889202684164,
+          0.002803069306537509,
+          0.00277251866646111,
+          0.002584317931905389,
+          0.0036652253475040197,
+          0.003485230728983879,
+          0.0033222297206521034,
+          0.004834663588553667,
+          0.00289557664655149,
+          0.001660627662204206,
+          0.003337763948366046,
+          0.002281205728650093,
+          0.0017770874546840787,
+          0.0034966759849339724,
+          0.0015669162385165691,
+          0.003164268098771572,
+          0.0018950302619487047,
+          0.003348003840073943,
+          0.002834221115335822,
+          0.0026938021183013916,
+          0.0019649812020361423,
+          0.0024389405734837055,
+          0.0029103064443916082,
+          0.0021605140063911676,
+          0.002220507711172104,
+          0.002315604593604803,
+          0.0040483130142092705,
+          0.003157628932967782,
+          0.0028880031313747168,
+          0.004474373068660498,
+          0.0014589024940505624,
+          0.003005886683240533,
+          0.0021842322312295437,
+          0.00799441896378994,
+          0.0021941596642136574,
+          0.002553457859903574,
+          0.003540211357176304,
+          0.0023067514412105083,
+          0.0020903022959828377,
+          0.0025112240109592676,
+          0.0022936146706342697,
+          0.003736547427251935,
+          0.002159451600164175,
+          0.004144397098571062,
+          0.0029741651378571987,
+          0.0014687110669910908,
+          0.004909049719572067,
+          0.0033052379731088877,
+          0.0039922804571688175,
+          0.003661832306534052,
+          0.002467288402840495,
+          0.0016644055722281337,
+          0.004286643583327532,
+          0.0028575495816767216,
+          0.005743422545492649,
+          0.0039182319305837154,
+          0.0033733448944985867,
+          0.0018679233035072684,
+          0.0016127900453284383,
+          0.0026849869173020124,
+          0.0026129111647605896,
+          0.0017506025033071637,
+          0.005390363745391369,
+          0.0035470693837851286,
+          0.002617820166051388,
+          0.0015801758272573352,
+          0.0014420612715184689,
+          0.005254702176898718,
+          0.0022155793849378824,
+          0.0034825983457267284,
+          0.0028990840073674917,
+          0.001852216781117022,
+          0.003222466679289937,
+          0.00202643359079957,
+          0.0027867471799254417,
+          0.0031873811967670918,
+          0.0035012229345738888,
+          0.007352890912443399,
+          0.001670429133810103,
+          0.00396424625068903,
+          0.002494974061846733,
+          0.002574759069830179,
+          0.004082276485860348,
+          0.0021287635900080204,
+          0.0029126377776265144,
+          0.0012571559054777026,
+          0.0021530818194150925,
+          0.003237232333049178,
+          0.004044263157993555,
+          0.0038493226747959852,
+          0.0020193953532725573,
+          0.0014356441097334027,
+          0.0036154084373265505,
+          0.0017462285468354821,
+          0.002085669431835413,
+          0.00204322743229568,
+          0.005107592791318893,
+          0.0024264983367174864,
+          0.0017284669447690248,
+          0.0021133010741323233
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 58,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_13/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 444,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_13/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          40,
+          40,
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.08123870158758689,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        40,
+        40,
+        192
+      ],
+      "output_shape_nhwc": [
+        1,
+        40,
+        40,
+        128
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

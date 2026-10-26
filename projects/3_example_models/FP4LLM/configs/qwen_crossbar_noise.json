@@ -1,0 +1,15 @@
+{
+  "weight_bits": 7,
+  "act_bits": 7,
+  "block_size": 16,
+  "float_format": "bf16",
+  "noise_config": {"enabled": true},
+  "reliability_config": {
+    "enabled": true,
+    "raw_ber_ppm": 10.0,
+    "state_sigma_ln": 0.02,
+    "use_ecc": false
+  },
+  "iv_config": {"enabled": false},
+  "tdc_config": {"enabled": false}
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_235",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 6400,
+    "k": 96,
+    "n": 64
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 4,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 5,
+      "k_start": 64,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n32",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        64
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        64
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 235,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 478,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_16;1",
+        "shape": [
+          1,
+          80,
+          80,
+          96
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 171,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_16/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          64,
+          1,
+          1,
+          96
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.00230147666297853,
+          0.012291539460420609,
+          0.007144519127905369,
+          0.005351662635803223,
+          0.003306380473077297,
+          0.005203873384743929,
+          0.009906888008117676,
+          0.0031168696004897356,
+          0.0021192405838519335,
+          0.004594619385898113,
+          0.002897466067224741,
+          0.0016702177235856652,
+          0.003333707805722952,
+          0.0019828956574201584,
+          0.0020903206896036863,
+          0.0023576272651553154,
+          0.0027996099088340998,
+          0.002110507106408477,
+          0.0015696549089625478,
+          0.003401909489184618,
+          0.0036268988624215126,
+          0.0027576135471463203,
+          0.007664651609957218,
+          0.027313731610774994,
+          0.003694494953379035,
+          0.0033699683845043182,
+          0.004356086254119873,
+          0.002888069488108158,
+          0.0031829276122152805,
+          0.0019642049446702003,
+          0.0029656561091542244,
+          0.0023588736075907946,
+          0.006522906478494406,
+          0.001884895726107061,
+          0.005201469175517559,
+          0.015652241185307503,
+          0.003846128936856985,
+          0.003105651354417205,
+          0.0056601837277412415,
+          0.00565950945019722,
+          0.0034902612678706646,
+          0.0015178783796727657,
+          0.0017040274105966091,
+          0.0015096623683348298,
+          0.003313112771138549,
+          0.003404337214305997,
+          0.004625615663826466,
+          0.0021672502625733614,
+          0.004601400811225176,
+          0.0026870309375226498,
+          0.0018590567633509636,
+          0.0031725976150482893,
+          0.005128958262503147,
+          0.00180016178637743,
+          0.0019949576817452908,
+          0.004537693690508604,
+          0.0022523629013448954,
+          0.0017262602923437953,
+          0.001342478208243847,
+          0.006123425904661417,
+          0.009886722080409527,
+          0.006770298816263676,
+          0.0022388885263353586,
+          0.002035685582086444
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 49,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_16/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          64
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 479,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_16/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          80,
+          80,
+          64
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.0783368696377972,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        80,
+        80,
+        96
+      ],
+      "output_shape_nhwc": [
+        1,
+        80,
+        80,
+        64
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

@@ -1,0 +1,6 @@
+flowchart TD
+    A["DepthwiseConv2D spec"] --> B["Spec K=channels, C=1"]
+    B --> C["Use real weight channels"]
+    C --> D["Logical C = input channels"]
+    D --> E["Diagonal depthwise matrix"]
+    E --> F["Correct per-channel crossbar output"]

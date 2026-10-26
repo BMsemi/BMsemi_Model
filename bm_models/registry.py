@@ -1,0 +1,1 @@
+from neuromorphic.registry import OperationUnavailable

@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_337",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 1600,
+    "k": 1152,
+    "n": 16
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 128,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k128_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 5,
+      "k_start": 160,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k160_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 6,
+      "k_start": 192,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k192_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 7,
+      "k_start": 224,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k224_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 8,
+      "k_start": 256,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k256_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 9,
+      "k_start": 288,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k288_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 10,
+      "k_start": 320,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k320_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 11,
+      "k_start": 352,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k352_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 12,
+      "k_start": 384,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k384_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 13,
+      "k_start": 416,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k416_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 14,
+      "k_start": 448,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k448_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 15,
+      "k_start": 480,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k480_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 16,
+      "k_start": 512,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k512_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 17,
+      "k_start": 544,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k544_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 18,
+      "k_start": 576,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k576_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 19,
+      "k_start": 608,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k608_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 20,
+      "k_start": 640,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k640_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 21,
+      "k_start": 672,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k672_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 22,
+      "k_start": 704,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k704_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 23,
+      "k_start": 736,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k736_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 24,
+      "k_start": 768,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k768_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 25,
+      "k_start": 800,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k800_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 26,
+      "k_start": 832,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k832_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 27,
+      "k_start": 864,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k864_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 28,
+      "k_start": 896,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k896_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 29,
+      "k_start": 928,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k928_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 30,
+      "k_start": 960,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k960_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 31,
+      "k_start": 992,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k992_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 32,
+      "k_start": 1024,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k1024_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 33,
+      "k_start": 1056,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k1056_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 34,
+      "k_start": 1088,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k1088_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 35,
+      "k_start": 1120,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k1120_n0",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k1024_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k1056_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k1088_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k1120_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k384_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k416_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k448_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k480_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k512_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k544_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k576_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k608_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k640_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k672_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k704_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k736_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k768_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k800_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k832_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k864_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k896_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k928_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k960_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k992_n0": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 337,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 519,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_19/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+        "shape": [
+          1,
+          40,
+          40,
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 146,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          16,
+          3,
+          3,
+          128
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.002842467976734042,
+          0.0016971509903669357,
+          0.011323761194944382,
+          0.003538381075486541,
+          0.011211815290153027,
+          0.013339842669665813,
+          0.0038405524101108313,
+          0.012388909235596657,
+          0.009102968499064445,
+          0.01275109313428402,
+          0.005119839683175087,
+          0.003242401871830225,
+          0.002841119421645999,
+          0.004876844119280577,
+          0.021125856786966324,
+          0.005327889695763588
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 25,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          16
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 581,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_20/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          1,
+          40,
+          40,
+          16
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.04642518974664643,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        40,
+        40,
+        128
+      ],
+      "output_shape_nhwc": [
+        1,
+        40,
+        40,
+        16
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "same"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

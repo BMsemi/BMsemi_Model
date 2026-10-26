@@ -1,0 +1,713 @@
+{
+  "nodes": [
+    {
+      "name": "x",
+      "op": "placeholder",
+      "target": "x",
+      "shape": [
+        1,
+        1,
+        8,
+        8
+      ],
+      "users": [
+        "features_0_0"
+      ]
+    },
+    {
+      "name": "features_0_0",
+      "op": "call_module",
+      "target": "features.0.0",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_0_1"
+      ]
+    },
+    {
+      "name": "features_0_1",
+      "op": "call_module",
+      "target": "features.0.1",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_0_2"
+      ]
+    },
+    {
+      "name": "features_0_2",
+      "op": "call_module",
+      "target": "features.0.2",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "add",
+        "features_1_conv_0_0"
+      ]
+    },
+    {
+      "name": "features_1_conv_0_0",
+      "op": "call_module",
+      "target": "features.1.conv.0.0",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_1_conv_0_1"
+      ]
+    },
+    {
+      "name": "features_1_conv_0_1",
+      "op": "call_module",
+      "target": "features.1.conv.0.1",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_1_conv_0_2"
+      ]
+    },
+    {
+      "name": "features_1_conv_0_2",
+      "op": "call_module",
+      "target": "features.1.conv.0.2",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_1_conv_1"
+      ]
+    },
+    {
+      "name": "features_1_conv_1",
+      "op": "call_module",
+      "target": "features.1.conv.1",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_1_conv_2"
+      ]
+    },
+    {
+      "name": "features_1_conv_2",
+      "op": "call_module",
+      "target": "features.1.conv.2",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "add"
+      ]
+    },
+    {
+      "name": "add",
+      "op": "call_function",
+      "target": "<built-in function add>",
+      "shape": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "users": [
+        "features_2_conv_0_0"
+      ]
+    },
+    {
+      "name": "features_2_conv_0_0",
+      "op": "call_module",
+      "target": "features.2.conv.0.0",
+      "shape": [
+        1,
+        16,
+        4,
+        4
+      ],
+      "users": [
+        "features_2_conv_0_1"
+      ]
+    },
+    {
+      "name": "features_2_conv_0_1",
+      "op": "call_module",
+      "target": "features.2.conv.0.1",
+      "shape": [
+        1,
+        16,
+        4,
+        4
+      ],
+      "users": [
+        "features_2_conv_0_2"
+      ]
+    },
+    {
+      "name": "features_2_conv_0_2",
+      "op": "call_module",
+      "target": "features.2.conv.0.2",
+      "shape": [
+        1,
+        16,
+        4,
+        4
+      ],
+      "users": [
+        "features_2_conv_1_0"
+      ]
+    },
+    {
+      "name": "features_2_conv_1_0",
+      "op": "call_module",
+      "target": "features.2.conv.1.0",
+      "shape": [
+        1,
+        16,
+        2,
+        2
+      ],
+      "users": [
+        "features_2_conv_1_1"
+      ]
+    },
+    {
+      "name": "features_2_conv_1_1",
+      "op": "call_module",
+      "target": "features.2.conv.1.1",
+      "shape": [
+        1,
+        16,
+        2,
+        2
+      ],
+      "users": [
+        "features_2_conv_1_2"
+      ]
+    },
+    {
+      "name": "features_2_conv_1_2",
+      "op": "call_module",
+      "target": "features.2.conv.1.2",
+      "shape": [
+        1,
+        16,
+        2,
+        2
+      ],
+      "users": [
+        "features_2_conv_2"
+      ]
+    },
+    {
+      "name": "features_2_conv_2",
+      "op": "call_module",
+      "target": "features.2.conv.2",
+      "shape": [
+        1,
+        12,
+        2,
+        2
+      ],
+      "users": [
+        "features_2_conv_3"
+      ]
+    },
+    {
+      "name": "features_2_conv_3",
+      "op": "call_module",
+      "target": "features.2.conv.3",
+      "shape": [
+        1,
+        12,
+        2,
+        2
+      ],
+      "users": [
+        "add_1",
+        "features_3_conv_0_0"
+      ]
+    },
+    {
+      "name": "features_3_conv_0_0",
+      "op": "call_module",
+      "target": "features.3.conv.0.0",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_0_1"
+      ]
+    },
+    {
+      "name": "features_3_conv_0_1",
+      "op": "call_module",
+      "target": "features.3.conv.0.1",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_0_2"
+      ]
+    },
+    {
+      "name": "features_3_conv_0_2",
+      "op": "call_module",
+      "target": "features.3.conv.0.2",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_1_0"
+      ]
+    },
+    {
+      "name": "features_3_conv_1_0",
+      "op": "call_module",
+      "target": "features.3.conv.1.0",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_1_1"
+      ]
+    },
+    {
+      "name": "features_3_conv_1_1",
+      "op": "call_module",
+      "target": "features.3.conv.1.1",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_1_2"
+      ]
+    },
+    {
+      "name": "features_3_conv_1_2",
+      "op": "call_module",
+      "target": "features.3.conv.1.2",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_2"
+      ]
+    },
+    {
+      "name": "features_3_conv_2",
+      "op": "call_module",
+      "target": "features.3.conv.2",
+      "shape": [
+        1,
+        12,
+        2,
+        2
+      ],
+      "users": [
+        "features_3_conv_3"
+      ]
+    },
+    {
+      "name": "features_3_conv_3",
+      "op": "call_module",
+      "target": "features.3.conv.3",
+      "shape": [
+        1,
+        12,
+        2,
+        2
+      ],
+      "users": [
+        "add_1"
+      ]
+    },
+    {
+      "name": "add_1",
+      "op": "call_function",
+      "target": "<built-in function add>",
+      "shape": [
+        1,
+        12,
+        2,
+        2
+      ],
+      "users": [
+        "features_4_conv_0_0"
+      ]
+    },
+    {
+      "name": "features_4_conv_0_0",
+      "op": "call_module",
+      "target": "features.4.conv.0.0",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_4_conv_0_1"
+      ]
+    },
+    {
+      "name": "features_4_conv_0_1",
+      "op": "call_module",
+      "target": "features.4.conv.0.1",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_4_conv_0_2"
+      ]
+    },
+    {
+      "name": "features_4_conv_0_2",
+      "op": "call_module",
+      "target": "features.4.conv.0.2",
+      "shape": [
+        1,
+        24,
+        2,
+        2
+      ],
+      "users": [
+        "features_4_conv_1_0"
+      ]
+    },
+    {
+      "name": "features_4_conv_1_0",
+      "op": "call_module",
+      "target": "features.4.conv.1.0",
+      "shape": [
+        1,
+        24,
+        1,
+        1
+      ],
+      "users": [
+        "features_4_conv_1_1"
+      ]
+    },
+    {
+      "name": "features_4_conv_1_1",
+      "op": "call_module",
+      "target": "features.4.conv.1.1",
+      "shape": [
+        1,
+        24,
+        1,
+        1
+      ],
+      "users": [
+        "features_4_conv_1_2"
+      ]
+    },
+    {
+      "name": "features_4_conv_1_2",
+      "op": "call_module",
+      "target": "features.4.conv.1.2",
+      "shape": [
+        1,
+        24,
+        1,
+        1
+      ],
+      "users": [
+        "features_4_conv_2"
+      ]
+    },
+    {
+      "name": "features_4_conv_2",
+      "op": "call_module",
+      "target": "features.4.conv.2",
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "users": [
+        "features_4_conv_3"
+      ]
+    },
+    {
+      "name": "features_4_conv_3",
+      "op": "call_module",
+      "target": "features.4.conv.3",
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "users": [
+        "add_2",
+        "features_5_conv_0_0"
+      ]
+    },
+    {
+      "name": "features_5_conv_0_0",
+      "op": "call_module",
+      "target": "features.5.conv.0.0",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_0_1"
+      ]
+    },
+    {
+      "name": "features_5_conv_0_1",
+      "op": "call_module",
+      "target": "features.5.conv.0.1",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_0_2"
+      ]
+    },
+    {
+      "name": "features_5_conv_0_2",
+      "op": "call_module",
+      "target": "features.5.conv.0.2",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_1_0"
+      ]
+    },
+    {
+      "name": "features_5_conv_1_0",
+      "op": "call_module",
+      "target": "features.5.conv.1.0",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_1_1"
+      ]
+    },
+    {
+      "name": "features_5_conv_1_1",
+      "op": "call_module",
+      "target": "features.5.conv.1.1",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_1_2"
+      ]
+    },
+    {
+      "name": "features_5_conv_1_2",
+      "op": "call_module",
+      "target": "features.5.conv.1.2",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_2"
+      ]
+    },
+    {
+      "name": "features_5_conv_2",
+      "op": "call_module",
+      "target": "features.5.conv.2",
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "users": [
+        "features_5_conv_3"
+      ]
+    },
+    {
+      "name": "features_5_conv_3",
+      "op": "call_module",
+      "target": "features.5.conv.3",
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "users": [
+        "add_2"
+      ]
+    },
+    {
+      "name": "add_2",
+      "op": "call_function",
+      "target": "<built-in function add>",
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "users": [
+        "features_6_0"
+      ]
+    },
+    {
+      "name": "features_6_0",
+      "op": "call_module",
+      "target": "features.6.0",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_6_1"
+      ]
+    },
+    {
+      "name": "features_6_1",
+      "op": "call_module",
+      "target": "features.6.1",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "features_6_2"
+      ]
+    },
+    {
+      "name": "features_6_2",
+      "op": "call_module",
+      "target": "features.6.2",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "pool"
+      ]
+    },
+    {
+      "name": "pool",
+      "op": "call_module",
+      "target": "pool",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "users": [
+        "flatten"
+      ]
+    },
+    {
+      "name": "flatten",
+      "op": "call_method",
+      "target": "flatten",
+      "shape": [
+        1,
+        32
+      ],
+      "users": [
+        "classifier"
+      ]
+    },
+    {
+      "name": "classifier",
+      "op": "call_module",
+      "target": "classifier",
+      "shape": [
+        1,
+        10
+      ],
+      "users": [
+        "output"
+      ]
+    },
+    {
+      "name": "output",
+      "op": "output",
+      "target": "output",
+      "shape": [
+        1,
+        10
+      ],
+      "users": []
+    }
+  ]
+}

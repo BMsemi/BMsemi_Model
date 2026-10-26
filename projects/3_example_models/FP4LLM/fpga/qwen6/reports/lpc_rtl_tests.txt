@@ -1,0 +1,15 @@
+PASS LPC N_PE=4 TDC=0 C=32 K=32 T=11
+PASS LPC N_PE=4 TDC=0 C=31 K=29 T=32
+PASS LPC N_PE=4 TDC=0 C=1 K=1 T=1
+PASS LPC N_PE=4 TDC=0 C=5 K=3 T=2
+QWEN6 LPC RTL PASS
+PASS: rows1 rows=1 cols=1 batch=1 cycles=75
+PASS: rows2 rows=2 cols=2 batch=1 cycles=78
+PASS: rows3 rows=3 cols=2 batch=1 cycles=81
+PASS: rows4 rows=4 cols=2 batch=1 cycles=82
+PASS: tdc_signed_zero rows=1 cols=3 batch=1 cycles=79
+PASS: pwm_extreme_nibbles rows=2 cols=2 batch=1 cycles=78
+PASS: rows32 rows=32 cols=4 batch=1 cycles=188
+PASS: batch3 rows=5 cols=3 batch=3 cycles=259
+PASS: full_burst_backpressure rows=32 cols=32 batch=32 cycles=10049
+SIM PASS: AXIS batched MVM core

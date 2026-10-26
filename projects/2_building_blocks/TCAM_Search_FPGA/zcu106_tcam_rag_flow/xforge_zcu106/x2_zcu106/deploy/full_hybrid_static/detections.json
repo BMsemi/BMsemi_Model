@@ -1,0 +1,110 @@
+{
+  "detections": [
+    {
+      "rank": 0,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.888641893863678,
+      "box_xyxy": [
+        176,
+        242,
+        271,
+        509
+      ],
+      "box_xywh": [
+        176,
+        242,
+        95,
+        267
+      ]
+    },
+    {
+      "rank": 1,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.8650373220443726,
+      "box_xyxy": [
+        527,
+        235,
+        638,
+        519
+      ],
+      "box_xywh": [
+        527,
+        235,
+        111,
+        284
+      ]
+    },
+    {
+      "rank": 2,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.8496363162994385,
+      "box_xyxy": [
+        40,
+        235,
+        185,
+        538
+      ],
+      "box_xywh": [
+        40,
+        235,
+        145,
+        303
+      ]
+    },
+    {
+      "rank": 3,
+      "class_id": 5,
+      "label": "bus",
+      "confidence": 0.7498459219932556,
+      "box_xyxy": [
+        4,
+        135,
+        638,
+        441
+      ],
+      "box_xywh": [
+        4,
+        135,
+        634,
+        306
+      ]
+    },
+    {
+      "rank": 4,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.6745970845222473,
+      "box_xyxy": [
+        1,
+        329,
+        50,
+        518
+      ],
+      "box_xywh": [
+        1,
+        329,
+        49,
+        189
+      ]
+    }
+  ],
+  "metadata": {
+    "preprocess": {
+      "mode": "resize",
+      "original_shape": [
+        640,
+        640
+      ],
+      "new_shape": [
+        640,
+        640
+      ],
+      "gain": null,
+      "pad_x": 0.0,
+      "pad_y": 0.0
+    }
+  }
+}

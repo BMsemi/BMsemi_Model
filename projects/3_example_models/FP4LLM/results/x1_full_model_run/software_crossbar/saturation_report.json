@@ -1,0 +1,32 @@
+{
+  "config": {
+    "enabled": false,
+    "audit_only": true,
+    "branch_model": "zero_point_corrected_signed_branch",
+    "iv_nonlinearity_mode": "hard_clamp",
+    "iv_adc_full_scale_levels": 2250.0,
+    "iv_linear_rows_before_clamp": 10,
+    "row_tile": 64,
+    "col_tile": 32,
+    "row_groups": 4,
+    "rows_per_group": 0,
+    "note": "Counts actual W7/A7 prompt/decode branch-current magnitudes that exceed full-scale. The BF16 values remain from the ideal_int software-crossbar value path."
+  },
+  "summary": {
+    "rows": 0,
+    "by_phase": {},
+    "by_phase_role": {},
+    "total": {
+      "iv_transfer_calls": 0,
+      "iv_upper_saturation_events": 0,
+      "iv_lower_clip_events": 0,
+      "iv_unique_saturated_tile_columns": 0,
+      "iv_saturated_tiles": 0,
+      "iv_observed_tile_columns": 0,
+      "iv_tile_reads": 0,
+      "iv_max_branch_level": 0.0,
+      "iv_clamped_column_fraction": 0.0
+    }
+  },
+  "rows": []
+}

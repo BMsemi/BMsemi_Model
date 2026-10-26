@@ -1,0 +1,405 @@
+*** Begin Patch
+*** Add File: Neuromorphic_compiler_V2/executorch/__init__.py
++"""
++ExecuTorch integration package.
++
++This package contains helper functions for capturing a PyTorch model using
++``torch.fx``, inserting delegate metadata and lowering the compile
++specification to a runtime‑ready program.  The lowering step attempts
++to use the optional ExecuTorch compiler when available and falls back to
++a TorchScript trace when ExecuTorch is not installed. See the README for
++details on the generated artefacts.
++"""
++
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/executorch/executorch_compile_spec.py
+@@
+-def get_spec(
+-    model: nn.Module,
+-    example_input: torch.Tensor,
+-    logger: Optional[CheckpointLogger] = None,
+-) -> Dict[str, Any]:
+-    """Create a lightweight ExecuTorch-style compile spec from a real model.
+-
+-    This function captures a model using ``torch.fx`` and records basic
+-    metadata such as the number of nodes, operations, and modules. It also
+-    includes a TorchScript representation of the model when possible. The
+-    TorchScript code is useful for debugging or when ExecuTorch is not
+-    available in the runtime environment.
+-
+-    Args:
+-        model: The PyTorch ``nn.Module`` to compile.
+-        example_input: A sample input tensor used to trace the model.
+-        logger: Optional ``CheckpointLogger`` used to record validation
+-            checkpoints during compilation.
+-
+-    Returns:
+-        A dictionary containing compile specification metadata.
+-    """
+-    traced = symbolic_trace(model.eval())
+-    node_ops = Counter(node.op for node in traced.graph.nodes)
+-    module_types = Counter(type(module).__name__ for _, module in model.named_modules())
+-    num_parameters = int(sum(param.numel() for param in model.parameters()))
+-    spec: Dict[str, Any] = {
+-        "model_type": model.__class__.__name__,
+-        "input_shape": list(example_input.shape),
+-        "num_parameters": num_parameters,
+-        "fx_node_count": sum(1 for _ in traced.graph.nodes),
+-        "node_ops": dict(node_ops),
+-        "module_types": dict(module_types),
+-        "precision": "fp32",
+-        "target_backend": "neuromorphic_x1",
+-    }
+-
+-    try:
+-        script_module = torch.jit.trace(model.eval(), example_input)
+-        spec["torchscript_code"] = script_module.code
+-    except Exception:
+-        spec["torchscript_code"] = None
+-
+-    if logger is not None:
+-        logger.check(
+-            name="executorch_spec_has_nodes",
+-            condition=spec["fx_node_count"] > 0,
+-            details="Generated a compile spec from traced graph.",
+-            payload={"fx_node_count": spec["fx_node_count"], "num_parameters": num_parameters},
+-        )
+-    return spec
++def get_spec(
++    model: nn.Module,
++    example_input: torch.Tensor,
++    logger: Optional[CheckpointLogger] = None,
++) -> Dict[str, Any]:
++    """Create a lightweight ExecuTorch‑style compile spec from a real model.
++
++    This function captures a model using ``torch.fx`` and records basic
++    metadata such as the number of nodes, operations, and modules. It also
++    includes a TorchScript representation of the model when possible. The
++    TorchScript code is useful for debugging or when ExecuTorch is not
++    available in the runtime environment.
++
++    Args:
++        model: The PyTorch ``nn.Module`` to compile.
++        example_input: A sample input tensor used to trace the model.
++        logger: Optional ``CheckpointLogger`` used to record validation
++            checkpoints during compilation.
++
++    Returns:
++        A dictionary containing compile specification metadata.
++    """
++    traced = symbolic_trace(model.eval())
++    node_ops = Counter(node.op for node in traced.graph.nodes)
++    module_types = Counter(type(module).__name__ for _, module in model.named_modules())
++    num_parameters = int(sum(param.numel() for param in model.parameters()))
++    spec: Dict[str, Any] = {
++        "model_type": model.__class__.__name__,
++        "input_shape": list(example_input.shape),
++        "num_parameters": num_parameters,
++        "fx_node_count": sum(1 for _ in traced.graph.nodes),
++        "node_ops": dict(node_ops),
++        "module_types": dict(module_types),
++        "precision": "fp32",
++        "target_backend": "neuromorphic_x1",
++    }
++    try:
++        script_module = torch.jit.trace(model.eval(), example_input)
++        spec["torchscript_code"] = script_module.code
++    except Exception:
++        spec["torchscript_code"] = None
++    if logger is not None:
++        logger.check(
++            name="executorch_spec_has_nodes",
++            condition=spec["fx_node_count"] > 0,
++            details="Generated a compile spec from traced graph.",
++            payload={"fx_node_count": spec["fx_node_count"], "num_parameters": num_parameters},
++        )
++    return spec
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/executorch/delegate_preprocess.py
+@@
+-def preprocess(spec: Dict[str, Any], logger: Optional[CheckpointLogger] = None) -> Dict[str, Any]:
+-    """Insert delegate preprocessing metadata into the compile spec.
+-
+-    The delegate preprocessing stage identifies which operator classes should
+-    be offloaded to the ExecuTorch delegate.  Users can customize the
+-    ``bmsemi_partition_tags`` list to include any operators supported by
+-    the underlying neuromorphic accelerator.  When a checkpoint logger is
+-    provided the function records a validation checkpoint.
+-
+-    Args:
+-        spec: A compile specification dictionary.
+-        logger: Optional ``CheckpointLogger`` used to record validation
+-            checkpoints.
+-
+-    Returns:
+-        A copy of ``spec`` with a ``delegate`` entry.
+-    """
+-    updated = deepcopy(spec)
+-    updated["delegate"] = {
+-        "lane": "executorch",
+-        "edge_transform_applied": True,
+-        "bmsemi_partition_tags": ["conv", "depthwise", "linear"],
+-    }
+-    if logger is not None:
+-        logger.check(
+-            name="executorch_delegate_tags_present",
+-            condition=bool(updated["delegate"]["bmsemi_partition_tags"]),
+-            details="Inserted delegate preprocess metadata for supported op classes.",
+-            payload=updated["delegate"],
+-        )
+-    return updated
++def preprocess(spec: Dict[str, Any], logger: Optional[CheckpointLogger] = None) -> Dict[str, Any]:
++    """Insert delegate preprocessing metadata into the compile spec.
++
++    The delegate preprocessing stage identifies which operator classes should
++    be offloaded to the ExecuTorch delegate. Users can customize the
++    ``bmsemi_partition_tags`` list to include any operators supported by
++    the underlying neuromorphic accelerator. When a checkpoint logger is
++    provided the function records a validation checkpoint.
++
++    Args:
++        spec: A compile specification dictionary.
++        logger: Optional ``CheckpointLogger`` used to record validation
++            checkpoints.
++
++    Returns:
++        A copy of ``spec`` with a ``delegate`` entry.
++    """
++    updated = deepcopy(spec)
++    updated["delegate"] = {
++        "lane": "executorch",
++        "edge_transform_applied": True,
++        "bmsemi_partition_tags": ["conv", "depthwise", "linear"],
++    }
++    if logger is not None:
++        logger.check(
++            name="executorch_delegate_tags_present",
++            condition=bool(updated["delegate"]["bmsemi_partition_tags"]),
++            details="Inserted delegate preprocess metadata for supported op classes.",
++            payload=updated["delegate"],
++        )
++    return updated
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/executorch/lower_to_execu_runtime.py
+@@
+-def lower(
+-    spec: Dict[str, Any],
+-    model: Optional[torch.nn.Module] = None,
+-    example_input: Optional[torch.Tensor] = None,
+-    logger: Optional[CheckpointLogger] = None,
+-) -> Dict[str, Any]:
+-    """Lower a compile spec into runtime metadata and produce a serialized program.
+-
+-    This function updates the provided ``spec`` with a ``runtime`` section
+-    describing where the compiled program has been saved and which runtime
+-    dispatcher should be used. It attempts to compile the model using the
+-    optional ExecuTorch compiler when available, and falls back to
+-    TorchScript tracing otherwise.  When neither compilation path
+-    succeeds a placeholder metadata is inserted and the caller is
+-    responsible for providing a program artefact by other means.
+-
+-    Args:
+-        spec: A compile specification dictionary as returned by
+-            ``executorch_compile_spec.get_spec``.
+-        model: The ``nn.Module`` to compile. If ``None``, no new
+-            compilation is attempted and only the metadata is updated.
+-        example_input: An example input tensor required to trace the model.
+-        logger: Optional ``CheckpointLogger`` used for consistency checks.
+-
+-    Returns:
+-        A copy of ``spec`` with a ``runtime`` entry.
+-    """
+-    updated = deepcopy(spec)
+-    serialized_path: Optional[str] = None
+-    if model is not None and example_input is not None:
+-        if executorch is not None:
+-            try:
+-                program = executorch.compile(model.eval(), example_input)
+-                serialized_path = "artifacts/executorch_program.pte"
+-                Path(serialized_path).parent.mkdir(parents=True, exist_ok=True)
+-                program.save(serialized_path)
+-            except Exception:
+-                serialized_path = None
+-        if serialized_path is None:
+-            try:
+-                script_module = torch.jit.trace(model.eval(), example_input)
+-                serialized_path = "artifacts/executorch_program.pte"
+-                Path(serialized_path).parent.mkdir(parents=True, exist_ok=True)
+-                script_module.save(serialized_path)
+-            except Exception:
+-                serialized_path = None
+-    updated["runtime"] = {
+-        "serialized_program": serialized_path or "artifacts/executorch_program.pte",
+-        "delegate_runtime": "runtime_dispatcher",
+-        "debug_handles": True,
+-    }
+-    if logger is not None:
+-        logger.check(
+-            name="executorch_runtime_has_debug_handles",
+-            condition=bool(updated["runtime"]["debug_handles"]),
+-            details="Lowered compile spec to a runtime-ready metadata blob.",
+-            payload=updated["runtime"],
+-        )
+-    return updated
++def lower(
++    spec: Dict[str, Any],
++    model: Optional[torch.nn.Module] = None,
++    example_input: Optional[torch.Tensor] = None,
++    logger: Optional[CheckpointLogger] = None,
++) -> Dict[str, Any]:
++    """Lower a compile spec into runtime metadata and produce a serialized program.
++
++    This function updates the provided ``spec`` with a ``runtime`` section
++    describing where the compiled program has been saved and which runtime
++    dispatcher should be used. It attempts to compile the model using the
++    optional ExecuTorch compiler when available, and falls back to
++    TorchScript tracing otherwise. When neither compilation path
++    succeeds a placeholder metadata is inserted and the caller is
++    responsible for providing a program artefact by other means.
++
++    Args:
++        spec: A compile specification dictionary as returned by
++            ``executorch_compile_spec.get_spec``.
++        model: The ``nn.Module`` to compile. If ``None``, no new
++            compilation is attempted and only the metadata is updated.
++        example_input: An example input tensor required to trace the model.
++        logger: Optional ``CheckpointLogger`` used for consistency checks.
++
++    Returns:
++        A copy of ``spec`` with a ``runtime`` entry.
++    """
++    updated = deepcopy(spec)
++    serialized_path: Optional[str] = None
++    if model is not None and example_input is not None:
++        if executorch is not None:
++            try:
++                program = executorch.compile(model.eval(), example_input)
++                serialized_path = "artifacts/executorch_program.pte"
++                Path(serialized_path).parent.mkdir(parents=True, exist_ok=True)
++                program.save(serialized_path)
++            except Exception:
++                serialized_path = None
++        if serialized_path is None:
++            try:
++                script_module = torch.jit.trace(model.eval(), example_input)
++                serialized_path = "artifacts/executorch_program.pte"
++                Path(serialized_path).parent.mkdir(parents=True, exist_ok=True)
++                script_module.save(serialized_path)
++            except Exception:
++                serialized_path = None
++    updated["runtime"] = {
++        "serialized_program": serialized_path or "artifacts/executorch_program.pte",
++        "delegate_runtime": "runtime_dispatcher",
++        "debug_handles": True,
++    }
++    if logger is not None:
++        logger.check(
++            name="executorch_runtime_has_debug_handles",
++            condition=bool(updated["runtime"]["debug_handles"]),
++            details="Lowered compile spec to a runtime-ready metadata blob.",
++            payload=updated["runtime"],
++        )
++    return updated
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/optimize_onnx_and_map.py
+@@
+-    # Generate an ExecuTorch compile specification, insert delegate metadata and
+-    # lower it to a runtime‑ready specification.  During lowering the serialized
+-    # program (.pte) will be produced using either the optional ExecuTorch compiler
+-    # or a TorchScript fallback.  We pass the model and example_input explicitly
+-    # so that the lower function has everything required to perform compilation.
+-    execu_spec = get_executorch_spec(model, example_input, logger)
+-    execu_spec = delegate_preprocess(execu_spec, logger)
+-    execu_spec = lower_to_execu(execu_spec, model=model, example_input=example_input, logger=logger)
+-    execu_spec_path = artifact_dir / "executorch_compile_spec.json"
+-    save_json(execu_spec_path, execu_spec)
++    # Generate an ExecuTorch compile specification, insert delegate metadata and
++    # lower it to a runtime‑ready specification. During lowering the serialized
++    # program (.pte) will be produced using either the optional ExecuTorch compiler
++    # or a TorchScript fallback. We pass the model and example_input explicitly
++    # so that the lower function has everything required to perform compilation.
++    execu_spec = get_executorch_spec(model, example_input, logger)
++    execu_spec = delegate_preprocess(execu_spec, logger)
++    execu_spec = lower_to_execu(
++        execu_spec, model=model, example_input=example_input, logger=logger
++    )
++    execu_spec_path = artifact_dir / "executorch_compile_spec.json"
++    save_json(execu_spec_path, execu_spec)
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/README.md
+@@
+-# Neuromorphic Compiler V2 – X2 AI Tooling Flow
+-![X2 AI Tooling Flow](ai_tooling_x2.PNG)
+-This repo is a runnable prototype of the X1 AI tooling flow shown in your
+-architecture sketch. It keeps the lane split you asked for:
+-
+-- **ExecuTorch lane** for compile-spec generation and delegate metadata.
+-- **Compiler lane** for graph capture, validation, quantization, tiling, and mapping.
+-- **MAESTRO lane** for per-layer dataflow description generation, mapping, and scheduling.
+-- **Runtime lane** for memory planning, dispatch, and verification.
+-- **Deployment lane** for quantized deployment status and export hooks.
++# Neuromorphic Compiler V2 – X2 AI Tooling Flow
++![X2 AI Tooling Flow](ai_tooling_x2.PNG)
++This repo is a runnable prototype of the X1 AI tooling flow shown in your
++architecture sketch. It keeps the lane split you asked for but now also
++integrates a basic **ExecuTorch compiler/runtime**. Where the original
++prototype generated only a compile specification and delegate metadata,
++this version produces a fully serialized program in `.pte` format using
++either the optional ExecuTorch compiler or a TorchScript fallback.
++
++- **ExecuTorch lane** – generates a compile specification and delegate
++  metadata and now also compiles the model to a serialized program
++  `artifacts/executorch_program.pte`. When the `executorch` package
++  is installed the program is produced via `executorch.compile`; if
++  unavailable, a TorchScript trace is saved instead.
++- **Compiler lane** – for graph capture, validation, quantization, tiling, and mapping.
++- **MAESTRO lane** – for per-layer dataflow description generation, mapping, and scheduling.
++- **Runtime lane** – for memory planning, dispatch, and verification.
++- **Deployment lane** – for quantized deployment status and export hooks.
+*** End Patch
+*** Begin Patch
+*** Update File: Neuromorphic_compiler_V2/README.md
+@@
+-## Generated artifacts
+-A successful run writes:
+-
+-- `checkpoints/tiny_mobilenetv2_digits_best.pt`
+-- `artifacts/sample_digit.png`
+-- `artifacts/executorch_compile_spec.json`
+-- `artifacts/compiler_graph.json`
+-- `artifacts/fx_graph.json`
+-- `artifacts/onnx_export_status.json`
+-- `artifacts/maestro_layer_dataflow.json`
+-- `artifacts/MobilenetV2_clustered_generated.m`
+-- `artifacts/maestro_integration_status.json`
+-- `artifacts/maestro_schedule.json`
+-- `artifacts/tflite_export_status.json`
+-- `artifacts/checkpoint_report.json`
+-- `artifacts/test_run_summary.json`
+-- `artifacts/run_console.log`
++## Generated artifacts
++A successful run writes:
++
++- `checkpoints/tiny_mobilenetv2_digits_best.pt`
++- `artifacts/sample_digit.png`
++- `artifacts/executorch_compile_spec.json`
++- `artifacts/executorch_program.pte` – serialized program produced via
++  ExecuTorch compile or TorchScript fallback
++- `artifacts/compiler_graph.json`
++- `artifacts/fx_graph.json`
++- `artifacts/onnx_export_status.json`
++- `artifacts/maestro_layer_dataflow.json`
++- `artifacts/MobilenetV2_clustered_generated.m`
++- `artifacts/maestro_integration_status.json`
++- `artifacts/maestro_schedule.json`
++- `artifacts/tflite_export_status.json`
++- `artifacts/checkpoint_report.json`
++- `artifacts/test_run_summary.json`
++- `artifacts/run_console.log`
+*** End Patch
+*** End Patch

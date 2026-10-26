@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_6",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 25600,
+    "k": 144,
+    "n": 32
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 128,
+      "n_start": 0,
+      "rows": 16,
+      "cols": 32,
+      "weight_key": "weight_k128_n0",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        32
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n0": {
+      "shape": [
+        16,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        32
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 6,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 249,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          322,
+          322,
+          16
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 234,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          32,
+          3,
+          3,
+          16
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.005648853722959757,
+          0.01169215701520443,
+          0.010765321552753448,
+          0.003959666006267071,
+          0.007846719585359097,
+          0.008749156259000301,
+          0.005679222289472818,
+          0.002323448657989502,
+          0.01205227430909872,
+          0.002357886638492346,
+          0.010803570039570332,
+          0.0037140166386961937,
+          0.0037170744035393,
+          0.011696558445692062,
+          0.0034652957692742348,
+          0.0062673515640199184,
+          0.013277779333293438,
+          0.006676619406789541,
+          0.00909746065735817,
+          0.00535978376865387,
+          0.00709326658397913,
+          0.002374957548454404,
+          0.003558296710252762,
+          0.008943373337388039,
+          0.004237729590386152,
+          0.006014836020767689,
+          0.002532330574467778,
+          0.0037145058158785105,
+          0.0028810796793550253,
+          0.005502666812390089,
+          0.006356085184961557,
+          0.00825368519872427
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 118,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          32
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 250,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3",
+        "shape": [
+          1,
+          160,
+          160,
+          32
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.48937774417907237,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        322,
+        322,
+        16
+      ],
+      "output_shape_nhwc": [
+        1,
+        160,
+        160,
+        32
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

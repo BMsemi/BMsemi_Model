@@ -1,0 +1,265 @@
+{
+  "run_name": "QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206",
+  "artifact_name": "QKV_PREFILL",
+  "phase": "prefill",
+  "reference_backend": "gpu",
+  "crossbar_used": false,
+  "model": "Qwen/Qwen3-1.7B",
+  "snapshot_path": "/users/staff/elesamj2/hf_models/Qwen--Qwen3-1.7B",
+  "layers_run": 3,
+  "original_layer_count": 28,
+  "prompt": "GPU reference prefill run for Qwen3-1.7B. Capture Q, K, and V tensors from the first three transformer layers for later crossbar verification.",
+  "prompt_sha256": "a7d71767292f7c556633b726cc7b5e18eef14181913cb5e0a83c1633438d9738",
+  "input_shape": [
+    1,
+    35
+  ],
+  "input_ids": [
+    [
+      49891,
+      5785,
+      855,
+      7559,
+      1598,
+      369,
+      1207,
+      16948,
+      18,
+      12,
+      16,
+      13,
+      22,
+      33,
+      13,
+      39885,
+      1207,
+      11,
+      730,
+      11,
+      323,
+      647,
+      77087,
+      504,
+      279,
+      1156,
+      2326,
+      42578,
+      13617,
+      369,
+      2937,
+      5312,
+      2257,
+      22901,
+      13
+    ]
+  ],
+  "attention_mask": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "dtype": "bfloat16",
+  "device": "cuda",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "gpu_name": "NVIDIA L40S",
+  "gpu_count": 8,
+  "peak_cuda_memory_bytes": 934755840,
+  "elapsed_s": 1.246788190008374,
+  "python": "3.12.3",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "hostname": "bose01",
+  "stats": {
+    "layer_00_k": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": 0.0026070899330079556,
+      "std": 0.36640849709510803,
+      "min": -3.546875,
+      "max": 3.5625,
+      "absmax": 3.5625,
+      "l2_norm": 69.36817932128906
+    },
+    "layer_00_q": {
+      "shape": [
+        1,
+        35,
+        2048
+      ],
+      "dtype": "bfloat16",
+      "numel": 71680,
+      "mean": -0.002011464675888419,
+      "std": 0.3347098231315613,
+      "min": -5.53125,
+      "max": 3.890625,
+      "absmax": 5.53125,
+      "l2_norm": 89.61393737792969
+    },
+    "layer_00_v": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": -0.0021412509959191084,
+      "std": 0.14566510915756226,
+      "min": -1.671875,
+      "max": 2.765625,
+      "absmax": 2.765625,
+      "l2_norm": 27.57944679260254
+    },
+    "layer_01_k": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": -0.002877265214920044,
+      "std": 0.26467928290367126,
+      "min": -1.7421875,
+      "max": 1.953125,
+      "absmax": 1.953125,
+      "l2_norm": 50.110538482666016
+    },
+    "layer_01_q": {
+      "shape": [
+        1,
+        35,
+        2048
+      ],
+      "dtype": "bfloat16",
+      "numel": 71680,
+      "mean": -0.001911142491735518,
+      "std": 0.22247622907161713,
+      "min": -2.640625,
+      "max": 2.09375,
+      "absmax": 2.640625,
+      "l2_norm": 59.56608200073242
+    },
+    "layer_01_v": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": -0.0017443897668272257,
+      "std": 0.13166126608848572,
+      "min": -1.046875,
+      "max": 0.984375,
+      "absmax": 1.046875,
+      "l2_norm": 24.927539825439453
+    },
+    "layer_02_k": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": 0.0035027244593948126,
+      "std": 0.35326236486434937,
+      "min": -4.1875,
+      "max": 3.125,
+      "absmax": 4.1875,
+      "l2_norm": 66.88090515136719
+    },
+    "layer_02_q": {
+      "shape": [
+        1,
+        35,
+        2048
+      ],
+      "dtype": "bfloat16",
+      "numel": 71680,
+      "mean": -0.0027242277283221483,
+      "std": 0.3419015407562256,
+      "min": -4.25,
+      "max": 4.03125,
+      "absmax": 4.25,
+      "l2_norm": 91.54077911376953
+    },
+    "layer_02_v": {
+      "shape": [
+        1,
+        35,
+        1024
+      ],
+      "dtype": "bfloat16",
+      "numel": 35840,
+      "mean": -0.0002810388687066734,
+      "std": 0.17828316986560822,
+      "min": -2.25,
+      "max": 1.90625,
+      "absmax": 2.25,
+      "l2_norm": 33.751556396484375
+    },
+    "last_hidden_state_after_layer_02": {
+      "shape": [
+        1,
+        35,
+        2048
+      ],
+      "dtype": "bfloat16",
+      "numel": 71680,
+      "mean": 0.03639906644821167,
+      "std": 2.5673606395721436,
+      "min": -81.5,
+      "max": 78.0,
+      "absmax": 81.5,
+      "l2_norm": 687.432861328125
+    }
+  },
+  "artifacts": {
+    "torch": "QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206.pt",
+    "numpy": "QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206.npz",
+    "safetensors": "QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206.safetensors",
+    "stats_csv": "qkv_stats.csv",
+    "metadata": "metadata.json"
+  }
+}

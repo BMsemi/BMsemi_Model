@@ -1,0 +1,8326 @@
+{
+  "summary": {
+    "operator_count": 413,
+    "backend_counts": {
+      "cpu_depthwise": 8,
+      "cpu_digital": 311,
+      "x2": 94
+    },
+    "elapsed_ms": 6720.488199964166,
+    "peak_cached_bytes": 13107200,
+    "x2_backend_calls": 99168,
+    "x2_input_words": 45140912,
+    "x2_output_words": 86248000,
+    "logical_macs": 2665292800,
+    "saturation_count": 0
+  },
+  "operators": [
+    {
+      "op_index": 0,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        0,
+        240
+      ],
+      "output_indices": [
+        244
+      ],
+      "duration_ms": 2.866600058041513,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 1,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        244,
+        120
+      ],
+      "output_indices": [
+        245
+      ],
+      "duration_ms": 12.978599988855422,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 2,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        245,
+        235,
+        119
+      ],
+      "output_indices": [
+        246
+      ],
+      "duration_ms": 211.68349997606128,
+      "x2_backend_calls": 3200,
+      "x2_input_words": 1062400,
+      "x2_output_words": 1638400,
+      "logical_macs": 44236800,
+      "activation_scale": 0.007874015748031496,
+      "activation_max_abs": 1.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 3,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        246
+      ],
+      "output_indices": [
+        247
+      ],
+      "duration_ms": 106.18589993100613,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 4,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        246,
+        247
+      ],
+      "output_indices": [
+        248
+      ],
+      "duration_ms": 6.415899959392846,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 5,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        248,
+        120
+      ],
+      "output_indices": [
+        249
+      ],
+      "duration_ms": 11.095100082457066,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 6,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        249,
+        234,
+        118
+      ],
+      "output_indices": [
+        250
+      ],
+      "duration_ms": 174.01369998697191,
+      "x2_backend_calls": 4000,
+      "x2_input_words": 1843200,
+      "x2_output_words": 4096000,
+      "logical_macs": 117964800,
+      "activation_scale": 0.4448888583446112,
+      "activation_max_abs": 56.500885009765625,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 7,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        250
+      ],
+      "output_indices": [
+        251
+      ],
+      "duration_ms": 65.6851000385359,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 8,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        250,
+        251
+      ],
+      "output_indices": [
+        252
+      ],
+      "duration_ms": 2.9366000089794397,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 9,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        252,
+        233,
+        117
+      ],
+      "output_indices": [
+        253
+      ],
+      "duration_ms": 96.52539994567633,
+      "x2_backend_calls": 800,
+      "x2_input_words": 409600,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.8558464951402559,
+      "activation_max_abs": 108.6925048828125,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 10,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        253
+      ],
+      "output_indices": [
+        254
+      ],
+      "duration_ms": 59.38240000978112,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 11,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        253,
+        254
+      ],
+      "output_indices": [
+        255
+      ],
+      "duration_ms": 2.9073000187054276,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 12,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        255,
+        116,
+        115
+      ],
+      "output_indices": [
+        256
+      ],
+      "duration_ms": 1.8154000863432884,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 13,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        256,
+        232,
+        114
+      ],
+      "output_indices": [
+        257
+      ],
+      "duration_ms": 76.20460004545748,
+      "x2_backend_calls": 4000,
+      "x2_input_words": 1152000,
+      "x2_output_words": 1024000,
+      "logical_macs": 29491200,
+      "activation_scale": 0.29066248015155943,
+      "activation_max_abs": 36.91413497924805,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 14,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        257
+      ],
+      "output_indices": [
+        258
+      ],
+      "duration_ms": 8.99200001731515,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 15,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        257,
+        258
+      ],
+      "output_indices": [
+        259
+      ],
+      "duration_ms": 0.5515000084415078,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 16,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        259,
+        231,
+        113
+      ],
+      "output_indices": [
+        260
+      ],
+      "duration_ms": 55.897200014442205,
+      "x2_backend_calls": 2400,
+      "x2_input_words": 691200,
+      "x2_output_words": 1228800,
+      "logical_macs": 29491200,
+      "activation_scale": 0.01717489347683163,
+      "activation_max_abs": 2.181211471557617,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 17,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        260
+      ],
+      "output_indices": [
+        261
+      ],
+      "duration_ms": 47.34029993414879,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 18,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        260,
+        261
+      ],
+      "output_indices": [
+        262
+      ],
+      "duration_ms": 2.0435000769793987,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 19,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        256,
+        262
+      ],
+      "output_indices": [
+        263
+      ],
+      "duration_ms": 3.1896999571472406,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 20,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        255,
+        112,
+        115
+      ],
+      "output_indices": [
+        264
+      ],
+      "duration_ms": 4.447199986316264,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 21,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        264,
+        256,
+        263
+      ],
+      "output_indices": [
+        265
+      ],
+      "duration_ms": 10.606499970890582,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 22,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        265,
+        230,
+        111
+      ],
+      "output_indices": [
+        266
+      ],
+      "duration_ms": 164.74049992393702,
+      "x2_backend_calls": 3200,
+      "x2_input_words": 1228800,
+      "x2_output_words": 3276800,
+      "logical_macs": 78643200,
+      "activation_scale": 0.4269785543126384,
+      "activation_max_abs": 54.22627639770508,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 23,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        266
+      ],
+      "output_indices": [
+        267
+      ],
+      "duration_ms": 136.8654000107199,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 24,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        266,
+        267
+      ],
+      "output_indices": [
+        268
+      ],
+      "duration_ms": 4.30549995508045,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 25,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        268,
+        120
+      ],
+      "output_indices": [
+        269
+      ],
+      "duration_ms": 16.243400052189827,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 26,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        269,
+        229,
+        110
+      ],
+      "output_indices": [
+        270
+      ],
+      "duration_ms": 190.87390007916838,
+      "x2_backend_calls": 7200,
+      "x2_input_words": 3686400,
+      "x2_output_words": 7372800,
+      "logical_macs": 235929600,
+      "activation_scale": 0.20970352052703617,
+      "activation_max_abs": 26.632347106933594,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 27,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        270
+      ],
+      "output_indices": [
+        271
+      ],
+      "duration_ms": 21.810999955050647,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 28,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        270,
+        271
+      ],
+      "output_indices": [
+        272
+      ],
+      "duration_ms": 1.1782998917624354,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 29,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        272,
+        228,
+        109
+      ],
+      "output_indices": [
+        273
+      ],
+      "duration_ms": 30.849299975670874,
+      "x2_backend_calls": 800,
+      "x2_input_words": 409600,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.054680309896394025,
+      "activation_max_abs": 6.944399356842041,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 30,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        273
+      ],
+      "output_indices": [
+        274
+      ],
+      "duration_ms": 16.84589998330921,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 31,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        273,
+        274
+      ],
+      "output_indices": [
+        275
+      ],
+      "duration_ms": 1.4394000172615051,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 32,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        275,
+        108,
+        107
+      ],
+      "output_indices": [
+        276
+      ],
+      "duration_ms": 0.4243999719619751,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 33,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        276,
+        227,
+        106
+      ],
+      "output_indices": [
+        277
+      ],
+      "duration_ms": 26.956799905747175,
+      "x2_backend_calls": 1800,
+      "x2_input_words": 691200,
+      "x2_output_words": 921600,
+      "logical_macs": 29491200,
+      "activation_scale": 0.033381619791346274,
+      "activation_max_abs": 4.239465713500977,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 34,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        277
+      ],
+      "output_indices": [
+        278
+      ],
+      "duration_ms": 2.925700042396784,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 35,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        277,
+        278
+      ],
+      "output_indices": [
+        279
+      ],
+      "duration_ms": 0.26759994216263294,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 36,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        279,
+        226,
+        105
+      ],
+      "output_indices": [
+        280
+      ],
+      "duration_ms": 20.981600042432547,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 460800,
+      "x2_output_words": 1024000,
+      "logical_macs": 29491200,
+      "activation_scale": 0.03367226142582931,
+      "activation_max_abs": 4.276377201080322,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 37,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        280
+      ],
+      "output_indices": [
+        281
+      ],
+      "duration_ms": 6.170100066810846,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 38,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        280,
+        281
+      ],
+      "output_indices": [
+        282
+      ],
+      "duration_ms": 0.30310009606182575,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 39,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        276,
+        282
+      ],
+      "output_indices": [
+        283
+      ],
+      "duration_ms": 0.19179994706064463,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 40,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        275,
+        112,
+        107
+      ],
+      "output_indices": [
+        284
+      ],
+      "duration_ms": 0.2266999799758196,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 41,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        284,
+        276,
+        283
+      ],
+      "output_indices": [
+        285
+      ],
+      "duration_ms": 3.581400029361248,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 42,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        285,
+        225,
+        104
+      ],
+      "output_indices": [
+        286
+      ],
+      "duration_ms": 65.37889991886914,
+      "x2_backend_calls": 2400,
+      "x2_input_words": 1228800,
+      "x2_output_words": 2457600,
+      "logical_macs": 78643200,
+      "activation_scale": 0.059919894210935576,
+      "activation_max_abs": 7.609826564788818,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 43,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        286
+      ],
+      "output_indices": [
+        287
+      ],
+      "duration_ms": 39.07089994754642,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 44,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        286,
+        287
+      ],
+      "output_indices": [
+        288
+      ],
+      "duration_ms": 4.252400016412139,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 45,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        288,
+        120
+      ],
+      "output_indices": [
+        289
+      ],
+      "duration_ms": 6.1267000855877995,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 46,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        289,
+        224,
+        103
+      ],
+      "output_indices": [
+        290
+      ],
+      "duration_ms": 209.22149997204542,
+      "x2_backend_calls": 7200,
+      "x2_input_words": 3686400,
+      "x2_output_words": 7372800,
+      "logical_macs": 235929600,
+      "activation_scale": 0.043784130276657465,
+      "activation_max_abs": 5.560584545135498,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 47,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        290
+      ],
+      "output_indices": [
+        291
+      ],
+      "duration_ms": 8.272900013253093,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 48,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        290,
+        291
+      ],
+      "output_indices": [
+        292
+      ],
+      "duration_ms": 0.547399977222085,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 49,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        292,
+        223,
+        102
+      ],
+      "output_indices": [
+        293
+      ],
+      "duration_ms": 30.973399989306927,
+      "x2_backend_calls": 800,
+      "x2_input_words": 409600,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.044890200997900774,
+      "activation_max_abs": 5.701055526733398,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 50,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        293
+      ],
+      "output_indices": [
+        294
+      ],
+      "duration_ms": 8.208899991586804,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 51,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        293,
+        294
+      ],
+      "output_indices": [
+        295
+      ],
+      "duration_ms": 0.6118000019341707,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 52,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        295,
+        101,
+        100
+      ],
+      "output_indices": [
+        296
+      ],
+      "duration_ms": 0.17619994468986988,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 53,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        296,
+        222,
+        99
+      ],
+      "output_indices": [
+        297
+      ],
+      "duration_ms": 22.960999980568886,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.04983161190363366,
+      "activation_max_abs": 6.328614711761475,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 54,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        297
+      ],
+      "output_indices": [
+        298
+      ],
+      "duration_ms": 1.5057000564411283,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 55,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        297,
+        298
+      ],
+      "output_indices": [
+        299
+      ],
+      "duration_ms": 0.08430005982518196,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 56,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        299,
+        221,
+        98
+      ],
+      "output_indices": [
+        300
+      ],
+      "duration_ms": 13.704199925996363,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.03261173803975263,
+      "activation_max_abs": 4.141690731048584,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 57,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        300
+      ],
+      "output_indices": [
+        301
+      ],
+      "duration_ms": 1.8835000228136778,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 58,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        300,
+        301
+      ],
+      "output_indices": [
+        302
+      ],
+      "duration_ms": 0.07680000271648169,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 59,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        302,
+        220,
+        97
+      ],
+      "output_indices": [
+        303
+      ],
+      "duration_ms": 13.25890002772212,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.044714266859640285,
+      "activation_max_abs": 5.678711891174316,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 60,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        303
+      ],
+      "output_indices": [
+        304
+      ],
+      "duration_ms": 2.519699977710843,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 61,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        303,
+        304
+      ],
+      "output_indices": [
+        305
+      ],
+      "duration_ms": 0.08329993579536676,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 62,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        299,
+        305
+      ],
+      "output_indices": [
+        306
+      ],
+      "duration_ms": 0.049400026910007,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 63,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        306,
+        219,
+        96
+      ],
+      "output_indices": [
+        307
+      ],
+      "duration_ms": 22.143600042909384,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.04094828207661787,
+      "activation_max_abs": 5.200431823730469,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 64,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        307
+      ],
+      "output_indices": [
+        308
+      ],
+      "duration_ms": 1.6672000056132674,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 65,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        307,
+        308
+      ],
+      "output_indices": [
+        309
+      ],
+      "duration_ms": 0.0751999905332923,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 66,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        309,
+        218,
+        95
+      ],
+      "output_indices": [
+        310
+      ],
+      "duration_ms": 14.234900008887053,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.05206025867011604,
+      "activation_max_abs": 6.611652851104736,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 67,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        310
+      ],
+      "output_indices": [
+        311
+      ],
+      "duration_ms": 2.021100022830069,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 68,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        310,
+        311
+      ],
+      "output_indices": [
+        312
+      ],
+      "duration_ms": 0.08899997919797897,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 69,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        306,
+        312
+      ],
+      "output_indices": [
+        313
+      ],
+      "duration_ms": 0.15009997878223658,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 70,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        296,
+        217,
+        94
+      ],
+      "output_indices": [
+        314
+      ],
+      "duration_ms": 8.198900031857193,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.04983161190363366,
+      "activation_max_abs": 6.328614711761475,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 71,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        314
+      ],
+      "output_indices": [
+        315
+      ],
+      "duration_ms": 2.105700084939599,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 72,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        314,
+        315
+      ],
+      "output_indices": [
+        316
+      ],
+      "duration_ms": 0.07479998748749495,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 73,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        313,
+        316
+      ],
+      "output_indices": [
+        317
+      ],
+      "duration_ms": 0.1498999772593379,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 74,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        317,
+        216,
+        93
+      ],
+      "output_indices": [
+        318
+      ],
+      "duration_ms": 14.568099984899163,
+      "x2_backend_calls": 200,
+      "x2_input_words": 102400,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.07453546749325249,
+      "activation_max_abs": 9.466004371643066,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 75,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        318
+      ],
+      "output_indices": [
+        319
+      ],
+      "duration_ms": 4.717499949038029,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 76,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        318,
+        319
+      ],
+      "output_indices": [
+        320
+      ],
+      "duration_ms": 0.1218999968841672,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 77,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        295,
+        112,
+        100
+      ],
+      "output_indices": [
+        321
+      ],
+      "duration_ms": 0.13509998098015785,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 78,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        321,
+        296,
+        320
+      ],
+      "output_indices": [
+        322
+      ],
+      "duration_ms": 0.8814000757411122,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 79,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        322,
+        215,
+        92
+      ],
+      "output_indices": [
+        323
+      ],
+      "duration_ms": 72.8747999528423,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 614400,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.04983161190363366,
+      "activation_max_abs": 6.328614711761475,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 80,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        323
+      ],
+      "output_indices": [
+        324
+      ],
+      "duration_ms": 7.736500003375113,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 81,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        323,
+        324
+      ],
+      "output_indices": [
+        325
+      ],
+      "duration_ms": 0.7339000003412366,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 82,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        325,
+        120
+      ],
+      "output_indices": [
+        326
+      ],
+      "duration_ms": 1.478099962696433,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 83,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        326,
+        214,
+        91
+      ],
+      "output_indices": [
+        327
+      ],
+      "duration_ms": 230.176700046286,
+      "x2_backend_calls": 3744,
+      "x2_input_words": 1880064,
+      "x2_output_words": 3686400,
+      "logical_macs": 117964800,
+      "activation_scale": 0.03886557751753199,
+      "activation_max_abs": 4.9359283447265625,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 84,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        327
+      ],
+      "output_indices": [
+        328
+      ],
+      "duration_ms": 6.916100042872131,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 85,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        327,
+        328
+      ],
+      "output_indices": [
+        329
+      ],
+      "duration_ms": 0.14029990416020155,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 86,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        329,
+        213,
+        90
+      ],
+      "output_indices": [
+        330
+      ],
+      "duration_ms": 46.00249999202788,
+      "x2_backend_calls": 832,
+      "x2_input_words": 417792,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.03692057376771461,
+      "activation_max_abs": 4.688912868499756,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 87,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        330
+      ],
+      "output_indices": [
+        331
+      ],
+      "duration_ms": 6.124200066551566,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 88,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        330,
+        331
+      ],
+      "output_indices": [
+        332
+      ],
+      "duration_ms": 0.23929995950311422,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 89,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        332,
+        89,
+        88
+      ],
+      "output_indices": [
+        333
+      ],
+      "duration_ms": 0.10760000441223383,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 90,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        333,
+        212,
+        87
+      ],
+      "output_indices": [
+        334
+      ],
+      "duration_ms": 11.849200003780425,
+      "x2_backend_calls": 104,
+      "x2_input_words": 52224,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.06803603435125877,
+      "activation_max_abs": 8.640576362609863,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 91,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        334
+      ],
+      "output_indices": [
+        335
+      ],
+      "duration_ms": 0.9575999574735761,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 92,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        334,
+        335
+      ],
+      "output_indices": [
+        336
+      ],
+      "duration_ms": 0.042899977415800095,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 93,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        336,
+        211,
+        86
+      ],
+      "output_indices": [
+        337
+      ],
+      "duration_ms": 24.644499993883073,
+      "x2_backend_calls": 468,
+      "x2_input_words": 235008,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.04758931708148145,
+      "activation_max_abs": 6.0438432693481445,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 94,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        337
+      ],
+      "output_indices": [
+        338
+      ],
+      "duration_ms": 1.4483999693766236,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 95,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        337,
+        338
+      ],
+      "output_indices": [
+        339
+      ],
+      "duration_ms": 0.04949991125613451,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 96,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        339,
+        210,
+        85
+      ],
+      "output_indices": [
+        340
+      ],
+      "duration_ms": 37.354900036007166,
+      "x2_backend_calls": 468,
+      "x2_input_words": 235008,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.048656504923903096,
+      "activation_max_abs": 6.179376125335693,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 97,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        340
+      ],
+      "output_indices": [
+        341
+      ],
+      "duration_ms": 1.0242999996989965,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 98,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        340,
+        341
+      ],
+      "output_indices": [
+        342
+      ],
+      "duration_ms": 0.04950002767145634,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 99,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        336,
+        342
+      ],
+      "output_indices": [
+        343
+      ],
+      "duration_ms": 0.03950006794184446,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 100,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        343,
+        209,
+        84
+      ],
+      "output_indices": [
+        344
+      ],
+      "duration_ms": 34.85149994958192,
+      "x2_backend_calls": 468,
+      "x2_input_words": 235008,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.08041551544910341,
+      "activation_max_abs": 10.212770462036133,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 101,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        344
+      ],
+      "output_indices": [
+        345
+      ],
+      "duration_ms": 1.146900001913309,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 102,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        344,
+        345
+      ],
+      "output_indices": [
+        346
+      ],
+      "duration_ms": 0.05419994704425335,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 103,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        346,
+        208,
+        83
+      ],
+      "output_indices": [
+        347
+      ],
+      "duration_ms": 99.35159992892295,
+      "x2_backend_calls": 468,
+      "x2_input_words": 235008,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.07683557975949265,
+      "activation_max_abs": 9.758118629455566,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 104,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        347
+      ],
+      "output_indices": [
+        348
+      ],
+      "duration_ms": 4.8738999757915735,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 105,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        347,
+        348
+      ],
+      "output_indices": [
+        349
+      ],
+      "duration_ms": 0.9114999556913972,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 106,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        343,
+        349
+      ],
+      "output_indices": [
+        350
+      ],
+      "duration_ms": 0.43240003287792206,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 107,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        333,
+        207,
+        82
+      ],
+      "output_indices": [
+        351
+      ],
+      "duration_ms": 44.49430003296584,
+      "x2_backend_calls": 104,
+      "x2_input_words": 52224,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.06803603435125877,
+      "activation_max_abs": 8.640576362609863,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 108,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        351
+      ],
+      "output_indices": [
+        352
+      ],
+      "duration_ms": 0.9348000166937709,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 109,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        351,
+        352
+      ],
+      "output_indices": [
+        353
+      ],
+      "duration_ms": 0.041599967516958714,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 110,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        350,
+        353
+      ],
+      "output_indices": [
+        354
+      ],
+      "duration_ms": 0.08769996929913759,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 111,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        354,
+        206,
+        81
+      ],
+      "output_indices": [
+        355
+      ],
+      "duration_ms": 13.123800046741962,
+      "x2_backend_calls": 208,
+      "x2_input_words": 104448,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.15776467511034387,
+      "activation_max_abs": 20.036113739013672,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 112,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        355
+      ],
+      "output_indices": [
+        356
+      ],
+      "duration_ms": 1.6644999850541353,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 113,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        355,
+        356
+      ],
+      "output_indices": [
+        357
+      ],
+      "duration_ms": 0.06770004983991385,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 114,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        332,
+        112,
+        88
+      ],
+      "output_indices": [
+        358
+      ],
+      "duration_ms": 0.11470005847513676,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 115,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        358,
+        333,
+        357
+      ],
+      "output_indices": [
+        359
+      ],
+      "duration_ms": 0.48239994794130325,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 116,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        359,
+        205,
+        80
+      ],
+      "output_indices": [
+        360
+      ],
+      "duration_ms": 131.535500055179,
+      "x2_backend_calls": 1248,
+      "x2_input_words": 626688,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.0727215263787217,
+      "activation_max_abs": 9.235633850097656,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 117,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        360
+      ],
+      "output_indices": [
+        361
+      ],
+      "duration_ms": 8.022300084121525,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 118,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        360,
+        361
+      ],
+      "output_indices": [
+        362
+      ],
+      "duration_ms": 0.12330000754445791,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 119,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        362,
+        204,
+        79
+      ],
+      "output_indices": [
+        363
+      ],
+      "duration_ms": 48.8908999832347,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.046890889565775716,
+      "activation_max_abs": 5.955142974853516,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 120,
+      "op_name": "MAX_POOL_2D",
+      "backend": "cpu_digital",
+      "input_indices": [
+        363
+      ],
+      "output_indices": [
+        364
+      ],
+      "duration_ms": 2.1051999647170305,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 121,
+      "op_name": "MAX_POOL_2D",
+      "backend": "cpu_digital",
+      "input_indices": [
+        364
+      ],
+      "output_indices": [
+        365
+      ],
+      "duration_ms": 1.7890000017359853,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 122,
+      "op_name": "MAX_POOL_2D",
+      "backend": "cpu_digital",
+      "input_indices": [
+        365
+      ],
+      "output_indices": [
+        366
+      ],
+      "duration_ms": 2.1134999115020037,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 123,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        363,
+        364,
+        365,
+        366
+      ],
+      "output_indices": [
+        367
+      ],
+      "duration_ms": 0.8517000824213028,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 124,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        367,
+        203,
+        78
+      ],
+      "output_indices": [
+        368
+      ],
+      "duration_ms": 95.86740005761385,
+      "x2_backend_calls": 1664,
+      "x2_input_words": 835584,
+      "x2_output_words": 1638400,
+      "logical_macs": 52428800,
+      "activation_scale": 0.047363138574314866,
+      "activation_max_abs": 6.015118598937988,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 125,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        368
+      ],
+      "output_indices": [
+        369
+      ],
+      "duration_ms": 4.048299975693226,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 126,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        368,
+        369
+      ],
+      "output_indices": [
+        370
+      ],
+      "duration_ms": 0.3347999881953001,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 127,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        370,
+        362
+      ],
+      "output_indices": [
+        371
+      ],
+      "duration_ms": 0.3043999895453453,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 128,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        371,
+        202,
+        77
+      ],
+      "output_indices": [
+        372
+      ],
+      "duration_ms": 94.48690002318472,
+      "x2_backend_calls": 832,
+      "x2_input_words": 417792,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.06671996379461814,
+      "activation_max_abs": 8.473435401916504,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 129,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        372
+      ],
+      "output_indices": [
+        373
+      ],
+      "duration_ms": 4.8738999757915735,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 130,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        372,
+        373
+      ],
+      "output_indices": [
+        374
+      ],
+      "duration_ms": 0.1629000762477517,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 131,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        374,
+        89,
+        88
+      ],
+      "output_indices": [
+        375
+      ],
+      "duration_ms": 0.09380001574754715,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 132,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        375,
+        201,
+        76
+      ],
+      "output_indices": [
+        376
+      ],
+      "duration_ms": 54.475100012496114,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.044514201757476085,
+      "activation_max_abs": 5.653303623199463,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 133,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        376,
+        238
+      ],
+      "output_indices": [
+        377
+      ],
+      "duration_ms": 0.09730004239827394,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 134,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        377,
+        236
+      ],
+      "output_indices": [
+        378
+      ],
+      "duration_ms": 0.2938000252470374,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 135,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        378,
+        112,
+        75
+      ],
+      "output_indices": [
+        379
+      ],
+      "duration_ms": 0.06250001024454832,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 136,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        378,
+        74,
+        75
+      ],
+      "output_indices": [
+        380
+      ],
+      "duration_ms": 0.04700000863522291,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 137,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        378,
+        73,
+        72
+      ],
+      "output_indices": [
+        381
+      ],
+      "duration_ms": 0.07770000956952572,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 138,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        379,
+        200
+      ],
+      "output_indices": [
+        382
+      ],
+      "duration_ms": 0.03930006641894579,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 139,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        382,
+        199
+      ],
+      "output_indices": [
+        383
+      ],
+      "duration_ms": 0.024399952962994576,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 140,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        380,
+        198
+      ],
+      "output_indices": [
+        384
+      ],
+      "duration_ms": 0.02910010516643524,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 141,
+      "op_name": "BATCH_MATMUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        383,
+        384
+      ],
+      "output_indices": [
+        385
+      ],
+      "duration_ms": 2.341300016269088,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 142,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        385,
+        243
+      ],
+      "output_indices": [
+        386
+      ],
+      "duration_ms": 0.8860999951139092,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 143,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        386,
+        197
+      ],
+      "output_indices": [
+        387
+      ],
+      "duration_ms": 0.8751999121159315,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 144,
+      "op_name": "SOFTMAX",
+      "backend": "cpu_digital",
+      "input_indices": [
+        387
+      ],
+      "output_indices": [
+        388
+      ],
+      "duration_ms": 4.1612000204622746,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 145,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        388,
+        200
+      ],
+      "output_indices": [
+        389
+      ],
+      "duration_ms": 1.068499987013638,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 146,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        381,
+        196
+      ],
+      "output_indices": [
+        390
+      ],
+      "duration_ms": 0.07339997682720423,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 147,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        389,
+        195
+      ],
+      "output_indices": [
+        391
+      ],
+      "duration_ms": 0.9989999234676361,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 148,
+      "op_name": "BATCH_MATMUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        390,
+        391
+      ],
+      "output_indices": [
+        392
+      ],
+      "duration_ms": 129.39250003546476,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 149,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        392,
+        194
+      ],
+      "output_indices": [
+        393
+      ],
+      "duration_ms": 0.10750000365078449,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 150,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        381,
+        194
+      ],
+      "output_indices": [
+        394
+      ],
+      "duration_ms": 0.09360001422464848,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 151,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        394,
+        240
+      ],
+      "output_indices": [
+        395
+      ],
+      "duration_ms": 0.0342000275850296,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 152,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        395,
+        193,
+        71
+      ],
+      "output_indices": [
+        396
+      ],
+      "duration_ms": 9.568199981004,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 153,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        396,
+        238
+      ],
+      "output_indices": [
+        397
+      ],
+      "duration_ms": 0.049400026910007,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 154,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        393,
+        397
+      ],
+      "output_indices": [
+        398
+      ],
+      "duration_ms": 0.05900010000914335,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 155,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        398,
+        240
+      ],
+      "output_indices": [
+        399
+      ],
+      "duration_ms": 0.03599992487579584,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 156,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        399,
+        192,
+        70
+      ],
+      "output_indices": [
+        400
+      ],
+      "duration_ms": 12.60550005827099,
+      "x2_backend_calls": 208,
+      "x2_input_words": 104448,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.025265100434070497,
+      "activation_max_abs": 3.208667755126953,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 157,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        375,
+        400
+      ],
+      "output_indices": [
+        401
+      ],
+      "duration_ms": 0.08779997006058693,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 158,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        401,
+        191,
+        69
+      ],
+      "output_indices": [
+        402
+      ],
+      "duration_ms": 21.115300012752414,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.04980108681626207,
+      "activation_max_abs": 6.324738025665283,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 159,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        402
+      ],
+      "output_indices": [
+        403
+      ],
+      "duration_ms": 1.892999978736043,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 160,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        402,
+        403
+      ],
+      "output_indices": [
+        404
+      ],
+      "duration_ms": 1.0272000217810273,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 161,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        404,
+        190,
+        68
+      ],
+      "output_indices": [
+        405
+      ],
+      "duration_ms": 19.78099998086691,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.02119102252749946,
+      "activation_max_abs": 2.6912598609924316,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 162,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        401,
+        405
+      ],
+      "output_indices": [
+        406
+      ],
+      "duration_ms": 0.06480002775788307,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 163,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        374,
+        112,
+        88
+      ],
+      "output_indices": [
+        407
+      ],
+      "duration_ms": 0.07860001642256975,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 164,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        407,
+        406
+      ],
+      "output_indices": [
+        408
+      ],
+      "duration_ms": 0.1140000531449914,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 165,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        408,
+        189,
+        67
+      ],
+      "output_indices": [
+        409
+      ],
+      "duration_ms": 41.39759996905923,
+      "x2_backend_calls": 832,
+      "x2_input_words": 417792,
+      "x2_output_words": 819200,
+      "logical_macs": 26214400,
+      "activation_scale": 0.05392953166811485,
+      "activation_max_abs": 6.849050521850586,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 166,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        409
+      ],
+      "output_indices": [
+        410
+      ],
+      "duration_ms": 2.8497999301180243,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 167,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        409,
+        410
+      ],
+      "output_indices": [
+        411
+      ],
+      "duration_ms": 0.13559998478740454,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 168,
+      "op_name": "RESIZE_NEAREST_NEIGHBOR",
+      "backend": "cpu_digital",
+      "input_indices": [
+        411,
+        239
+      ],
+      "output_indices": [
+        412
+      ],
+      "duration_ms": 4.125999985262752,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 169,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        412,
+        325
+      ],
+      "output_indices": [
+        413
+      ],
+      "duration_ms": 6.042700028046966,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 170,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        413,
+        188,
+        66
+      ],
+      "output_indices": [
+        414
+      ],
+      "duration_ms": 136.13330002408475,
+      "x2_backend_calls": 2400,
+      "x2_input_words": 1228800,
+      "x2_output_words": 2457600,
+      "logical_macs": 78643200,
+      "activation_scale": 0.03886557751753199,
+      "activation_max_abs": 4.9359283447265625,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 171,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        414
+      ],
+      "output_indices": [
+        415
+      ],
+      "duration_ms": 14.188600005581975,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 172,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        414,
+        415
+      ],
+      "output_indices": [
+        416
+      ],
+      "duration_ms": 0.9021000005304813,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 173,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        416,
+        101,
+        100
+      ],
+      "output_indices": [
+        417
+      ],
+      "duration_ms": 0.41099998634308577,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 174,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        417,
+        187,
+        65
+      ],
+      "output_indices": [
+        418
+      ],
+      "duration_ms": 38.962400052696466,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03001125778738908,
+      "activation_max_abs": 3.811429738998413,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 175,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        418
+      ],
+      "output_indices": [
+        419
+      ],
+      "duration_ms": 1.866700011305511,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 176,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        418,
+        419
+      ],
+      "output_indices": [
+        420
+      ],
+      "duration_ms": 0.0591999851167202,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 177,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        420,
+        186,
+        64
+      ],
+      "output_indices": [
+        421
+      ],
+      "duration_ms": 15.41599992197007,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.02146383157865269,
+      "activation_max_abs": 2.7259066104888916,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 178,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        421
+      ],
+      "output_indices": [
+        422
+      ],
+      "duration_ms": 1.6370000084862113,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 179,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        421,
+        422
+      ],
+      "output_indices": [
+        423
+      ],
+      "duration_ms": 0.07870001718401909,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 180,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        423,
+        185,
+        63
+      ],
+      "output_indices": [
+        424
+      ],
+      "duration_ms": 20.870600012131035,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.047443029448742,
+      "activation_max_abs": 6.025264739990234,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 181,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        424
+      ],
+      "output_indices": [
+        425
+      ],
+      "duration_ms": 1.841900055296719,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 182,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        424,
+        425
+      ],
+      "output_indices": [
+        426
+      ],
+      "duration_ms": 0.09550002869218588,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 183,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        420,
+        426
+      ],
+      "output_indices": [
+        427
+      ],
+      "duration_ms": 0.06759993266314268,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 184,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        427,
+        184,
+        62
+      ],
+      "output_indices": [
+        428
+      ],
+      "duration_ms": 14.394900063052773,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.07448403666338582,
+      "activation_max_abs": 9.45947265625,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 185,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        428
+      ],
+      "output_indices": [
+        429
+      ],
+      "duration_ms": 1.60030007828027,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 186,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        428,
+        429
+      ],
+      "output_indices": [
+        430
+      ],
+      "duration_ms": 0.09670003782957792,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 187,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        430,
+        183,
+        61
+      ],
+      "output_indices": [
+        431
+      ],
+      "duration_ms": 14.271100051701069,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.03433761821957085,
+      "activation_max_abs": 4.360877513885498,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 188,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        431
+      ],
+      "output_indices": [
+        432
+      ],
+      "duration_ms": 1.0665999725461006,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 189,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        431,
+        432
+      ],
+      "output_indices": [
+        433
+      ],
+      "duration_ms": 0.07680000271648169,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 190,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        427,
+        433
+      ],
+      "output_indices": [
+        434
+      ],
+      "duration_ms": 0.05639996379613876,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 191,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        417,
+        182,
+        60
+      ],
+      "output_indices": [
+        435
+      ],
+      "duration_ms": 10.156399919651449,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03001125778738908,
+      "activation_max_abs": 3.811429738998413,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 192,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        435
+      ],
+      "output_indices": [
+        436
+      ],
+      "duration_ms": 2.061599981971085,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 193,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        435,
+        436
+      ],
+      "output_indices": [
+        437
+      ],
+      "duration_ms": 0.09159999899566174,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 194,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        434,
+        437
+      ],
+      "output_indices": [
+        438
+      ],
+      "duration_ms": 0.1713000237941742,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 195,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        438,
+        181,
+        59
+      ],
+      "output_indices": [
+        439
+      ],
+      "duration_ms": 12.753999908454716,
+      "x2_backend_calls": 200,
+      "x2_input_words": 102400,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.10040599342406266,
+      "activation_max_abs": 12.751561164855957,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 196,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        439
+      ],
+      "output_indices": [
+        440
+      ],
+      "duration_ms": 3.9124999893829226,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 197,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        439,
+        440
+      ],
+      "output_indices": [
+        441
+      ],
+      "duration_ms": 0.11889997404068708,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 198,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        416,
+        112,
+        100
+      ],
+      "output_indices": [
+        442
+      ],
+      "duration_ms": 0.1778999576345086,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 199,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        442,
+        417,
+        441
+      ],
+      "output_indices": [
+        443
+      ],
+      "duration_ms": 0.9092000545933843,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 200,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        443,
+        180,
+        58
+      ],
+      "output_indices": [
+        444
+      ],
+      "duration_ms": 42.27149998769164,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 614400,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.07385336507962445,
+      "activation_max_abs": 9.379377365112305,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 201,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        444
+      ],
+      "output_indices": [
+        445
+      ],
+      "duration_ms": 7.575000054202974,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 202,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        444,
+        445
+      ],
+      "output_indices": [
+        446
+      ],
+      "duration_ms": 0.5665000062435865,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 203,
+      "op_name": "RESIZE_NEAREST_NEIGHBOR",
+      "backend": "cpu_digital",
+      "input_indices": [
+        446,
+        237
+      ],
+      "output_indices": [
+        447
+      ],
+      "duration_ms": 8.831200073473155,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 204,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        447,
+        288
+      ],
+      "output_indices": [
+        448
+      ],
+      "duration_ms": 6.5591000020504,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 205,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        448,
+        179,
+        57
+      ],
+      "output_indices": [
+        449
+      ],
+      "duration_ms": 116.89439998008311,
+      "x2_backend_calls": 3200,
+      "x2_input_words": 1638400,
+      "x2_output_words": 3276800,
+      "logical_macs": 104857600,
+      "activation_scale": 0.043784130276657465,
+      "activation_max_abs": 5.560584545135498,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 206,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        449
+      ],
+      "output_indices": [
+        450
+      ],
+      "duration_ms": 15.849100076593459,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 207,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        449,
+        450
+      ],
+      "output_indices": [
+        451
+      ],
+      "duration_ms": 1.082399976439774,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 208,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        451,
+        108,
+        107
+      ],
+      "output_indices": [
+        452
+      ],
+      "duration_ms": 0.314100063405931,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 209,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        452,
+        178,
+        56
+      ],
+      "output_indices": [
+        453
+      ],
+      "duration_ms": 17.92310003656894,
+      "x2_backend_calls": 200,
+      "x2_input_words": 76800,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03574449809517447,
+      "activation_max_abs": 4.539551258087158,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 210,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        453
+      ],
+      "output_indices": [
+        454
+      ],
+      "duration_ms": 3.7042999174445868,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 211,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        453,
+        454
+      ],
+      "output_indices": [
+        455
+      ],
+      "duration_ms": 0.30090007930994034,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 212,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        455,
+        177,
+        55
+      ],
+      "output_indices": [
+        456
+      ],
+      "duration_ms": 20.01520001795143,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 345600,
+      "x2_output_words": 512000,
+      "logical_macs": 14745600,
+      "activation_scale": 0.00866477508244552,
+      "activation_max_abs": 1.100426435470581,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 213,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        456
+      ],
+      "output_indices": [
+        457
+      ],
+      "duration_ms": 4.078600089997053,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 214,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        456,
+        457
+      ],
+      "output_indices": [
+        458
+      ],
+      "duration_ms": 0.12729992158710957,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 215,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        458,
+        176,
+        54
+      ],
+      "output_indices": [
+        459
+      ],
+      "duration_ms": 21.332599921151996,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 345600,
+      "x2_output_words": 512000,
+      "logical_macs": 14745600,
+      "activation_scale": 0.03154075051855853,
+      "activation_max_abs": 4.005675315856934,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 216,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        459
+      ],
+      "output_indices": [
+        460
+      ],
+      "duration_ms": 4.339099978096783,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 217,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        459,
+        460
+      ],
+      "output_indices": [
+        461
+      ],
+      "duration_ms": 0.20620005670934916,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 218,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        455,
+        461
+      ],
+      "output_indices": [
+        462
+      ],
+      "duration_ms": 0.09440002031624317,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 219,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        462,
+        175,
+        53
+      ],
+      "output_indices": [
+        463
+      ],
+      "duration_ms": 38.64349995274097,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 345600,
+      "x2_output_words": 512000,
+      "logical_macs": 14745600,
+      "activation_scale": 0.035948077524740864,
+      "activation_max_abs": 4.56540584564209,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 220,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        463
+      ],
+      "output_indices": [
+        464
+      ],
+      "duration_ms": 3.935100045055151,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 221,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        463,
+        464
+      ],
+      "output_indices": [
+        465
+      ],
+      "duration_ms": 0.16210007015615702,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 222,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        465,
+        174,
+        52
+      ],
+      "output_indices": [
+        466
+      ],
+      "duration_ms": 20.37629997357726,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 345600,
+      "x2_output_words": 512000,
+      "logical_macs": 14745600,
+      "activation_scale": 0.029748451052688238,
+      "activation_max_abs": 3.7780532836914062,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 223,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        466
+      ],
+      "output_indices": [
+        467
+      ],
+      "duration_ms": 2.7710000285878778,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 224,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        466,
+        467
+      ],
+      "output_indices": [
+        468
+      ],
+      "duration_ms": 0.3013000823557377,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 225,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        462,
+        468
+      ],
+      "output_indices": [
+        469
+      ],
+      "duration_ms": 0.2940000267699361,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 226,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        452,
+        173,
+        51
+      ],
+      "output_indices": [
+        470
+      ],
+      "duration_ms": 14.027199940755963,
+      "x2_backend_calls": 200,
+      "x2_input_words": 76800,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03574449809517447,
+      "activation_max_abs": 4.539551258087158,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 227,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        470
+      ],
+      "output_indices": [
+        471
+      ],
+      "duration_ms": 3.1949999975040555,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 228,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        470,
+        471
+      ],
+      "output_indices": [
+        472
+      ],
+      "duration_ms": 0.09909993968904018,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 229,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        469,
+        472
+      ],
+      "output_indices": [
+        473
+      ],
+      "duration_ms": 0.6773999193683267,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 230,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        473,
+        172,
+        50
+      ],
+      "output_indices": [
+        474
+      ],
+      "duration_ms": 15.32280002720654,
+      "x2_backend_calls": 200,
+      "x2_input_words": 102400,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.1322949176698219,
+      "activation_max_abs": 16.801454544067383,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 231,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        474
+      ],
+      "output_indices": [
+        475
+      ],
+      "duration_ms": 7.78259988874197,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 232,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        474,
+        475
+      ],
+      "output_indices": [
+        476
+      ],
+      "duration_ms": 2.112400019541383,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 233,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        451,
+        112,
+        107
+      ],
+      "output_indices": [
+        477
+      ],
+      "duration_ms": 0.6991999689489603,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 234,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        477,
+        452,
+        476
+      ],
+      "output_indices": [
+        478
+      ],
+      "duration_ms": 1.8615000881254673,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 235,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        478,
+        171,
+        49
+      ],
+      "output_indices": [
+        479
+      ],
+      "duration_ms": 52.68610001076013,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 614400,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.07575750726414478,
+      "activation_max_abs": 9.621203422546387,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 236,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        479
+      ],
+      "output_indices": [
+        480
+      ],
+      "duration_ms": 23.78160005901009,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 237,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        479,
+        480
+      ],
+      "output_indices": [
+        481
+      ],
+      "duration_ms": 1.8280999502167106,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 238,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        481,
+        120
+      ],
+      "output_indices": [
+        482
+      ],
+      "duration_ms": 4.453200032003224,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 239,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        482,
+        170,
+        48
+      ],
+      "output_indices": [
+        483
+      ],
+      "duration_ms": 84.74840002600104,
+      "x2_backend_calls": 1800,
+      "x2_input_words": 921600,
+      "x2_output_words": 1843200,
+      "logical_macs": 58982400,
+      "activation_scale": 0.038384407524048814,
+      "activation_max_abs": 4.874819755554199,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 240,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        483
+      ],
+      "output_indices": [
+        484
+      ],
+      "duration_ms": 3.7359000416472554,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 241,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        483,
+        484
+      ],
+      "output_indices": [
+        485
+      ],
+      "duration_ms": 0.2867999719455838,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 242,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        485,
+        446
+      ],
+      "output_indices": [
+        486
+      ],
+      "duration_ms": 1.7018999205902219,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 243,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        486,
+        169,
+        47
+      ],
+      "output_indices": [
+        487
+      ],
+      "duration_ms": 50.66439998336136,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 614400,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.041056985930195,
+      "activation_max_abs": 5.214237213134766,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 244,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        487
+      ],
+      "output_indices": [
+        488
+      ],
+      "duration_ms": 11.361699900589883,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 245,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        487,
+        488
+      ],
+      "output_indices": [
+        489
+      ],
+      "duration_ms": 0.6133000133559108,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 246,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        489,
+        101,
+        100
+      ],
+      "output_indices": [
+        490
+      ],
+      "duration_ms": 0.1705000177025795,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 247,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        490,
+        168,
+        46
+      ],
+      "output_indices": [
+        491
+      ],
+      "duration_ms": 20.37629997357726,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03947658989373155,
+      "activation_max_abs": 5.013526916503906,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 248,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        491
+      ],
+      "output_indices": [
+        492
+      ],
+      "duration_ms": 1.6670000040903687,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 249,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        491,
+        492
+      ],
+      "output_indices": [
+        493
+      ],
+      "duration_ms": 0.06330001633614302,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 250,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        493,
+        167,
+        45
+      ],
+      "output_indices": [
+        494
+      ],
+      "duration_ms": 15.428600017912686,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.008707962636872539,
+      "activation_max_abs": 1.1059112548828125,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 251,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        494
+      ],
+      "output_indices": [
+        495
+      ],
+      "duration_ms": 2.4111000820994377,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 252,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        494,
+        495
+      ],
+      "output_indices": [
+        496
+      ],
+      "duration_ms": 0.05440006498247385,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 253,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        496,
+        166,
+        44
+      ],
+      "output_indices": [
+        497
+      ],
+      "duration_ms": 21.299900021404028,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.031678143448717014,
+      "activation_max_abs": 4.0231242179870605,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 254,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        497
+      ],
+      "output_indices": [
+        498
+      ],
+      "duration_ms": 2.015799982473254,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 255,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        497,
+        498
+      ],
+      "output_indices": [
+        499
+      ],
+      "duration_ms": 0.0751999905332923,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 256,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        493,
+        499
+      ],
+      "output_indices": [
+        500
+      ],
+      "duration_ms": 0.053600058890879154,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 257,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        500,
+        165,
+        43
+      ],
+      "output_indices": [
+        501
+      ],
+      "duration_ms": 12.100600055418909,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.044243688658466486,
+      "activation_max_abs": 5.618948459625244,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 258,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        501
+      ],
+      "output_indices": [
+        502
+      ],
+      "duration_ms": 1.5617000171914697,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 259,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        501,
+        502
+      ],
+      "output_indices": [
+        503
+      ],
+      "duration_ms": 0.0708999577909708,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 260,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        503,
+        164,
+        42
+      ],
+      "output_indices": [
+        504
+      ],
+      "duration_ms": 13.484900002367795,
+      "x2_backend_calls": 450,
+      "x2_input_words": 230400,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.04071482335488627,
+      "activation_max_abs": 5.170782566070557,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 261,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        504
+      ],
+      "output_indices": [
+        505
+      ],
+      "duration_ms": 1.913700019940734,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 262,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        504,
+        505
+      ],
+      "output_indices": [
+        506
+      ],
+      "duration_ms": 0.10760000441223383,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 263,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        500,
+        506
+      ],
+      "output_indices": [
+        507
+      ],
+      "duration_ms": 0.04300009459257126,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 264,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        490,
+        163,
+        41
+      ],
+      "output_indices": [
+        508
+      ],
+      "duration_ms": 9.922600002028048,
+      "x2_backend_calls": 100,
+      "x2_input_words": 51200,
+      "x2_output_words": 102400,
+      "logical_macs": 3276800,
+      "activation_scale": 0.03947658989373155,
+      "activation_max_abs": 5.013526916503906,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 265,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        508
+      ],
+      "output_indices": [
+        509
+      ],
+      "duration_ms": 2.0680000307038426,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 266,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        508,
+        509
+      ],
+      "output_indices": [
+        510
+      ],
+      "duration_ms": 0.1705000177025795,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 267,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        507,
+        510
+      ],
+      "output_indices": [
+        511
+      ],
+      "duration_ms": 0.2050000475719571,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 268,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        511,
+        162,
+        40
+      ],
+      "output_indices": [
+        512
+      ],
+      "duration_ms": 12.081599910743535,
+      "x2_backend_calls": 200,
+      "x2_input_words": 102400,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.19786288043645422,
+      "activation_max_abs": 25.128585815429688,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 269,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        512
+      ],
+      "output_indices": [
+        513
+      ],
+      "duration_ms": 3.455400001257658,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 270,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        512,
+        513
+      ],
+      "output_indices": [
+        514
+      ],
+      "duration_ms": 0.18039997667074203,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 271,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        489,
+        112,
+        100
+      ],
+      "output_indices": [
+        515
+      ],
+      "duration_ms": 0.11889997404068708,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 272,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        515,
+        490,
+        514
+      ],
+      "output_indices": [
+        516
+      ],
+      "duration_ms": 0.8226999780163169,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 273,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        516,
+        161,
+        39
+      ],
+      "output_indices": [
+        517
+      ],
+      "duration_ms": 41.43260000273585,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 614400,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.07884570745032603,
+      "activation_max_abs": 10.013404846191406,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 274,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        517
+      ],
+      "output_indices": [
+        518
+      ],
+      "duration_ms": 8.597000036388636,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 275,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        517,
+        518
+      ],
+      "output_indices": [
+        519
+      ],
+      "duration_ms": 0.5909999599680305,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 276,
+      "op_name": "PAD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        519,
+        120
+      ],
+      "output_indices": [
+        520
+      ],
+      "duration_ms": 1.6163999680429697,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 277,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        520,
+        160,
+        38
+      ],
+      "output_indices": [
+        521
+      ],
+      "duration_ms": 86.58630005083978,
+      "x2_backend_calls": 1872,
+      "x2_input_words": 940032,
+      "x2_output_words": 1843200,
+      "logical_macs": 58982400,
+      "activation_scale": 0.04220471795149675,
+      "activation_max_abs": 5.359999179840088,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 278,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        521
+      ],
+      "output_indices": [
+        522
+      ],
+      "duration_ms": 1.8185999942943454,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 279,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        521,
+        522
+      ],
+      "output_indices": [
+        523
+      ],
+      "duration_ms": 0.04680000711232424,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 280,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        523,
+        411
+      ],
+      "output_indices": [
+        524
+      ],
+      "duration_ms": 0.4069999558851123,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 281,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        524,
+        159,
+        37
+      ],
+      "output_indices": [
+        525
+      ],
+      "duration_ms": 50.34040007740259,
+      "x2_backend_calls": 1248,
+      "x2_input_words": 626688,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.039209936547467086,
+      "activation_max_abs": 4.97966194152832,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 282,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        525
+      ],
+      "output_indices": [
+        526
+      ],
+      "duration_ms": 4.643700085580349,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 283,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        525,
+        526
+      ],
+      "output_indices": [
+        527
+      ],
+      "duration_ms": 0.2386999549344182,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 284,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        527,
+        89,
+        88
+      ],
+      "output_indices": [
+        528
+      ],
+      "duration_ms": 0.15959993470460176,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 285,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        528,
+        158,
+        36
+      ],
+      "output_indices": [
+        529
+      ],
+      "duration_ms": 45.731599908322096,
+      "x2_backend_calls": 936,
+      "x2_input_words": 470016,
+      "x2_output_words": 921600,
+      "logical_macs": 29491200,
+      "activation_scale": 0.039629849861925984,
+      "activation_max_abs": 5.0329909324646,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 286,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        529
+      ],
+      "output_indices": [
+        530
+      ],
+      "duration_ms": 0.8236001012846828,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 287,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        529,
+        530
+      ],
+      "output_indices": [
+        531
+      ],
+      "duration_ms": 0.03899994771927595,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 288,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        531,
+        157,
+        35
+      ],
+      "output_indices": [
+        532
+      ],
+      "duration_ms": 48.44379995483905,
+      "x2_backend_calls": 936,
+      "x2_input_words": 470016,
+      "x2_output_words": 921600,
+      "logical_macs": 29491200,
+      "activation_scale": 0.042217971771720826,
+      "activation_max_abs": 5.361682415008545,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 289,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        532
+      ],
+      "output_indices": [
+        533
+      ],
+      "duration_ms": 1.971099991351366,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 290,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        532,
+        533
+      ],
+      "output_indices": [
+        534
+      ],
+      "duration_ms": 0.06150000263005495,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 291,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        528,
+        534
+      ],
+      "output_indices": [
+        535
+      ],
+      "duration_ms": 0.04680000711232424,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 292,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        535,
+        156,
+        34
+      ],
+      "output_indices": [
+        536
+      ],
+      "duration_ms": 33.284699893556535,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.08165952727550596,
+      "activation_max_abs": 10.370759963989258,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 293,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        536,
+        238
+      ],
+      "output_indices": [
+        537
+      ],
+      "duration_ms": 0.058699981309473515,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 294,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        537,
+        236
+      ],
+      "output_indices": [
+        538
+      ],
+      "duration_ms": 0.059699988923966885,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 295,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        538,
+        112,
+        75
+      ],
+      "output_indices": [
+        539
+      ],
+      "duration_ms": 0.04079996142536402,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 296,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        538,
+        74,
+        75
+      ],
+      "output_indices": [
+        540
+      ],
+      "duration_ms": 0.038199941627681255,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 297,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        538,
+        73,
+        72
+      ],
+      "output_indices": [
+        541
+      ],
+      "duration_ms": 0.036899931728839874,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 298,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        539,
+        200
+      ],
+      "output_indices": [
+        542
+      ],
+      "duration_ms": 0.021999934688210487,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 299,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        542,
+        199
+      ],
+      "output_indices": [
+        543
+      ],
+      "duration_ms": 0.018999911844730377,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 300,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        540,
+        198
+      ],
+      "output_indices": [
+        544
+      ],
+      "duration_ms": 0.021799933165311813,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 301,
+      "op_name": "BATCH_MATMUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        543,
+        544
+      ],
+      "output_indices": [
+        545
+      ],
+      "duration_ms": 9.477299987338483,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 302,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        545,
+        243
+      ],
+      "output_indices": [
+        546
+      ],
+      "duration_ms": 0.8351999567821622,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 303,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        546,
+        197
+      ],
+      "output_indices": [
+        547
+      ],
+      "duration_ms": 0.8211999665945768,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 304,
+      "op_name": "SOFTMAX",
+      "backend": "cpu_digital",
+      "input_indices": [
+        547
+      ],
+      "output_indices": [
+        548
+      ],
+      "duration_ms": 3.429700038395822,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 305,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        548,
+        200
+      ],
+      "output_indices": [
+        549
+      ],
+      "duration_ms": 0.7874000584706664,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 306,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        541,
+        196
+      ],
+      "output_indices": [
+        550
+      ],
+      "duration_ms": 0.07329997606575489,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 307,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        549,
+        195
+      ],
+      "output_indices": [
+        551
+      ],
+      "duration_ms": 0.7319001015275717,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 308,
+      "op_name": "BATCH_MATMUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        550,
+        551
+      ],
+      "output_indices": [
+        552
+      ],
+      "duration_ms": 93.50439999252558,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 309,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        552,
+        194
+      ],
+      "output_indices": [
+        553
+      ],
+      "duration_ms": 0.05829997826367617,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 310,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        541,
+        194
+      ],
+      "output_indices": [
+        554
+      ],
+      "duration_ms": 0.04109996370971203,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 311,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        554,
+        240
+      ],
+      "output_indices": [
+        555
+      ],
+      "duration_ms": 0.04880002234131098,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 312,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        555,
+        155,
+        33
+      ],
+      "output_indices": [
+        556
+      ],
+      "duration_ms": 17.53800001461059,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 313,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        556,
+        238
+      ],
+      "output_indices": [
+        557
+      ],
+      "duration_ms": 0.04079996142536402,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 314,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        553,
+        557
+      ],
+      "output_indices": [
+        558
+      ],
+      "duration_ms": 0.054200063459575176,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 315,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        558,
+        240
+      ],
+      "output_indices": [
+        559
+      ],
+      "duration_ms": 0.03370002377778292,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 316,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        559,
+        154,
+        32
+      ],
+      "output_indices": [
+        560
+      ],
+      "duration_ms": 26.913900044746697,
+      "x2_backend_calls": 208,
+      "x2_input_words": 104448,
+      "x2_output_words": 204800,
+      "logical_macs": 6553600,
+      "activation_scale": 0.09332088410385012,
+      "activation_max_abs": 11.851752281188965,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 317,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        535,
+        560
+      ],
+      "output_indices": [
+        561
+      ],
+      "duration_ms": 0.056299963034689426,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 318,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        561,
+        153,
+        31
+      ],
+      "output_indices": [
+        562
+      ],
+      "duration_ms": 38.57919992879033,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.10393845565675751,
+      "activation_max_abs": 13.200183868408203,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 319,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        562
+      ],
+      "output_indices": [
+        563
+      ],
+      "duration_ms": 3.919700044207275,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 320,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        562,
+        563
+      ],
+      "output_indices": [
+        564
+      ],
+      "duration_ms": 0.24770002346485853,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 321,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        564,
+        152,
+        30
+      ],
+      "output_indices": [
+        565
+      ],
+      "duration_ms": 19.903100095689297,
+      "x2_backend_calls": 416,
+      "x2_input_words": 208896,
+      "x2_output_words": 409600,
+      "logical_macs": 13107200,
+      "activation_scale": 0.12916148929145393,
+      "activation_max_abs": 16.40350914001465,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 322,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        561,
+        565
+      ],
+      "output_indices": [
+        566
+      ],
+      "duration_ms": 0.08929998148232698,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 323,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        527,
+        112,
+        88
+      ],
+      "output_indices": [
+        567
+      ],
+      "duration_ms": 0.09370001498609781,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 324,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        567,
+        528,
+        566
+      ],
+      "output_indices": [
+        568
+      ],
+      "duration_ms": 0.4000000189989805,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 325,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        568,
+        151,
+        29
+      ],
+      "output_indices": [
+        569
+      ],
+      "duration_ms": 65.37760002538562,
+      "x2_backend_calls": 1248,
+      "x2_input_words": 626688,
+      "x2_output_words": 1228800,
+      "logical_macs": 39321600,
+      "activation_scale": 0.07411345534437284,
+      "activation_max_abs": 9.412408828735352,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 326,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        569
+      ],
+      "output_indices": [
+        570
+      ],
+      "duration_ms": 7.0541000459343195,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 327,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        569,
+        570
+      ],
+      "output_indices": [
+        571
+      ],
+      "duration_ms": 0.15380000695586205,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 328,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        481,
+        150,
+        28
+      ],
+      "output_indices": [
+        572
+      ],
+      "duration_ms": 88.83869997225702,
+      "x2_backend_calls": 3600,
+      "x2_input_words": 1382400,
+      "x2_output_words": 1843200,
+      "logical_macs": 58982400,
+      "activation_scale": 0.038384407524048814,
+      "activation_max_abs": 4.874819755554199,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 329,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        572
+      ],
+      "output_indices": [
+        573
+      ],
+      "duration_ms": 3.052700078114867,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 330,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        572,
+        573
+      ],
+      "output_indices": [
+        574
+      ],
+      "duration_ms": 0.30499999411404133,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 331,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        574,
+        149,
+        27
+      ],
+      "output_indices": [
+        575
+      ],
+      "duration_ms": 36.04479995556176,
+      "x2_backend_calls": 1000,
+      "x2_input_words": 345600,
+      "x2_output_words": 512000,
+      "logical_macs": 14745600,
+      "activation_scale": 0.08070838357519916,
+      "activation_max_abs": 10.249964714050293,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 332,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        575
+      ],
+      "output_indices": [
+        576
+      ],
+      "duration_ms": 5.956599954515696,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 333,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        575,
+        576
+      ],
+      "output_indices": [
+        577
+      ],
+      "duration_ms": 0.25379995349794626,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 334,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        577,
+        148,
+        26
+      ],
+      "output_indices": [
+        578
+      ],
+      "duration_ms": 10.26920008007437,
+      "x2_backend_calls": 200,
+      "x2_input_words": 28800,
+      "x2_output_words": 25600,
+      "logical_macs": 409600,
+      "activation_scale": 0.0587385733296552,
+      "activation_max_abs": 7.459798812866211,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 335,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        578,
+        238
+      ],
+      "output_indices": [
+        579
+      ],
+      "duration_ms": 0.08100003469735384,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 336,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        579,
+        147
+      ],
+      "output_indices": [
+        580
+      ],
+      "duration_ms": 0.03550003748387098,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 337,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        519,
+        146,
+        25
+      ],
+      "output_indices": [
+        581
+      ],
+      "duration_ms": 43.300700024701655,
+      "x2_backend_calls": 1800,
+      "x2_input_words": 691200,
+      "x2_output_words": 921600,
+      "logical_macs": 29491200,
+      "activation_scale": 0.04220471795149675,
+      "activation_max_abs": 5.359999179840088,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 338,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        581
+      ],
+      "output_indices": [
+        582
+      ],
+      "duration_ms": 0.7867999374866486,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 339,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        581,
+        582
+      ],
+      "output_indices": [
+        583
+      ],
+      "duration_ms": 0.04549999721348286,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 340,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        583,
+        145,
+        24
+      ],
+      "output_indices": [
+        584
+      ],
+      "duration_ms": 10.98010002169758,
+      "x2_backend_calls": 250,
+      "x2_input_words": 86400,
+      "x2_output_words": 128000,
+      "logical_macs": 3686400,
+      "activation_scale": 0.0785553248848502,
+      "activation_max_abs": 9.976526260375977,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 341,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        584
+      ],
+      "output_indices": [
+        585
+      ],
+      "duration_ms": 0.9142000926658511,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 342,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        584,
+        585
+      ],
+      "output_indices": [
+        586
+      ],
+      "duration_ms": 0.04440010525286198,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 343,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        586,
+        144,
+        23
+      ],
+      "output_indices": [
+        587
+      ],
+      "duration_ms": 12.161700055003166,
+      "x2_backend_calls": 50,
+      "x2_input_words": 7200,
+      "x2_output_words": 6400,
+      "logical_macs": 102400,
+      "activation_scale": 0.05238952411441353,
+      "activation_max_abs": 6.653469562530518,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 344,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        587,
+        238
+      ],
+      "output_indices": [
+        588
+      ],
+      "duration_ms": 0.03029999788850546,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 345,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        588,
+        143
+      ],
+      "output_indices": [
+        589
+      ],
+      "duration_ms": 0.02429995220154524,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 346,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        571,
+        142,
+        22
+      ],
+      "output_indices": [
+        590
+      ],
+      "duration_ms": 57.10600002203137,
+      "x2_backend_calls": 936,
+      "x2_input_words": 350208,
+      "x2_output_words": 460800,
+      "logical_macs": 14745600,
+      "activation_scale": 0.08866681827334907,
+      "activation_max_abs": 11.260685920715332,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 347,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        590
+      ],
+      "output_indices": [
+        591
+      ],
+      "duration_ms": 0.24189997930079699,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 348,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        590,
+        591
+      ],
+      "output_indices": [
+        592
+      ],
+      "duration_ms": 0.022300053387880325,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 349,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        592,
+        141,
+        21
+      ],
+      "output_indices": [
+        593
+      ],
+      "duration_ms": 11.43640000373125,
+      "x2_backend_calls": 65,
+      "x2_input_words": 21888,
+      "x2_output_words": 32000,
+      "logical_macs": 921600,
+      "activation_scale": 0.06643327577846257,
+      "activation_max_abs": 8.437026023864746,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 350,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        593
+      ],
+      "output_indices": [
+        594
+      ],
+      "duration_ms": 0.38400001358240843,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 351,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        593,
+        594
+      ],
+      "output_indices": [
+        595
+      ],
+      "duration_ms": 0.03220001235604286,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 352,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        595,
+        140,
+        20
+      ],
+      "output_indices": [
+        596
+      ],
+      "duration_ms": 9.281400009058416,
+      "x2_backend_calls": 13,
+      "x2_input_words": 1808,
+      "x2_output_words": 1600,
+      "logical_macs": 25600,
+      "activation_scale": 0.10221572936050535,
+      "activation_max_abs": 12.98139762878418,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 353,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        596,
+        238
+      ],
+      "output_indices": [
+        597
+      ],
+      "duration_ms": 0.030399998649954796,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 354,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        597,
+        139
+      ],
+      "output_indices": [
+        598
+      ],
+      "duration_ms": 0.023499946109950542,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 355,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        580,
+        589,
+        598
+      ],
+      "output_indices": [
+        599
+      ],
+      "duration_ms": 0.7292999653145671,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 356,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        481,
+        138,
+        19
+      ],
+      "output_indices": [
+        600
+      ],
+      "duration_ms": 182.1687000337988,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 357,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        600
+      ],
+      "output_indices": [
+        601
+      ],
+      "duration_ms": 18.187300069257617,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 358,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        600,
+        601
+      ],
+      "output_indices": [
+        602
+      ],
+      "duration_ms": 1.283799996599555,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 359,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        602,
+        137,
+        18
+      ],
+      "output_indices": [
+        603
+      ],
+      "duration_ms": 45.19919992890209,
+      "x2_backend_calls": 1200,
+      "x2_input_words": 563200,
+      "x2_output_words": 1024000,
+      "logical_macs": 32768000,
+      "activation_scale": 0.06449078387162817,
+      "activation_max_abs": 8.190329551696777,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 360,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        603
+      ],
+      "output_indices": [
+        604
+      ],
+      "duration_ms": 34.4698999542743,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 361,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        603,
+        604
+      ],
+      "output_indices": [
+        605
+      ],
+      "duration_ms": 4.119299934245646,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 362,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        605,
+        136,
+        17
+      ],
+      "output_indices": [
+        606
+      ],
+      "duration_ms": 262.95300002675503,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 363,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        606
+      ],
+      "output_indices": [
+        607
+      ],
+      "duration_ms": 24.718399974517524,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 364,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        606,
+        607
+      ],
+      "output_indices": [
+        608
+      ],
+      "duration_ms": 1.8077000277116895,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 365,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        608,
+        135,
+        16
+      ],
+      "output_indices": [
+        609
+      ],
+      "duration_ms": 74.55000001937151,
+      "x2_backend_calls": 1800,
+      "x2_input_words": 704000,
+      "x2_output_words": 1536000,
+      "logical_macs": 40960000,
+      "activation_scale": 0.057409068730872446,
+      "activation_max_abs": 7.290951728820801,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 366,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        609
+      ],
+      "output_indices": [
+        610
+      ],
+      "duration_ms": 27.606999967247248,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 367,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        609,
+        610
+      ],
+      "output_indices": [
+        611
+      ],
+      "duration_ms": 0.9506000205874443,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 368,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        611,
+        134,
+        15
+      ],
+      "output_indices": [
+        612
+      ],
+      "duration_ms": 76.34320005308837,
+      "x2_backend_calls": 1800,
+      "x2_input_words": 704000,
+      "x2_output_words": 1536000,
+      "logical_macs": 40960000,
+      "activation_scale": 0.09453334207609883,
+      "activation_max_abs": 12.00573444366455,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 369,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        612,
+        238
+      ],
+      "output_indices": [
+        613
+      ],
+      "duration_ms": 1.1258000740781426,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 370,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        613,
+        133
+      ],
+      "output_indices": [
+        614
+      ],
+      "duration_ms": 1.1051000328734517,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 371,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        519,
+        132,
+        14
+      ],
+      "output_indices": [
+        615
+      ],
+      "duration_ms": 106.61890008486807,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 372,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        615
+      ],
+      "output_indices": [
+        616
+      ],
+      "duration_ms": 7.968700025230646,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 373,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        615,
+        616
+      ],
+      "output_indices": [
+        617
+      ],
+      "duration_ms": 0.5218000151216984,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 374,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        617,
+        131,
+        13
+      ],
+      "output_indices": [
+        618
+      ],
+      "duration_ms": 38.280999986454844,
+      "x2_backend_calls": 600,
+      "x2_input_words": 281600,
+      "x2_output_words": 512000,
+      "logical_macs": 16384000,
+      "activation_scale": 0.059524866539662276,
+      "activation_max_abs": 7.559658050537109,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 375,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        618
+      ],
+      "output_indices": [
+        619
+      ],
+      "duration_ms": 4.966099979355931,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 376,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        618,
+        619
+      ],
+      "output_indices": [
+        620
+      ],
+      "duration_ms": 0.3643999807536602,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 377,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        620,
+        130,
+        12
+      ],
+      "output_indices": [
+        621
+      ],
+      "duration_ms": 45.79789994750172,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 378,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        621
+      ],
+      "output_indices": [
+        622
+      ],
+      "duration_ms": 4.14099998306483,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 379,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        621,
+        622
+      ],
+      "output_indices": [
+        623
+      ],
+      "duration_ms": 0.18400000408291817,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 380,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        623,
+        129,
+        11
+      ],
+      "output_indices": [
+        624
+      ],
+      "duration_ms": 29.71969998907298,
+      "x2_backend_calls": 450,
+      "x2_input_words": 176000,
+      "x2_output_words": 384000,
+      "logical_macs": 10240000,
+      "activation_scale": 0.13465160459984005,
+      "activation_max_abs": 17.100753784179688,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 381,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        624
+      ],
+      "output_indices": [
+        625
+      ],
+      "duration_ms": 4.398399963974953,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 382,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        624,
+        625
+      ],
+      "output_indices": [
+        626
+      ],
+      "duration_ms": 0.3622999647632241,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 383,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        626,
+        128,
+        10
+      ],
+      "output_indices": [
+        627
+      ],
+      "duration_ms": 20.46969998627901,
+      "x2_backend_calls": 450,
+      "x2_input_words": 176000,
+      "x2_output_words": 384000,
+      "logical_macs": 10240000,
+      "activation_scale": 0.18951258321446696,
+      "activation_max_abs": 24.068098068237305,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 384,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        627,
+        238
+      ],
+      "output_indices": [
+        628
+      ],
+      "duration_ms": 0.36800000816583633,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 385,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        628,
+        127
+      ],
+      "output_indices": [
+        629
+      ],
+      "duration_ms": 0.23999996483325958,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 386,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        571,
+        126,
+        9
+      ],
+      "output_indices": [
+        630
+      ],
+      "duration_ms": 41.79319995455444,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 387,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        630
+      ],
+      "output_indices": [
+        631
+      ],
+      "duration_ms": 4.930800059810281,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 388,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        630,
+        631
+      ],
+      "output_indices": [
+        632
+      ],
+      "duration_ms": 0.17439993098378181,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 389,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        632,
+        125,
+        8
+      ],
+      "output_indices": [
+        633
+      ],
+      "duration_ms": 33.612099941819906,
+      "x2_backend_calls": 312,
+      "x2_input_words": 143360,
+      "x2_output_words": 256000,
+      "logical_macs": 8192000,
+      "activation_scale": 0.1718814429335707,
+      "activation_max_abs": 21.828943252563477,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 390,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        633
+      ],
+      "output_indices": [
+        634
+      ],
+      "duration_ms": 0.9483998874202371,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 391,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        633,
+        634
+      ],
+      "output_indices": [
+        635
+      ],
+      "duration_ms": 0.04509999416768551,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 392,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "backend": "cpu_depthwise",
+      "input_indices": [
+        635,
+        124,
+        7
+      ],
+      "output_indices": [
+        636
+      ],
+      "duration_ms": 13.252099975943565,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 393,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        636
+      ],
+      "output_indices": [
+        637
+      ],
+      "duration_ms": 0.6519999587908387,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 394,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        636,
+        637
+      ],
+      "output_indices": [
+        638
+      ],
+      "duration_ms": 0.0513000413775444,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 395,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        638,
+        123,
+        6
+      ],
+      "output_indices": [
+        639
+      ],
+      "duration_ms": 23.097399971447885,
+      "x2_backend_calls": 117,
+      "x2_input_words": 44800,
+      "x2_output_words": 96000,
+      "logical_macs": 2560000,
+      "activation_scale": 0.36795131052572894,
+      "activation_max_abs": 46.72981643676758,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 396,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        639
+      ],
+      "output_indices": [
+        640
+      ],
+      "duration_ms": 1.6805999912321568,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 397,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        639,
+        640
+      ],
+      "output_indices": [
+        641
+      ],
+      "duration_ms": 0.12080010492354631,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 398,
+      "op_name": "CONV_2D",
+      "backend": "x2",
+      "input_indices": [
+        641,
+        122,
+        5
+      ],
+      "output_indices": [
+        642
+      ],
+      "duration_ms": 18.52889999281615,
+      "x2_backend_calls": 117,
+      "x2_input_words": 44800,
+      "x2_output_words": 96000,
+      "logical_macs": 2560000,
+      "activation_scale": 0.7865163247416339,
+      "activation_max_abs": 99.8875732421875,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 399,
+      "op_name": "TRANSPOSE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        642,
+        238
+      ],
+      "output_indices": [
+        643
+      ],
+      "duration_ms": 0.048600020818412304,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 400,
+      "op_name": "RESHAPE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        643,
+        121
+      ],
+      "output_indices": [
+        644
+      ],
+      "duration_ms": 0.037100049667060375,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 401,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        614,
+        629,
+        644
+      ],
+      "output_indices": [
+        645
+      ],
+      "duration_ms": 11.956800008192658,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 402,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        599,
+        4,
+        3
+      ],
+      "output_indices": [
+        646
+      ],
+      "duration_ms": 0.14640006702393293,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 403,
+      "op_name": "SLICE",
+      "backend": "cpu_digital",
+      "input_indices": [
+        599,
+        2,
+        3
+      ],
+      "output_indices": [
+        647
+      ],
+      "duration_ms": 0.0958999153226614,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 404,
+      "op_name": "SUB",
+      "backend": "cpu_digital",
+      "input_indices": [
+        242,
+        646
+      ],
+      "output_indices": [
+        648
+      ],
+      "duration_ms": 0.06510003004223108,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 405,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        647,
+        242
+      ],
+      "output_indices": [
+        649
+      ],
+      "duration_ms": 0.04130008164793253,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 406,
+      "op_name": "ADD",
+      "backend": "cpu_digital",
+      "input_indices": [
+        648,
+        649
+      ],
+      "output_indices": [
+        650
+      ],
+      "duration_ms": 0.023700064048171043,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 407,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        650,
+        1
+      ],
+      "output_indices": [
+        651
+      ],
+      "duration_ms": 0.02319994382560253,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 408,
+      "op_name": "SUB",
+      "backend": "cpu_digital",
+      "input_indices": [
+        649,
+        648
+      ],
+      "output_indices": [
+        652
+      ],
+      "duration_ms": 0.02719997428357601,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 409,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        651,
+        652
+      ],
+      "output_indices": [
+        653
+      ],
+      "duration_ms": 0.929199974052608,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 410,
+      "op_name": "MUL",
+      "backend": "cpu_digital",
+      "input_indices": [
+        653,
+        241
+      ],
+      "output_indices": [
+        654
+      ],
+      "duration_ms": 0.37699996028095484,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 411,
+      "op_name": "LOGISTIC",
+      "backend": "cpu_digital",
+      "input_indices": [
+        645
+      ],
+      "output_indices": [
+        655
+      ],
+      "duration_ms": 36.82339994702488,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    },
+    {
+      "op_index": 412,
+      "op_name": "CONCATENATION",
+      "backend": "cpu_digital",
+      "input_indices": [
+        654,
+        655
+      ],
+      "output_indices": [
+        656
+      ],
+      "duration_ms": 7.164499955251813,
+      "x2_backend_calls": 0,
+      "x2_input_words": 0,
+      "x2_output_words": 0,
+      "logical_macs": 0,
+      "activation_scale": 0.0,
+      "activation_max_abs": 0.0,
+      "saturation_count": 0
+    }
+  ]
+}

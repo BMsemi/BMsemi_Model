@@ -1,0 +1,5 @@
+ai-edge-litert==2.1.5
+iree-compiler==20241104.1068
+numpy==2.5.0
+opencv-python-headless>=4.8
+pillow==12.3.0

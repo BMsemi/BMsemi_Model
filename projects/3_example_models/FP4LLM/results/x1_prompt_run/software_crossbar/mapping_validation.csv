@@ -1,0 +1,21 @@
+label,actual,capacity,fits
+prefill q_proj tokens,11,512,True
+decode q_proj tokens,1,1,True
+prefill k_proj tokens,11,512,True
+decode k_proj tokens,1,1,True
+prefill v_proj tokens,11,512,True
+decode v_proj tokens,1,1,True
+prefill out_proj tokens,11,512,True
+decode out_proj tokens,1,1,True
+prefill ffn_up tokens,11,512,True
+decode ffn_up tokens,1,1,True
+prefill ffn_down tokens,11,512,True
+decode ffn_down tokens,1,1,True
+prefill attention QK query tokens,11,512,True
+prefill attention QK context,11,512,True
+prefill attention AV query tokens,11,512,True
+prefill attention AV context,11,512,True
+decode attention QK context,12,513,True
+decode attention QK mapped context Y,12,513,True
+decode attention AV context,12,513,True
+decode attention AV mapped context Y,12,513,True

@@ -1,0 +1,54 @@
+{
+  "Qwen/Qwen2.5-1.5B": {
+    "baseline": 11.256756782531738,
+    "layer_to_layer_INT8": 11.981329917907715,
+    "layer_to_layer_INT10": 11.431388854980469,
+    "layer_to_layer_INT12": 11.350845336914062,
+    "layer_to_layer_INT14": 11.262044906616211,
+    "layer_to_layer_INT16": 11.253015518188477,
+    "attn_to_mlp_INT8": 11.624065399169922,
+    "attn_to_mlp_INT10": 11.257532119750977,
+    "attn_to_mlp_INT12": 11.25259780883789,
+    "attn_to_mlp_INT14": 11.255844116210938,
+    "attn_to_mlp_INT16": 11.25549030303955
+  },
+  "Qwen/Qwen3-1.7B": {
+    "baseline": 19.777137756347656,
+    "layer_to_layer_INT8": 21.037109375,
+    "layer_to_layer_INT10": 19.700620651245117,
+    "layer_to_layer_INT12": 19.828298568725586,
+    "layer_to_layer_INT14": 19.737014770507812,
+    "layer_to_layer_INT16": 19.759929656982422,
+    "attn_to_mlp_INT8": 19.991762161254883,
+    "attn_to_mlp_INT10": 19.855878829956055,
+    "attn_to_mlp_INT12": 19.792373657226562,
+    "attn_to_mlp_INT14": 19.768728256225586,
+    "attn_to_mlp_INT16": 19.77419662475586
+  },
+  "Qwen/Qwen3-4B": {
+    "baseline": 16.164012908935547,
+    "layer_to_layer_INT8": 17.135881423950195,
+    "layer_to_layer_INT10": 16.208209991455078,
+    "layer_to_layer_INT12": 16.015342712402344,
+    "layer_to_layer_INT14": 16.112361907958984,
+    "layer_to_layer_INT16": 16.179346084594727,
+    "attn_to_mlp_INT8": 16.67029571533203,
+    "attn_to_mlp_INT10": 16.215160369873047,
+    "attn_to_mlp_INT12": 16.156665802001953,
+    "attn_to_mlp_INT14": 16.163496017456055,
+    "attn_to_mlp_INT16": 16.1619815826416
+  },
+  "Qwen/Qwen3-8B": {
+    "baseline": 11.657475471496582,
+    "layer_to_layer_INT8": 13.602298736572266,
+    "layer_to_layer_INT10": 11.708423614501953,
+    "layer_to_layer_INT12": 11.626249313354492,
+    "layer_to_layer_INT14": 11.619673728942871,
+    "layer_to_layer_INT16": 11.660496711730957,
+    "attn_to_mlp_INT8": 12.33753776550293,
+    "attn_to_mlp_INT10": 11.760102272033691,
+    "attn_to_mlp_INT12": 11.661311149597168,
+    "attn_to_mlp_INT14": 11.657361030578613,
+    "attn_to_mlp_INT16": 11.658150672912598
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_2",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 102400,
+    "k": 27,
+    "n": 16
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 27,
+      "cols": 16,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        27,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 2,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 245,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3",
+        "shape": [
+          1,
+          642,
+          642,
+          3
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 235,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          16,
+          3,
+          3,
+          3
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.08503387868404388,
+          0.04060192033648491,
+          0.09375074505805969,
+          0.1858414113521576,
+          0.06976320594549179,
+          0.03987089917063713,
+          0.06643426418304443,
+          0.07843475043773651,
+          0.17833659052848816,
+          0.04878894239664078,
+          0.07062198966741562,
+          0.14466382563114166,
+          0.08885496109724045,
+          0.03713078424334526,
+          0.1718502938747406,
+          0.03208912909030914
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 119,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          16
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 246,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;4",
+        "shape": [
+          1,
+          320,
+          320,
+          16
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.008661417322834646,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        642,
+        642,
+        3
+      ],
+      "output_shape_nhwc": [
+        1,
+        320,
+        320,
+        16
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales",
+    "spatial_temporal_channel_schedule": {
+      "strategy": "spatial_temporal_output_channel_tiling",
+      "scope": "first_four_yolo_conv2d_layers_on_fpga",
+      "op_index": 2,
+      "logical_layer": 0,
+      "output_channels": 16,
+      "channel_tile_size": 16,
+      "engine_ids": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "time_steps": 1,
+      "spatial_rule": "engine = engine_ids[tile_id mod engine_count]",
+      "temporal_rule": "time_step = floor(tile_id / engine_count)",
+      "tiles": [
+        {
+          "tile_id": 0,
+          "op_index": 2,
+          "logical_layer": 0,
+          "time_step": 0,
+          "engine": 2,
+          "oc_start": 0,
+          "oc_end": 16,
+          "channel_count": 16,
+          "output_offset": 0
+        }
+      ],
+      "merge_rule": "write each tile into output[:, :, :, oc_start:oc_end]",
+      "next_layer_rule": "next layer starts only after all tiles are merged in DDR/L2"
+    }
+  }
+}

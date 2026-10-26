@@ -1,0 +1,6 @@
+variant,w_scale,a_scale,ppl,hardware_cost,delta_ppl_vs_bf16
+BF16,-,-,11.256756782531738,baseline FP ops,0.0
+W4A16-ch,per-channel FP32,BF16,13.965213775634766,FP4 weight decode only,2.7084569931030273
+MXFP4-W4A4,E8M0 block-16,E8M0 block-16,13.485675811767578,shift-only scale (barrel shifter),2.22891902923584
+NVFP4-W4A4,E4M3 block-16,E4M3 block-16,13.233500480651855,FP8→FP16 scale multiply,1.9767436981201172
+Ideal-W4A4,FP32 block-16,FP32 block-16,13.129752159118652,FP32 scale multiply (reference only),1.872995376586914

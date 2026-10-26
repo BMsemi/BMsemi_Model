@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "platform": "ZCU106",
+  "pipeline": "TCAM Engine0/1 -> Layer0 Engine2/3/4/5 on miss -> remaining Conv2D emulator",
+  "entrypoint": "run_tcam_yolo.py",
+  "overlay": "overlay/zcu106_axi_x2_mvm.bit",
+  "overlay_sha256": "ea97a6fcd7703af591d54ba711cce3728d1042b08f5a9c54ef2c4e08ce7f0f9a",
+  "accelerator_version_minimum": "0x00020024",
+  "tcam_capacity": 32,
+  "tcam_physical_shape_per_pe": [
+    32,
+    32
+  ],
+  "tcam_transaction_shape": [
+    32,
+    16
+  ],
+  "tcam_column_passes": 2,
+  "tcam_engine_count": 2,
+  "yolo_layer0_engine_count": 4,
+  "total_engine_count": 6,
+  "tcam_internal_lanes_per_engine": 8,
+  "yolo_layer0_internal_lanes_per_engine": 4,
+  "constants_manifest_additions": {
+    "block_name": "Constants & Manifest + TCAM Cache Index",
+    "stores": [
+      "MLIR tile constants",
+      "TCAM keys",
+      "care masks",
+      "chunk IDs",
+      "slot -> chunk mapping"
+    ]
+  },
+  "hybrid_runtime_scheduler_additions": {
+    "block_name": "Hybrid Runtime Scheduler + TCAM Hit/Miss + Image Fingerprint",
+    "responsibilities": [
+      "generate image fingerprint",
+      "batch TCAM queries",
+      "route fitting TCAM queries to Engine 0/1",
+      "route YOLO Layer 0/1/2/3 miss-path work to Engine 2/3/4/5",
+      "search extra TCAM banks/pages on Engine 0/1",
+      "skip YOLO/MLIR on TCAM hit",
+      "run YOLO/MLIR on TCAM miss",
+      "store key -> chunk ID after miss"
+    ]
+  },
+  "engine_partition": {
+    "Engine 0": "dedicated 32x32 TCAM slots 0-15 with TDC enabled",
+    "Engine 1": "dedicated 32x32 TCAM slots 16-31 with TDC enabled",
+    "Engine 2": "dedicated YOLO Layer 0 on TCAM miss, 4 lanes, TDC disabled",
+    "Engine 3": "dedicated YOLO Layer 1 on TCAM miss, 4 lanes, TDC disabled",
+    "Engine 4": "dedicated YOLO Layer 2 on TCAM miss, 4 lanes, TDC disabled",
+    "Engine 5": "dedicated YOLO Layer 3 on TCAM miss, 4 lanes, TDC disabled",
+    "encoding": "q/qbar rows, A/B columns, B-A + TDC on Engine 0/1",
+    "miss_latency_policy": "TCAM cells remain resident; miss-path YOLO does not erase/reprogram TCAM Engine 0/1."
+  }
+}

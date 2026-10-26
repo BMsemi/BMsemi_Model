@@ -1,0 +1,40 @@
+Input image/video
+   |
+   v
+Preprocess outside ONNX - Ultralytics-style inference path
+OpenCV loads frames as BGR HWC uint8
+LetterBox to model size, e.g. 640x640:
+  preserve aspect ratio
+  resize with linear interpolation
+  center-pad with value 114
+  keep ratio and pad metadata for box scaling
+BGR -> RGB
+Quantize to model input dtype
+  for YOLO26n full-integer TFLite:
+  dtype = int8
+  scale ~= 1/255
+  zero_point = -128
+  q_int8 = pixel_uint8 - 128
+For the crossbar PE input:
+  use zero-point-removed activation a = q_int8 - zero_point
+  this gives unsigned 8-bit activation bytes in [0,255]
+  HWC -> CHW/BCHW for the PE channel path
+   |
+   v
+INT8 model / crossbar graph execution
+backbone + neck + detect head + tensor reshaping + box decode logic
+   |
+   v
+Postprocess outside or inside ONNX depending on export
+confidence filtering
+NMS or end-to-end top-k selection
+scale boxes back using LetterBox ratio/pad
+clip boxes to original image size
+   |
+   v
+Final boxes, class IDs, scores
+
+For the custom INT8 PE path in this repo:
+the same letterboxed activation bytes are kept as uint8 R/G/B channel files.
+Layer0_padding.txt is the first Conv SAME-padding step and is separate from
+the Ultralytics LetterBox padding.

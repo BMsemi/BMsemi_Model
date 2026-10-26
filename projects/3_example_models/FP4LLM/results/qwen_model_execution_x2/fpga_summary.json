@@ -1,0 +1,554 @@
+{
+  "execution_target": "fpga6",
+  "physical_hardware": true,
+  "block_index": 0,
+  "phase": "prefill",
+  "tokens": 1,
+  "decode_executed": false,
+  "cpu_model_arithmetic_fallback": false,
+  "lpc_dtype": "INT8",
+  "accumulator_dtype": "INT32",
+  "nlpc_arithmetic": "FP32 with BF16 output rounding",
+  "ps_operations": [
+    "BF16/INT8 conversion",
+    "scale reconstruction",
+    "layout/copies",
+    "DMA scheduling"
+  ],
+  "engine_operations": {
+    "engine_4_op_0": 1,
+    "engine_5_op_0": 1,
+    "engine_4_op_2": 4,
+    "engine_0_mvm": 12368,
+    "engine_1_mvm": 12304,
+    "engine_2_mvm": 12304,
+    "engine_3_mvm": 12304,
+    "engine_4_op_1": 24304,
+    "engine_5_op_1": 24256,
+    "engine_5_op_2": 2,
+    "engine_4_op_3": 2,
+    "engine_5_op_3": 2,
+    "engine_4_op_4": 16,
+    "engine_4_op_6": 2,
+    "engine_4_op_5": 1
+  },
+  "projection_stages": [
+    {
+      "name": "self_attn.q_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        2048,
+        2048
+      ],
+      "wall_seconds": 13.83483745798003
+    },
+    {
+      "name": "self_attn.k_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        1024,
+        2048
+      ],
+      "wall_seconds": 6.901338011957705
+    },
+    {
+      "name": "self_attn.v_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        1024,
+        2048
+      ],
+      "wall_seconds": 6.907710558967665
+    },
+    {
+      "name": "attention_qk_head_0",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.012006399920210242
+    },
+    {
+      "name": "attention_pv_head_0_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006253264960832894
+    },
+    {
+      "name": "attention_qk_head_1",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011958264978602529
+    },
+    {
+      "name": "attention_pv_head_1_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006358286016620696
+    },
+    {
+      "name": "attention_qk_head_2",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011912729940377176
+    },
+    {
+      "name": "attention_pv_head_2_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.0062804080080240965
+    },
+    {
+      "name": "attention_qk_head_3",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011928301071748137
+    },
+    {
+      "name": "attention_pv_head_3_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006247874000109732
+    },
+    {
+      "name": "attention_qk_head_4",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011921270983293653
+    },
+    {
+      "name": "attention_pv_head_4_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006270666024647653
+    },
+    {
+      "name": "attention_qk_head_5",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011880817008204758
+    },
+    {
+      "name": "attention_pv_head_5_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006260556052438915
+    },
+    {
+      "name": "attention_qk_head_6",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011903009028173983
+    },
+    {
+      "name": "attention_pv_head_6_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.0063355929451063275
+    },
+    {
+      "name": "attention_qk_head_7",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011954094981774688
+    },
+    {
+      "name": "attention_pv_head_7_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006251134909689426
+    },
+    {
+      "name": "attention_qk_head_8",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011794258025474846
+    },
+    {
+      "name": "attention_pv_head_8_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006343123968690634
+    },
+    {
+      "name": "attention_qk_head_9",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011900109006091952
+    },
+    {
+      "name": "attention_pv_head_9_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.0063350830459967256
+    },
+    {
+      "name": "attention_qk_head_10",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.01193651300854981
+    },
+    {
+      "name": "attention_pv_head_10_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.0063130808994174
+    },
+    {
+      "name": "attention_qk_head_11",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.0119018490659073
+    },
+    {
+      "name": "attention_pv_head_11_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.00634203408844769
+    },
+    {
+      "name": "attention_qk_head_12",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011885016923770308
+    },
+    {
+      "name": "attention_pv_head_12_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006338533014059067
+    },
+    {
+      "name": "attention_qk_head_13",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011958564980886877
+    },
+    {
+      "name": "attention_pv_head_13_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006345963920466602
+    },
+    {
+      "name": "attention_qk_head_14",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.01192707207519561
+    },
+    {
+      "name": "attention_pv_head_14_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.00624644395429641
+    },
+    {
+      "name": "attention_qk_head_15",
+      "input_shape": [
+        1,
+        128
+      ],
+      "weight_shape": [
+        1,
+        128
+      ],
+      "wall_seconds": 0.011931351968087256
+    },
+    {
+      "name": "attention_pv_head_15_query_0",
+      "input_shape": [
+        1,
+        1
+      ],
+      "weight_shape": [
+        128,
+        1
+      ],
+      "wall_seconds": 0.006234723026864231
+    },
+    {
+      "name": "self_attn.o_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        2048,
+        2048
+      ],
+      "wall_seconds": 13.806180504965596
+    },
+    {
+      "name": "mlp.gate_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        6144,
+        2048
+      ],
+      "wall_seconds": 41.414617992937565
+    },
+    {
+      "name": "mlp.up_proj",
+      "input_shape": [
+        1,
+        2048
+      ],
+      "weight_shape": [
+        6144,
+        2048
+      ],
+      "wall_seconds": 41.41050153202377
+    },
+    {
+      "name": "mlp.down_proj",
+      "input_shape": [
+        1,
+        6144
+      ],
+      "weight_shape": [
+        2048,
+        6144
+      ],
+      "wall_seconds": 41.6441698189592
+    }
+  ],
+  "wall_seconds": 178.33181709703058,
+  "bundle_metadata": {
+    "format": "qwen6-bundle-v1",
+    "block_index": 0,
+    "prompt": "Hello",
+    "token_ids": [
+      9707
+    ],
+    "tokens": [
+      "Hello"
+    ],
+    "config": {
+      "architectures": [
+        "Qwen3ForCausalLM"
+      ],
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 2048,
+      "initializer_range": 0.02,
+      "intermediate_size": 6144,
+      "max_position_embeddings": 40960,
+      "max_window_layers": 28,
+      "model_type": "qwen3",
+      "num_attention_heads": 16,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 8,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": null,
+      "rope_theta": 1000000,
+      "sliding_window": null,
+      "tie_word_embeddings": true,
+      "torch_dtype": "bfloat16",
+      "transformers_version": "4.51.0",
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 151936
+    },
+    "checkpoint": "https://huggingface.co/Qwen/Qwen3-1.7B/tree/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "reference_checkpoint": true,
+    "source_tensors": "model.layers.0.*",
+    "position_ids": [
+      0
+    ]
+  },
+  "bitstream": "/home/xilinx/qwen6_20261005/fpga/qwen6/overlay/qwen6.bit"
+}

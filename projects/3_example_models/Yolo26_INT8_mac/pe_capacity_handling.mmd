@@ -1,0 +1,6 @@
+flowchart LR
+    A["C*R*S > 64"] --> B["Split channels into PE groups"]
+    B --> C{"Groups exceed 512 PEs?"}
+    C -->|"fast mode"| D["Time-multiplex/vectorized waves"]
+    C -->|"slow mode"| E["Reject or run targeted layer"]
+    D --> F["All 102 layers can run"]

@@ -1,0 +1,5 @@
+{
+  "reason": "No module named 'onnxscript'",
+  "requested_path": "/tmp/nc_v2_maestro/artifacts/model.onnx",
+  "status": "not_generated"
+}

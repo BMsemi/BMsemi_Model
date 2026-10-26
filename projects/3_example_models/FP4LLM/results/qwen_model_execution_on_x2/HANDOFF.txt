@@ -1,0 +1,32 @@
+Qwen3-1.7B: Hello, first-block FPGA prefill
+
+Scope: prompt "Hello", token ID 9707, position 0, transformer block index 0.
+This package contains the physical FPGA block result, not full-model generation.
+
+fpga_block1_prefill.npz
+  output: [1, 2048], input hidden state for transformer block index 1.
+  key_cache: [8, 1, 128], first block's normalized/RoPE-transformed keys.
+  value_cache: [8, 1, 128], first block's values.
+  Values use float32 containers with BF16-rounded values.
+  Add a leading batch dimension if the continuation runtime expects one.
+
+fpga_summary.json: board execution metadata, timing and engine counts.
+accuracy.json: physical output and caches compared with the host reference.
+hello.source.json: pinned checkpoint revision and source tensor hashes.
+hello_input.npz: input embedding, positional constants and model configuration.
+host_validation.json: description of the separate host-only reference check.
+board_hello_run.txt: captured board console output.
+SHA256SUMS.txt: file checksums for transfer verification.
+
+Use the exact checkpoint revision in hello.source.json for continuation.
+The FPGA uses INT8 linear arithmetic and FP32 nonlinear arithmetic with explicit
+BF16 rounding. The existing W7/A7 crossbar simulator uses different quantization;
+continuing with it creates a mixed-arithmetic experiment. Record this explicitly.
+Do not run the embedding or first transformer block again on this output.
+For prefill continuation, execute blocks 1 through 27 in order, followed by final
+normalization and the language-model head. Full decode also requires preserving
+and integrating the first-block K/V cache with later blocks' caches.
+
+The supplied host reference uses NumPy plus the actual NLPC C++ kernel.
+It is not a full-model PyTorch reference. Consult accuracy.json for measured
+agreement rather than assuming the physical board output is identical.

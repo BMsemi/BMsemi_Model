@@ -1,0 +1,2 @@
+Layer,Optimizer,LatencyWeight,AreaWeight,LoopOrder,K,C,R,S,Y,X,StrideY,StrideX,KTile,CTile,UsesCluster,ClusterSize,KGroups,Kwaves,Cfolds,Cwaves,RowFold,FoldProgram,FoldCompute,Reduction,Finalize,LatencyCycles,AreaCost,Score,ActivePEs,UtilizationPct
+Conv2D_2,exhaustive_discrete_search,1.0,0.001,K->C->YXRS,32,32,1,1,160,160,1,1,8,8,True,4,4,1,4,1,8,1,18,2,3,614400,16,614400.016000,16,3.1250

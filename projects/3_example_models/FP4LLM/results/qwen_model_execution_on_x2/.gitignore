@@ -1,0 +1,2 @@
+# Model weights stay local; the checkpoint revision is recorded in hello.source.json.
+/block1_hello_bundle.npz

@@ -1,0 +1,4 @@
+model,n_layers,n_q_heads,n_kv_heads,head_dim,fanout,hidden
+Qwen3-1.7B,28,16,8,128,2,2048
+Qwen3-4B,36,32,8,80,4,2560
+Qwen3-8B,36,32,8,128,4,4096

@@ -1,0 +1,45 @@
+{
+  "delegate": {
+    "bmsemi_partition_tags": [
+      "conv",
+      "depthwise",
+      "linear"
+    ],
+    "edge_transform_applied": true,
+    "lane": "executorch"
+  },
+  "fx_node_count": 51,
+  "input_shape": [
+    1,
+    1,
+    8,
+    8
+  ],
+  "model_type": "TinyMobileNetV2",
+  "module_types": {
+    "AdaptiveAvgPool2d": 1,
+    "BatchNorm2d": 16,
+    "Conv2d": 16,
+    "ConvBNAct": 11,
+    "InvertedResidual": 5,
+    "Linear": 1,
+    "ReLU6": 11,
+    "Sequential": 6,
+    "TinyMobileNetV2": 1
+  },
+  "node_ops": {
+    "call_function": 3,
+    "call_method": 1,
+    "call_module": 45,
+    "output": 1,
+    "placeholder": 1
+  },
+  "num_parameters": 5114,
+  "precision": "fp32",
+  "runtime": {
+    "debug_handles": true,
+    "delegate_runtime": "runtime_dispatcher",
+    "serialized_program": "artifacts/executorch_program.pte"
+  },
+  "target_backend": "neuromorphic_x1"
+}

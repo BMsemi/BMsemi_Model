@@ -1,0 +1,19 @@
+{
+  "import_error": "No module named 'tensorflow'",
+  "input_shape": [
+    1,
+    1,
+    8,
+    8
+  ],
+  "model_name": "TinyMobileNetV2",
+  "reason": "No supported PyTorch->TFLite converter is installed in this runtime.",
+  "requested_output": "/tmp/nc_v2_maestro/artifacts/model_int8.tflite",
+  "status": "not_generated",
+  "suggested_paths": {
+    "option_1": "Export ONNX first, then convert in a TensorFlow/TFLite environment.",
+    "option_2": "Rebuild the model in TensorFlow and run full integer quantization there.",
+    "option_3": "Use a dedicated bridge such as ai-edge/onnx-tf in a prepared environment."
+  },
+  "tensorflow_present": false
+}

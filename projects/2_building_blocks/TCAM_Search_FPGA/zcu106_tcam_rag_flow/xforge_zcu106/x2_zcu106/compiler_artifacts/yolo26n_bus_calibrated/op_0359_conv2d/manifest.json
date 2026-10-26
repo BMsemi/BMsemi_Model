@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_359",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 6400,
+    "k": 64,
+    "n": 80
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 3,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 0,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k0_n64",
+      "accumulate": false
+    },
+    {
+      "tile_id": 5,
+      "k_start": 32,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 16,
+      "weight_key": "weight_k32_n64",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        80
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n64": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n64": {
+      "shape": [
+        32,
+        16
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        80
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 359,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 602,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_0/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.DWConv_0/torch.nn.modules.activation.SiLU_act;",
+        "shape": [
+          1,
+          80,
+          80,
+          64
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 137,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_0/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          80,
+          1,
+          1,
+          64
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.002999028889462352,
+          0.00388146098703146,
+          0.0024469224736094475,
+          0.004899298306554556,
+          0.005723082926124334,
+          0.002877953229472041,
+          0.005183148197829723,
+          0.008832346647977829,
+          0.00392488669604063,
+          0.004105551168322563,
+          0.002702033380046487,
+          0.004837400745600462,
+          0.00340218935161829,
+          0.0030582754407078028,
+          0.0028476454317569733,
+          0.008569461293518543,
+          0.002139165299013257,
+          0.007068195380270481,
+          0.004356204066425562,
+          0.007164063863456249,
+          0.0036819239612668753,
+          0.004076830111443996,
+          0.003066443605348468,
+          0.0036856294609606266,
+          0.00468567805364728,
+          0.006947485264390707,
+          0.006951602641493082,
+          0.00613025389611721,
+          0.002837397623807192,
+          0.0023810137063264847,
+          0.011268501169979572,
+          0.003820235375314951,
+          0.013651683926582336,
+          0.005870200227946043,
+          0.0028295936062932014,
+          0.004250878002494574,
+          0.005867427214980125,
+          0.004888550378382206,
+          0.0029349573887884617,
+          0.0035111350007355213,
+          0.0016982231754809618,
+          0.005983557086437941,
+          0.002785426564514637,
+          0.0036923731677234173,
+          0.006810286547988653,
+          0.002657718723639846,
+          0.003625747049227357,
+          0.004067268688231707,
+          0.003427657764405012,
+          0.0031928017269819975,
+          0.0017812039004638791,
+          0.005067798309028149,
+          0.0032760861795395613,
+          0.003443558933213353,
+          0.005322705954313278,
+          0.0014507228042930365,
+          0.002975806128233671,
+          0.005796405486762524,
+          0.007691978011280298,
+          0.002826866926625371,
+          0.004059970378875732,
+          0.0037461798638105392,
+          0.004581624176353216,
+          0.006642613559961319,
+          0.005520689766854048,
+          0.006842792499810457,
+          0.003503586398437619,
+          0.0036373832263052464,
+          0.0028183204121887684,
+          0.004639007151126862,
+          0.0023299495223909616,
+          0.001992548117414117,
+          0.0033234565053135157,
+          0.0019100540084764361,
+          0.009761583060026169,
+          0.0012762872502207756,
+          0.0026551098562777042,
+          0.004681405611336231,
+          0.006105745676904917,
+          0.005012622103095055
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 18,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_0/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          80
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 603,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.head.Detect_23/torch.nn.modules.container.Sequential_0/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          80,
+          80,
+          80
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.06865794001601813,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        80,
+        80,
+        64
+      ],
+      "output_shape_nhwc": [
+        1,
+        80,
+        80,
+        80
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

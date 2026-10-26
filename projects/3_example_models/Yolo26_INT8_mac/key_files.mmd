@@ -1,0 +1,8 @@
+flowchart TD
+    A["user.py"] --> B["Main CLI + postprocess"]
+    C["full_inference_executor.py"] --> D["Model input + full executor"]
+    E["hybrid_inference_executor.py"] --> F["Crossbar/digital execution"]
+    G["Yolo26n_full_model_spec.m"] --> H["Exact TFLite layer spec"]
+    I["ONNX_graph_parser.py"] --> G
+    J["Crossbar_array.py"] --> K["INT8 row-serial PE math"]
+    L["full_inference_test/"] --> M["Outputs and traces"]

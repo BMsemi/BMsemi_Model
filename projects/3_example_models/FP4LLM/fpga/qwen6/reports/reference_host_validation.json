@@ -1,0 +1,53 @@
+{
+  "physical_hardware": false,
+  "validation_kind": "LPC NumPy test doubles + actual NLPC C++ kernel",
+  "checkpoint": "https://huggingface.co/Qwen/Qwen3-1.7B/tree/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "reference_checkpoint": true,
+  "tokens": 11,
+  "token_ids": [
+    840,
+    20772,
+    1246,
+    1032,
+    33905,
+    5312,
+    24950,
+    2736,
+    6172,
+    46444,
+    13
+  ],
+  "shape": [
+    11,
+    2048
+  ],
+  "all_finite": true,
+  "engine_operations_emulated": {
+    "engine_4_op_2": 4,
+    "engine_5_op_2": 4,
+    "engine_0_mvm": 12528,
+    "engine_1_mvm": 12464,
+    "engine_2_mvm": 12464,
+    "engine_3_mvm": 12464,
+    "engine_4_op_1": 24304,
+    "engine_5_op_1": 24256,
+    "engine_4_op_3": 2,
+    "engine_5_op_3": 2,
+    "engine_4_op_4": 16,
+    "engine_5_op_4": 16,
+    "engine_4_op_6": 2,
+    "engine_5_op_6": 2,
+    "engine_4_op_5": 1,
+    "engine_5_op_5": 1
+  },
+  "host_wall_seconds": 5.327999999979511,
+  "comparison_note": "NumPy references; not bitwise PyTorch or physical FPGA validation",
+  "error_vs_int8_reference": {
+    "relative_l2": 0.0,
+    "max_abs": 0.0
+  },
+  "error_vs_bf16_reference": {
+    "relative_l2": 0.14700110272367595,
+    "max_abs": 0.53125
+  }
+}

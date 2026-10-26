@@ -1,0 +1,17 @@
+phase,network,layer_name,role,k,c,r,s,y,x,stride_y,stride_x,tokens,in_dim,out_dim,row_tiles,col_tiles,crossbar_tiles,macs,weight_elements
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L01_Q_Proj,q_proj,2048,2048,1,1,512,1,1,1,512,2048,2048,32,64,2048,2147483648,4194304
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L02_K_Proj,k_proj,1024,2048,1,1,512,1,1,1,512,2048,1024,32,32,1024,1073741824,2097152
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L03_V_Proj,v_proj,1024,2048,1,1,512,1,1,1,512,2048,1024,32,32,1024,1073741824,2097152
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L04_Attn_Scores_QKt,attn_scores_qkt,512,128,1,1,512,1,1,1,512,128,512,2,16,32,33554432,65536
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L05_Attn_AV,attn_av,128,512,1,1,512,1,1,1,512,512,128,8,4,32,33554432,65536
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L06_Out_Proj,out_proj,2048,2048,1,1,512,1,1,1,512,2048,2048,32,64,2048,2147483648,4194304
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L07_FFN_1,ffn_up,6144,2048,1,1,512,1,1,1,512,2048,6144,32,192,6144,6442450944,12582912
+prefill,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P,L08_FFN_2,ffn_down,2048,6144,1,1,512,1,1,1,512,6144,2048,96,64,6144,6442450944,12582912
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L01_Q_Proj,q_proj,2048,2048,1,1,1,1,1,1,1,2048,2048,32,64,2048,4194304,4194304
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L02_K_Proj,k_proj,1024,2048,1,1,1,1,1,1,1,2048,1024,32,32,1024,2097152,2097152
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L03_V_Proj,v_proj,1024,2048,1,1,1,1,1,1,1,2048,1024,32,32,1024,2097152,2097152
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L04_Attn_Scores_QKt,attn_scores_qkt,513,128,1,1,513,1,1,1,513,128,513,2,17,34,33685632,65664
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L05_Attn_AV,attn_av,128,513,1,1,513,1,1,1,513,513,128,9,4,36,33685632,65664
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L06_Out_Proj,out_proj,2048,2048,1,1,1,1,1,1,1,2048,2048,32,64,2048,4194304,4194304
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L07_FFN_1,ffn_up,6144,2048,1,1,1,1,1,1,1,2048,6144,32,192,6144,12582912,12582912
+decode,Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode,L08_FFN_2,ffn_down,2048,6144,1,1,1,1,1,1,1,6144,2048,96,64,6144,12582912,12582912

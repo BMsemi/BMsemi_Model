@@ -1,0 +1,9 @@
+flowchart LR
+    A["TFLite weight tensor"] --> B["K,C,R,S layout"]
+    B --> C["Logical matrix: C*R*S rows, K cols"]
+    C --> D["64-row PE groups"]
+    D --> E["INT8 activation patches"]
+    E --> F["MVM: activation @ weights"]
+    F --> G["INT32 accum"]
+    G --> H["Scale + bias"]
+    H --> I["Layer output tensor"]

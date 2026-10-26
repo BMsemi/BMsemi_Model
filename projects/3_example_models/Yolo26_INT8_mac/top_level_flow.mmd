@@ -1,0 +1,11 @@
+flowchart LR
+    A["bus.jpg"] --> B["Plain resize 640x640"]
+    B --> C["yolo26n_int8.tflite"]
+    C --> D["TFLite op list"]
+    D --> E{"Op type"}
+    E -->|"Conv2D / DepthwiseConv2D"| F["Crossbar path"]
+    E -->|"Add / Mul / Logistic / Concat / Reshape"| G["Digital path"]
+    F --> H["YOLO output tensor 1x84x8400"]
+    G --> H
+    H --> I["Decode + NMS"]
+    I --> J["detected_bus.jpg"]

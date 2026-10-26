@@ -1,0 +1,7 @@
+flowchart LR
+    A["Crossbar"] --> B["Conv2D"]
+    A --> C["DepthwiseConv2D"]
+    D["Digital"] --> E["Logistic"]
+    D --> F["Add / Mul"]
+    D --> G["Concat / Reshape / Transpose"]
+    D --> H["Decode / NMS"]

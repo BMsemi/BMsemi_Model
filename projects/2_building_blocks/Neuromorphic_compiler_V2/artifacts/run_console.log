@@ -1,0 +1,399 @@
+CHECKPOINT [INFO] runtime_seed: Initialized deterministic runtime settings.
+  payload={"seed": 7, "torch_threads": 1}
+CHECKPOINT [PASS] dataset_loaded: Loaded sklearn digits dataset for a real image classification task.
+  payload={"mean": 0.3059433698654175, "num_test": 360, "num_train": 1437, "std": 0.37632375955581665}
+CHECKPOINT [PASS] sample_image_saved: Saved a real sample digit image used for inference verification.
+  payload={"sample_image_path": "/tmp/nc_v2_maestro/artifacts/sample_digit.png", "sample_label": 5}
+CHECKPOINT [PASS] real_tiny_model_built: Constructed a real TinyMobileNetV2 model for the digits task.
+  payload={"num_parameters": 5114}
+CHECKPOINT [INFO] training_checkpoint_loaded: Loaded previously trained tiny MobileNetV2 checkpoint.
+  payload={"checkpoint_path": "/tmp/nc_v2_maestro/checkpoints/tiny_mobilenetv2_digits_best.pt", "epochs_recorded": 10}
+CHECKPOINT [PASS] model_accuracy_threshold: Verified test accuracy against threshold 0.85.
+  payload={"test_accuracy": 0.9027777777777778, "test_loss": 0.3305195583237542}
+CHECKPOINT [PASS] sample_inference_completed: Ran inference on a real sample image through the trained model.
+  payload={"confidence": 0.8552864193916321, "predicted_class": 5, "true_class": 5}
+CHECKPOINT [PASS] executorch_spec_has_nodes: Generated a compile spec from traced graph.
+  payload={"fx_node_count": 51, "num_parameters": 5114}
+CHECKPOINT [PASS] executorch_delegate_tags_present: Inserted delegate preprocess metadata for supported op classes.
+  payload={"bmsemi_partition_tags": ["conv", "depthwise", "linear"], "edge_transform_applied": true, "lane": "executorch"}
+CHECKPOINT [PASS] executorch_runtime_has_debug_handles: Lowered compile spec to a runtime-ready metadata blob.
+  payload={"debug_handles": true, "delegate_runtime": "runtime_dispatcher", "serialized_program": "artifacts/executorch_program.pte"}
+CHECKPOINT [PASS] fx_capture_nonempty: Captured a real compiler graph from the trained model.
+  payload={"json_export_path": "/tmp/nc_v2_maestro/artifacts/fx_graph.json", "num_nodes": 51}
+CHECKPOINT [INFO] onnx_export_attempted: Attempted ONNX export and wrote status manifest.
+  payload={"onnx_status_path": "/tmp/nc_v2_maestro/artifacts/onnx_export_status.json", "requested_path": "/tmp/nc_v2_maestro/artifacts/model.onnx", "status": "not_generated"}
+CHECKPOINT [INFO] ir_initialized: Initialized FX-backed compiler IR.
+  payload={"num_named_modules": 68, "num_nodes": 51}
+CHECKPOINT [PASS] graph_optimizer_compute_nodes_present: Graph contains real compute nodes ready for downstream passes.
+  payload={"call_module_nodes": 45, "compute_nodes": 17, "conv_bn_relu_triplets": 11, "note": "Analysis-only optimization report; no graph rewrite applied."}
+CHECKPOINT [PASS] weights_finite::features.0.0: Weight tensor is finite for module features.0.0.
+  payload={"max": 0.35447385907173157, "mean_abs": 0.15108026564121246, "min": -0.30975085496902466, "shape": [8, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.1.conv.0.0: Weight tensor is finite for module features.1.conv.0.0.
+  payload={"max": 0.3610262870788574, "mean_abs": 0.1607317179441452, "min": -0.3588728904724121, "shape": [8, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.1.conv.1: Weight tensor is finite for module features.1.conv.1.
+  payload={"max": 0.37802383303642273, "mean_abs": 0.17593663930892944, "min": -0.3545971214771271, "shape": [8, 8, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.2.conv.0.0: Weight tensor is finite for module features.2.conv.0.0.
+  payload={"max": 0.3952723443508148, "mean_abs": 0.1827121078968048, "min": -0.4347473680973053, "shape": [16, 8, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.2.conv.1.0: Weight tensor is finite for module features.2.conv.1.0.
+  payload={"max": 0.4430454969406128, "mean_abs": 0.16937704384326935, "min": -0.37411901354789734, "shape": [16, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.2.conv.2: Weight tensor is finite for module features.2.conv.2.
+  payload={"max": 0.29062458872795105, "mean_abs": 0.1330394297838211, "min": -0.30068761110305786, "shape": [12, 16, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.3.conv.0.0: Weight tensor is finite for module features.3.conv.0.0.
+  payload={"max": 0.38126400113105774, "mean_abs": 0.14954528212547302, "min": -0.3262673020362854, "shape": [24, 12, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.3.conv.1.0: Weight tensor is finite for module features.3.conv.1.0.
+  payload={"max": 0.4294396936893463, "mean_abs": 0.17637427151203156, "min": -0.3747091293334961, "shape": [24, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.3.conv.2: Weight tensor is finite for module features.3.conv.2.
+  payload={"max": 0.27617552876472473, "mean_abs": 0.10807744413614273, "min": -0.26897963881492615, "shape": [12, 24, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.4.conv.0.0: Weight tensor is finite for module features.4.conv.0.0.
+  payload={"max": 0.35774797201156616, "mean_abs": 0.1377333551645279, "min": -0.35000747442245483, "shape": [24, 12, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.4.conv.1.0: Weight tensor is finite for module features.4.conv.1.0.
+  payload={"max": 0.42207854986190796, "mean_abs": 0.17296937108039856, "min": -0.3785865008831024, "shape": [24, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.4.conv.2: Weight tensor is finite for module features.4.conv.2.
+  payload={"max": 0.24773217737674713, "mean_abs": 0.1075206771492958, "min": -0.2883625626564026, "shape": [16, 24, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.5.conv.0.0: Weight tensor is finite for module features.5.conv.0.0.
+  payload={"max": 0.33275750279426575, "mean_abs": 0.1281813681125641, "min": -0.31292909383773804, "shape": [32, 16, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.5.conv.1.0: Weight tensor is finite for module features.5.conv.1.0.
+  payload={"max": 0.38066160678863525, "mean_abs": 0.17097258567810059, "min": -0.3359045386314392, "shape": [32, 1, 3, 3]}
+CHECKPOINT [PASS] weights_finite::features.5.conv.2: Weight tensor is finite for module features.5.conv.2.
+  payload={"max": 0.3238251507282257, "mean_abs": 0.09439072012901306, "min": -0.27417513728141785, "shape": [16, 32, 1, 1]}
+CHECKPOINT [PASS] weights_finite::features.6.0: Weight tensor is finite for module features.6.0.
+  payload={"max": 0.40510857105255127, "mean_abs": 0.12862230837345123, "min": -0.3774692118167877, "shape": [32, 16, 1, 1]}
+CHECKPOINT [PASS] weights_finite::classifier: Weight tensor is finite for module classifier.
+  payload={"max": 0.39836782217025757, "mean_abs": 0.18138132989406586, "min": -0.39475783705711365, "shape": [10, 32]}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.0.0: Generated weight cluster summary for features.0.0.
+  payload={"first_centroid": -0.30975085496902466, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.1.conv.0.0: Generated weight cluster summary for features.1.conv.0.0.
+  payload={"first_centroid": -0.3588728904724121, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.1.conv.1: Generated weight cluster summary for features.1.conv.1.
+  payload={"first_centroid": -0.3545971214771271, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.2.conv.0.0: Generated weight cluster summary for features.2.conv.0.0.
+  payload={"first_centroid": -0.4347473680973053, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.2.conv.1.0: Generated weight cluster summary for features.2.conv.1.0.
+  payload={"first_centroid": -0.37411901354789734, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.2.conv.2: Generated weight cluster summary for features.2.conv.2.
+  payload={"first_centroid": -0.30068761110305786, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.3.conv.0.0: Generated weight cluster summary for features.3.conv.0.0.
+  payload={"first_centroid": -0.3262673020362854, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.3.conv.1.0: Generated weight cluster summary for features.3.conv.1.0.
+  payload={"first_centroid": -0.3747091293334961, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.3.conv.2: Generated weight cluster summary for features.3.conv.2.
+  payload={"first_centroid": -0.26897963881492615, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.4.conv.0.0: Generated weight cluster summary for features.4.conv.0.0.
+  payload={"first_centroid": -0.35000747442245483, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.4.conv.1.0: Generated weight cluster summary for features.4.conv.1.0.
+  payload={"first_centroid": -0.3785865008831024, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.4.conv.2: Generated weight cluster summary for features.4.conv.2.
+  payload={"first_centroid": -0.2883625626564026, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.5.conv.0.0: Generated weight cluster summary for features.5.conv.0.0.
+  payload={"first_centroid": -0.31292909383773804, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.5.conv.1.0: Generated weight cluster summary for features.5.conv.1.0.
+  payload={"first_centroid": -0.3359045386314392, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.5.conv.2: Generated weight cluster summary for features.5.conv.2.
+  payload={"first_centroid": -0.27417513728141785, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::features.6.0: Generated weight cluster summary for features.6.0.
+  payload={"first_centroid": -0.3774692118167877, "num_clusters": 8}
+CHECKPOINT [PASS] weight_clusters_nonempty::classifier: Generated weight cluster summary for classifier.
+  payload={"first_centroid": -0.39475783705711365, "num_clusters": 8}
+CHECKPOINT [PASS] weight_quant_valid::features.0.0: Symmetric int8 quantization computed for features.0.0.
+  payload={"max_abs": 0.35447385907173157, "max_int8": 127, "min_int8": -111, "mse": 5.72267708776053e-07, "scale": 0.0027911327485963117}
+CHECKPOINT [PASS] weight_quant_valid::features.1.conv.0.0: Symmetric int8 quantization computed for features.1.conv.0.0.
+  payload={"max_abs": 0.3610262870788574, "max_int8": 127, "min_int8": -126, "mse": 6.681208901682112e-07, "scale": 0.002842726669912263}
+CHECKPOINT [PASS] weight_quant_valid::features.1.conv.1: Symmetric int8 quantization computed for features.1.conv.1.
+  payload={"max_abs": 0.37802383303642273, "max_int8": 127, "min_int8": -119, "mse": 7.193686428763613e-07, "scale": 0.0029765656144600215}
+CHECKPOINT [PASS] weight_quant_valid::features.2.conv.0.0: Symmetric int8 quantization computed for features.2.conv.0.0.
+  payload={"max_abs": 0.4347473680973053, "max_int8": 115, "min_int8": -127, "mse": 1.0611767038426478e-06, "scale": 0.0034232076228134277}
+CHECKPOINT [PASS] weight_quant_valid::features.2.conv.1.0: Symmetric int8 quantization computed for features.2.conv.1.0.
+  payload={"max_abs": 0.4430454969406128, "max_int8": 127, "min_int8": -107, "mse": 9.203698141391214e-07, "scale": 0.003488547220004825}
+CHECKPOINT [PASS] weight_quant_valid::features.2.conv.2: Symmetric int8 quantization computed for features.2.conv.2.
+  payload={"max_abs": 0.30068761110305786, "max_int8": 123, "min_int8": -127, "mse": 4.5956150529491424e-07, "scale": 0.0023676189850634476}
+CHECKPOINT [PASS] weight_quant_valid::features.3.conv.0.0: Symmetric int8 quantization computed for features.3.conv.0.0.
+  payload={"max_abs": 0.38126400113105774, "max_int8": 127, "min_int8": -109, "mse": 7.899646448095154e-07, "scale": 0.0030020787490634467}
+CHECKPOINT [PASS] weight_quant_valid::features.3.conv.1.0: Symmetric int8 quantization computed for features.3.conv.1.0.
+  payload={"max_abs": 0.4294396936893463, "max_int8": 127, "min_int8": -111, "mse": 9.592645255906973e-07, "scale": 0.003381414910939735}
+CHECKPOINT [PASS] weight_quant_valid::features.3.conv.2: Symmetric int8 quantization computed for features.3.conv.2.
+  payload={"max_abs": 0.27617552876472473, "max_int8": 127, "min_int8": -124, "mse": 3.7699413724112674e-07, "scale": 0.002174610462714368}
+CHECKPOINT [PASS] weight_quant_valid::features.4.conv.0.0: Symmetric int8 quantization computed for features.4.conv.0.0.
+  payload={"max_abs": 0.35774797201156616, "max_int8": 127, "min_int8": -124, "mse": 6.370659093590803e-07, "scale": 0.002816913165445403}
+CHECKPOINT [PASS] weight_quant_valid::features.4.conv.1.0: Symmetric int8 quantization computed for features.4.conv.1.0.
+  payload={"max_abs": 0.42207854986190796, "max_int8": 127, "min_int8": -114, "mse": 9.339426583210297e-07, "scale": 0.0033234531485189602}
+CHECKPOINT [PASS] weight_quant_valid::features.4.conv.2: Symmetric int8 quantization computed for features.4.conv.2.
+  payload={"max_abs": 0.2883625626564026, "max_int8": 109, "min_int8": -127, "mse": 4.013353134268982e-07, "scale": 0.0022705713594992328}
+CHECKPOINT [PASS] weight_quant_valid::features.5.conv.0.0: Symmetric int8 quantization computed for features.5.conv.0.0.
+  payload={"max_abs": 0.33275750279426575, "max_int8": 127, "min_int8": -119, "mse": 5.368482902667893e-07, "scale": 0.002620137817277683}
+CHECKPOINT [PASS] weight_quant_valid::features.5.conv.1.0: Symmetric int8 quantization computed for features.5.conv.1.0.
+  payload={"max_abs": 0.38066160678863525, "max_int8": 127, "min_int8": -112, "mse": 7.961980941217917e-07, "scale": 0.002997335486524687}
+CHECKPOINT [PASS] weight_quant_valid::features.5.conv.2: Symmetric int8 quantization computed for features.5.conv.2.
+  payload={"max_abs": 0.3238251507282257, "max_int8": 127, "min_int8": -108, "mse": 5.009835604141699e-07, "scale": 0.002549804336442722}
+CHECKPOINT [PASS] weight_quant_valid::features.6.0: Symmetric int8 quantization computed for features.6.0.
+  payload={"max_abs": 0.40510857105255127, "max_int8": 127, "min_int8": -118, "mse": 8.587581987740123e-07, "scale": 0.003189831268130325}
+CHECKPOINT [PASS] weight_quant_valid::classifier: Symmetric int8 quantization computed for classifier.
+  payload={"max_abs": 0.39836782217025757, "max_int8": 127, "min_int8": -126, "mse": 8.054360591813747e-07, "scale": 0.0031367545052776186}
+CHECKPOINT [PASS] activation_quant_valid::classifier: Collected activation range for classifier.
+  payload={"max": 6.737490177154541, "min": -5.56058406829834, "scale": 0.05305110375712237}
+CHECKPOINT [PASS] activation_quant_valid::features.0.0: Collected activation range for features.0.0.
+  payload={"max": 2.154555320739746, "min": -1.6789135932922363, "scale": 0.016965002525509813}
+CHECKPOINT [PASS] activation_quant_valid::features.0.1: Collected activation range for features.0.1.
+  payload={"max": 3.5579729080200195, "min": -3.4887495040893555, "scale": 0.02801553470881905}
+CHECKPOINT [PASS] activation_quant_valid::features.0.2: Collected activation range for features.0.2.
+  payload={"max": 3.5579729080200195, "min": 0.0, "scale": 0.02801553470881905}
+CHECKPOINT [PASS] activation_quant_valid::features.1.conv.0.0: Collected activation range for features.1.conv.0.0.
+  payload={"max": 1.2057756185531616, "min": -1.9706560373306274, "scale": 0.015516976671894705}
+CHECKPOINT [PASS] activation_quant_valid::features.1.conv.0.1: Collected activation range for features.1.conv.0.1.
+  payload={"max": 4.079777717590332, "min": -4.443540096282959, "scale": 0.034988504695141406}
+CHECKPOINT [PASS] activation_quant_valid::features.1.conv.0.2: Collected activation range for features.1.conv.0.2.
+  payload={"max": 4.079777717590332, "min": 0.0, "scale": 0.03212423399677427}
+CHECKPOINT [PASS] activation_quant_valid::features.1.conv.1: Collected activation range for features.1.conv.1.
+  payload={"max": 1.7382209300994873, "min": -1.9814586639404297, "scale": 0.015602036723940392}
+CHECKPOINT [PASS] activation_quant_valid::features.1.conv.2: Collected activation range for features.1.conv.2.
+  payload={"max": 4.210909366607666, "min": -5.002712249755859, "scale": 0.039391435037447714}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.0.0: Collected activation range for features.2.conv.0.0.
+  payload={"max": 4.000396251678467, "min": -4.329792022705078, "scale": 0.03409285057248093}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.0.1: Collected activation range for features.2.conv.0.1.
+  payload={"max": 4.22271203994751, "min": -4.393668174743652, "scale": 0.034595812399556315}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.0.2: Collected activation range for features.2.conv.0.2.
+  payload={"max": 4.22271203994751, "min": 0.0, "scale": 0.03324970110194889}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.1.0: Collected activation range for features.2.conv.1.0.
+  payload={"max": 1.562403678894043, "min": -1.4791001081466675, "scale": 0.01230239117239404}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.1.1: Collected activation range for features.2.conv.1.1.
+  payload={"max": 4.836920738220215, "min": -4.512564182281494, "scale": 0.0380859900647261}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.1.2: Collected activation range for features.2.conv.1.2.
+  payload={"max": 4.836920738220215, "min": 0.0, "scale": 0.0380859900647261}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.2: Collected activation range for features.2.conv.2.
+  payload={"max": 1.5828839540481567, "min": -2.035942554473877, "scale": 0.01603104373601478}
+CHECKPOINT [PASS] activation_quant_valid::features.2.conv.3: Collected activation range for features.2.conv.3.
+  payload={"max": 3.4639244079589844, "min": -5.2969441413879395, "scale": 0.04170822158573181}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.0.0: Collected activation range for features.3.conv.0.0.
+  payload={"max": 3.486485004425049, "min": -3.8551125526428223, "scale": 0.030355216949943482}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.0.1: Collected activation range for features.3.conv.0.1.
+  payload={"max": 4.491823673248291, "min": -4.965003967285156, "scale": 0.03909451942744217}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.0.2: Collected activation range for features.3.conv.0.2.
+  payload={"max": 4.491823673248291, "min": 0.0, "scale": 0.035368690340537724}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.1.0: Collected activation range for features.3.conv.1.0.
+  payload={"max": 1.3834316730499268, "min": -1.2565555572509766, "scale": 0.010893162779920683}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.1.1: Collected activation range for features.3.conv.1.1.
+  payload={"max": 5.936792850494385, "min": -4.334107398986816, "scale": 0.046746400397593584}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.1.2: Collected activation range for features.3.conv.1.2.
+  payload={"max": 5.936792850494385, "min": 0.0, "scale": 0.046746400397593584}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.2: Collected activation range for features.3.conv.2.
+  payload={"max": 2.8748528957366943, "min": -2.5329487323760986, "scale": 0.02263663697430468}
+CHECKPOINT [PASS] activation_quant_valid::features.3.conv.3: Collected activation range for features.3.conv.3.
+  payload={"max": 5.115548610687256, "min": -4.614479064941406, "scale": 0.04027991032037209}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.0.0: Collected activation range for features.4.conv.0.0.
+  payload={"max": 4.413232803344727, "min": -3.5666682720184326, "scale": 0.03474986459326556}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.0.1: Collected activation range for features.4.conv.0.1.
+  payload={"max": 4.079222679138184, "min": -4.1482696533203125, "scale": 0.0326635405773253}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.0.2: Collected activation range for features.4.conv.0.2.
+  payload={"max": 4.079222679138184, "min": 0.0, "scale": 0.032119863615261285}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.1.0: Collected activation range for features.4.conv.1.0.
+  payload={"max": 1.594333291053772, "min": -1.522106409072876, "scale": 0.012553805441368283}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.1.1: Collected activation range for features.4.conv.1.1.
+  payload={"max": 3.918855905532837, "min": -3.9695420265197754, "scale": 0.03125623642928957}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.1.2: Collected activation range for features.4.conv.1.2.
+  payload={"max": 3.918855905532837, "min": 0.0, "scale": 0.030857133114431785}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.2: Collected activation range for features.4.conv.2.
+  payload={"max": 1.8643218278884888, "min": -1.7047845125198364, "scale": 0.014679699432192824}
+CHECKPOINT [PASS] activation_quant_valid::features.4.conv.3: Collected activation range for features.4.conv.3.
+  payload={"max": 3.0037736892700195, "min": -3.384739398956299, "scale": 0.026651491330364558}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.0.0: Collected activation range for features.5.conv.0.0.
+  payload={"max": 2.5445053577423096, "min": -2.1603338718414307, "scale": 0.020035475257813462}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.0.1: Collected activation range for features.5.conv.0.1.
+  payload={"max": 3.4482154846191406, "min": -3.636255979537964, "scale": 0.02863193684675562}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.0.2: Collected activation range for features.5.conv.0.2.
+  payload={"max": 3.4482154846191406, "min": 0.0, "scale": 0.02715130302849717}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.1.0: Collected activation range for features.5.conv.1.0.
+  payload={"max": 1.2392133474349976, "min": -0.8214265704154968, "scale": 0.009757585412873996}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.1.1: Collected activation range for features.5.conv.1.1.
+  payload={"max": 4.698504447937012, "min": -4.712833881378174, "scale": 0.03710892819982814}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.1.2: Collected activation range for features.5.conv.1.2.
+  payload={"max": 4.698504447937012, "min": 0.0, "scale": 0.03699609801525206}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.2: Collected activation range for features.5.conv.2.
+  payload={"max": 2.248946189880371, "min": -2.0784528255462646, "scale": 0.01770823771559347}
+CHECKPOINT [PASS] activation_quant_valid::features.5.conv.3: Collected activation range for features.5.conv.3.
+  payload={"max": 3.970115900039673, "min": -3.979311943054199, "scale": 0.03133316490593858}
+CHECKPOINT [PASS] activation_quant_valid::features.6.0: Collected activation range for features.6.0.
+  payload={"max": 4.13371467590332, "min": -2.7659666538238525, "scale": 0.032548934455931655}
+CHECKPOINT [PASS] activation_quant_valid::features.6.1: Collected activation range for features.6.1.
+  payload={"max": 4.73096227645874, "min": -3.0027964115142822, "scale": 0.03725167146817906}
+CHECKPOINT [PASS] activation_quant_valid::features.6.2: Collected activation range for features.6.2.
+  payload={"max": 4.73096227645874, "min": 0.0, "scale": 0.03725167146817906}
+CHECKPOINT [PASS] op_tiler_tiles_created: Partitioned compute ops into hardware-sized tiles.
+  payload={"num_tiles": 24, "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.0.0: Built MAESTRO per-layer dataflow descriptor for features.0.0.
+  payload={"C": 1, "K": 8, "R": 3, "S": 3, "X": 4, "Y": 4, "expected_tile_count": 1, "layer_name": "features_0_0", "layer_type": "CONV", "tile_width": 8}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.1.conv.0.0: Built MAESTRO per-layer dataflow descriptor for features.1.conv.0.0.
+  payload={"C": 8, "K": 8, "R": 3, "S": 3, "X": 4, "Y": 4, "expected_tile_count": 1, "layer_name": "features_1_conv_0_0", "layer_type": "DEPTHWISE_CONV", "tile_width": 8}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.1.conv.1: Built MAESTRO per-layer dataflow descriptor for features.1.conv.1.
+  payload={"C": 8, "K": 8, "R": 1, "S": 1, "X": 4, "Y": 4, "expected_tile_count": 1, "layer_name": "features_1_conv_1", "layer_type": "POINTWISE_CONV", "tile_width": 8}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.2.conv.0.0: Built MAESTRO per-layer dataflow descriptor for features.2.conv.0.0.
+  payload={"C": 8, "K": 16, "R": 1, "S": 1, "X": 4, "Y": 4, "expected_tile_count": 1, "layer_name": "features_2_conv_0_0", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.2.conv.1.0: Built MAESTRO per-layer dataflow descriptor for features.2.conv.1.0.
+  payload={"C": 16, "K": 16, "R": 3, "S": 3, "X": 2, "Y": 2, "expected_tile_count": 1, "layer_name": "features_2_conv_1_0", "layer_type": "DEPTHWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.2.conv.2: Built MAESTRO per-layer dataflow descriptor for features.2.conv.2.
+  payload={"C": 16, "K": 12, "R": 1, "S": 1, "X": 2, "Y": 2, "expected_tile_count": 1, "layer_name": "features_2_conv_2", "layer_type": "POINTWISE_CONV", "tile_width": 12}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.3.conv.0.0: Built MAESTRO per-layer dataflow descriptor for features.3.conv.0.0.
+  payload={"C": 12, "K": 24, "R": 1, "S": 1, "X": 2, "Y": 2, "expected_tile_count": 2, "layer_name": "features_3_conv_0_0", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.3.conv.1.0: Built MAESTRO per-layer dataflow descriptor for features.3.conv.1.0.
+  payload={"C": 24, "K": 24, "R": 3, "S": 3, "X": 2, "Y": 2, "expected_tile_count": 2, "layer_name": "features_3_conv_1_0", "layer_type": "DEPTHWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.3.conv.2: Built MAESTRO per-layer dataflow descriptor for features.3.conv.2.
+  payload={"C": 24, "K": 12, "R": 1, "S": 1, "X": 2, "Y": 2, "expected_tile_count": 1, "layer_name": "features_3_conv_2", "layer_type": "POINTWISE_CONV", "tile_width": 12}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.4.conv.0.0: Built MAESTRO per-layer dataflow descriptor for features.4.conv.0.0.
+  payload={"C": 12, "K": 24, "R": 1, "S": 1, "X": 2, "Y": 2, "expected_tile_count": 2, "layer_name": "features_4_conv_0_0", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.4.conv.1.0: Built MAESTRO per-layer dataflow descriptor for features.4.conv.1.0.
+  payload={"C": 24, "K": 24, "R": 3, "S": 3, "X": 1, "Y": 1, "expected_tile_count": 2, "layer_name": "features_4_conv_1_0", "layer_type": "DEPTHWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.4.conv.2: Built MAESTRO per-layer dataflow descriptor for features.4.conv.2.
+  payload={"C": 24, "K": 16, "R": 1, "S": 1, "X": 1, "Y": 1, "expected_tile_count": 1, "layer_name": "features_4_conv_2", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.5.conv.0.0: Built MAESTRO per-layer dataflow descriptor for features.5.conv.0.0.
+  payload={"C": 16, "K": 32, "R": 1, "S": 1, "X": 1, "Y": 1, "expected_tile_count": 2, "layer_name": "features_5_conv_0_0", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.5.conv.1.0: Built MAESTRO per-layer dataflow descriptor for features.5.conv.1.0.
+  payload={"C": 32, "K": 32, "R": 3, "S": 3, "X": 1, "Y": 1, "expected_tile_count": 2, "layer_name": "features_5_conv_1_0", "layer_type": "DEPTHWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.5.conv.2: Built MAESTRO per-layer dataflow descriptor for features.5.conv.2.
+  payload={"C": 32, "K": 16, "R": 1, "S": 1, "X": 1, "Y": 1, "expected_tile_count": 1, "layer_name": "features_5_conv_2", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::features.6.0: Built MAESTRO per-layer dataflow descriptor for features.6.0.
+  payload={"C": 16, "K": 32, "R": 1, "S": 1, "X": 1, "Y": 1, "expected_tile_count": 2, "layer_name": "features_6_0", "layer_type": "POINTWISE_CONV", "tile_width": 16}
+CHECKPOINT [PASS] maestro_layer_dimensions_valid::classifier: Built MAESTRO per-layer dataflow descriptor for classifier.
+  payload={"C": 32, "K": 10, "R": 1, "S": 1, "X": 1, "Y": 1, "expected_tile_count": 1, "layer_name": "classifier", "layer_type": "GEMM", "tile_width": 10}
+CHECKPOINT [PASS] maestro_descriptor_count_matches_compute_modules: Built one MAESTRO descriptor per compute layer.
+  payload={"compute_modules": 17, "num_descriptors": 17}
+CHECKPOINT [PASS] maestro_artifacts_written: Wrote MAESTRO per-layer JSON and .m dataflow artifacts.
+  payload={"generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m", "json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json", "manifest_path": "/tmp/nc_v2_maestro/artifacts/maestro_integration_status.json"}
+CHECKPOINT [PASS] maestro_repo_reference_matches_generated: Repo MAESTRO reference file matches generated per-layer dataflow description.
+  payload={"generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m", "repo_reference_path": "/tmp/nc_v2_maestro/maestro/MobilenetV2_clustered.m"}
+CHECKPOINT [PASS] maestro_repo_json_reference_matches_generated: Repo MAESTRO JSON reference matches generated per-layer dataflow description.
+  payload={"json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json", "repo_json_reference_path": "/tmp/nc_v2_maestro/maestro/layer_dataflow_reference.json"}
+CHECKPOINT [PASS] mapping_assignments_cover_all_tiles: Assigned every tile to a PE and memory bank.
+  payload={"num_assignments": 24, "num_tiles": 24}
+CHECKPOINT [INFO] maestro_mapper_init: Initialized MAESTRO mapper with tile assignments and per-layer descriptors.
+  payload={"num_descriptors": 17, "num_tiles": 24}
+CHECKPOINT [PASS] maestro_mapper_all_tiles_have_descriptors: Every compiler tile matched a MAESTRO per-layer descriptor.
+  payload={"missing_modules": []}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.0.0: Tile channel coverage matches K dimension for features.0.0.
+  payload={"covered_channels": 8, "expected_k": 8, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.1.conv.0.0: Tile channel coverage matches K dimension for features.1.conv.0.0.
+  payload={"covered_channels": 8, "expected_k": 8, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.1.conv.1: Tile channel coverage matches K dimension for features.1.conv.1.
+  payload={"covered_channels": 8, "expected_k": 8, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.2.conv.0.0: Tile channel coverage matches K dimension for features.2.conv.0.0.
+  payload={"covered_channels": 16, "expected_k": 16, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.2.conv.1.0: Tile channel coverage matches K dimension for features.2.conv.1.0.
+  payload={"covered_channels": 16, "expected_k": 16, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.2.conv.2: Tile channel coverage matches K dimension for features.2.conv.2.
+  payload={"covered_channels": 12, "expected_k": 12, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.3.conv.0.0: Tile channel coverage matches K dimension for features.3.conv.0.0.
+  payload={"covered_channels": 24, "expected_k": 24, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.3.conv.1.0: Tile channel coverage matches K dimension for features.3.conv.1.0.
+  payload={"covered_channels": 24, "expected_k": 24, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.3.conv.2: Tile channel coverage matches K dimension for features.3.conv.2.
+  payload={"covered_channels": 12, "expected_k": 12, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.4.conv.0.0: Tile channel coverage matches K dimension for features.4.conv.0.0.
+  payload={"covered_channels": 24, "expected_k": 24, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.4.conv.1.0: Tile channel coverage matches K dimension for features.4.conv.1.0.
+  payload={"covered_channels": 24, "expected_k": 24, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.4.conv.2: Tile channel coverage matches K dimension for features.4.conv.2.
+  payload={"covered_channels": 16, "expected_k": 16, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.5.conv.0.0: Tile channel coverage matches K dimension for features.5.conv.0.0.
+  payload={"covered_channels": 32, "expected_k": 32, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.5.conv.1.0: Tile channel coverage matches K dimension for features.5.conv.1.0.
+  payload={"covered_channels": 32, "expected_k": 32, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.5.conv.2: Tile channel coverage matches K dimension for features.5.conv.2.
+  payload={"covered_channels": 16, "expected_k": 16, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::features.6.0: Tile channel coverage matches K dimension for features.6.0.
+  payload={"covered_channels": 32, "expected_k": 32, "expected_tile_count": 2}
+CHECKPOINT [PASS] maestro_tile_coverage_matches_k::classifier: Tile channel coverage matches K dimension for classifier.
+  payload={"covered_channels": 10, "expected_k": 10, "expected_tile_count": 1}
+CHECKPOINT [PASS] maestro_mapper_output_nonempty: Mapped compiler tiles into MAESTRO work items with attached dataflow directives.
+  payload={"num_mapped": 24}
+CHECKPOINT [INFO] maestro_scheduler_init: Initialized MAESTRO scheduler with mapped work items.
+  payload={"num_layers": 17, "num_mapped_ops": 24}
+CHECKPOINT [PASS] maestro_schedule_entries_have_valid_layers: Every scheduled MAESTRO work item references a valid per-layer descriptor.
+  payload={"invalid_layers": []}
+CHECKPOINT [PASS] maestro_schedule_layer_coverage_complete: Every MAESTRO layer descriptor appears in the generated schedule.
+  payload={"descriptor_layers": ["classifier", "features_0_0", "features_1_conv_0_0", "features_1_conv_1", "features_2_conv_0_0", "features_2_conv_1_0", "features_2_conv_2", "features_3_conv_0_0", "features_3_conv_1_0", "features_3_conv_2", "features_4_conv_0_0", "features_4_conv_1_0", "features_4_conv_2", "features_5_conv_0_0", "features_5_conv_1_0", "features_5_conv_2", "features_6_0"], "scheduled_layers": ["classifier", "features_0_0", "features_1_conv_0_0", "features_1_conv_1", "features_2_conv_0_0", "features_2_conv_1_0", "features_2_conv_2", "features_3_conv_0_0", "features_3_conv_1_0", "features_3_conv_2", "features_4_conv_0_0", "features_4_conv_1_0", "features_4_conv_2", "features_5_conv_0_0", "features_5_conv_1_0", "features_5_conv_2", "features_6_0"]}
+CHECKPOINT [PASS] maestro_schedule_created: Created a serial MAESTRO schedule with per-layer cycle accounting.
+  payload={"per_layer_cycles": {"classifier": 40, "features_0_0": 32, "features_1_conv_0_0": 32, "features_1_conv_1": 32, "features_2_conv_0_0": 64, "features_2_conv_1_0": 64, "features_2_conv_2": 48, "features_3_conv_0_0": 96, "features_3_conv_1_0": 96, "features_3_conv_2": 48, "features_4_conv_0_0": 96, "features_4_conv_1_0": 96, "features_4_conv_2": 64, "features_5_conv_0_0": 128, "features_5_conv_1_0": 128, "features_5_conv_2": 64, "features_6_0": 128}, "per_layer_entries": {"classifier": 1, "features_0_0": 1, "features_1_conv_0_0": 1, "features_1_conv_1": 1, "features_2_conv_0_0": 1, "features_2_conv_1_0": 1, "features_2_conv_2": 1, "features_3_conv_0_0": 2, "features_3_conv_1_0": 2, "features_3_conv_2": 1, "features_4_conv_0_0": 2, "features_4_conv_1_0": 2, "features_4_conv_2": 1, "features_5_conv_0_0": 2, "features_5_conv_1_0": 2, "features_5_conv_2": 1, "features_6_0": 2}, "schedule_entries": 24, "total_cycles": 1256}
+CHECKPOINT [PASS] maestro_schedule_artifact_written: Wrote MAESTRO schedule artifact for inspection.
+  payload={"maestro_schedule_path": "/tmp/nc_v2_maestro/artifacts/maestro_schedule.json", "schedule_entries": 24}
+CHECKPOINT [INFO] runtime_memory_planner_init: schedule_entries=24
+CHECKPOINT [PASS] runtime_memory_plan_created: allocated 1256 bytes across 24 entries
+CHECKPOINT [PASS] memory_plan_matches_schedule: Verified that memory plan entry count matches schedule length.
+  payload={"num_entries": 24, "schedule_entries": 24}
+CHECKPOINT [INFO] runtime_dispatcher_init: schedule_entries=24 total_bytes=1256
+CHECKPOINT [PASS] runtime_dispatch_completed: executed_entries=24 total_cycles=1256
+CHECKPOINT [INFO] tflite_export_status_written: Wrote TFLite deployment status manifest.
+  payload={"status": "not_generated", "status_path": "/tmp/nc_v2_maestro/artifacts/tflite_export_status.json"}
+CHECKPOINT [PASS] verification_harness_accuracy: Verification harness accepted model accuracy.
+  payload={"accuracy_ok": true, "dispatch_ok": true, "maestro_ok": true, "schedule_ok": true}
+CHECKPOINT [PASS] verification_harness_schedule: Verification harness accepted generated schedule.
+  payload={"accuracy_ok": true, "dispatch_ok": true, "maestro_ok": true, "schedule_ok": true}
+CHECKPOINT [PASS] verification_harness_dispatch: Verification harness accepted runtime dispatch results.
+  payload={"accuracy_ok": true, "dispatch_ok": true, "maestro_ok": true, "schedule_ok": true}
+CHECKPOINT [PASS] verification_harness_maestro: Verification harness accepted MAESTRO per-layer integration outputs.
+  payload={"accuracy_ok": true, "dispatch_ok": true, "maestro_ok": true, "schedule_ok": true}
+
+FINAL SUMMARY
+{
+  "accuracy_threshold": 0.85,
+  "checkpoint_counts": {
+    "INFO": 7,
+    "PASS": 156
+  },
+  "checkpoint_path": "/tmp/nc_v2_maestro/checkpoints/tiny_mobilenetv2_digits_best.pt",
+  "checkpoint_report_path": "/tmp/nc_v2_maestro/artifacts/checkpoint_report.json",
+  "compiler_json_graph_path": "/tmp/nc_v2_maestro/artifacts/compiler_graph.json",
+  "confidence": 0.8552864193916321,
+  "dataset": "sklearn_digits",
+  "dispatch_report": {
+    "executed_entries": 24,
+    "total_cycles": 1256,
+    "unique_addresses": 24
+  },
+  "executorch_spec_path": "/tmp/nc_v2_maestro/artifacts/executorch_compile_spec.json",
+  "fx_export_path": "/tmp/nc_v2_maestro/artifacts/fx_graph.json",
+  "history_last": {
+    "epoch": 10.0,
+    "test_accuracy": 0.8916666666666667,
+    "test_loss": 0.3523946265379588,
+    "train_accuracy": 0.9498956158663883,
+    "train_loss": 0.2210500063834791
+  },
+  "maestro_dataflow_json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json",
+  "maestro_generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m",
+  "maestro_json_reference_matches_generated": true,
+  "maestro_layer_count": 17,
+  "maestro_reference_matches_generated": true,
+  "maestro_repo_json_reference_path": "/tmp/nc_v2_maestro/maestro/layer_dataflow_reference.json",
+  "maestro_repo_reference_path": "/tmp/nc_v2_maestro/maestro/MobilenetV2_clustered.m",
+  "maestro_schedule_path": "/tmp/nc_v2_maestro/artifacts/maestro_schedule.json",
+  "model_name": "TinyMobileNetV2",
+  "onnx_path": null,
+  "onnx_status": {
+    "reason": "No module named 'onnxscript'",
+    "requested_path": "/tmp/nc_v2_maestro/artifacts/model.onnx",
+    "status": "not_generated"
+  },
+  "onnx_status_path": "/tmp/nc_v2_maestro/artifacts/onnx_export_status.json",
+  "predicted_class": 5,
+  "sample_image_path": "/tmp/nc_v2_maestro/artifacts/sample_digit.png",
+  "schedule_entries": 24,
+  "test_accuracy": 0.9027777777777778,
+  "test_loss": 0.3305195583237542,
+  "tflite_status": {
+    "import_error": "No module named 'tensorflow'",
+    "input_shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "model_name": "TinyMobileNetV2",
+    "reason": "No supported PyTorch->TFLite converter is installed in this runtime.",
+    "requested_output": "/tmp/nc_v2_maestro/artifacts/model_int8.tflite",
+    "status": "not_generated",
+    "suggested_paths": {
+      "option_1": "Export ONNX first, then convert in a TensorFlow/TFLite environment.",
+      "option_2": "Rebuild the model in TensorFlow and run full integer quantization there.",
+      "option_3": "Use a dedicated bridge such as ai-edge/onnx-tf in a prepared environment."
+    },
+    "tensorflow_present": false
+  },
+  "true_class": 5
+}

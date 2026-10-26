@@ -1,0 +1,561 @@
+label,actual,capacity,fits,block_index
+prefill q_proj tokens,1,512,True,0
+decode q_proj tokens,1,1,True,0
+prefill k_proj tokens,1,512,True,0
+decode k_proj tokens,1,1,True,0
+prefill v_proj tokens,1,512,True,0
+decode v_proj tokens,1,1,True,0
+prefill out_proj tokens,1,512,True,0
+decode out_proj tokens,1,1,True,0
+prefill ffn_up tokens,1,512,True,0
+decode ffn_up tokens,1,1,True,0
+prefill ffn_down tokens,1,512,True,0
+decode ffn_down tokens,1,1,True,0
+prefill attention QK query tokens,1,512,True,0
+prefill attention QK context,1,512,True,0
+prefill attention AV query tokens,1,512,True,0
+prefill attention AV context,1,512,True,0
+decode attention QK context,2,513,True,0
+decode attention QK mapped context Y,2,513,True,0
+decode attention AV context,2,513,True,0
+decode attention AV mapped context Y,2,513,True,0
+prefill q_proj tokens,1,512,True,1
+decode q_proj tokens,1,1,True,1
+prefill k_proj tokens,1,512,True,1
+decode k_proj tokens,1,1,True,1
+prefill v_proj tokens,1,512,True,1
+decode v_proj tokens,1,1,True,1
+prefill out_proj tokens,1,512,True,1
+decode out_proj tokens,1,1,True,1
+prefill ffn_up tokens,1,512,True,1
+decode ffn_up tokens,1,1,True,1
+prefill ffn_down tokens,1,512,True,1
+decode ffn_down tokens,1,1,True,1
+prefill attention QK query tokens,1,512,True,1
+prefill attention QK context,1,512,True,1
+prefill attention AV query tokens,1,512,True,1
+prefill attention AV context,1,512,True,1
+decode attention QK context,2,513,True,1
+decode attention QK mapped context Y,2,513,True,1
+decode attention AV context,2,513,True,1
+decode attention AV mapped context Y,2,513,True,1
+prefill q_proj tokens,1,512,True,2
+decode q_proj tokens,1,1,True,2
+prefill k_proj tokens,1,512,True,2
+decode k_proj tokens,1,1,True,2
+prefill v_proj tokens,1,512,True,2
+decode v_proj tokens,1,1,True,2
+prefill out_proj tokens,1,512,True,2
+decode out_proj tokens,1,1,True,2
+prefill ffn_up tokens,1,512,True,2
+decode ffn_up tokens,1,1,True,2
+prefill ffn_down tokens,1,512,True,2
+decode ffn_down tokens,1,1,True,2
+prefill attention QK query tokens,1,512,True,2
+prefill attention QK context,1,512,True,2
+prefill attention AV query tokens,1,512,True,2
+prefill attention AV context,1,512,True,2
+decode attention QK context,2,513,True,2
+decode attention QK mapped context Y,2,513,True,2
+decode attention AV context,2,513,True,2
+decode attention AV mapped context Y,2,513,True,2
+prefill q_proj tokens,1,512,True,3
+decode q_proj tokens,1,1,True,3
+prefill k_proj tokens,1,512,True,3
+decode k_proj tokens,1,1,True,3
+prefill v_proj tokens,1,512,True,3
+decode v_proj tokens,1,1,True,3
+prefill out_proj tokens,1,512,True,3
+decode out_proj tokens,1,1,True,3
+prefill ffn_up tokens,1,512,True,3
+decode ffn_up tokens,1,1,True,3
+prefill ffn_down tokens,1,512,True,3
+decode ffn_down tokens,1,1,True,3
+prefill attention QK query tokens,1,512,True,3
+prefill attention QK context,1,512,True,3
+prefill attention AV query tokens,1,512,True,3
+prefill attention AV context,1,512,True,3
+decode attention QK context,2,513,True,3
+decode attention QK mapped context Y,2,513,True,3
+decode attention AV context,2,513,True,3
+decode attention AV mapped context Y,2,513,True,3
+prefill q_proj tokens,1,512,True,4
+decode q_proj tokens,1,1,True,4
+prefill k_proj tokens,1,512,True,4
+decode k_proj tokens,1,1,True,4
+prefill v_proj tokens,1,512,True,4
+decode v_proj tokens,1,1,True,4
+prefill out_proj tokens,1,512,True,4
+decode out_proj tokens,1,1,True,4
+prefill ffn_up tokens,1,512,True,4
+decode ffn_up tokens,1,1,True,4
+prefill ffn_down tokens,1,512,True,4
+decode ffn_down tokens,1,1,True,4
+prefill attention QK query tokens,1,512,True,4
+prefill attention QK context,1,512,True,4
+prefill attention AV query tokens,1,512,True,4
+prefill attention AV context,1,512,True,4
+decode attention QK context,2,513,True,4
+decode attention QK mapped context Y,2,513,True,4
+decode attention AV context,2,513,True,4
+decode attention AV mapped context Y,2,513,True,4
+prefill q_proj tokens,1,512,True,5
+decode q_proj tokens,1,1,True,5
+prefill k_proj tokens,1,512,True,5
+decode k_proj tokens,1,1,True,5
+prefill v_proj tokens,1,512,True,5
+decode v_proj tokens,1,1,True,5
+prefill out_proj tokens,1,512,True,5
+decode out_proj tokens,1,1,True,5
+prefill ffn_up tokens,1,512,True,5
+decode ffn_up tokens,1,1,True,5
+prefill ffn_down tokens,1,512,True,5
+decode ffn_down tokens,1,1,True,5
+prefill attention QK query tokens,1,512,True,5
+prefill attention QK context,1,512,True,5
+prefill attention AV query tokens,1,512,True,5
+prefill attention AV context,1,512,True,5
+decode attention QK context,2,513,True,5
+decode attention QK mapped context Y,2,513,True,5
+decode attention AV context,2,513,True,5
+decode attention AV mapped context Y,2,513,True,5
+prefill q_proj tokens,1,512,True,6
+decode q_proj tokens,1,1,True,6
+prefill k_proj tokens,1,512,True,6
+decode k_proj tokens,1,1,True,6
+prefill v_proj tokens,1,512,True,6
+decode v_proj tokens,1,1,True,6
+prefill out_proj tokens,1,512,True,6
+decode out_proj tokens,1,1,True,6
+prefill ffn_up tokens,1,512,True,6
+decode ffn_up tokens,1,1,True,6
+prefill ffn_down tokens,1,512,True,6
+decode ffn_down tokens,1,1,True,6
+prefill attention QK query tokens,1,512,True,6
+prefill attention QK context,1,512,True,6
+prefill attention AV query tokens,1,512,True,6
+prefill attention AV context,1,512,True,6
+decode attention QK context,2,513,True,6
+decode attention QK mapped context Y,2,513,True,6
+decode attention AV context,2,513,True,6
+decode attention AV mapped context Y,2,513,True,6
+prefill q_proj tokens,1,512,True,7
+decode q_proj tokens,1,1,True,7
+prefill k_proj tokens,1,512,True,7
+decode k_proj tokens,1,1,True,7
+prefill v_proj tokens,1,512,True,7
+decode v_proj tokens,1,1,True,7
+prefill out_proj tokens,1,512,True,7
+decode out_proj tokens,1,1,True,7
+prefill ffn_up tokens,1,512,True,7
+decode ffn_up tokens,1,1,True,7
+prefill ffn_down tokens,1,512,True,7
+decode ffn_down tokens,1,1,True,7
+prefill attention QK query tokens,1,512,True,7
+prefill attention QK context,1,512,True,7
+prefill attention AV query tokens,1,512,True,7
+prefill attention AV context,1,512,True,7
+decode attention QK context,2,513,True,7
+decode attention QK mapped context Y,2,513,True,7
+decode attention AV context,2,513,True,7
+decode attention AV mapped context Y,2,513,True,7
+prefill q_proj tokens,1,512,True,8
+decode q_proj tokens,1,1,True,8
+prefill k_proj tokens,1,512,True,8
+decode k_proj tokens,1,1,True,8
+prefill v_proj tokens,1,512,True,8
+decode v_proj tokens,1,1,True,8
+prefill out_proj tokens,1,512,True,8
+decode out_proj tokens,1,1,True,8
+prefill ffn_up tokens,1,512,True,8
+decode ffn_up tokens,1,1,True,8
+prefill ffn_down tokens,1,512,True,8
+decode ffn_down tokens,1,1,True,8
+prefill attention QK query tokens,1,512,True,8
+prefill attention QK context,1,512,True,8
+prefill attention AV query tokens,1,512,True,8
+prefill attention AV context,1,512,True,8
+decode attention QK context,2,513,True,8
+decode attention QK mapped context Y,2,513,True,8
+decode attention AV context,2,513,True,8
+decode attention AV mapped context Y,2,513,True,8
+prefill q_proj tokens,1,512,True,9
+decode q_proj tokens,1,1,True,9
+prefill k_proj tokens,1,512,True,9
+decode k_proj tokens,1,1,True,9
+prefill v_proj tokens,1,512,True,9
+decode v_proj tokens,1,1,True,9
+prefill out_proj tokens,1,512,True,9
+decode out_proj tokens,1,1,True,9
+prefill ffn_up tokens,1,512,True,9
+decode ffn_up tokens,1,1,True,9
+prefill ffn_down tokens,1,512,True,9
+decode ffn_down tokens,1,1,True,9
+prefill attention QK query tokens,1,512,True,9
+prefill attention QK context,1,512,True,9
+prefill attention AV query tokens,1,512,True,9
+prefill attention AV context,1,512,True,9
+decode attention QK context,2,513,True,9
+decode attention QK mapped context Y,2,513,True,9
+decode attention AV context,2,513,True,9
+decode attention AV mapped context Y,2,513,True,9
+prefill q_proj tokens,1,512,True,10
+decode q_proj tokens,1,1,True,10
+prefill k_proj tokens,1,512,True,10
+decode k_proj tokens,1,1,True,10
+prefill v_proj tokens,1,512,True,10
+decode v_proj tokens,1,1,True,10
+prefill out_proj tokens,1,512,True,10
+decode out_proj tokens,1,1,True,10
+prefill ffn_up tokens,1,512,True,10
+decode ffn_up tokens,1,1,True,10
+prefill ffn_down tokens,1,512,True,10
+decode ffn_down tokens,1,1,True,10
+prefill attention QK query tokens,1,512,True,10
+prefill attention QK context,1,512,True,10
+prefill attention AV query tokens,1,512,True,10
+prefill attention AV context,1,512,True,10
+decode attention QK context,2,513,True,10
+decode attention QK mapped context Y,2,513,True,10
+decode attention AV context,2,513,True,10
+decode attention AV mapped context Y,2,513,True,10
+prefill q_proj tokens,1,512,True,11
+decode q_proj tokens,1,1,True,11
+prefill k_proj tokens,1,512,True,11
+decode k_proj tokens,1,1,True,11
+prefill v_proj tokens,1,512,True,11
+decode v_proj tokens,1,1,True,11
+prefill out_proj tokens,1,512,True,11
+decode out_proj tokens,1,1,True,11
+prefill ffn_up tokens,1,512,True,11
+decode ffn_up tokens,1,1,True,11
+prefill ffn_down tokens,1,512,True,11
+decode ffn_down tokens,1,1,True,11
+prefill attention QK query tokens,1,512,True,11
+prefill attention QK context,1,512,True,11
+prefill attention AV query tokens,1,512,True,11
+prefill attention AV context,1,512,True,11
+decode attention QK context,2,513,True,11
+decode attention QK mapped context Y,2,513,True,11
+decode attention AV context,2,513,True,11
+decode attention AV mapped context Y,2,513,True,11
+prefill q_proj tokens,1,512,True,12
+decode q_proj tokens,1,1,True,12
+prefill k_proj tokens,1,512,True,12
+decode k_proj tokens,1,1,True,12
+prefill v_proj tokens,1,512,True,12
+decode v_proj tokens,1,1,True,12
+prefill out_proj tokens,1,512,True,12
+decode out_proj tokens,1,1,True,12
+prefill ffn_up tokens,1,512,True,12
+decode ffn_up tokens,1,1,True,12
+prefill ffn_down tokens,1,512,True,12
+decode ffn_down tokens,1,1,True,12
+prefill attention QK query tokens,1,512,True,12
+prefill attention QK context,1,512,True,12
+prefill attention AV query tokens,1,512,True,12
+prefill attention AV context,1,512,True,12
+decode attention QK context,2,513,True,12
+decode attention QK mapped context Y,2,513,True,12
+decode attention AV context,2,513,True,12
+decode attention AV mapped context Y,2,513,True,12
+prefill q_proj tokens,1,512,True,13
+decode q_proj tokens,1,1,True,13
+prefill k_proj tokens,1,512,True,13
+decode k_proj tokens,1,1,True,13
+prefill v_proj tokens,1,512,True,13
+decode v_proj tokens,1,1,True,13
+prefill out_proj tokens,1,512,True,13
+decode out_proj tokens,1,1,True,13
+prefill ffn_up tokens,1,512,True,13
+decode ffn_up tokens,1,1,True,13
+prefill ffn_down tokens,1,512,True,13
+decode ffn_down tokens,1,1,True,13
+prefill attention QK query tokens,1,512,True,13
+prefill attention QK context,1,512,True,13
+prefill attention AV query tokens,1,512,True,13
+prefill attention AV context,1,512,True,13
+decode attention QK context,2,513,True,13
+decode attention QK mapped context Y,2,513,True,13
+decode attention AV context,2,513,True,13
+decode attention AV mapped context Y,2,513,True,13
+prefill q_proj tokens,1,512,True,14
+decode q_proj tokens,1,1,True,14
+prefill k_proj tokens,1,512,True,14
+decode k_proj tokens,1,1,True,14
+prefill v_proj tokens,1,512,True,14
+decode v_proj tokens,1,1,True,14
+prefill out_proj tokens,1,512,True,14
+decode out_proj tokens,1,1,True,14
+prefill ffn_up tokens,1,512,True,14
+decode ffn_up tokens,1,1,True,14
+prefill ffn_down tokens,1,512,True,14
+decode ffn_down tokens,1,1,True,14
+prefill attention QK query tokens,1,512,True,14
+prefill attention QK context,1,512,True,14
+prefill attention AV query tokens,1,512,True,14
+prefill attention AV context,1,512,True,14
+decode attention QK context,2,513,True,14
+decode attention QK mapped context Y,2,513,True,14
+decode attention AV context,2,513,True,14
+decode attention AV mapped context Y,2,513,True,14
+prefill q_proj tokens,1,512,True,15
+decode q_proj tokens,1,1,True,15
+prefill k_proj tokens,1,512,True,15
+decode k_proj tokens,1,1,True,15
+prefill v_proj tokens,1,512,True,15
+decode v_proj tokens,1,1,True,15
+prefill out_proj tokens,1,512,True,15
+decode out_proj tokens,1,1,True,15
+prefill ffn_up tokens,1,512,True,15
+decode ffn_up tokens,1,1,True,15
+prefill ffn_down tokens,1,512,True,15
+decode ffn_down tokens,1,1,True,15
+prefill attention QK query tokens,1,512,True,15
+prefill attention QK context,1,512,True,15
+prefill attention AV query tokens,1,512,True,15
+prefill attention AV context,1,512,True,15
+decode attention QK context,2,513,True,15
+decode attention QK mapped context Y,2,513,True,15
+decode attention AV context,2,513,True,15
+decode attention AV mapped context Y,2,513,True,15
+prefill q_proj tokens,1,512,True,16
+decode q_proj tokens,1,1,True,16
+prefill k_proj tokens,1,512,True,16
+decode k_proj tokens,1,1,True,16
+prefill v_proj tokens,1,512,True,16
+decode v_proj tokens,1,1,True,16
+prefill out_proj tokens,1,512,True,16
+decode out_proj tokens,1,1,True,16
+prefill ffn_up tokens,1,512,True,16
+decode ffn_up tokens,1,1,True,16
+prefill ffn_down tokens,1,512,True,16
+decode ffn_down tokens,1,1,True,16
+prefill attention QK query tokens,1,512,True,16
+prefill attention QK context,1,512,True,16
+prefill attention AV query tokens,1,512,True,16
+prefill attention AV context,1,512,True,16
+decode attention QK context,2,513,True,16
+decode attention QK mapped context Y,2,513,True,16
+decode attention AV context,2,513,True,16
+decode attention AV mapped context Y,2,513,True,16
+prefill q_proj tokens,1,512,True,17
+decode q_proj tokens,1,1,True,17
+prefill k_proj tokens,1,512,True,17
+decode k_proj tokens,1,1,True,17
+prefill v_proj tokens,1,512,True,17
+decode v_proj tokens,1,1,True,17
+prefill out_proj tokens,1,512,True,17
+decode out_proj tokens,1,1,True,17
+prefill ffn_up tokens,1,512,True,17
+decode ffn_up tokens,1,1,True,17
+prefill ffn_down tokens,1,512,True,17
+decode ffn_down tokens,1,1,True,17
+prefill attention QK query tokens,1,512,True,17
+prefill attention QK context,1,512,True,17
+prefill attention AV query tokens,1,512,True,17
+prefill attention AV context,1,512,True,17
+decode attention QK context,2,513,True,17
+decode attention QK mapped context Y,2,513,True,17
+decode attention AV context,2,513,True,17
+decode attention AV mapped context Y,2,513,True,17
+prefill q_proj tokens,1,512,True,18
+decode q_proj tokens,1,1,True,18
+prefill k_proj tokens,1,512,True,18
+decode k_proj tokens,1,1,True,18
+prefill v_proj tokens,1,512,True,18
+decode v_proj tokens,1,1,True,18
+prefill out_proj tokens,1,512,True,18
+decode out_proj tokens,1,1,True,18
+prefill ffn_up tokens,1,512,True,18
+decode ffn_up tokens,1,1,True,18
+prefill ffn_down tokens,1,512,True,18
+decode ffn_down tokens,1,1,True,18
+prefill attention QK query tokens,1,512,True,18
+prefill attention QK context,1,512,True,18
+prefill attention AV query tokens,1,512,True,18
+prefill attention AV context,1,512,True,18
+decode attention QK context,2,513,True,18
+decode attention QK mapped context Y,2,513,True,18
+decode attention AV context,2,513,True,18
+decode attention AV mapped context Y,2,513,True,18
+prefill q_proj tokens,1,512,True,19
+decode q_proj tokens,1,1,True,19
+prefill k_proj tokens,1,512,True,19
+decode k_proj tokens,1,1,True,19
+prefill v_proj tokens,1,512,True,19
+decode v_proj tokens,1,1,True,19
+prefill out_proj tokens,1,512,True,19
+decode out_proj tokens,1,1,True,19
+prefill ffn_up tokens,1,512,True,19
+decode ffn_up tokens,1,1,True,19
+prefill ffn_down tokens,1,512,True,19
+decode ffn_down tokens,1,1,True,19
+prefill attention QK query tokens,1,512,True,19
+prefill attention QK context,1,512,True,19
+prefill attention AV query tokens,1,512,True,19
+prefill attention AV context,1,512,True,19
+decode attention QK context,2,513,True,19
+decode attention QK mapped context Y,2,513,True,19
+decode attention AV context,2,513,True,19
+decode attention AV mapped context Y,2,513,True,19
+prefill q_proj tokens,1,512,True,20
+decode q_proj tokens,1,1,True,20
+prefill k_proj tokens,1,512,True,20
+decode k_proj tokens,1,1,True,20
+prefill v_proj tokens,1,512,True,20
+decode v_proj tokens,1,1,True,20
+prefill out_proj tokens,1,512,True,20
+decode out_proj tokens,1,1,True,20
+prefill ffn_up tokens,1,512,True,20
+decode ffn_up tokens,1,1,True,20
+prefill ffn_down tokens,1,512,True,20
+decode ffn_down tokens,1,1,True,20
+prefill attention QK query tokens,1,512,True,20
+prefill attention QK context,1,512,True,20
+prefill attention AV query tokens,1,512,True,20
+prefill attention AV context,1,512,True,20
+decode attention QK context,2,513,True,20
+decode attention QK mapped context Y,2,513,True,20
+decode attention AV context,2,513,True,20
+decode attention AV mapped context Y,2,513,True,20
+prefill q_proj tokens,1,512,True,21
+decode q_proj tokens,1,1,True,21
+prefill k_proj tokens,1,512,True,21
+decode k_proj tokens,1,1,True,21
+prefill v_proj tokens,1,512,True,21
+decode v_proj tokens,1,1,True,21
+prefill out_proj tokens,1,512,True,21
+decode out_proj tokens,1,1,True,21
+prefill ffn_up tokens,1,512,True,21
+decode ffn_up tokens,1,1,True,21
+prefill ffn_down tokens,1,512,True,21
+decode ffn_down tokens,1,1,True,21
+prefill attention QK query tokens,1,512,True,21
+prefill attention QK context,1,512,True,21
+prefill attention AV query tokens,1,512,True,21
+prefill attention AV context,1,512,True,21
+decode attention QK context,2,513,True,21
+decode attention QK mapped context Y,2,513,True,21
+decode attention AV context,2,513,True,21
+decode attention AV mapped context Y,2,513,True,21
+prefill q_proj tokens,1,512,True,22
+decode q_proj tokens,1,1,True,22
+prefill k_proj tokens,1,512,True,22
+decode k_proj tokens,1,1,True,22
+prefill v_proj tokens,1,512,True,22
+decode v_proj tokens,1,1,True,22
+prefill out_proj tokens,1,512,True,22
+decode out_proj tokens,1,1,True,22
+prefill ffn_up tokens,1,512,True,22
+decode ffn_up tokens,1,1,True,22
+prefill ffn_down tokens,1,512,True,22
+decode ffn_down tokens,1,1,True,22
+prefill attention QK query tokens,1,512,True,22
+prefill attention QK context,1,512,True,22
+prefill attention AV query tokens,1,512,True,22
+prefill attention AV context,1,512,True,22
+decode attention QK context,2,513,True,22
+decode attention QK mapped context Y,2,513,True,22
+decode attention AV context,2,513,True,22
+decode attention AV mapped context Y,2,513,True,22
+prefill q_proj tokens,1,512,True,23
+decode q_proj tokens,1,1,True,23
+prefill k_proj tokens,1,512,True,23
+decode k_proj tokens,1,1,True,23
+prefill v_proj tokens,1,512,True,23
+decode v_proj tokens,1,1,True,23
+prefill out_proj tokens,1,512,True,23
+decode out_proj tokens,1,1,True,23
+prefill ffn_up tokens,1,512,True,23
+decode ffn_up tokens,1,1,True,23
+prefill ffn_down tokens,1,512,True,23
+decode ffn_down tokens,1,1,True,23
+prefill attention QK query tokens,1,512,True,23
+prefill attention QK context,1,512,True,23
+prefill attention AV query tokens,1,512,True,23
+prefill attention AV context,1,512,True,23
+decode attention QK context,2,513,True,23
+decode attention QK mapped context Y,2,513,True,23
+decode attention AV context,2,513,True,23
+decode attention AV mapped context Y,2,513,True,23
+prefill q_proj tokens,1,512,True,24
+decode q_proj tokens,1,1,True,24
+prefill k_proj tokens,1,512,True,24
+decode k_proj tokens,1,1,True,24
+prefill v_proj tokens,1,512,True,24
+decode v_proj tokens,1,1,True,24
+prefill out_proj tokens,1,512,True,24
+decode out_proj tokens,1,1,True,24
+prefill ffn_up tokens,1,512,True,24
+decode ffn_up tokens,1,1,True,24
+prefill ffn_down tokens,1,512,True,24
+decode ffn_down tokens,1,1,True,24
+prefill attention QK query tokens,1,512,True,24
+prefill attention QK context,1,512,True,24
+prefill attention AV query tokens,1,512,True,24
+prefill attention AV context,1,512,True,24
+decode attention QK context,2,513,True,24
+decode attention QK mapped context Y,2,513,True,24
+decode attention AV context,2,513,True,24
+decode attention AV mapped context Y,2,513,True,24
+prefill q_proj tokens,1,512,True,25
+decode q_proj tokens,1,1,True,25
+prefill k_proj tokens,1,512,True,25
+decode k_proj tokens,1,1,True,25
+prefill v_proj tokens,1,512,True,25
+decode v_proj tokens,1,1,True,25
+prefill out_proj tokens,1,512,True,25
+decode out_proj tokens,1,1,True,25
+prefill ffn_up tokens,1,512,True,25
+decode ffn_up tokens,1,1,True,25
+prefill ffn_down tokens,1,512,True,25
+decode ffn_down tokens,1,1,True,25
+prefill attention QK query tokens,1,512,True,25
+prefill attention QK context,1,512,True,25
+prefill attention AV query tokens,1,512,True,25
+prefill attention AV context,1,512,True,25
+decode attention QK context,2,513,True,25
+decode attention QK mapped context Y,2,513,True,25
+decode attention AV context,2,513,True,25
+decode attention AV mapped context Y,2,513,True,25
+prefill q_proj tokens,1,512,True,26
+decode q_proj tokens,1,1,True,26
+prefill k_proj tokens,1,512,True,26
+decode k_proj tokens,1,1,True,26
+prefill v_proj tokens,1,512,True,26
+decode v_proj tokens,1,1,True,26
+prefill out_proj tokens,1,512,True,26
+decode out_proj tokens,1,1,True,26
+prefill ffn_up tokens,1,512,True,26
+decode ffn_up tokens,1,1,True,26
+prefill ffn_down tokens,1,512,True,26
+decode ffn_down tokens,1,1,True,26
+prefill attention QK query tokens,1,512,True,26
+prefill attention QK context,1,512,True,26
+prefill attention AV query tokens,1,512,True,26
+prefill attention AV context,1,512,True,26
+decode attention QK context,2,513,True,26
+decode attention QK mapped context Y,2,513,True,26
+decode attention AV context,2,513,True,26
+decode attention AV mapped context Y,2,513,True,26
+prefill q_proj tokens,1,512,True,27
+decode q_proj tokens,1,1,True,27
+prefill k_proj tokens,1,512,True,27
+decode k_proj tokens,1,1,True,27
+prefill v_proj tokens,1,512,True,27
+decode v_proj tokens,1,1,True,27
+prefill out_proj tokens,1,512,True,27
+decode out_proj tokens,1,1,True,27
+prefill ffn_up tokens,1,512,True,27
+decode ffn_up tokens,1,1,True,27
+prefill ffn_down tokens,1,512,True,27
+decode ffn_down tokens,1,1,True,27
+prefill attention QK query tokens,1,512,True,27
+prefill attention QK context,1,512,True,27
+prefill attention AV query tokens,1,512,True,27
+prefill attention AV context,1,512,True,27
+decode attention QK context,2,513,True,27
+decode attention QK mapped context Y,2,513,True,27
+decode attention AV context,2,513,True,27
+decode attention AV mapped context Y,2,513,True,27

@@ -1,0 +1,2185 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_116",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 400,
+    "k": 384,
+    "n": 256
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 128,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 5,
+      "k_start": 160,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 6,
+      "k_start": 192,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 7,
+      "k_start": 224,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 8,
+      "k_start": 256,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 9,
+      "k_start": 288,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 10,
+      "k_start": 320,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 11,
+      "k_start": 352,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 12,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 13,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 14,
+      "k_start": 64,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 15,
+      "k_start": 96,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 16,
+      "k_start": 128,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 17,
+      "k_start": 160,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 18,
+      "k_start": 192,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 19,
+      "k_start": 224,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 20,
+      "k_start": 256,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 21,
+      "k_start": 288,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 22,
+      "k_start": 320,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 23,
+      "k_start": 352,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 24,
+      "k_start": 0,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n64",
+      "accumulate": false
+    },
+    {
+      "tile_id": 25,
+      "k_start": 32,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 26,
+      "k_start": 64,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 27,
+      "k_start": 96,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 28,
+      "k_start": 128,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 29,
+      "k_start": 160,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 30,
+      "k_start": 192,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 31,
+      "k_start": 224,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 32,
+      "k_start": 256,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 33,
+      "k_start": 288,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 34,
+      "k_start": 320,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 35,
+      "k_start": 352,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 36,
+      "k_start": 0,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n96",
+      "accumulate": false
+    },
+    {
+      "tile_id": 37,
+      "k_start": 32,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 38,
+      "k_start": 64,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 39,
+      "k_start": 96,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 40,
+      "k_start": 128,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 41,
+      "k_start": 160,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 42,
+      "k_start": 192,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 43,
+      "k_start": 224,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 44,
+      "k_start": 256,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 45,
+      "k_start": 288,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 46,
+      "k_start": 320,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 47,
+      "k_start": 352,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 48,
+      "k_start": 0,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n128",
+      "accumulate": false
+    },
+    {
+      "tile_id": 49,
+      "k_start": 32,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 50,
+      "k_start": 64,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 51,
+      "k_start": 96,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 52,
+      "k_start": 128,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 53,
+      "k_start": 160,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 54,
+      "k_start": 192,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 55,
+      "k_start": 224,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 56,
+      "k_start": 256,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 57,
+      "k_start": 288,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 58,
+      "k_start": 320,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 59,
+      "k_start": 352,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 60,
+      "k_start": 0,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n160",
+      "accumulate": false
+    },
+    {
+      "tile_id": 61,
+      "k_start": 32,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 62,
+      "k_start": 64,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 63,
+      "k_start": 96,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 64,
+      "k_start": 128,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 65,
+      "k_start": 160,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 66,
+      "k_start": 192,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 67,
+      "k_start": 224,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 68,
+      "k_start": 256,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 69,
+      "k_start": 288,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 70,
+      "k_start": 320,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 71,
+      "k_start": 352,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 72,
+      "k_start": 0,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n192",
+      "accumulate": false
+    },
+    {
+      "tile_id": 73,
+      "k_start": 32,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 74,
+      "k_start": 64,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 75,
+      "k_start": 96,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 76,
+      "k_start": 128,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 77,
+      "k_start": 160,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 78,
+      "k_start": 192,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 79,
+      "k_start": 224,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 80,
+      "k_start": 256,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 81,
+      "k_start": 288,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 82,
+      "k_start": 320,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 83,
+      "k_start": 352,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 84,
+      "k_start": 0,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n224",
+      "accumulate": false
+    },
+    {
+      "tile_id": 85,
+      "k_start": 32,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 86,
+      "k_start": 64,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 87,
+      "k_start": 96,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 88,
+      "k_start": 128,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 89,
+      "k_start": 160,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 90,
+      "k_start": 192,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 91,
+      "k_start": 224,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 92,
+      "k_start": 256,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k256_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 93,
+      "k_start": 288,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k288_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 94,
+      "k_start": 320,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k320_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 95,
+      "k_start": 352,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k352_n224",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        256
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k256_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k288_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k320_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k352_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        256
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 116,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 359,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_8;1",
+        "shape": [
+          1,
+          20,
+          20,
+          384
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 205,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          256,
+          1,
+          1,
+          384
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.0024556024000048637,
+          0.003165240865200758,
+          0.0027177496813237667,
+          0.003988688811659813,
+          0.0028665962163358927,
+          0.003028264967724681,
+          0.0018054354004561901,
+          0.0018800068646669388,
+          0.001285959966480732,
+          0.001304452307522297,
+          0.002759943949058652,
+          0.0020905197598040104,
+          0.001113568665459752,
+          0.002181845251470804,
+          0.00175590836443007,
+          0.002032131189480424,
+          0.00221761642023921,
+          0.0012710315641015768,
+          0.0015504424227401614,
+          0.0018798084929585457,
+          0.002853721147403121,
+          0.002196714747697115,
+          0.0024455306120216846,
+          0.003280916251242161,
+          0.003583198878914118,
+          0.0034270978067070246,
+          0.0014777150936424732,
+          0.0020803639199584723,
+          0.0014597984263673425,
+          0.002568233758211136,
+          0.002742966404184699,
+          0.0032983701676130295,
+          0.0023639488499611616,
+          0.002991799730807543,
+          0.0026641206350177526,
+          0.0011700254399329424,
+          0.002683729398995638,
+          0.001231561996974051,
+          0.0024569195229560137,
+          0.004212903790175915,
+          0.003115126397460699,
+          0.0027195201255381107,
+          0.0020343249198049307,
+          0.0038033246528357267,
+          0.0035325095523148775,
+          0.0041742874309420586,
+          0.003393333638086915,
+          0.0032124100252985954,
+          0.0017167762853205204,
+          0.002678995719179511,
+          0.0024410425685346127,
+          0.0021036816760897636,
+          0.0014268781524151564,
+          0.0013941270299255848,
+          0.0017963680438697338,
+          0.003869891632348299,
+          0.0014708319213241339,
+          0.0017126641469076276,
+          0.004609259776771069,
+          0.004022790584713221,
+          0.002523251110687852,
+          0.0018018190748989582,
+          0.00220944220200181,
+          0.0030511871445924044,
+          0.0024742381647229195,
+          0.0013340461300686002,
+          0.0014653090620413423,
+          0.0033639066386967897,
+          0.0009446656331419945,
+          0.0018851659260690212,
+          0.0014203420141711831,
+          0.0017397196497768164,
+          0.002316119382157922,
+          0.002082671970129013,
+          0.0017073139315471053,
+          0.004796456079930067,
+          0.0022188001312315464,
+          0.0030992291867733,
+          0.002458660863339901,
+          0.002675779862329364,
+          0.003467804053798318,
+          0.0022641827818006277,
+          0.0016864277422428131,
+          0.001534204464405775,
+          0.001395990839228034,
+          0.003016190603375435,
+          0.0028974919114261866,
+          0.0022335725370794535,
+          0.0030992748215794563,
+          0.0020168751943856478,
+          0.0028142761439085007,
+          0.002217273460701108,
+          0.0033908358309417963,
+          0.007726476062089205,
+          0.001890659797936678,
+          0.00312413671053946,
+          0.0028501315973699093,
+          0.001756973215378821,
+          0.001643763273023069,
+          0.003001117380335927,
+          0.002047534566372633,
+          0.0019019098253920674,
+          0.0020403899252414703,
+          0.004048890899866819,
+          0.00251629576086998,
+          0.005306744948029518,
+          0.0015449209604412317,
+          0.002009245101362467,
+          0.0038873322773724794,
+          0.0021429082844406366,
+          0.005596865899860859,
+          0.0027263122610747814,
+          0.001468778122216463,
+          0.0021430538035929203,
+          0.0022123155649751425,
+          0.0017554908990859985,
+          0.001449104631319642,
+          0.003269496839493513,
+          0.0036714898888021708,
+          0.0023725267965346575,
+          0.002703594509512186,
+          0.0030882644932717085,
+          0.0015662764199078083,
+          0.0011732598068192601,
+          0.0025570555590093136,
+          0.0022629706654697657,
+          0.004236312583088875,
+          0.0035434134770184755,
+          0.0015281388768926263,
+          0.0016256809467449784,
+          0.001196526107378304,
+          0.0036425271537154913,
+          0.0016896437155082822,
+          0.001501425402238965,
+          0.003182654967531562,
+          0.0014965516747906804,
+          0.00326740019954741,
+          0.0021742291282862425,
+          0.0059550148434937,
+          0.002633588155731559,
+          0.0018072441453114152,
+          0.008062644861638546,
+          0.0014040698297321796,
+          0.0013817958533763885,
+          0.0011953627690672874,
+          0.0009943891782313585,
+          0.0014910361496731639,
+          0.0017449975712224841,
+          0.004526709206402302,
+          0.001183420536108315,
+          0.002856428036466241,
+          0.002954634139314294,
+          0.0019037973834201694,
+          0.0019373300019651651,
+          0.0017989298794418573,
+          0.0022628193255513906,
+          0.002661554142832756,
+          0.003997055813670158,
+          0.0029570746701210737,
+          0.0009478845749981701,
+          0.0023286030627787113,
+          0.001236411975696683,
+          0.003034597495570779,
+          0.0014717968879267573,
+          0.0034898268058896065,
+          0.0022640032693743706,
+          0.0020536009687930346,
+          0.0026098506059497595,
+          0.0020982392597943544,
+          0.0031725012231618166,
+          0.0017742767231538892,
+          0.0017378797056153417,
+          0.010288943536579609,
+          0.0020230067893862724,
+          0.002652408555150032,
+          0.003565402003005147,
+          0.0019616815261542797,
+          0.0017424729885533452,
+          0.003081799950450659,
+          0.0016267143655568361,
+          0.0038000652566552162,
+          0.003184366039931774,
+          0.0012778742238879204,
+          0.0021430107299238443,
+          0.0017622715095058084,
+          0.0018643592484295368,
+          0.0017187511548399925,
+          0.0025751590728759766,
+          0.001848001265898347,
+          0.0035374644212424755,
+          0.001932686660438776,
+          0.0023335078731179237,
+          0.0022201465908437967,
+          0.0010211918270215392,
+          0.0015979609452188015,
+          0.002143146703019738,
+          0.0021619105245918036,
+          0.0017619144637137651,
+          0.00234788516536355,
+          0.0023784914519637823,
+          0.0016122180968523026,
+          0.0027728413697332144,
+          0.0023392755538225174,
+          0.0020914170891046524,
+          0.004038616083562374,
+          0.0029603797011077404,
+          0.002717329654842615,
+          0.0016095530008897185,
+          0.002581067616119981,
+          0.0021937836427241564,
+          0.0021594150457531214,
+          0.0023006638512015343,
+          0.002976660616695881,
+          0.002646044595167041,
+          0.0015931862872093916,
+          0.0032411820720881224,
+          0.0014343077782541513,
+          0.0013652179623022676,
+          0.0030175575520843267,
+          0.003323952667415142,
+          0.003818439319729805,
+          0.0014276846777647734,
+          0.0029195910319685936,
+          0.0031977384351193905,
+          0.0014160654973238707,
+          0.0038314645644277334,
+          0.0024574643466621637,
+          0.004293160978704691,
+          0.002583133289590478,
+          0.0027192109264433384,
+          0.0018142389599233866,
+          0.0010560270166024566,
+          0.0032509968150407076,
+          0.0029672053642570972,
+          0.0038063121028244495,
+          0.0024933533277362585,
+          0.002685645129531622,
+          0.002155064605176449,
+          0.00184400356374681,
+          0.0025393343530595303,
+          0.003174161072820425,
+          0.0012350761098787189,
+          0.0016597375506535172,
+          0.0031504295766353607,
+          0.0017466975841671228,
+          0.005416494328528643,
+          0.0017335613956674933,
+          0.0014549086336046457,
+          0.003923164680600166,
+          0.002570673357695341,
+          0.0020081293769180775,
+          0.002326768124476075,
+          0.0036914432421326637,
+          0.004087334964424372,
+          0.0026442687958478928,
+          0.0021190412808209658
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 80,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          256
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 360,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C3k2_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          20,
+          20,
+          256
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.07999367901659388,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        20,
+        20,
+        384
+      ],
+      "output_shape_nhwc": [
+        1,
+        20,
+        20,
+        256
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

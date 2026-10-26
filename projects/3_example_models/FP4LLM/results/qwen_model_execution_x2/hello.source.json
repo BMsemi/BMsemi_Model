@@ -1,0 +1,23 @@
+{
+  "checkpoint": "https://huggingface.co/Qwen/Qwen3-1.7B/tree/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "reference_checkpoint": true,
+  "sha256_bf16_ranges": {
+    "model.layers.0.input_layernorm.weight": "8a1b7eaa6aaf29858a402e0ac9839f470d468b52d04e76beca8afb77e527017f",
+    "model.layers.0.post_attention_layernorm.weight": "086f6d7ba4426295e12b26e112db5a7a1aece739b3d88153ea67e4060ae8a652",
+    "model.layers.0.self_attn.q_proj.weight": "7d3eb79b41399ffba59cc10871177f13c2d5c60cdf711c5a2f401535c1bb5c84",
+    "model.layers.0.self_attn.k_proj.weight": "a1159573b3bbeb65c94a49ef75475590eb8fe0920167d4b8176f6bf83d90352e",
+    "model.layers.0.self_attn.v_proj.weight": "30c7283f676334e60cb4f55c74a1b4d6c907f891b87103b9e957b38abb00b69c",
+    "model.layers.0.self_attn.o_proj.weight": "e86465b65702c89b3b685f27a9c78d50d90e8e11ae897ca3455258172e0a74cf",
+    "model.layers.0.self_attn.q_norm.weight": "5158cfe545d2b6a8962ca4a73358d537f3b6260c8c087e83ae2419b76d1f8dab",
+    "model.layers.0.self_attn.k_norm.weight": "270b617658566031a498581cc8f67763126c959860a1304ee4ddf8cb6eb05910",
+    "model.layers.0.mlp.gate_proj.weight": "312820692920d1267be3aadedfe651ed1226a335fb2d3c25899ff33eb0885d0e",
+    "model.layers.0.mlp.up_proj.weight": "fe358c6340cdb60208486f682107da25d3ab5ec126795c9af1bb934da2b42b43",
+    "model.layers.0.mlp.down_proj.weight": "2b265dc6ea829855961974874b848df60f7bcd22619b22e2d7dc83b32ff56a0a",
+    "model.embed_tokens.weight": "886d0b8756a6256fb8138a5c1dbdeb1f898440552daffa37722c2092b13b9d48"
+  },
+  "note": "Block weights reused from the validated bundle; embedding fetched from the same pinned revision.",
+  "prompt": "Hello",
+  "token_ids": [
+    9707
+  ]
+}

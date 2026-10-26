@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "static_weight_elements": 1409286144,
+    "static_programmed_cells": 5637144576,
+    "static_program_cycles": 1,
+    "static_endurance_cycles": 100000,
+    "static_margin": 100000.0,
+    "dynamic_kv_elements_observed": 114688,
+    "dynamic_kv_endurance_cycles": 10000000,
+    "kv_cache_context_slots": 2,
+    "kv_cache_token_time_s": 0.1,
+    "kv_cache_service_life_years": 5.0,
+    "projected_decode_tokens_per_service_life": 1576800000.0,
+    "projected_kv_write_cycles_per_slot": 788400000.0,
+    "kv_margin": 0.012683916793505834
+  },
+  "rows": [
+    {
+      "category": "static_transformer_block_linears",
+      "write_policy": "program_once_then_read_for_inference",
+      "programmed_elements": 1409286144,
+      "programmed_cells": 5637144576,
+      "observed_or_projected_cycles_per_cell": 1,
+      "endurance_cycles": 100000,
+      "margin": 100000.0,
+      "status": "meets_inference_programming"
+    },
+    {
+      "category": "dynamic_kv_cache_for_executed_blocks",
+      "write_policy": "append_only_new_token",
+      "programmed_elements": 114688,
+      "programmed_cells": 114688,
+      "observed_or_projected_cycles_per_cell": 788400000.0,
+      "endurance_cycles": 10000000,
+      "margin": 0.012683916793505834,
+      "status": "below_projection"
+    }
+  ]
+}

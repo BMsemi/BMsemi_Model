@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "model": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\yolo26n_int8.tflite",
+    "image": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\bus.jpg",
+    "mapping": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\Yolo26n_full_model_spec.m",
+    "preprocess": {
+      "mode": "plain-resize",
+      "original_shape": [
+        1080,
+        810
+      ],
+      "new_shape": [
+        640,
+        640
+      ]
+    },
+    "crossbar_candidate_layers": 102,
+    "eligible_layers_audited": 102,
+    "ineligible_layers": {},
+    "activation_source": "LiteRT reference tensors with the same INT8 bridge used by the crossbar executor"
+  },
+  "reliability": {
+    "layers_audited": 102,
+    "programmed_unique_cell_levels": 14534080,
+    "programmed_cell_reads_audited": 30210165440,
+    "changed_cell_level_reads": 29965565094,
+    "raw_ber_bit_flips_after_ecc": 1,
+    "effective_int8_weight_read_entries_changed": 808391600,
+    "branch_abs_error_sum": 10682930275,
+    "branch_abs_error_max": 2286,
+    "branch_error_denominator": 3974886400,
+    "mean_abs_integer_branch_error": 2.6876064370040864,
+    "max_abs_integer_branch_error": 2286,
+    "config": {
+      "enabled": true,
+      "stuck_at_lrs_prob": 0.0,
+      "stuck_at_hrs_prob": 0.0,
+      "raw_ber_ppm": 10.0,
+      "use_ecc": true,
+      "ecc_codeword_bits": 38,
+      "ecc_data_bits": 32,
+      "ecc_encode_latency_cycles": 1,
+      "ecc_decode_latency_cycles": 1,
+      "retention_time_s": 2592000,
+      "retention_reference_s": 1.0,
+      "retention_temp_c": 125.0,
+      "retention_temp_reference_c": 125.0,
+      "retention_temp_acceleration_per_100c": 1.0,
+      "retention_model": "state_power_law",
+      "retention_log10_resistance_drift_per_decade": 0.0,
+      "retention_lrs_beta_log10_per_decade": -0.02556,
+      "retention_hrs_beta_log10_per_decade": -0.04041,
+      "state_sigma_ln": 0.02,
+      "relaxation_time_s": 0.0,
+      "relaxation_tau_s": 2000.0,
+      "relaxation_resistance_amplitude_ln": 0.0,
+      "endurance_write_cycles": 0,
+      "endurance_cycles": 100000,
+      "endurance_resistance_drift_ln_per_life_fraction": 0.0,
+      "endurance_limit_stuck_at_lrs_prob": 0.0,
+      "endurance_limit_stuck_at_hrs_prob": 0.0,
+      "endurance_limit_multilevel_loss_prob": 0.0,
+      "endurance_limit_multilevel_sigma_ln": 0.0
+    }
+  },
+  "noise": {
+    "mean_equivalent_branch_read_noise_sigma_levels": 0.02617521080756981,
+    "max_equivalent_branch_read_noise_sigma_levels": 0.029964850496103233,
+    "weighted_cell_level_reads": 30210165440,
+    "config": {
+      "enabled": true,
+      "vread": 0.1,
+      "temp_k": 300.0,
+      "fano": 1.0,
+      "r_lrs_ohm": 10000.0,
+      "r_hrs_ohm": 1000000.0,
+      "flicker_af_lrs": 1e-11,
+      "flicker_af_hrs": 1e-09,
+      "flicker_gamma_lrs": 1.0,
+      "flicker_gamma_hrs": 1.0,
+      "rtn_amp_frac_lrs": 0.0003,
+      "rtn_amp_frac_hrs": 0.02,
+      "readout_noise_a_rms": 0.0,
+      "bandwidth_hz": 5000.0,
+      "flicker_fmin_hz": 0.5
+    }
+  },
+  "iv_adc": {
+    "upper_saturation_events": 29941977,
+    "lower_clip_events": 0,
+    "clamped_tile_columns": 10293222,
+    "saturated_tiles": 262320,
+    "max_branch_level": 14599,
+    "row_groups": 4,
+    "config": {
+      "enabled": true,
+      "mode": "hard_clamp",
+      "adc_full_scale_levels": 2250.0,
+      "linear_rows_before_clamp": 10.0
+    }
+  },
+  "tdc": {
+    "output_values_converted": 68276800,
+    "wire_bits": 614491200,
+    "extra_sar_range_clips_after_iv_limiting": 0,
+    "mean_abs_integer_readout_error": 23.864614568931174,
+    "max_abs_integer_readout_error": 128,
+    "config": {
+      "enabled": true,
+      "tdc_bits": 8,
+      "coarse_bits": 5,
+      "fine_bits": 3,
+      "gain_shift": 0,
+      "output_format": "sar_fp",
+      "precision_mode": "9b",
+      "signed_payload_bits": 9
+    },
+    "iv_limiter": {
+      "enabled": true,
+      "mode": "hard_clamp",
+      "adc_full_scale_levels": 2250.0,
+      "linear_rows_before_clamp": 10.0
+    }
+  },
+  "layer_summary_csv": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\all_layer_nonlinearity_effect_test_results\\layer_summary.csv"
+}

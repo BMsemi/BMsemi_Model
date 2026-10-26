@@ -1,0 +1,97 @@
+{
+  "image": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\bus.jpg",
+  "conf_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "detections": [
+    {
+      "rank": 0,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.8909145593643188,
+      "box_xyxy": [
+        671,
+        395,
+        809,
+        879
+      ],
+      "box_xywh": [
+        671,
+        395,
+        138,
+        484
+      ]
+    },
+    {
+      "rank": 1,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.840999960899353,
+      "box_xyxy": [
+        48,
+        394,
+        235,
+        905
+      ],
+      "box_xywh": [
+        48,
+        394,
+        187,
+        511
+      ]
+    },
+    {
+      "rank": 2,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.8390539288520813,
+      "box_xyxy": [
+        224,
+        399,
+        346,
+        860
+      ],
+      "box_xywh": [
+        224,
+        399,
+        122,
+        461
+      ]
+    },
+    {
+      "rank": 3,
+      "class_id": 5,
+      "label": "bus",
+      "confidence": 0.8339289426803589,
+      "box_xyxy": [
+        1,
+        225,
+        806,
+        746
+      ],
+      "box_xywh": [
+        1,
+        225,
+        805,
+        521
+      ]
+    },
+    {
+      "rank": 4,
+      "class_id": 0,
+      "label": "person",
+      "confidence": 0.6661078333854675,
+      "box_xyxy": [
+        1,
+        556,
+        70,
+        873
+      ],
+      "box_xywh": [
+        1,
+        556,
+        69,
+        317
+      ]
+    }
+  ]
+}

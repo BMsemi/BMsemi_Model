@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+artifacts/model.onnx
+artifacts/model_int8.tflite
+.venv/
+venv/

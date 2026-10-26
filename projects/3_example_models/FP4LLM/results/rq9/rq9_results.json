@@ -1,0 +1,140 @@
+{
+  "sweep": [
+    {
+      "op": "WFP4AINT8",
+      "n_bits": "inf",
+      "ppl": 14.370052337646484,
+      "overflow_scope": "none"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 8,
+      "ppl": 38.074100494384766,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 10,
+      "ppl": 25.133136749267578,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 12,
+      "ppl": 16.962141036987305,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 14,
+      "ppl": 14.502692222595215,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 16,
+      "ppl": 14.320084571838379,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 18,
+      "ppl": 14.399084091186523,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 20,
+      "ppl": 14.266867637634277,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 24,
+      "ppl": 14.332052230834961,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "WFP4AINT8",
+      "n_bits": 32,
+      "ppl": 14.370237350463867,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": "inf",
+      "ppl": 13.485675811767578,
+      "overflow_scope": "none"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 8,
+      "ppl": 34.14405822753906,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 10,
+      "ppl": 24.520864486694336,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 12,
+      "ppl": 17.453134536743164,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 14,
+      "ppl": 13.796046257019043,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 16,
+      "ppl": 13.585700988769531,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 18,
+      "ppl": 13.496808052062988,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 20,
+      "ppl": 13.570793151855469,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 24,
+      "ppl": 13.43000316619873,
+      "overflow_scope": "all"
+    },
+    {
+      "op": "NVFP4_W4A4",
+      "n_bits": 32,
+      "ppl": 13.511602401733398,
+      "overflow_scope": "all"
+    }
+  ],
+  "psum_summary": {
+    "WFP4AINT8": {
+      "max_abs_max": 4576.0,
+      "max_abs_med": 15.5625,
+      "p99_max": 288.0,
+      "req_bits_max": 34,
+      "req_bits_med": 29.0
+    },
+    "NVFP4_W4A4": {
+      "max_abs_max": 6112.0,
+      "max_abs_med": 15.5,
+      "p99_max": 288.0,
+      "req_bits_max": 34,
+      "req_bits_med": 26.0
+    }
+  }
+}

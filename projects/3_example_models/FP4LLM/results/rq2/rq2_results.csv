@@ -1,0 +1,6 @@
+variant,quantize_weights,act_site,ppl
+no_quant,False,None,11.256756782531738
+weight_only,True,None,13.965213775634766
+attn_only,True,attn,67.2729263305664
+mlp_only,True,mlp,133.34739685058594
+all_linear,True,all,4250.259765625

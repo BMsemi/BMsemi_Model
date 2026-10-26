@@ -1,0 +1,8 @@
+echo Y2QgL2hvbWUveGlsaW54L3F3ZW42XzIwMjYxMDA1ICYmIC91c3IvbG9jYWwvc2hhcmUvcHlucS12ZW52L2Jpbi9weXRob24zIHByZXBhcmVfYm9hcmRfaGVsbG8ucHkgJiYgc3VkbyAtbiAvdXNyL2xvY2FsL3NoYXJlL3B5bnEtdmVudi9iaW4vcHl0aG9uMyBmcGdhL3F3ZW42L2JvYXJkX2RtYV9oZWFwLnB5IG1haW4ucHkgLS1leGVjdXRpb24tdGFyZ2V0IGZwZ2E2IC0tYmxvY2staW5kZXggMCAtLXByb21wdCBIZWxsbyAtLWZwZ2EtYnVuZGxlIGJsb2NrMV9oZWxsb19idW5kbGUubnB6IC0tZnBnYS1iaXRzdHJlYW0gZnBnYS9xd2VuNi9vdmVybGF5L3F3ZW42LmJpdCAtLWZwZ2EtZHJpdmVyIGZwZ2EvcXdlbjYvYXhpX3gyX212bV9kcml2ZXIucHkgLS1vdXQtZGlyIHJlc3VsdHMvcXdlbl9tb2RlbF9leGVjdXRpb25fb25feDI= | base64 -d | bash; printf '\nQWEN_DONE_d603473ea0d746e294c3658ad3f6b5d7:%s\n' $?
+[?2004lHello bundle ready; same checkpoint weights, one token.
+xbutil: symbol lookup error: xbutil: undefined symbol: _ZN4ZYNQ4shim11handleCheckEPv
+/usr/local/share/pynq-venv/lib/python3.10/site-packages/pynq/pl_server/xrt_device.py:59: UserWarning: xbutil failed to run - unable to determine XRT version
+  warnings.warn("xbutil failed to run - unable to determine XRT version")
+FPGA block 1 prefill completed: 1 tokens. Report: /home/xilinx/qwen6_20261005/results/qwen_model_execution_on_x2/fpga_summary.json
+
+QWEN_DONE_d603473ea0d746e294c3658ad3f6b5d7:0

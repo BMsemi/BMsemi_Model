@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/rtl/tcam_rag_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tcam_rag_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/rtl/axi_tcam_rag_accel.sv" into library work
+INFO: [VRFC 10-311] analyzing module axi_tcam_rag_accel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim/tb_tcam_rag_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_tcam_rag_core

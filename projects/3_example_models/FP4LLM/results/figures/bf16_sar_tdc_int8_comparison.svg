@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="960" viewBox="0 0 1450 960">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="70" y="55.0" font-size="20" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="70" dy="0">Cell-level readout comparison: INT8 PWM vs BF16 SAR-TDC</tspan></text>
+<rect x="70" y="105" width="560" height="60" rx="8" ry="8" fill="#f7caca" stroke="#c35d5d" stroke-width="1"/>
+<text x="350.0" y="135.0" font-size="15" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">Existing INT8 PWM cost-model path</tspan></text>
+<rect x="140" y="210" width="420" height="52" fill="#cfe1f9" stroke="#c35d5d" stroke-width="1"/>
+<text x="350.0" y="236.0" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">BF16 tensor boundary</tspan></text>
+<polygon points="350,298 353.5,289.0 346.5,289.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="350" y1="262" x2="350" y2="298" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="140" y="298" width="420" height="52" fill="#fff1bf" stroke="#c35d5d" stroke-width="1"/>
+<text x="350.0" y="324.0" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">W/A block quantization to signed INT8 codes</tspan></text>
+<polygon points="350,386 353.5,377.0 346.5,377.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="350" y1="350" x2="350" y2="386" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="140" y="386" width="420" height="52" fill="#d8ecd5" stroke="#7aa273" stroke-width="1"/>
+<text x="350.0" y="412.0" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">INT8 weight -&gt; low/high 4-bit nibbles</tspan></text>
+<polygon points="350,474 353.5,465.0 346.5,465.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="350" y1="438" x2="350" y2="474" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="140" y="474" width="420" height="52" fill="#d8ecd5" stroke="#7aa273" stroke-width="1"/>
+<text x="350.0" y="500.0" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">differential banks: pos/neg x low/high = 4</tspan></text>
+<polygon points="350,562 353.5,553.0 346.5,553.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="350" y1="526" x2="350" y2="562" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="140" y="562" width="420" height="52" fill="#cfe1f9" stroke="#c35d5d" stroke-width="1"/>
+<text x="350.0" y="588.0" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="350.0" dy="0">one logical tile readout unit in mapping cost model</tspan></text>
+<rect x="805" y="105" width="560" height="60" rx="8" ry="8" fill="#d8ecd5" stroke="#73a46f" stroke-width="1"/>
+<text x="1085.0" y="135.0" font-size="15" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">BF16 x BF16 SAR-TDC one-PE path</tspan></text>
+<rect x="875" y="190" width="420" height="48" fill="#cfe1f9" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="214.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">BF16 = sign + exponent + fraction</tspan></text>
+<polygon points="1085,266 1088.5,257.0 1081.5,257.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1085" y1="238" x2="1085" y2="266" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="875" y="266" width="420" height="48" fill="#fff1bf" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="290.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">normal significand = hidden 1 + 7 fraction bits</tspan></text>
+<polygon points="1085,342 1088.5,333.0 1081.5,333.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1085" y1="314" x2="1085" y2="342" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="875" y="342" width="420" height="48" fill="#d8ecd5" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="366.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">split significand into two 4-bit chunks</tspan></text>
+<polygon points="1085,418 1088.5,409.0 1081.5,409.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1085" y1="390" x2="1085" y2="418" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="875" y="418" width="420" height="48" fill="#d8ecd5" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="442.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">for each product exponent bucket: 2 x 2 chunk reads</tspan></text>
+<polygon points="1085,494 1088.5,485.0 1081.5,485.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1085" y1="466" x2="1085" y2="494" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="875" y="494" width="420" height="48" fill="#fff1bf" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="518.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">8 buckets in demo -&gt; 32 readout passes</tspan></text>
+<polygon points="1085,570 1088.5,561.0 1081.5,561.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1085" y1="542" x2="1085" y2="570" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="875" y="570" width="420" height="48" fill="#cfe1f9" stroke="#7aa273" stroke-width="1"/>
+<text x="1085.0" y="594.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1085.0" dy="0">SAR-TDC partials -&gt; digital shift/accumulate -&gt; BF16</tspan></text>
+<line x1="1325" y1="260" x2="1325" y2="540" stroke="#8a1977" stroke-width="1.3"/>
+<polygon points="1295,540 1304.0,543.5 1304.0,536.5" fill="#8a1977" stroke="#8a1977" stroke-width="1"/>
+<line x1="1325" y1="540" x2="1295" y2="540" stroke="#8a1977" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="1340" y="384.0" font-size="10" fill="#8a1977" font-family="Arial, sans-serif" font-weight="400" text-anchor="start"><tspan x="1340" dy="0">sign/exponent</tspan><tspan x="1340" dy="12.0">metadata bypass</tspan></text>
+<rect x="80" y="675" width="1280" height="235" rx="8" ry="8" fill="white" stroke="#1b1b32" stroke-width="1.3"/>
+<text x="100" y="703.0" font-size="14" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="100" dy="0">Same deterministic 1 x 10 by 10 x 18 workload</tspan></text>
+<rect x="120" y="740" width="1180" height="28" fill="#e6ebff" stroke="#99a5dd" stroke-width="1"/>
+<rect x="120" y="740" width="430" height="28" fill="#e6ebff" stroke="#99a5dd" stroke-width="1"/>
+<text x="335.0" y="754.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="335.0" dy="0">Metric</tspan></text>
+<rect x="550" y="740" width="330" height="28" fill="#e6ebff" stroke="#99a5dd" stroke-width="1"/>
+<text x="715.0" y="754.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">INT8 PWM</tspan></text>
+<rect x="880" y="740" width="420" height="28" fill="#e6ebff" stroke="#99a5dd" stroke-width="1"/>
+<text x="1090.0" y="754.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">BF16 SAR-TDC</tspan></text>
+<rect x="120" y="768" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="779.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Physical 4-bit cells</tspan></text>
+<rect x="550" y="768" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="779.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">720</tspan></text>
+<rect x="880" y="768" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="779.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">1,440</tspan></text>
+<rect x="120" y="790" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="801.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Readout passes</tspan></text>
+<rect x="550" y="790" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="801.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">1</tspan></text>
+<rect x="880" y="790" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="801.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">32</tspan></text>
+<rect x="120" y="812" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="823.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Latency cycles</tspan></text>
+<rect x="550" y="812" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="823.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">78</tspan></text>
+<rect x="880" y="812" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="823.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">2,283</tspan></text>
+<rect x="120" y="834" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="845.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Energy</tspan></text>
+<rect x="550" y="834" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="845.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">4.839e-8 J</tspan></text>
+<rect x="880" y="834" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="845.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">1.546e-6 J</tspan></text>
+<rect x="120" y="856" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="867.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Area</tspan></text>
+<rect x="550" y="856" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="867.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">478.8 um^2</tspan></text>
+<rect x="880" y="856" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="867.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">707.6 um^2</tspan></text>
+<rect x="120" y="878" width="430" height="22" fill="white" stroke="#cfd3dd" stroke-width="1"/>
+<text x="335.0" y="889.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="335.0" dy="0">Mean abs error vs BF16</tspan></text>
+<rect x="550" y="878" width="330" height="22" fill="#fff6dc" stroke="#cfd3dd" stroke-width="1"/>
+<text x="715.0" y="889.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="715.0" dy="0">7.60e-4</tspan></text>
+<rect x="880" y="878" width="420" height="22" fill="#fff1bf" stroke="#cfd3dd" stroke-width="1"/>
+<text x="1090.0" y="889.0" font-size="9" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1090.0" dy="0">1.14e-3</tspan></text>
+<text x="95" y="935.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="95" dy="0">Key correction: BF16 increases readout passes because exponent buckets prevent one unscaled analog sum across rows.</tspan></text>
+</svg>

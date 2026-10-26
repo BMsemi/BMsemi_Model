@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "baseline",
+    "vram_loaded_gb": 3.087,
+    "vram_prefill_gb": 3.193,
+    "vram_decode_gb": 3.105,
+    "prefill_ms": 15.75,
+    "prefill_std_ms": 0.04,
+    "prefill_tps": 18351.7,
+    "ttft_ms": 15.46,
+    "decode_tps": 68.9,
+    "prompt_len_tok": 289
+  },
+  {
+    "variant": "WFP4AINT8",
+    "vram_loaded_gb": 3.096,
+    "vram_prefill_gb": 3.193,
+    "vram_decode_gb": 3.105,
+    "prefill_ms": 31.25,
+    "prefill_std_ms": 0.08,
+    "prefill_tps": 9248.1,
+    "ttft_ms": 31.11,
+    "decode_tps": 33.4,
+    "prompt_len_tok": 289
+  },
+  {
+    "variant": "NVFP4_W4A4_B16",
+    "vram_loaded_gb": 3.096,
+    "vram_prefill_gb": 3.239,
+    "vram_decode_gb": 3.105,
+    "prefill_ms": 60.52,
+    "prefill_std_ms": 0.07,
+    "prefill_tps": 4775.2,
+    "ttft_ms": 61.89,
+    "decode_tps": 17.6,
+    "prompt_len_tok": 289
+  }
+]

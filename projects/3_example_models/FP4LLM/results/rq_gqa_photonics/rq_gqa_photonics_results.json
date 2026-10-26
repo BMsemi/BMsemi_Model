@@ -1,0 +1,39 @@
+{
+  "configs": [
+    {
+      "model": "Qwen3-1.7B",
+      "n_layers": 28,
+      "n_q_heads": 16,
+      "n_kv_heads": 8,
+      "head_dim": 128,
+      "fanout": 2,
+      "hidden": 2048
+    },
+    {
+      "model": "Qwen3-4B",
+      "n_layers": 36,
+      "n_q_heads": 32,
+      "n_kv_heads": 8,
+      "head_dim": 80,
+      "fanout": 4,
+      "hidden": 2560
+    },
+    {
+      "model": "Qwen3-8B",
+      "n_layers": 36,
+      "n_q_heads": 32,
+      "n_kv_heads": 8,
+      "head_dim": 128,
+      "fanout": 4,
+      "hidden": 4096
+    }
+  ],
+  "constants": {
+    "AXI_BW": 32,
+    "AXI_E": 2.0,
+    "OPT_BW": 256,
+    "OPT_E": 0.5,
+    "OPT_ENCODE": 0.5,
+    "OPT_TRIG": 4
+  }
+}

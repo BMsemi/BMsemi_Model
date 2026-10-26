@@ -1,0 +1,6368 @@
+{
+  "schema_version": 1,
+  "source_model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+  "compiled_conv2d_count": 94,
+  "compile_error_count": 0,
+  "compiled_programs": [
+    {
+      "op_index": 2,
+      "program": "op_0002_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        102400,
+        27,
+        16
+      ]
+    },
+    {
+      "op_index": 6,
+      "program": "op_0006_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        25600,
+        144,
+        32
+      ]
+    },
+    {
+      "op_index": 9,
+      "program": "op_0009_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        25600,
+        32,
+        32
+      ]
+    },
+    {
+      "op_index": 13,
+      "program": "op_0013_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        25600,
+        144,
+        8
+      ]
+    },
+    {
+      "op_index": 16,
+      "program": "op_0016_conv2d",
+      "tiles": 3,
+      "logical_shape": [
+        25600,
+        72,
+        16
+      ]
+    },
+    {
+      "op_index": 22,
+      "program": "op_0022_conv2d",
+      "tiles": 4,
+      "logical_shape": [
+        25600,
+        48,
+        64
+      ]
+    },
+    {
+      "op_index": 26,
+      "program": "op_0026_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        6400,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 29,
+      "program": "op_0029_conv2d",
+      "tiles": 4,
+      "logical_shape": [
+        6400,
+        64,
+        64
+      ]
+    },
+    {
+      "op_index": 33,
+      "program": "op_0033_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        6400,
+        288,
+        16
+      ]
+    },
+    {
+      "op_index": 36,
+      "program": "op_0036_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        32
+      ]
+    },
+    {
+      "op_index": 42,
+      "program": "op_0042_conv2d",
+      "tiles": 12,
+      "logical_shape": [
+        6400,
+        96,
+        128
+      ]
+    },
+    {
+      "op_index": 46,
+      "program": "op_0046_conv2d",
+      "tiles": 144,
+      "logical_shape": [
+        1600,
+        1152,
+        128
+      ]
+    },
+    {
+      "op_index": 49,
+      "program": "op_0049_conv2d",
+      "tiles": 16,
+      "logical_shape": [
+        1600,
+        128,
+        128
+      ]
+    },
+    {
+      "op_index": 53,
+      "program": "op_0053_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 56,
+      "program": "op_0056_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 59,
+      "program": "op_0059_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 63,
+      "program": "op_0063_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 66,
+      "program": "op_0066_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 70,
+      "program": "op_0070_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 74,
+      "program": "op_0074_conv2d",
+      "tiles": 4,
+      "logical_shape": [
+        1600,
+        64,
+        64
+      ]
+    },
+    {
+      "op_index": 79,
+      "program": "op_0079_conv2d",
+      "tiles": 24,
+      "logical_shape": [
+        1600,
+        192,
+        128
+      ]
+    },
+    {
+      "op_index": 83,
+      "program": "op_0083_conv2d",
+      "tiles": 288,
+      "logical_shape": [
+        400,
+        1152,
+        256
+      ]
+    },
+    {
+      "op_index": 86,
+      "program": "op_0086_conv2d",
+      "tiles": 64,
+      "logical_shape": [
+        400,
+        256,
+        256
+      ]
+    },
+    {
+      "op_index": 90,
+      "program": "op_0090_conv2d",
+      "tiles": 8,
+      "logical_shape": [
+        400,
+        128,
+        64
+      ]
+    },
+    {
+      "op_index": 93,
+      "program": "op_0093_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        400,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 96,
+      "program": "op_0096_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        400,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 100,
+      "program": "op_0100_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        400,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 103,
+      "program": "op_0103_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        400,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 107,
+      "program": "op_0107_conv2d",
+      "tiles": 8,
+      "logical_shape": [
+        400,
+        128,
+        64
+      ]
+    },
+    {
+      "op_index": 111,
+      "program": "op_0111_conv2d",
+      "tiles": 16,
+      "logical_shape": [
+        400,
+        128,
+        128
+      ]
+    },
+    {
+      "op_index": 116,
+      "program": "op_0116_conv2d",
+      "tiles": 96,
+      "logical_shape": [
+        400,
+        384,
+        256
+      ]
+    },
+    {
+      "op_index": 119,
+      "program": "op_0119_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        256,
+        128
+      ]
+    },
+    {
+      "op_index": 124,
+      "program": "op_0124_conv2d",
+      "tiles": 128,
+      "logical_shape": [
+        400,
+        512,
+        256
+      ]
+    },
+    {
+      "op_index": 128,
+      "program": "op_0128_conv2d",
+      "tiles": 64,
+      "logical_shape": [
+        400,
+        256,
+        256
+      ]
+    },
+    {
+      "op_index": 132,
+      "program": "op_0132_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        128,
+        256
+      ]
+    },
+    {
+      "op_index": 156,
+      "program": "op_0156_conv2d",
+      "tiles": 16,
+      "logical_shape": [
+        400,
+        128,
+        128
+      ]
+    },
+    {
+      "op_index": 158,
+      "program": "op_0158_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        128,
+        256
+      ]
+    },
+    {
+      "op_index": 161,
+      "program": "op_0161_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        256,
+        128
+      ]
+    },
+    {
+      "op_index": 165,
+      "program": "op_0165_conv2d",
+      "tiles": 64,
+      "logical_shape": [
+        400,
+        256,
+        256
+      ]
+    },
+    {
+      "op_index": 170,
+      "program": "op_0170_conv2d",
+      "tiles": 48,
+      "logical_shape": [
+        1600,
+        384,
+        128
+      ]
+    },
+    {
+      "op_index": 174,
+      "program": "op_0174_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 177,
+      "program": "op_0177_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 180,
+      "program": "op_0180_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 184,
+      "program": "op_0184_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 187,
+      "program": "op_0187_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 191,
+      "program": "op_0191_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 195,
+      "program": "op_0195_conv2d",
+      "tiles": 4,
+      "logical_shape": [
+        1600,
+        64,
+        64
+      ]
+    },
+    {
+      "op_index": 200,
+      "program": "op_0200_conv2d",
+      "tiles": 24,
+      "logical_shape": [
+        1600,
+        192,
+        128
+      ]
+    },
+    {
+      "op_index": 205,
+      "program": "op_0205_conv2d",
+      "tiles": 16,
+      "logical_shape": [
+        6400,
+        256,
+        64
+      ]
+    },
+    {
+      "op_index": 209,
+      "program": "op_0209_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        6400,
+        32,
+        16
+      ]
+    },
+    {
+      "op_index": 212,
+      "program": "op_0212_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 215,
+      "program": "op_0215_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 219,
+      "program": "op_0219_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 222,
+      "program": "op_0222_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 226,
+      "program": "op_0226_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        6400,
+        32,
+        16
+      ]
+    },
+    {
+      "op_index": 230,
+      "program": "op_0230_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        6400,
+        32,
+        32
+      ]
+    },
+    {
+      "op_index": 235,
+      "program": "op_0235_conv2d",
+      "tiles": 6,
+      "logical_shape": [
+        6400,
+        96,
+        64
+      ]
+    },
+    {
+      "op_index": 239,
+      "program": "op_0239_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        1600,
+        576,
+        64
+      ]
+    },
+    {
+      "op_index": 243,
+      "program": "op_0243_conv2d",
+      "tiles": 24,
+      "logical_shape": [
+        1600,
+        192,
+        128
+      ]
+    },
+    {
+      "op_index": 247,
+      "program": "op_0247_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 250,
+      "program": "op_0250_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 253,
+      "program": "op_0253_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 257,
+      "program": "op_0257_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 260,
+      "program": "op_0260_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        288,
+        32
+      ]
+    },
+    {
+      "op_index": 264,
+      "program": "op_0264_conv2d",
+      "tiles": 2,
+      "logical_shape": [
+        1600,
+        64,
+        32
+      ]
+    },
+    {
+      "op_index": 268,
+      "program": "op_0268_conv2d",
+      "tiles": 4,
+      "logical_shape": [
+        1600,
+        64,
+        64
+      ]
+    },
+    {
+      "op_index": 273,
+      "program": "op_0273_conv2d",
+      "tiles": 24,
+      "logical_shape": [
+        1600,
+        192,
+        128
+      ]
+    },
+    {
+      "op_index": 277,
+      "program": "op_0277_conv2d",
+      "tiles": 144,
+      "logical_shape": [
+        400,
+        1152,
+        128
+      ]
+    },
+    {
+      "op_index": 281,
+      "program": "op_0281_conv2d",
+      "tiles": 96,
+      "logical_shape": [
+        400,
+        384,
+        256
+      ]
+    },
+    {
+      "op_index": 285,
+      "program": "op_0285_conv2d",
+      "tiles": 72,
+      "logical_shape": [
+        400,
+        1152,
+        64
+      ]
+    },
+    {
+      "op_index": 288,
+      "program": "op_0288_conv2d",
+      "tiles": 72,
+      "logical_shape": [
+        400,
+        576,
+        128
+      ]
+    },
+    {
+      "op_index": 292,
+      "program": "op_0292_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        128,
+        256
+      ]
+    },
+    {
+      "op_index": 316,
+      "program": "op_0316_conv2d",
+      "tiles": 16,
+      "logical_shape": [
+        400,
+        128,
+        128
+      ]
+    },
+    {
+      "op_index": 318,
+      "program": "op_0318_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        128,
+        256
+      ]
+    },
+    {
+      "op_index": 321,
+      "program": "op_0321_conv2d",
+      "tiles": 32,
+      "logical_shape": [
+        400,
+        256,
+        128
+      ]
+    },
+    {
+      "op_index": 325,
+      "program": "op_0325_conv2d",
+      "tiles": 96,
+      "logical_shape": [
+        400,
+        384,
+        256
+      ]
+    },
+    {
+      "op_index": 328,
+      "program": "op_0328_conv2d",
+      "tiles": 18,
+      "logical_shape": [
+        6400,
+        576,
+        16
+      ]
+    },
+    {
+      "op_index": 331,
+      "program": "op_0331_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        6400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 334,
+      "program": "op_0334_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        6400,
+        16,
+        4
+      ]
+    },
+    {
+      "op_index": 337,
+      "program": "op_0337_conv2d",
+      "tiles": 36,
+      "logical_shape": [
+        1600,
+        1152,
+        16
+      ]
+    },
+    {
+      "op_index": 340,
+      "program": "op_0340_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        1600,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 343,
+      "program": "op_0343_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        1600,
+        16,
+        4
+      ]
+    },
+    {
+      "op_index": 346,
+      "program": "op_0346_conv2d",
+      "tiles": 72,
+      "logical_shape": [
+        400,
+        2304,
+        16
+      ]
+    },
+    {
+      "op_index": 349,
+      "program": "op_0349_conv2d",
+      "tiles": 5,
+      "logical_shape": [
+        400,
+        144,
+        16
+      ]
+    },
+    {
+      "op_index": 352,
+      "program": "op_0352_conv2d",
+      "tiles": 1,
+      "logical_shape": [
+        400,
+        16,
+        4
+      ]
+    },
+    {
+      "op_index": 359,
+      "program": "op_0359_conv2d",
+      "tiles": 6,
+      "logical_shape": [
+        6400,
+        64,
+        80
+      ]
+    },
+    {
+      "op_index": 365,
+      "program": "op_0365_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        6400,
+        80,
+        80
+      ]
+    },
+    {
+      "op_index": 368,
+      "program": "op_0368_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        6400,
+        80,
+        80
+      ]
+    },
+    {
+      "op_index": 374,
+      "program": "op_0374_conv2d",
+      "tiles": 12,
+      "logical_shape": [
+        1600,
+        128,
+        80
+      ]
+    },
+    {
+      "op_index": 380,
+      "program": "op_0380_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        80,
+        80
+      ]
+    },
+    {
+      "op_index": 383,
+      "program": "op_0383_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        1600,
+        80,
+        80
+      ]
+    },
+    {
+      "op_index": 389,
+      "program": "op_0389_conv2d",
+      "tiles": 24,
+      "logical_shape": [
+        400,
+        256,
+        80
+      ]
+    },
+    {
+      "op_index": 395,
+      "program": "op_0395_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        400,
+        80,
+        80
+      ]
+    },
+    {
+      "op_index": 398,
+      "program": "op_0398_conv2d",
+      "tiles": 9,
+      "logical_shape": [
+        400,
+        80,
+        80
+      ]
+    }
+  ],
+  "compile_errors": [],
+  "operators": [
+    {
+      "index": 0,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        0,
+        240
+      ],
+      "outputs": [
+        244
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 1,
+      "op_name": "PAD",
+      "inputs": [
+        244,
+        120
+      ],
+      "outputs": [
+        245
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 2,
+      "op_name": "CONV_2D",
+      "inputs": [
+        245,
+        235,
+        119
+      ],
+      "outputs": [
+        246
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 3,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        246
+      ],
+      "outputs": [
+        247
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 4,
+      "op_name": "MUL",
+      "inputs": [
+        246,
+        247
+      ],
+      "outputs": [
+        248
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 5,
+      "op_name": "PAD",
+      "inputs": [
+        248,
+        120
+      ],
+      "outputs": [
+        249
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 6,
+      "op_name": "CONV_2D",
+      "inputs": [
+        249,
+        234,
+        118
+      ],
+      "outputs": [
+        250
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 7,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        250
+      ],
+      "outputs": [
+        251
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 8,
+      "op_name": "MUL",
+      "inputs": [
+        250,
+        251
+      ],
+      "outputs": [
+        252
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 9,
+      "op_name": "CONV_2D",
+      "inputs": [
+        252,
+        233,
+        117
+      ],
+      "outputs": [
+        253
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 10,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        253
+      ],
+      "outputs": [
+        254
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 11,
+      "op_name": "MUL",
+      "inputs": [
+        253,
+        254
+      ],
+      "outputs": [
+        255
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 12,
+      "op_name": "SLICE",
+      "inputs": [
+        255,
+        116,
+        115
+      ],
+      "outputs": [
+        256
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 13,
+      "op_name": "CONV_2D",
+      "inputs": [
+        256,
+        232,
+        114
+      ],
+      "outputs": [
+        257
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 14,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        257
+      ],
+      "outputs": [
+        258
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 15,
+      "op_name": "MUL",
+      "inputs": [
+        257,
+        258
+      ],
+      "outputs": [
+        259
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 16,
+      "op_name": "CONV_2D",
+      "inputs": [
+        259,
+        231,
+        113
+      ],
+      "outputs": [
+        260
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 17,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        260
+      ],
+      "outputs": [
+        261
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 18,
+      "op_name": "MUL",
+      "inputs": [
+        260,
+        261
+      ],
+      "outputs": [
+        262
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 19,
+      "op_name": "ADD",
+      "inputs": [
+        256,
+        262
+      ],
+      "outputs": [
+        263
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 20,
+      "op_name": "SLICE",
+      "inputs": [
+        255,
+        112,
+        115
+      ],
+      "outputs": [
+        264
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 21,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        264,
+        256,
+        263
+      ],
+      "outputs": [
+        265
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 22,
+      "op_name": "CONV_2D",
+      "inputs": [
+        265,
+        230,
+        111
+      ],
+      "outputs": [
+        266
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 23,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        266
+      ],
+      "outputs": [
+        267
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 24,
+      "op_name": "MUL",
+      "inputs": [
+        266,
+        267
+      ],
+      "outputs": [
+        268
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 25,
+      "op_name": "PAD",
+      "inputs": [
+        268,
+        120
+      ],
+      "outputs": [
+        269
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 26,
+      "op_name": "CONV_2D",
+      "inputs": [
+        269,
+        229,
+        110
+      ],
+      "outputs": [
+        270
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 27,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        270
+      ],
+      "outputs": [
+        271
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 28,
+      "op_name": "MUL",
+      "inputs": [
+        270,
+        271
+      ],
+      "outputs": [
+        272
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 29,
+      "op_name": "CONV_2D",
+      "inputs": [
+        272,
+        228,
+        109
+      ],
+      "outputs": [
+        273
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 30,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        273
+      ],
+      "outputs": [
+        274
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 31,
+      "op_name": "MUL",
+      "inputs": [
+        273,
+        274
+      ],
+      "outputs": [
+        275
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 32,
+      "op_name": "SLICE",
+      "inputs": [
+        275,
+        108,
+        107
+      ],
+      "outputs": [
+        276
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 33,
+      "op_name": "CONV_2D",
+      "inputs": [
+        276,
+        227,
+        106
+      ],
+      "outputs": [
+        277
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 34,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        277
+      ],
+      "outputs": [
+        278
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 35,
+      "op_name": "MUL",
+      "inputs": [
+        277,
+        278
+      ],
+      "outputs": [
+        279
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 36,
+      "op_name": "CONV_2D",
+      "inputs": [
+        279,
+        226,
+        105
+      ],
+      "outputs": [
+        280
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 37,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        280
+      ],
+      "outputs": [
+        281
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 38,
+      "op_name": "MUL",
+      "inputs": [
+        280,
+        281
+      ],
+      "outputs": [
+        282
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 39,
+      "op_name": "ADD",
+      "inputs": [
+        276,
+        282
+      ],
+      "outputs": [
+        283
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 40,
+      "op_name": "SLICE",
+      "inputs": [
+        275,
+        112,
+        107
+      ],
+      "outputs": [
+        284
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 41,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        284,
+        276,
+        283
+      ],
+      "outputs": [
+        285
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 42,
+      "op_name": "CONV_2D",
+      "inputs": [
+        285,
+        225,
+        104
+      ],
+      "outputs": [
+        286
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 43,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        286
+      ],
+      "outputs": [
+        287
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 44,
+      "op_name": "MUL",
+      "inputs": [
+        286,
+        287
+      ],
+      "outputs": [
+        288
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 45,
+      "op_name": "PAD",
+      "inputs": [
+        288,
+        120
+      ],
+      "outputs": [
+        289
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 46,
+      "op_name": "CONV_2D",
+      "inputs": [
+        289,
+        224,
+        103
+      ],
+      "outputs": [
+        290
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 47,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        290
+      ],
+      "outputs": [
+        291
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 48,
+      "op_name": "MUL",
+      "inputs": [
+        290,
+        291
+      ],
+      "outputs": [
+        292
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 49,
+      "op_name": "CONV_2D",
+      "inputs": [
+        292,
+        223,
+        102
+      ],
+      "outputs": [
+        293
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 50,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        293
+      ],
+      "outputs": [
+        294
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 51,
+      "op_name": "MUL",
+      "inputs": [
+        293,
+        294
+      ],
+      "outputs": [
+        295
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 52,
+      "op_name": "SLICE",
+      "inputs": [
+        295,
+        101,
+        100
+      ],
+      "outputs": [
+        296
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 53,
+      "op_name": "CONV_2D",
+      "inputs": [
+        296,
+        222,
+        99
+      ],
+      "outputs": [
+        297
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 54,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        297
+      ],
+      "outputs": [
+        298
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 55,
+      "op_name": "MUL",
+      "inputs": [
+        297,
+        298
+      ],
+      "outputs": [
+        299
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 56,
+      "op_name": "CONV_2D",
+      "inputs": [
+        299,
+        221,
+        98
+      ],
+      "outputs": [
+        300
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 57,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        300
+      ],
+      "outputs": [
+        301
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 58,
+      "op_name": "MUL",
+      "inputs": [
+        300,
+        301
+      ],
+      "outputs": [
+        302
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 59,
+      "op_name": "CONV_2D",
+      "inputs": [
+        302,
+        220,
+        97
+      ],
+      "outputs": [
+        303
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 60,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        303
+      ],
+      "outputs": [
+        304
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 61,
+      "op_name": "MUL",
+      "inputs": [
+        303,
+        304
+      ],
+      "outputs": [
+        305
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 62,
+      "op_name": "ADD",
+      "inputs": [
+        299,
+        305
+      ],
+      "outputs": [
+        306
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 63,
+      "op_name": "CONV_2D",
+      "inputs": [
+        306,
+        219,
+        96
+      ],
+      "outputs": [
+        307
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 64,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        307
+      ],
+      "outputs": [
+        308
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 65,
+      "op_name": "MUL",
+      "inputs": [
+        307,
+        308
+      ],
+      "outputs": [
+        309
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 66,
+      "op_name": "CONV_2D",
+      "inputs": [
+        309,
+        218,
+        95
+      ],
+      "outputs": [
+        310
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 67,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        310
+      ],
+      "outputs": [
+        311
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 68,
+      "op_name": "MUL",
+      "inputs": [
+        310,
+        311
+      ],
+      "outputs": [
+        312
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 69,
+      "op_name": "ADD",
+      "inputs": [
+        306,
+        312
+      ],
+      "outputs": [
+        313
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 70,
+      "op_name": "CONV_2D",
+      "inputs": [
+        296,
+        217,
+        94
+      ],
+      "outputs": [
+        314
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 71,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        314
+      ],
+      "outputs": [
+        315
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 72,
+      "op_name": "MUL",
+      "inputs": [
+        314,
+        315
+      ],
+      "outputs": [
+        316
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 73,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        313,
+        316
+      ],
+      "outputs": [
+        317
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 74,
+      "op_name": "CONV_2D",
+      "inputs": [
+        317,
+        216,
+        93
+      ],
+      "outputs": [
+        318
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 75,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        318
+      ],
+      "outputs": [
+        319
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 76,
+      "op_name": "MUL",
+      "inputs": [
+        318,
+        319
+      ],
+      "outputs": [
+        320
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 77,
+      "op_name": "SLICE",
+      "inputs": [
+        295,
+        112,
+        100
+      ],
+      "outputs": [
+        321
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 78,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        321,
+        296,
+        320
+      ],
+      "outputs": [
+        322
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 79,
+      "op_name": "CONV_2D",
+      "inputs": [
+        322,
+        215,
+        92
+      ],
+      "outputs": [
+        323
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 80,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        323
+      ],
+      "outputs": [
+        324
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 81,
+      "op_name": "MUL",
+      "inputs": [
+        323,
+        324
+      ],
+      "outputs": [
+        325
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 82,
+      "op_name": "PAD",
+      "inputs": [
+        325,
+        120
+      ],
+      "outputs": [
+        326
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 83,
+      "op_name": "CONV_2D",
+      "inputs": [
+        326,
+        214,
+        91
+      ],
+      "outputs": [
+        327
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 84,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        327
+      ],
+      "outputs": [
+        328
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 85,
+      "op_name": "MUL",
+      "inputs": [
+        327,
+        328
+      ],
+      "outputs": [
+        329
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 86,
+      "op_name": "CONV_2D",
+      "inputs": [
+        329,
+        213,
+        90
+      ],
+      "outputs": [
+        330
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 87,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        330
+      ],
+      "outputs": [
+        331
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 88,
+      "op_name": "MUL",
+      "inputs": [
+        330,
+        331
+      ],
+      "outputs": [
+        332
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 89,
+      "op_name": "SLICE",
+      "inputs": [
+        332,
+        89,
+        88
+      ],
+      "outputs": [
+        333
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 90,
+      "op_name": "CONV_2D",
+      "inputs": [
+        333,
+        212,
+        87
+      ],
+      "outputs": [
+        334
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 91,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        334
+      ],
+      "outputs": [
+        335
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 92,
+      "op_name": "MUL",
+      "inputs": [
+        334,
+        335
+      ],
+      "outputs": [
+        336
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 93,
+      "op_name": "CONV_2D",
+      "inputs": [
+        336,
+        211,
+        86
+      ],
+      "outputs": [
+        337
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 94,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        337
+      ],
+      "outputs": [
+        338
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 95,
+      "op_name": "MUL",
+      "inputs": [
+        337,
+        338
+      ],
+      "outputs": [
+        339
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 96,
+      "op_name": "CONV_2D",
+      "inputs": [
+        339,
+        210,
+        85
+      ],
+      "outputs": [
+        340
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 97,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        340
+      ],
+      "outputs": [
+        341
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 98,
+      "op_name": "MUL",
+      "inputs": [
+        340,
+        341
+      ],
+      "outputs": [
+        342
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 99,
+      "op_name": "ADD",
+      "inputs": [
+        336,
+        342
+      ],
+      "outputs": [
+        343
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 100,
+      "op_name": "CONV_2D",
+      "inputs": [
+        343,
+        209,
+        84
+      ],
+      "outputs": [
+        344
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 101,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        344
+      ],
+      "outputs": [
+        345
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 102,
+      "op_name": "MUL",
+      "inputs": [
+        344,
+        345
+      ],
+      "outputs": [
+        346
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 103,
+      "op_name": "CONV_2D",
+      "inputs": [
+        346,
+        208,
+        83
+      ],
+      "outputs": [
+        347
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 104,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        347
+      ],
+      "outputs": [
+        348
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 105,
+      "op_name": "MUL",
+      "inputs": [
+        347,
+        348
+      ],
+      "outputs": [
+        349
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 106,
+      "op_name": "ADD",
+      "inputs": [
+        343,
+        349
+      ],
+      "outputs": [
+        350
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 107,
+      "op_name": "CONV_2D",
+      "inputs": [
+        333,
+        207,
+        82
+      ],
+      "outputs": [
+        351
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 108,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        351
+      ],
+      "outputs": [
+        352
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 109,
+      "op_name": "MUL",
+      "inputs": [
+        351,
+        352
+      ],
+      "outputs": [
+        353
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 110,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        350,
+        353
+      ],
+      "outputs": [
+        354
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 111,
+      "op_name": "CONV_2D",
+      "inputs": [
+        354,
+        206,
+        81
+      ],
+      "outputs": [
+        355
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 112,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        355
+      ],
+      "outputs": [
+        356
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 113,
+      "op_name": "MUL",
+      "inputs": [
+        355,
+        356
+      ],
+      "outputs": [
+        357
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 114,
+      "op_name": "SLICE",
+      "inputs": [
+        332,
+        112,
+        88
+      ],
+      "outputs": [
+        358
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 115,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        358,
+        333,
+        357
+      ],
+      "outputs": [
+        359
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 116,
+      "op_name": "CONV_2D",
+      "inputs": [
+        359,
+        205,
+        80
+      ],
+      "outputs": [
+        360
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 117,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        360
+      ],
+      "outputs": [
+        361
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 118,
+      "op_name": "MUL",
+      "inputs": [
+        360,
+        361
+      ],
+      "outputs": [
+        362
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 119,
+      "op_name": "CONV_2D",
+      "inputs": [
+        362,
+        204,
+        79
+      ],
+      "outputs": [
+        363
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 120,
+      "op_name": "MAX_POOL_2D",
+      "inputs": [
+        363
+      ],
+      "outputs": [
+        364
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 121,
+      "op_name": "MAX_POOL_2D",
+      "inputs": [
+        364
+      ],
+      "outputs": [
+        365
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 122,
+      "op_name": "MAX_POOL_2D",
+      "inputs": [
+        365
+      ],
+      "outputs": [
+        366
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 123,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        363,
+        364,
+        365,
+        366
+      ],
+      "outputs": [
+        367
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 124,
+      "op_name": "CONV_2D",
+      "inputs": [
+        367,
+        203,
+        78
+      ],
+      "outputs": [
+        368
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 125,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        368
+      ],
+      "outputs": [
+        369
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 126,
+      "op_name": "MUL",
+      "inputs": [
+        368,
+        369
+      ],
+      "outputs": [
+        370
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 127,
+      "op_name": "ADD",
+      "inputs": [
+        370,
+        362
+      ],
+      "outputs": [
+        371
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 128,
+      "op_name": "CONV_2D",
+      "inputs": [
+        371,
+        202,
+        77
+      ],
+      "outputs": [
+        372
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 129,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        372
+      ],
+      "outputs": [
+        373
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 130,
+      "op_name": "MUL",
+      "inputs": [
+        372,
+        373
+      ],
+      "outputs": [
+        374
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 131,
+      "op_name": "SLICE",
+      "inputs": [
+        374,
+        89,
+        88
+      ],
+      "outputs": [
+        375
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 132,
+      "op_name": "CONV_2D",
+      "inputs": [
+        375,
+        201,
+        76
+      ],
+      "outputs": [
+        376
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 133,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        376,
+        238
+      ],
+      "outputs": [
+        377
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 134,
+      "op_name": "RESHAPE",
+      "inputs": [
+        377,
+        236
+      ],
+      "outputs": [
+        378
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 135,
+      "op_name": "SLICE",
+      "inputs": [
+        378,
+        112,
+        75
+      ],
+      "outputs": [
+        379
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 136,
+      "op_name": "SLICE",
+      "inputs": [
+        378,
+        74,
+        75
+      ],
+      "outputs": [
+        380
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 137,
+      "op_name": "SLICE",
+      "inputs": [
+        378,
+        73,
+        72
+      ],
+      "outputs": [
+        381
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 138,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        379,
+        200
+      ],
+      "outputs": [
+        382
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 139,
+      "op_name": "RESHAPE",
+      "inputs": [
+        382,
+        199
+      ],
+      "outputs": [
+        383
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 140,
+      "op_name": "RESHAPE",
+      "inputs": [
+        380,
+        198
+      ],
+      "outputs": [
+        384
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 141,
+      "op_name": "BATCH_MATMUL",
+      "inputs": [
+        383,
+        384
+      ],
+      "outputs": [
+        385
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 142,
+      "op_name": "MUL",
+      "inputs": [
+        385,
+        243
+      ],
+      "outputs": [
+        386
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 143,
+      "op_name": "RESHAPE",
+      "inputs": [
+        386,
+        197
+      ],
+      "outputs": [
+        387
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 144,
+      "op_name": "SOFTMAX",
+      "inputs": [
+        387
+      ],
+      "outputs": [
+        388
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 145,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        388,
+        200
+      ],
+      "outputs": [
+        389
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 146,
+      "op_name": "RESHAPE",
+      "inputs": [
+        381,
+        196
+      ],
+      "outputs": [
+        390
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 147,
+      "op_name": "RESHAPE",
+      "inputs": [
+        389,
+        195
+      ],
+      "outputs": [
+        391
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 148,
+      "op_name": "BATCH_MATMUL",
+      "inputs": [
+        390,
+        391
+      ],
+      "outputs": [
+        392
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 149,
+      "op_name": "RESHAPE",
+      "inputs": [
+        392,
+        194
+      ],
+      "outputs": [
+        393
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 150,
+      "op_name": "RESHAPE",
+      "inputs": [
+        381,
+        194
+      ],
+      "outputs": [
+        394
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 151,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        394,
+        240
+      ],
+      "outputs": [
+        395
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 152,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        395,
+        193,
+        71
+      ],
+      "outputs": [
+        396
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 153,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        396,
+        238
+      ],
+      "outputs": [
+        397
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 154,
+      "op_name": "ADD",
+      "inputs": [
+        393,
+        397
+      ],
+      "outputs": [
+        398
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 155,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        398,
+        240
+      ],
+      "outputs": [
+        399
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 156,
+      "op_name": "CONV_2D",
+      "inputs": [
+        399,
+        192,
+        70
+      ],
+      "outputs": [
+        400
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 157,
+      "op_name": "ADD",
+      "inputs": [
+        375,
+        400
+      ],
+      "outputs": [
+        401
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 158,
+      "op_name": "CONV_2D",
+      "inputs": [
+        401,
+        191,
+        69
+      ],
+      "outputs": [
+        402
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 159,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        402
+      ],
+      "outputs": [
+        403
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 160,
+      "op_name": "MUL",
+      "inputs": [
+        402,
+        403
+      ],
+      "outputs": [
+        404
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 161,
+      "op_name": "CONV_2D",
+      "inputs": [
+        404,
+        190,
+        68
+      ],
+      "outputs": [
+        405
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 162,
+      "op_name": "ADD",
+      "inputs": [
+        401,
+        405
+      ],
+      "outputs": [
+        406
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 163,
+      "op_name": "SLICE",
+      "inputs": [
+        374,
+        112,
+        88
+      ],
+      "outputs": [
+        407
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 164,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        407,
+        406
+      ],
+      "outputs": [
+        408
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 165,
+      "op_name": "CONV_2D",
+      "inputs": [
+        408,
+        189,
+        67
+      ],
+      "outputs": [
+        409
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 166,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        409
+      ],
+      "outputs": [
+        410
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 167,
+      "op_name": "MUL",
+      "inputs": [
+        409,
+        410
+      ],
+      "outputs": [
+        411
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 168,
+      "op_name": "RESIZE_NEAREST_NEIGHBOR",
+      "inputs": [
+        411,
+        239
+      ],
+      "outputs": [
+        412
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 169,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        412,
+        325
+      ],
+      "outputs": [
+        413
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 170,
+      "op_name": "CONV_2D",
+      "inputs": [
+        413,
+        188,
+        66
+      ],
+      "outputs": [
+        414
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 171,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        414
+      ],
+      "outputs": [
+        415
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 172,
+      "op_name": "MUL",
+      "inputs": [
+        414,
+        415
+      ],
+      "outputs": [
+        416
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 173,
+      "op_name": "SLICE",
+      "inputs": [
+        416,
+        101,
+        100
+      ],
+      "outputs": [
+        417
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 174,
+      "op_name": "CONV_2D",
+      "inputs": [
+        417,
+        187,
+        65
+      ],
+      "outputs": [
+        418
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 175,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        418
+      ],
+      "outputs": [
+        419
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 176,
+      "op_name": "MUL",
+      "inputs": [
+        418,
+        419
+      ],
+      "outputs": [
+        420
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 177,
+      "op_name": "CONV_2D",
+      "inputs": [
+        420,
+        186,
+        64
+      ],
+      "outputs": [
+        421
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 178,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        421
+      ],
+      "outputs": [
+        422
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 179,
+      "op_name": "MUL",
+      "inputs": [
+        421,
+        422
+      ],
+      "outputs": [
+        423
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 180,
+      "op_name": "CONV_2D",
+      "inputs": [
+        423,
+        185,
+        63
+      ],
+      "outputs": [
+        424
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 181,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        424
+      ],
+      "outputs": [
+        425
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 182,
+      "op_name": "MUL",
+      "inputs": [
+        424,
+        425
+      ],
+      "outputs": [
+        426
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 183,
+      "op_name": "ADD",
+      "inputs": [
+        420,
+        426
+      ],
+      "outputs": [
+        427
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 184,
+      "op_name": "CONV_2D",
+      "inputs": [
+        427,
+        184,
+        62
+      ],
+      "outputs": [
+        428
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 185,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        428
+      ],
+      "outputs": [
+        429
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 186,
+      "op_name": "MUL",
+      "inputs": [
+        428,
+        429
+      ],
+      "outputs": [
+        430
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 187,
+      "op_name": "CONV_2D",
+      "inputs": [
+        430,
+        183,
+        61
+      ],
+      "outputs": [
+        431
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 188,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        431
+      ],
+      "outputs": [
+        432
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 189,
+      "op_name": "MUL",
+      "inputs": [
+        431,
+        432
+      ],
+      "outputs": [
+        433
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 190,
+      "op_name": "ADD",
+      "inputs": [
+        427,
+        433
+      ],
+      "outputs": [
+        434
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 191,
+      "op_name": "CONV_2D",
+      "inputs": [
+        417,
+        182,
+        60
+      ],
+      "outputs": [
+        435
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 192,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        435
+      ],
+      "outputs": [
+        436
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 193,
+      "op_name": "MUL",
+      "inputs": [
+        435,
+        436
+      ],
+      "outputs": [
+        437
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 194,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        434,
+        437
+      ],
+      "outputs": [
+        438
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 195,
+      "op_name": "CONV_2D",
+      "inputs": [
+        438,
+        181,
+        59
+      ],
+      "outputs": [
+        439
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 196,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        439
+      ],
+      "outputs": [
+        440
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 197,
+      "op_name": "MUL",
+      "inputs": [
+        439,
+        440
+      ],
+      "outputs": [
+        441
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 198,
+      "op_name": "SLICE",
+      "inputs": [
+        416,
+        112,
+        100
+      ],
+      "outputs": [
+        442
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 199,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        442,
+        417,
+        441
+      ],
+      "outputs": [
+        443
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 200,
+      "op_name": "CONV_2D",
+      "inputs": [
+        443,
+        180,
+        58
+      ],
+      "outputs": [
+        444
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 201,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        444
+      ],
+      "outputs": [
+        445
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 202,
+      "op_name": "MUL",
+      "inputs": [
+        444,
+        445
+      ],
+      "outputs": [
+        446
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 203,
+      "op_name": "RESIZE_NEAREST_NEIGHBOR",
+      "inputs": [
+        446,
+        237
+      ],
+      "outputs": [
+        447
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 204,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        447,
+        288
+      ],
+      "outputs": [
+        448
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 205,
+      "op_name": "CONV_2D",
+      "inputs": [
+        448,
+        179,
+        57
+      ],
+      "outputs": [
+        449
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 206,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        449
+      ],
+      "outputs": [
+        450
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 207,
+      "op_name": "MUL",
+      "inputs": [
+        449,
+        450
+      ],
+      "outputs": [
+        451
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 208,
+      "op_name": "SLICE",
+      "inputs": [
+        451,
+        108,
+        107
+      ],
+      "outputs": [
+        452
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 209,
+      "op_name": "CONV_2D",
+      "inputs": [
+        452,
+        178,
+        56
+      ],
+      "outputs": [
+        453
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 210,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        453
+      ],
+      "outputs": [
+        454
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 211,
+      "op_name": "MUL",
+      "inputs": [
+        453,
+        454
+      ],
+      "outputs": [
+        455
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 212,
+      "op_name": "CONV_2D",
+      "inputs": [
+        455,
+        177,
+        55
+      ],
+      "outputs": [
+        456
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 213,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        456
+      ],
+      "outputs": [
+        457
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 214,
+      "op_name": "MUL",
+      "inputs": [
+        456,
+        457
+      ],
+      "outputs": [
+        458
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 215,
+      "op_name": "CONV_2D",
+      "inputs": [
+        458,
+        176,
+        54
+      ],
+      "outputs": [
+        459
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 216,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        459
+      ],
+      "outputs": [
+        460
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 217,
+      "op_name": "MUL",
+      "inputs": [
+        459,
+        460
+      ],
+      "outputs": [
+        461
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 218,
+      "op_name": "ADD",
+      "inputs": [
+        455,
+        461
+      ],
+      "outputs": [
+        462
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 219,
+      "op_name": "CONV_2D",
+      "inputs": [
+        462,
+        175,
+        53
+      ],
+      "outputs": [
+        463
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 220,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        463
+      ],
+      "outputs": [
+        464
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 221,
+      "op_name": "MUL",
+      "inputs": [
+        463,
+        464
+      ],
+      "outputs": [
+        465
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 222,
+      "op_name": "CONV_2D",
+      "inputs": [
+        465,
+        174,
+        52
+      ],
+      "outputs": [
+        466
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 223,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        466
+      ],
+      "outputs": [
+        467
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 224,
+      "op_name": "MUL",
+      "inputs": [
+        466,
+        467
+      ],
+      "outputs": [
+        468
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 225,
+      "op_name": "ADD",
+      "inputs": [
+        462,
+        468
+      ],
+      "outputs": [
+        469
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 226,
+      "op_name": "CONV_2D",
+      "inputs": [
+        452,
+        173,
+        51
+      ],
+      "outputs": [
+        470
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 227,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        470
+      ],
+      "outputs": [
+        471
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 228,
+      "op_name": "MUL",
+      "inputs": [
+        470,
+        471
+      ],
+      "outputs": [
+        472
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 229,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        469,
+        472
+      ],
+      "outputs": [
+        473
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 230,
+      "op_name": "CONV_2D",
+      "inputs": [
+        473,
+        172,
+        50
+      ],
+      "outputs": [
+        474
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 231,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        474
+      ],
+      "outputs": [
+        475
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 232,
+      "op_name": "MUL",
+      "inputs": [
+        474,
+        475
+      ],
+      "outputs": [
+        476
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 233,
+      "op_name": "SLICE",
+      "inputs": [
+        451,
+        112,
+        107
+      ],
+      "outputs": [
+        477
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 234,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        477,
+        452,
+        476
+      ],
+      "outputs": [
+        478
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 235,
+      "op_name": "CONV_2D",
+      "inputs": [
+        478,
+        171,
+        49
+      ],
+      "outputs": [
+        479
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 236,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        479
+      ],
+      "outputs": [
+        480
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 237,
+      "op_name": "MUL",
+      "inputs": [
+        479,
+        480
+      ],
+      "outputs": [
+        481
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 238,
+      "op_name": "PAD",
+      "inputs": [
+        481,
+        120
+      ],
+      "outputs": [
+        482
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 239,
+      "op_name": "CONV_2D",
+      "inputs": [
+        482,
+        170,
+        48
+      ],
+      "outputs": [
+        483
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 240,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        483
+      ],
+      "outputs": [
+        484
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 241,
+      "op_name": "MUL",
+      "inputs": [
+        483,
+        484
+      ],
+      "outputs": [
+        485
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 242,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        485,
+        446
+      ],
+      "outputs": [
+        486
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 243,
+      "op_name": "CONV_2D",
+      "inputs": [
+        486,
+        169,
+        47
+      ],
+      "outputs": [
+        487
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 244,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        487
+      ],
+      "outputs": [
+        488
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 245,
+      "op_name": "MUL",
+      "inputs": [
+        487,
+        488
+      ],
+      "outputs": [
+        489
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 246,
+      "op_name": "SLICE",
+      "inputs": [
+        489,
+        101,
+        100
+      ],
+      "outputs": [
+        490
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 247,
+      "op_name": "CONV_2D",
+      "inputs": [
+        490,
+        168,
+        46
+      ],
+      "outputs": [
+        491
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 248,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        491
+      ],
+      "outputs": [
+        492
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 249,
+      "op_name": "MUL",
+      "inputs": [
+        491,
+        492
+      ],
+      "outputs": [
+        493
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 250,
+      "op_name": "CONV_2D",
+      "inputs": [
+        493,
+        167,
+        45
+      ],
+      "outputs": [
+        494
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 251,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        494
+      ],
+      "outputs": [
+        495
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 252,
+      "op_name": "MUL",
+      "inputs": [
+        494,
+        495
+      ],
+      "outputs": [
+        496
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 253,
+      "op_name": "CONV_2D",
+      "inputs": [
+        496,
+        166,
+        44
+      ],
+      "outputs": [
+        497
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 254,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        497
+      ],
+      "outputs": [
+        498
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 255,
+      "op_name": "MUL",
+      "inputs": [
+        497,
+        498
+      ],
+      "outputs": [
+        499
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 256,
+      "op_name": "ADD",
+      "inputs": [
+        493,
+        499
+      ],
+      "outputs": [
+        500
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 257,
+      "op_name": "CONV_2D",
+      "inputs": [
+        500,
+        165,
+        43
+      ],
+      "outputs": [
+        501
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 258,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        501
+      ],
+      "outputs": [
+        502
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 259,
+      "op_name": "MUL",
+      "inputs": [
+        501,
+        502
+      ],
+      "outputs": [
+        503
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 260,
+      "op_name": "CONV_2D",
+      "inputs": [
+        503,
+        164,
+        42
+      ],
+      "outputs": [
+        504
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 261,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        504
+      ],
+      "outputs": [
+        505
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 262,
+      "op_name": "MUL",
+      "inputs": [
+        504,
+        505
+      ],
+      "outputs": [
+        506
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 263,
+      "op_name": "ADD",
+      "inputs": [
+        500,
+        506
+      ],
+      "outputs": [
+        507
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 264,
+      "op_name": "CONV_2D",
+      "inputs": [
+        490,
+        163,
+        41
+      ],
+      "outputs": [
+        508
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 265,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        508
+      ],
+      "outputs": [
+        509
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 266,
+      "op_name": "MUL",
+      "inputs": [
+        508,
+        509
+      ],
+      "outputs": [
+        510
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 267,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        507,
+        510
+      ],
+      "outputs": [
+        511
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 268,
+      "op_name": "CONV_2D",
+      "inputs": [
+        511,
+        162,
+        40
+      ],
+      "outputs": [
+        512
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 269,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        512
+      ],
+      "outputs": [
+        513
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 270,
+      "op_name": "MUL",
+      "inputs": [
+        512,
+        513
+      ],
+      "outputs": [
+        514
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 271,
+      "op_name": "SLICE",
+      "inputs": [
+        489,
+        112,
+        100
+      ],
+      "outputs": [
+        515
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 272,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        515,
+        490,
+        514
+      ],
+      "outputs": [
+        516
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 273,
+      "op_name": "CONV_2D",
+      "inputs": [
+        516,
+        161,
+        39
+      ],
+      "outputs": [
+        517
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 274,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        517
+      ],
+      "outputs": [
+        518
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 275,
+      "op_name": "MUL",
+      "inputs": [
+        517,
+        518
+      ],
+      "outputs": [
+        519
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 276,
+      "op_name": "PAD",
+      "inputs": [
+        519,
+        120
+      ],
+      "outputs": [
+        520
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 277,
+      "op_name": "CONV_2D",
+      "inputs": [
+        520,
+        160,
+        38
+      ],
+      "outputs": [
+        521
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 278,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        521
+      ],
+      "outputs": [
+        522
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 279,
+      "op_name": "MUL",
+      "inputs": [
+        521,
+        522
+      ],
+      "outputs": [
+        523
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 280,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        523,
+        411
+      ],
+      "outputs": [
+        524
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 281,
+      "op_name": "CONV_2D",
+      "inputs": [
+        524,
+        159,
+        37
+      ],
+      "outputs": [
+        525
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 282,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        525
+      ],
+      "outputs": [
+        526
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 283,
+      "op_name": "MUL",
+      "inputs": [
+        525,
+        526
+      ],
+      "outputs": [
+        527
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 284,
+      "op_name": "SLICE",
+      "inputs": [
+        527,
+        89,
+        88
+      ],
+      "outputs": [
+        528
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 285,
+      "op_name": "CONV_2D",
+      "inputs": [
+        528,
+        158,
+        36
+      ],
+      "outputs": [
+        529
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 286,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        529
+      ],
+      "outputs": [
+        530
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 287,
+      "op_name": "MUL",
+      "inputs": [
+        529,
+        530
+      ],
+      "outputs": [
+        531
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 288,
+      "op_name": "CONV_2D",
+      "inputs": [
+        531,
+        157,
+        35
+      ],
+      "outputs": [
+        532
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 289,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        532
+      ],
+      "outputs": [
+        533
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 290,
+      "op_name": "MUL",
+      "inputs": [
+        532,
+        533
+      ],
+      "outputs": [
+        534
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 291,
+      "op_name": "ADD",
+      "inputs": [
+        528,
+        534
+      ],
+      "outputs": [
+        535
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 292,
+      "op_name": "CONV_2D",
+      "inputs": [
+        535,
+        156,
+        34
+      ],
+      "outputs": [
+        536
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 293,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        536,
+        238
+      ],
+      "outputs": [
+        537
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 294,
+      "op_name": "RESHAPE",
+      "inputs": [
+        537,
+        236
+      ],
+      "outputs": [
+        538
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 295,
+      "op_name": "SLICE",
+      "inputs": [
+        538,
+        112,
+        75
+      ],
+      "outputs": [
+        539
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 296,
+      "op_name": "SLICE",
+      "inputs": [
+        538,
+        74,
+        75
+      ],
+      "outputs": [
+        540
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 297,
+      "op_name": "SLICE",
+      "inputs": [
+        538,
+        73,
+        72
+      ],
+      "outputs": [
+        541
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 298,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        539,
+        200
+      ],
+      "outputs": [
+        542
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 299,
+      "op_name": "RESHAPE",
+      "inputs": [
+        542,
+        199
+      ],
+      "outputs": [
+        543
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 300,
+      "op_name": "RESHAPE",
+      "inputs": [
+        540,
+        198
+      ],
+      "outputs": [
+        544
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 301,
+      "op_name": "BATCH_MATMUL",
+      "inputs": [
+        543,
+        544
+      ],
+      "outputs": [
+        545
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 302,
+      "op_name": "MUL",
+      "inputs": [
+        545,
+        243
+      ],
+      "outputs": [
+        546
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 303,
+      "op_name": "RESHAPE",
+      "inputs": [
+        546,
+        197
+      ],
+      "outputs": [
+        547
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 304,
+      "op_name": "SOFTMAX",
+      "inputs": [
+        547
+      ],
+      "outputs": [
+        548
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 305,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        548,
+        200
+      ],
+      "outputs": [
+        549
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 306,
+      "op_name": "RESHAPE",
+      "inputs": [
+        541,
+        196
+      ],
+      "outputs": [
+        550
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 307,
+      "op_name": "RESHAPE",
+      "inputs": [
+        549,
+        195
+      ],
+      "outputs": [
+        551
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 308,
+      "op_name": "BATCH_MATMUL",
+      "inputs": [
+        550,
+        551
+      ],
+      "outputs": [
+        552
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 309,
+      "op_name": "RESHAPE",
+      "inputs": [
+        552,
+        194
+      ],
+      "outputs": [
+        553
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 310,
+      "op_name": "RESHAPE",
+      "inputs": [
+        541,
+        194
+      ],
+      "outputs": [
+        554
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 311,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        554,
+        240
+      ],
+      "outputs": [
+        555
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 312,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        555,
+        155,
+        33
+      ],
+      "outputs": [
+        556
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 313,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        556,
+        238
+      ],
+      "outputs": [
+        557
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 314,
+      "op_name": "ADD",
+      "inputs": [
+        553,
+        557
+      ],
+      "outputs": [
+        558
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 315,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        558,
+        240
+      ],
+      "outputs": [
+        559
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 316,
+      "op_name": "CONV_2D",
+      "inputs": [
+        559,
+        154,
+        32
+      ],
+      "outputs": [
+        560
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 317,
+      "op_name": "ADD",
+      "inputs": [
+        535,
+        560
+      ],
+      "outputs": [
+        561
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 318,
+      "op_name": "CONV_2D",
+      "inputs": [
+        561,
+        153,
+        31
+      ],
+      "outputs": [
+        562
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 319,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        562
+      ],
+      "outputs": [
+        563
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 320,
+      "op_name": "MUL",
+      "inputs": [
+        562,
+        563
+      ],
+      "outputs": [
+        564
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 321,
+      "op_name": "CONV_2D",
+      "inputs": [
+        564,
+        152,
+        30
+      ],
+      "outputs": [
+        565
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 322,
+      "op_name": "ADD",
+      "inputs": [
+        561,
+        565
+      ],
+      "outputs": [
+        566
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 323,
+      "op_name": "SLICE",
+      "inputs": [
+        527,
+        112,
+        88
+      ],
+      "outputs": [
+        567
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 324,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        567,
+        528,
+        566
+      ],
+      "outputs": [
+        568
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 325,
+      "op_name": "CONV_2D",
+      "inputs": [
+        568,
+        151,
+        29
+      ],
+      "outputs": [
+        569
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 326,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        569
+      ],
+      "outputs": [
+        570
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 327,
+      "op_name": "MUL",
+      "inputs": [
+        569,
+        570
+      ],
+      "outputs": [
+        571
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 328,
+      "op_name": "CONV_2D",
+      "inputs": [
+        481,
+        150,
+        28
+      ],
+      "outputs": [
+        572
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 329,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        572
+      ],
+      "outputs": [
+        573
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 330,
+      "op_name": "MUL",
+      "inputs": [
+        572,
+        573
+      ],
+      "outputs": [
+        574
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 331,
+      "op_name": "CONV_2D",
+      "inputs": [
+        574,
+        149,
+        27
+      ],
+      "outputs": [
+        575
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 332,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        575
+      ],
+      "outputs": [
+        576
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 333,
+      "op_name": "MUL",
+      "inputs": [
+        575,
+        576
+      ],
+      "outputs": [
+        577
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 334,
+      "op_name": "CONV_2D",
+      "inputs": [
+        577,
+        148,
+        26
+      ],
+      "outputs": [
+        578
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 335,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        578,
+        238
+      ],
+      "outputs": [
+        579
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 336,
+      "op_name": "RESHAPE",
+      "inputs": [
+        579,
+        147
+      ],
+      "outputs": [
+        580
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 337,
+      "op_name": "CONV_2D",
+      "inputs": [
+        519,
+        146,
+        25
+      ],
+      "outputs": [
+        581
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 338,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        581
+      ],
+      "outputs": [
+        582
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 339,
+      "op_name": "MUL",
+      "inputs": [
+        581,
+        582
+      ],
+      "outputs": [
+        583
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 340,
+      "op_name": "CONV_2D",
+      "inputs": [
+        583,
+        145,
+        24
+      ],
+      "outputs": [
+        584
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 341,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        584
+      ],
+      "outputs": [
+        585
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 342,
+      "op_name": "MUL",
+      "inputs": [
+        584,
+        585
+      ],
+      "outputs": [
+        586
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 343,
+      "op_name": "CONV_2D",
+      "inputs": [
+        586,
+        144,
+        23
+      ],
+      "outputs": [
+        587
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 344,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        587,
+        238
+      ],
+      "outputs": [
+        588
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 345,
+      "op_name": "RESHAPE",
+      "inputs": [
+        588,
+        143
+      ],
+      "outputs": [
+        589
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 346,
+      "op_name": "CONV_2D",
+      "inputs": [
+        571,
+        142,
+        22
+      ],
+      "outputs": [
+        590
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 347,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        590
+      ],
+      "outputs": [
+        591
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 348,
+      "op_name": "MUL",
+      "inputs": [
+        590,
+        591
+      ],
+      "outputs": [
+        592
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 349,
+      "op_name": "CONV_2D",
+      "inputs": [
+        592,
+        141,
+        21
+      ],
+      "outputs": [
+        593
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 350,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        593
+      ],
+      "outputs": [
+        594
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 351,
+      "op_name": "MUL",
+      "inputs": [
+        593,
+        594
+      ],
+      "outputs": [
+        595
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 352,
+      "op_name": "CONV_2D",
+      "inputs": [
+        595,
+        140,
+        20
+      ],
+      "outputs": [
+        596
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 353,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        596,
+        238
+      ],
+      "outputs": [
+        597
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 354,
+      "op_name": "RESHAPE",
+      "inputs": [
+        597,
+        139
+      ],
+      "outputs": [
+        598
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 355,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        580,
+        589,
+        598
+      ],
+      "outputs": [
+        599
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 356,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        481,
+        138,
+        19
+      ],
+      "outputs": [
+        600
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 357,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        600
+      ],
+      "outputs": [
+        601
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 358,
+      "op_name": "MUL",
+      "inputs": [
+        600,
+        601
+      ],
+      "outputs": [
+        602
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 359,
+      "op_name": "CONV_2D",
+      "inputs": [
+        602,
+        137,
+        18
+      ],
+      "outputs": [
+        603
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 360,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        603
+      ],
+      "outputs": [
+        604
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 361,
+      "op_name": "MUL",
+      "inputs": [
+        603,
+        604
+      ],
+      "outputs": [
+        605
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 362,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        605,
+        136,
+        17
+      ],
+      "outputs": [
+        606
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 363,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        606
+      ],
+      "outputs": [
+        607
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 364,
+      "op_name": "MUL",
+      "inputs": [
+        606,
+        607
+      ],
+      "outputs": [
+        608
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 365,
+      "op_name": "CONV_2D",
+      "inputs": [
+        608,
+        135,
+        16
+      ],
+      "outputs": [
+        609
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 366,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        609
+      ],
+      "outputs": [
+        610
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 367,
+      "op_name": "MUL",
+      "inputs": [
+        609,
+        610
+      ],
+      "outputs": [
+        611
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 368,
+      "op_name": "CONV_2D",
+      "inputs": [
+        611,
+        134,
+        15
+      ],
+      "outputs": [
+        612
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 369,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        612,
+        238
+      ],
+      "outputs": [
+        613
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 370,
+      "op_name": "RESHAPE",
+      "inputs": [
+        613,
+        133
+      ],
+      "outputs": [
+        614
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 371,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        519,
+        132,
+        14
+      ],
+      "outputs": [
+        615
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 372,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        615
+      ],
+      "outputs": [
+        616
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 373,
+      "op_name": "MUL",
+      "inputs": [
+        615,
+        616
+      ],
+      "outputs": [
+        617
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 374,
+      "op_name": "CONV_2D",
+      "inputs": [
+        617,
+        131,
+        13
+      ],
+      "outputs": [
+        618
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 375,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        618
+      ],
+      "outputs": [
+        619
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 376,
+      "op_name": "MUL",
+      "inputs": [
+        618,
+        619
+      ],
+      "outputs": [
+        620
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 377,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        620,
+        130,
+        12
+      ],
+      "outputs": [
+        621
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 378,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        621
+      ],
+      "outputs": [
+        622
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 379,
+      "op_name": "MUL",
+      "inputs": [
+        621,
+        622
+      ],
+      "outputs": [
+        623
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 380,
+      "op_name": "CONV_2D",
+      "inputs": [
+        623,
+        129,
+        11
+      ],
+      "outputs": [
+        624
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 381,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        624
+      ],
+      "outputs": [
+        625
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 382,
+      "op_name": "MUL",
+      "inputs": [
+        624,
+        625
+      ],
+      "outputs": [
+        626
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 383,
+      "op_name": "CONV_2D",
+      "inputs": [
+        626,
+        128,
+        10
+      ],
+      "outputs": [
+        627
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 384,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        627,
+        238
+      ],
+      "outputs": [
+        628
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 385,
+      "op_name": "RESHAPE",
+      "inputs": [
+        628,
+        127
+      ],
+      "outputs": [
+        629
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 386,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        571,
+        126,
+        9
+      ],
+      "outputs": [
+        630
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 387,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        630
+      ],
+      "outputs": [
+        631
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 388,
+      "op_name": "MUL",
+      "inputs": [
+        630,
+        631
+      ],
+      "outputs": [
+        632
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 389,
+      "op_name": "CONV_2D",
+      "inputs": [
+        632,
+        125,
+        8
+      ],
+      "outputs": [
+        633
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 390,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        633
+      ],
+      "outputs": [
+        634
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 391,
+      "op_name": "MUL",
+      "inputs": [
+        633,
+        634
+      ],
+      "outputs": [
+        635
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 392,
+      "op_name": "DEPTHWISE_CONV_2D",
+      "inputs": [
+        635,
+        124,
+        7
+      ],
+      "outputs": [
+        636
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 393,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        636
+      ],
+      "outputs": [
+        637
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 394,
+      "op_name": "MUL",
+      "inputs": [
+        636,
+        637
+      ],
+      "outputs": [
+        638
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 395,
+      "op_name": "CONV_2D",
+      "inputs": [
+        638,
+        123,
+        6
+      ],
+      "outputs": [
+        639
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 396,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        639
+      ],
+      "outputs": [
+        640
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 397,
+      "op_name": "MUL",
+      "inputs": [
+        639,
+        640
+      ],
+      "outputs": [
+        641
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 398,
+      "op_name": "CONV_2D",
+      "inputs": [
+        641,
+        122,
+        5
+      ],
+      "outputs": [
+        642
+      ],
+      "status": "x2_prototype",
+      "reason": "Float activation requires the signed INT8 runtime bridge."
+    },
+    {
+      "index": 399,
+      "op_name": "TRANSPOSE",
+      "inputs": [
+        642,
+        238
+      ],
+      "outputs": [
+        643
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 400,
+      "op_name": "RESHAPE",
+      "inputs": [
+        643,
+        121
+      ],
+      "outputs": [
+        644
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 401,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        614,
+        629,
+        644
+      ],
+      "outputs": [
+        645
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 402,
+      "op_name": "SLICE",
+      "inputs": [
+        599,
+        4,
+        3
+      ],
+      "outputs": [
+        646
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 403,
+      "op_name": "SLICE",
+      "inputs": [
+        599,
+        2,
+        3
+      ],
+      "outputs": [
+        647
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 404,
+      "op_name": "SUB",
+      "inputs": [
+        242,
+        646
+      ],
+      "outputs": [
+        648
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 405,
+      "op_name": "ADD",
+      "inputs": [
+        647,
+        242
+      ],
+      "outputs": [
+        649
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 406,
+      "op_name": "ADD",
+      "inputs": [
+        648,
+        649
+      ],
+      "outputs": [
+        650
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 407,
+      "op_name": "MUL",
+      "inputs": [
+        650,
+        1
+      ],
+      "outputs": [
+        651
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 408,
+      "op_name": "SUB",
+      "inputs": [
+        649,
+        648
+      ],
+      "outputs": [
+        652
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 409,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        651,
+        652
+      ],
+      "outputs": [
+        653
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 410,
+      "op_name": "MUL",
+      "inputs": [
+        653,
+        241
+      ],
+      "outputs": [
+        654
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 411,
+      "op_name": "LOGISTIC",
+      "inputs": [
+        645
+      ],
+      "outputs": [
+        655
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    },
+    {
+      "index": 412,
+      "op_name": "CONCATENATION",
+      "inputs": [
+        654,
+        655
+      ],
+      "outputs": [
+        656
+      ],
+      "status": "cpu_fallback",
+      "reason": "The first compiler slice targets Conv2D only."
+    }
+  ],
+  "fallback_policy": "All non-Conv2D operators and any rejected Conv2D remain on the CPU. Float Conv2D activations use the explicit signed INT8 bridge."
+}

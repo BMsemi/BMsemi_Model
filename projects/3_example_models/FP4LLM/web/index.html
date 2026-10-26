@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qwen · Local chat</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101112;color:#e7e7e8;font:15px/1.6 system-ui,sans-serif}button,select,textarea{font:inherit}button{cursor:pointer}aside{position:fixed;width:246px;height:100vh;background:#191a1c;padding:28px 20px;border-right:1px solid #292a2e;display:flex;flex-direction:column}.brand{font-size:23px;font-weight:650;letter-spacing:-1px}.mark{color:#b5a3ff;margin-right:10px}.sub{color:#929398;font-size:12px}.new{margin-top:35px;border:1px solid #414248;background:transparent;color:#eee;padding:10px;border-radius:9px;text-align:left}.side-label{font-size:11px;letter-spacing:1.6px;color:#888a92;margin:32px 0 12px}.model{padding:12px;background:#242529;border-radius:9px}.dot{display:inline-block;width:7px;height:7px;background:#98d5b3;border-radius:50%;margin-right:8px}.foot{margin-top:auto;color:#919299;font-size:12px}main{margin-left:246px;height:100vh;display:flex;flex-direction:column}header{height:80px;padding:22px 34px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #242528}select{background:#202124;color:#ddd;border:1px solid #37383d;border-radius:8px;padding:8px;font-size:12px}.badge{font-size:12px;color:#a5a6ac}#scroll{overflow:auto;flex:1;padding:30px 24px}#conversation{max-width:780px;margin:auto}#welcome{padding-top:9vh;text-align:center}.orb{font-size:40px;color:#bdafff}h1{font-size:36px;font-weight:500;letter-spacing:-1.2px;margin:12px 0}#welcome p{color:#96979f}.cards{display:flex;gap:12px;margin:36px 0}.cards button{flex:1;text-align:left;background:#1b1c1f;border:1px solid #33343a;border-radius:12px;color:#bfc0c7;padding:18px}.cards button:hover{border-color:#a391eb}.message{margin:22px 0;white-space:pre-wrap;overflow-wrap:anywhere}.message.user{margin-left:16%;background:#292a30;border-radius:16px;padding:14px 20px}.message.assistant{padding:12px 0 20px 0}.role{display:block;color:#ae9ced;font-size:12px;margin-bottom:9px;font-weight:650}.composer{width:calc(100% - 48px);max-width:780px;margin:0 auto 22px}.inputbox{background:#242529;border:1px solid #414249;border-radius:17px;padding:16px}textarea{width:100%;resize:none;background:transparent;color:#eee;border:0;outline:none;min-height:60px;max-height:160px}.controls{display:flex;align-items:center;justify-content:space-between}.hint{color:#898b94;font-size:11px}#send{border:0;border-radius:9px;background:#baa9ff;color:#171224;padding:8px 19px;font-weight:600}#status{font-size:12px;color:#a7a8b0;min-height:26px;padding:4px}#warning{color:#d6b883;font-size:12px;padding-bottom:9px}button:disabled{opacity:.5;cursor:default}@media(max-width:750px){aside{display:none}main{margin:0}header{padding:15px}h1{font-size:28px}.cards{flex-direction:column}#welcome{padding-top:0}.badge{display:none}}
+</style></head><body>
+<aside><div class="brand"><span class="mark">✳</span> Qwen</div><div class="sub">LOCAL INTELLIGENCE</div><button class="new" id="new">＋ &nbsp; New chat</button><div class="side-label">YOUR WORKSPACE</div><div class="model"><span class="dot"></span>Qwen3-1.7B<div class="sub">Local model · selectable FPGA prefill</div></div><div class="side-label">CROSSBAR LAB</div><a href="/logs" target="_blank" style="color:#baa9ff;margin-bottom:12px">FPGA &amp; crossbar logs ↗</a><div class="sub">Explore clean and noisy ReRAM inference using FP4LLM.</div><div class="foot">FP4LLM / Qwen frontend<br>Running on this computer</div></aside>
+<main><header><span>Qwen3 <span class="badge"> / 1.7B</span></span><select id="mode" aria-label="Inference mode"><option value="fpga" selected>FPGA block 0 + CPU chat</option><option value="standard">Standard chat · BF16</option><option value="clean">ReRAM · clean</option><option value="noisy">ReRAM simulation · noise + reliability ON</option></select><span class="badge"><span class="dot"></span>Localhost</span></header>
+<div id="scroll"><div id="conversation"><div id="welcome"><div class="orb">✳</div><h1>What’s on your mind?</h1><p>Think, write, and explore with Qwen.<br>Your model runs locally on this computer.</p><div class="cards"><button>Explain ReRAM crossbars in simple terms.</button><button>Write a short Python example.</button><button>Help me turn an idea into a plan.</button></div></div></div></div>
+<div class="composer"><div id="warning"></div><div class="inputbox"><textarea id="prompt" aria-label="Message Qwen" placeholder="Message Qwen…" rows="2"></textarea><div class="controls"><span class="hint">Enter to send · Shift + Enter for a new line</span><button id="send">Send ↑</button></div></div><div id="status">Ready · Standard mode uses BF16 Qwen; ReRAM simulation is optional.</div></div></main>
+<script>
+const $=id=>document.getElementById(id);let history=[],busy=false;
+function add(role,text){$('welcome').style.display='none';const el=document.createElement('div');el.className='message '+role;const label=document.createElement('span');label.className='role';label.textContent=role==='assistant'?'✳  Qwen':'You';const body=document.createElement('span');body.textContent=text;el.append(label,body);$('conversation').append(el);return body}
+function scroll(){ $('scroll').scrollTop=$('scroll').scrollHeight }
+function setBusy(value){busy=value;$('send').textContent=value?'Stop ■':'Send ↑';$('mode').disabled=value;$('new').disabled=value}
+$('mode').onchange=()=>{$('warning').textContent=$('mode').value==='fpga'?'Physical FPGA block-0 prefill via COM17; remaining layers and decode use CPU BF16. No ReRAM noise in this mode. First response takes several minutes.':$('mode').value==='standard'?'':'all:crossbar · W7/A7 simulation on CPU. Responses can take tens of minutes; capped at 8 tokens. Stop takes effect after the current computation.'};
+$('new').onclick=()=>{history=[];document.querySelectorAll('.message').forEach(e=>e.remove());$('welcome').style.display='block';$('status').textContent='Ready for a new conversation.'};
+document.querySelectorAll('.cards button').forEach(b=>b.onclick=()=>{$('prompt').value=b.textContent;$('prompt').focus()});
+async function status(){const r=await fetch('/api/status');if(!r.ok)throw Error('Server unavailable');return r.json()}
+async function watch(answer,ownRequest,initial){
+  let s=initial;
+  while(true){
+    if(!s)s=await status();
+    answer.textContent=s.text||'Waiting for the active response…';
+    $('status').textContent=(ownRequest?'':'Existing request · ')+s.detail;
+    scroll();
+    if(s.status==='error')throw Error(s.detail);
+    if(s.status==='idle')throw Error('The server restarted. Please send your message again.');
+    if(s.status==='done'){
+      if(ownRequest&&s.text)history.push({role:'assistant',content:s.text});
+      if(!s.text)answer.textContent='No text generated.';
+      break;
+    }
+    await new Promise(r=>setTimeout(r,1000));s=null;
+  }
+}
+async function attach(s){
+  setBusy(true);$('mode').value=s.mode;$('mode').onchange();
+  const answer=add('assistant',s.text||'An earlier request is running. Your draft will stay here until it finishes.');
+  answer.parentElement.querySelector('.role').textContent='✳ Qwen · existing request';
+  // Its prompt is unknown to this tab, so keep it outside this conversation's history.
+  await watch(answer,false,s);
+}
+async function send(){
+  if(busy){try{await fetch('/api/stop',{method:'POST'});$('status').textContent='Stopping after the current computation…'}catch(e){$('status').textContent=e.message}return}
+  const text=$('prompt').value.trim();if(!text)return;
+  setBusy(true);
+  try{
+    const current=await status();
+    if(['loading','generating'].includes(current.status)){await attach(current);return}
+    const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[...history,{role:'user',content:text}],mode:$('mode').value,max_tokens:$('mode').value==='standard'||$('mode').value==='fpga'?128:8})});
+    const data=await response.json();
+    if(response.status===409){await attach(await status());return}
+    if(!response.ok)throw Error(data.error);
+    history.push({role:'user',content:text});add('user',text);$('prompt').value='';
+    await watch(add('assistant',''),true);
+  }catch(e){$('status').textContent='Error: '+e.message}
+  finally{setBusy(false);$('prompt').focus()}
+}
+$('send').onclick=send;$('prompt').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}};
+
+$('mode').onchange();
+$('status').textContent='Ready · FPGA block-0 prefill selected · CPU continuation and decode.';
+const originalFetch=window.fetch.bind(window);
+window.fetch=async (...args)=>{try{return await originalFetch(...args)}catch(error){throw new Error('Cannot reach the local server. Start it with start_chat.py in the llmqwen environment, then reload this page.')}};
+async function reconnect(){
+  setBusy(true);$('send').disabled=true;$('status').textContent='Checking the server…';
+  try{const s=await status();$('send').disabled=false;
+    if(['loading','generating'].includes(s.status))await attach(s);
+    else $('status').textContent='Ready · Select a mode and send a message.';
+  }catch(e){$('status').textContent=e.message}
+  finally{$('send').disabled=false;setBusy(false)}
+}
+reconnect();
+</script></body></html>

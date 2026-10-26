@@ -1,0 +1,9 @@
+flowchart TD
+    A["413 graph ops"] --> B["102 Conv/Depthwise ops"]
+    A --> C["276 digital ops"]
+    A --> D["35 reference fallback ops"]
+    B --> E["Crossbar MVM"]
+    C --> F["Software digital math"]
+    D --> F
+    E --> G["Final tensor"]
+    F --> G

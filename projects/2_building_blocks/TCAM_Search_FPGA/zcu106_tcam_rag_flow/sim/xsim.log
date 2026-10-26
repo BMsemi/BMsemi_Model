@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# xsim v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Aug 21 14:24:56 2026
+# Process ID: 18612
+# Current directory: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim
+# Command line: xsim.exe -mode tcl -source {xsim.dir/tcam_rag_core_sim/xsim_script.tcl}
+# Log file: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim/xsim.log
+# Journal file: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim\xsim.jou
+# Running On: H39SRK2-PC, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 4, Host memory: 17058 MB
+#-----------------------------------------------------------
+source xsim.dir/tcam_rag_core_sim/xsim_script.tcl
+# xsim {tcam_rag_core_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+RESULT rank=0 chunk=1000 A=0 B=16 B-A=16 TDC=32 HD=0
+RESULT rank=1 chunk=1001 A=1 B=15 B-A=14 TDC=30 HD=1
+RESULT rank=2 chunk=1002 A=1 B=15 B-A=14 TDC=30 HD=1
+RESULT rank=3 chunk=1003 A=2 B=14 B-A=12 TDC=28 HD=2
+DEMO6_SCALED rank=0 chunk=2000 A=0 B=2 B-A=2 TDC=4 HD=0
+DEMO6_SCALED rank=1 chunk=2001 A=1 B=1 B-A=0 TDC=2 HD=1
+DEMO6_SCALED rank=2 chunk=2002 A=2 B=0 B-A=-2 TDC=0 HD=2
+DEMO6_SCALED rank=3 chunk=2003 A=0 B=0 B-A=0 TDC=0 HD=0
+TCAM_RAG_CORE_TEST_PASS
+$finish called at time : 1060 ns : File "C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim/tb_tcam_rag_core.sv" Line 129
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Aug 21 14:25:01 2026...

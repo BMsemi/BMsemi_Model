@@ -1,0 +1,1673 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_128",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 400,
+    "k": 256,
+    "n": 256
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 128,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 5,
+      "k_start": 160,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 6,
+      "k_start": 192,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 7,
+      "k_start": 224,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 8,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 9,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 10,
+      "k_start": 64,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 11,
+      "k_start": 96,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 12,
+      "k_start": 128,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 13,
+      "k_start": 160,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 14,
+      "k_start": 192,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 15,
+      "k_start": 224,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 16,
+      "k_start": 0,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n64",
+      "accumulate": false
+    },
+    {
+      "tile_id": 17,
+      "k_start": 32,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 18,
+      "k_start": 64,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 19,
+      "k_start": 96,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 20,
+      "k_start": 128,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 21,
+      "k_start": 160,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 22,
+      "k_start": 192,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 23,
+      "k_start": 224,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 24,
+      "k_start": 0,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n96",
+      "accumulate": false
+    },
+    {
+      "tile_id": 25,
+      "k_start": 32,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 26,
+      "k_start": 64,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 27,
+      "k_start": 96,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 28,
+      "k_start": 128,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 29,
+      "k_start": 160,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 30,
+      "k_start": 192,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 31,
+      "k_start": 224,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 32,
+      "k_start": 0,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n128",
+      "accumulate": false
+    },
+    {
+      "tile_id": 33,
+      "k_start": 32,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 34,
+      "k_start": 64,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 35,
+      "k_start": 96,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 36,
+      "k_start": 128,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 37,
+      "k_start": 160,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 38,
+      "k_start": 192,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 39,
+      "k_start": 224,
+      "n_start": 128,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n128",
+      "accumulate": true
+    },
+    {
+      "tile_id": 40,
+      "k_start": 0,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n160",
+      "accumulate": false
+    },
+    {
+      "tile_id": 41,
+      "k_start": 32,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 42,
+      "k_start": 64,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 43,
+      "k_start": 96,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 44,
+      "k_start": 128,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 45,
+      "k_start": 160,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 46,
+      "k_start": 192,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 47,
+      "k_start": 224,
+      "n_start": 160,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n160",
+      "accumulate": true
+    },
+    {
+      "tile_id": 48,
+      "k_start": 0,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n192",
+      "accumulate": false
+    },
+    {
+      "tile_id": 49,
+      "k_start": 32,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 50,
+      "k_start": 64,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 51,
+      "k_start": 96,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 52,
+      "k_start": 128,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 53,
+      "k_start": 160,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 54,
+      "k_start": 192,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 55,
+      "k_start": 224,
+      "n_start": 192,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n192",
+      "accumulate": true
+    },
+    {
+      "tile_id": 56,
+      "k_start": 0,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n224",
+      "accumulate": false
+    },
+    {
+      "tile_id": 57,
+      "k_start": 32,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 58,
+      "k_start": 64,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 59,
+      "k_start": 96,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 60,
+      "k_start": 128,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k128_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 61,
+      "k_start": 160,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k160_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 62,
+      "k_start": 192,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k192_n224",
+      "accumulate": true
+    },
+    {
+      "tile_id": 63,
+      "k_start": 224,
+      "n_start": 224,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k224_n224",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        256
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k128_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k160_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k192_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k224_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n128": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n160": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n192": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n224": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        256
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 128,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 371,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.SPPF_9;1",
+        "shape": [
+          1,
+          20,
+          20,
+          256
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 202,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          256,
+          1,
+          1,
+          256
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.004245405085384846,
+          0.004112578928470612,
+          0.0035390385892242193,
+          0.004427806939929724,
+          0.0036328339483588934,
+          0.00311455549672246,
+          0.008651095442473888,
+          0.004146035294979811,
+          0.004811830818653107,
+          0.004506118595600128,
+          0.0031023507472127676,
+          0.003085403237491846,
+          0.004322223365306854,
+          0.004311542492359877,
+          0.0034810276702046394,
+          0.005317024886608124,
+          0.0040642861276865005,
+          0.0045386445708572865,
+          0.00466172955930233,
+          0.005858998745679855,
+          0.0034954920411109924,
+          0.003814557334408164,
+          0.003418505657464266,
+          0.0034083633217960596,
+          0.006129974965006113,
+          0.005182668101042509,
+          0.004119362216442823,
+          0.003772628027945757,
+          0.0036897126119583845,
+          0.004536531399935484,
+          0.0038410951383411884,
+          0.00373774953186512,
+          0.0032811076380312443,
+          0.005893664434552193,
+          0.003968886565417051,
+          0.004396891687065363,
+          0.0043547498062253,
+          0.003396326210349798,
+          0.0034511287230998278,
+          0.004335257224738598,
+          0.004804773256182671,
+          0.0039567844942212105,
+          0.003214565571397543,
+          0.004671507515013218,
+          0.004858220461755991,
+          0.0031938746105879545,
+          0.003940450958907604,
+          0.003628970356658101,
+          0.0033051411155611277,
+          0.004440844990313053,
+          0.004162028897553682,
+          0.0030106345657259226,
+          0.003549732733517885,
+          0.004815786611288786,
+          0.004555664490908384,
+          0.005037887487560511,
+          0.004357175901532173,
+          0.003381047397851944,
+          0.0035942052491009235,
+          0.003986557479947805,
+          0.004142591264098883,
+          0.0037780494894832373,
+          0.005024935584515333,
+          0.004300446715205908,
+          0.0047148894518613815,
+          0.0036910963244736195,
+          0.0031296054366976023,
+          0.0054720183834433556,
+          0.0050018043257296085,
+          0.004587891977280378,
+          0.004298005718737841,
+          0.003498857142403722,
+          0.003312867833301425,
+          0.00457008695229888,
+          0.004123740363866091,
+          0.0034164199605584145,
+          0.0035058713983744383,
+          0.004554207436740398,
+          0.003230454633012414,
+          0.004211668390780687,
+          0.0034765773452818394,
+          0.004968835506588221,
+          0.0036811293102800846,
+          0.0030463708098977804,
+          0.004164006561040878,
+          0.005488772410899401,
+          0.004697704687714577,
+          0.00805501639842987,
+          0.003945149015635252,
+          0.003511243499815464,
+          0.007710280828177929,
+          0.004285881295800209,
+          0.00610358314588666,
+          0.0037813959643244743,
+          0.003921239171177149,
+          0.004675963427871466,
+          0.00377295701764524,
+          0.0035483455285429955,
+          0.004966294392943382,
+          0.00612688809633255,
+          0.003704850096255541,
+          0.003213322488591075,
+          0.004309054929763079,
+          0.0033477728720754385,
+          0.004492834210395813,
+          0.00319411582313478,
+          0.00578094320371747,
+          0.004466900136321783,
+          0.0037396459374576807,
+          0.003781780833378434,
+          0.003625210840255022,
+          0.0040937685407698154,
+          0.003997840918600559,
+          0.003457444254308939,
+          0.004370714072138071,
+          0.004106096923351288,
+          0.0033299876376986504,
+          0.004361735191196203,
+          0.0036866478621959686,
+          0.004027870483696461,
+          0.0030027139000594616,
+          0.0038251965306699276,
+          0.004909905139356852,
+          0.0034184064716100693,
+          0.0060938019305467606,
+          0.003646285505965352,
+          0.0051164510659873486,
+          0.005359881091862917,
+          0.002754378132522106,
+          0.002942448016256094,
+          0.00442216033115983,
+          0.0027041893918067217,
+          0.002487241756170988,
+          0.0040648579597473145,
+          0.002267655683681369,
+          0.003891679923981428,
+          0.0025920893531292677,
+          0.003121983492746949,
+          0.0020695191342383623,
+          0.002704606857150793,
+          0.0026046251878142357,
+          0.002374673029407859,
+          0.0072164335288107395,
+          0.0024176565930247307,
+          0.003749796887859702,
+          0.002870844444260001,
+          0.0022819333244115114,
+          0.004025173839181662,
+          0.0027916841208934784,
+          0.005556905642151833,
+          0.002802832517772913,
+          0.011183862574398518,
+          0.0014772833092138171,
+          0.004545607604086399,
+          0.0035956797655671835,
+          0.0028683848213404417,
+          0.003579468000680208,
+          0.002701737219467759,
+          0.0025149250868707895,
+          0.002018307102844119,
+          0.004404969979077578,
+          0.0062825544737279415,
+          0.001665796502493322,
+          0.0040635038167238235,
+          0.003433489939197898,
+          0.0050020599737763405,
+          0.001894259126856923,
+          0.00927046500146389,
+          0.007789019960910082,
+          0.004040074534714222,
+          0.004494168795645237,
+          0.0036830746103078127,
+          0.00216078688390553,
+          0.002920390572398901,
+          0.0037121204659342766,
+          0.0055443402379751205,
+          0.0027657924219965935,
+          0.005170189309865236,
+          0.0024109003134071827,
+          0.006842194590717554,
+          0.004300812259316444,
+          0.004158172756433487,
+          0.001964899944141507,
+          0.0021858825348317623,
+          0.0018115242710337043,
+          0.0018665756797417998,
+          0.0037045390345156193,
+          0.0031991591677069664,
+          0.006177030969411135,
+          0.006509025581181049,
+          0.0016367604257538915,
+          0.0038603979628533125,
+          0.008116929791867733,
+          0.005368516780436039,
+          0.0034024077467620373,
+          0.007224388886243105,
+          0.0018902949523180723,
+          0.0023124325089156628,
+          0.004753184970468283,
+          0.001681923633441329,
+          0.005716732237488031,
+          0.0015024791937321424,
+          0.004200083203613758,
+          0.0026320316828787327,
+          0.005831707734614611,
+          0.007147425785660744,
+          0.004021520260721445,
+          0.007728253956884146,
+          0.00417799036949873,
+          0.0014352296711876988,
+          0.0033547510392963886,
+          0.003295501694083214,
+          0.004040299449115992,
+          0.005180372856557369,
+          0.0017445944249629974,
+          0.005917077884078026,
+          0.004476078320294619,
+          0.0020327968522906303,
+          0.0032212508376687765,
+          0.0015073999529704452,
+          0.007570882793515921,
+          0.0021425774320960045,
+          0.001969770761206746,
+          0.004652286879718304,
+          0.0019716196693480015,
+          0.0017778613837435842,
+          0.004294361919164658,
+          0.004100647289305925,
+          0.0028033016715198755,
+          0.00438572745770216,
+          0.008479968644678593,
+          0.003082799492403865,
+          0.003201879095286131,
+          0.007701748050749302,
+          0.0028846159111708403,
+          0.002770169172435999,
+          0.002117202617228031,
+          0.002501927549019456,
+          0.004086297005414963,
+          0.0031619376968592405,
+          0.001939678331837058,
+          0.0022126659750938416,
+          0.002392879454419017,
+          0.00431665638461709,
+          0.002893689554184675,
+          0.0020132313948124647,
+          0.003906578291207552,
+          0.0015249502612277865,
+          0.001837539253756404,
+          0.0025884679052978754,
+          0.002440906362608075,
+          0.0022207386791706085,
+          0.0033162629697471857,
+          0.006782326847314835,
+          0.002775122644379735,
+          0.0028319749981164932
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 77,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          256
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 372,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          20,
+          20,
+          256
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.06754163081251731,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        20,
+        20,
+        256
+      ],
+      "output_shape_nhwc": [
+        1,
+        20,
+        20,
+        256
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

@@ -1,0 +1,4 @@
+# Preserve the exact artifact bytes covered by SHA256SUMS.txt on every platform.
+* -text whitespace=cr-at-eol
+# The serial capture intentionally preserves terminal control/line-ending bytes.
+board_hello_run.txt -whitespace

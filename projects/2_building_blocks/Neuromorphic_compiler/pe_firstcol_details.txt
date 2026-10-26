@@ -1,0 +1,387 @@
+=== First-Column Dot-Product Details (first tile per PE) ===
+Format: For each PE, show (y,x), input vec32 nonzeros, weights[:,0], contributions, and sum.
+
+PE 0 (y=0, x=0)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 1 (y=0, x=25)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 2 (y=1, x=22)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 3 (y=2, x=19)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 4 (y=3, x=16)
+Input vec32 (indices:val where nonzero): 23:1 24:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 23:1 24:1
+Dot sum (first column): 2
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+
+PE 5 (y=4, x=13)
+Input vec32 (indices:val where nonzero): 20:1 21:1 22:1 23:1 24:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 20:1 21:1 22:1 23:1 24:1
+Dot sum (first column): 5
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 1 1 1 1
+
+PE 6 (y=5, x=10)
+Input vec32 (indices:val where nonzero): 18:1 19:1 20:1 21:1 22:1 23:1 24:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 18:1 19:1 20:1 21:1 22:1 23:1 24:1
+Dot sum (first column): 7
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+1 1 1 1 1
+
+PE 7 (y=6, x=7)
+Input vec32 (indices:val where nonzero): 18:1 19:1 23:1 24:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 18:1 19:1 23:1 24:1
+Dot sum (first column): 4
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+0 0 0 1 1
+
+PE 8 (y=7, x=4)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 9 (y=8, x=1)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 10 (y=8, x=26)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 11 (y=9, x=23)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 12 (y=10, x=20)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 13 (y=11, x=17)
+Input vec32 (indices:val where nonzero): 2:1 20:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 2:1 20:1
+Dot sum (first column): 2
+Patch 5x5 (SAME at this (y,x)):
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 0 0 0 0
+
+PE 14 (y=12, x=14)
+Input vec32 (indices:val where nonzero): 0:1 5:1 6:1 10:1 11:1 16:1 17:1 18:1 22:1 23:1 24:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 0:1 5:1 6:1 10:1 11:1 16:1 17:1 18:1 22:1 23:1 24:1
+Dot sum (first column): 11
+Patch 5x5 (SAME at this (y,x)):
+1 0 0 0 0
+1 1 0 0 0
+1 1 0 0 0
+0 1 1 1 0
+0 0 1 1 1
+
+PE 15 (y=13, x=11)
+Input vec32 (indices:val where nonzero): 2:1 3:1 4:1 8:1 9:1 14:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 2:1 3:1 4:1 8:1 9:1 14:1
+Dot sum (first column): 6
+Patch 5x5 (SAME at this (y,x)):
+0 0 1 1 1
+0 0 0 1 1
+0 0 0 0 1
+0 0 0 0 0
+0 0 0 0 0
+
+PE 16 (y=14, x=8)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 17 (y=15, x=5)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 18 (y=16, x=2)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 19 (y=16, x=27)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 20 (y=17, x=24)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 21 (y=18, x=21)
+Input vec32 (indices:val where nonzero): 0:1 5:1 10:1 15:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 0:1 5:1 10:1 15:1
+Dot sum (first column): 4
+Patch 5x5 (SAME at this (y,x)):
+1 0 0 0 0
+1 0 0 0 0
+1 0 0 0 0
+1 0 0 0 0
+0 0 0 0 0
+
+PE 22 (y=19, x=18)
+Input vec32 (indices:val where nonzero): 1:1 2:1 3:1 5:1 6:1 7:1 8:1 10:1 11:1 12:1 13:1 15:1 16:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 1:1 2:1 3:1 5:1 6:1 7:1 8:1 10:1 11:1 12:1 13:1 15:1 16:1
+Dot sum (first column): 13
+Patch 5x5 (SAME at this (y,x)):
+0 1 1 1 0
+1 1 1 1 0
+1 1 1 1 0
+1 1 0 0 0
+0 0 0 0 0
+
+PE 23 (y=20, x=15)
+Input vec32 (indices:val where nonzero): 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 20:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 20:1
+Dot sum (first column): 17
+Patch 5x5 (SAME at this (y,x)):
+0 0 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 0 0
+1 0 0 0 0
+
+PE 24 (y=21, x=12)
+Input vec32 (indices:val where nonzero): 3:1 4:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 20:1 21:1 22:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 3:1 4:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 20:1 21:1 22:1
+Dot sum (first column): 17
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 1 1
+0 0 1 1 1
+1 1 1 1 1
+1 1 1 1 0
+1 1 1 0 0
+
+PE 25 (y=22, x=9)
+Input vec32 (indices:val where nonzero): 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 19:1 20:1 21:1 22:1 23:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 19:1 20:1 21:1 22:1 23:1
+Dot sum (first column): 16
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 0
+
+PE 26 (y=23, x=6)
+Input vec32 (indices:val where nonzero): 8:1 9:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 19:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 8:1 9:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 19:1
+Dot sum (first column): 11
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 1 1
+0 1 1 1 1
+1 1 1 1 1
+0 0 0 0 0
+
+PE 27 (y=24, x=3)
+Input vec32 (indices:val where nonzero): 9:1 13:1 14:1
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): 9:1 13:1 14:1
+Dot sum (first column): 3
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 1
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+
+PE 28 (y=25, x=0)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 29 (y=25, x=25)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 30 (y=26, x=22)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+PE 31 (y=27, x=19)
+Input vec32 (indices:val where nonzero): 
+Weights[:,0] (first column): 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+Contributions (i:vec[i]*w[i,0] where nonzero): (none)
+Dot sum (first column): 0
+Patch 5x5 (SAME at this (y,x)):
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+

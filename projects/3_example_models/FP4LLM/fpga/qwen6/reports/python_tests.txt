@@ -1,0 +1,24 @@
+test_bf16_words_and_ties (test_ps_int8_quantization.PSQuantizationTests.test_bf16_words_and_ties) ... ok
+test_existing_fpga_dma_packer (test_ps_int8_quantization.PSQuantizationTests.test_existing_fpga_dma_packer) ... ok
+test_invalid_operands (test_ps_int8_quantization.PSQuantizationTests.test_invalid_operands) ... ok
+test_tiled_reduction_and_four_engine_partition (test_ps_int8_quantization.PSQuantizationTests.test_tiled_reduction_and_four_engine_partition) ... ok
+test_zero_and_per_row_scales (test_ps_int8_quantization.PSQuantizationTests.test_zero_and_per_row_scales) ... ok
+test_bad_bundle_rejected (test_qwen_fpga6.BoundaryTests.test_bad_bundle_rejected) ... ok
+test_fault_recovery_resets_overlay_before_releasing_retained_dma (test_qwen_fpga6.BoundaryTests.test_fault_recovery_resets_overlay_before_releasing_retained_dma) ... ok
+test_hardware_cli_rejects_other_blocks_before_model_loading (test_qwen_fpga6.BoundaryTests.test_hardware_cli_rejects_other_blocks_before_model_loading) ... ok
+test_nlpc_dma_words_pointer_halves_and_cache_sync (test_qwen_fpga6.BoundaryTests.test_nlpc_dma_words_pointer_halves_and_cache_sync) ... ok
+test_old_overlay_rejected_before_programming (test_qwen_fpga6.BoundaryTests.test_old_overlay_rejected_before_programming) ... ok
+test_real_bf16_checkpoint_reader_and_embedding_row_selection (test_qwen_fpga6.BoundaryTests.test_real_bf16_checkpoint_reader_and_embedding_row_selection) ... ok
+test_timeout_retains_buffers_and_disables_driver (test_qwen_fpga6.BoundaryTests.test_timeout_retains_buffers_and_disables_driver) ... ok
+test_precision_defaults_and_software_forwarding (test_qwen_fpga6.EntrypointTests.test_precision_defaults_and_software_forwarding) ... ok
+test_full_block_11_tokens_gqa_and_causality (test_qwen_fpga6.KernelAndScheduleTests.test_full_block_11_tokens_gqa_and_causality) ... ok
+test_integer_overflow_rejected (test_qwen_fpga6.KernelAndScheduleTests.test_integer_overflow_rejected) ... ok
+test_nonlinear_kernels_nontrivial_values_and_row_splits (test_qwen_fpga6.KernelAndScheduleTests.test_nonlinear_kernels_nontrivial_values_and_row_splits) ... ok
+test_tiled_gemm_tail_tiles_four_engines_and_integer_partials (test_qwen_fpga6.KernelAndScheduleTests.test_tiled_gemm_tail_tiles_four_engines_and_integer_partials) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 4.830s
+
+OK
+
+=== Running prompt-aware software crossbar ===

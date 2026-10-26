@@ -1,0 +1,649 @@
+{
+  "schema_version": 1,
+  "name": "tflite_conv2d_op_156",
+  "kind": "conv2d",
+  "logical_shape": {
+    "m": 400,
+    "k": 128,
+    "n": 128
+  },
+  "target": {
+    "name": "zcu106-axi-x2-mvm-v0.2.34",
+    "max_rows": 32,
+    "max_cols": 32,
+    "max_batch": 32,
+    "accumulator_dtype": "int32",
+    "weight_dtype": "int8",
+    "activation_dtype": "int8"
+  },
+  "tiles": [
+    {
+      "tile_id": 0,
+      "k_start": 0,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n0",
+      "accumulate": false
+    },
+    {
+      "tile_id": 1,
+      "k_start": 32,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 2,
+      "k_start": 64,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 3,
+      "k_start": 96,
+      "n_start": 0,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n0",
+      "accumulate": true
+    },
+    {
+      "tile_id": 4,
+      "k_start": 0,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n32",
+      "accumulate": false
+    },
+    {
+      "tile_id": 5,
+      "k_start": 32,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 6,
+      "k_start": 64,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 7,
+      "k_start": 96,
+      "n_start": 32,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n32",
+      "accumulate": true
+    },
+    {
+      "tile_id": 8,
+      "k_start": 0,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n64",
+      "accumulate": false
+    },
+    {
+      "tile_id": 9,
+      "k_start": 32,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 10,
+      "k_start": 64,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 11,
+      "k_start": 96,
+      "n_start": 64,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n64",
+      "accumulate": true
+    },
+    {
+      "tile_id": 12,
+      "k_start": 0,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k0_n96",
+      "accumulate": false
+    },
+    {
+      "tile_id": 13,
+      "k_start": 32,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k32_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 14,
+      "k_start": 64,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k64_n96",
+      "accumulate": true
+    },
+    {
+      "tile_id": 15,
+      "k_start": 96,
+      "n_start": 96,
+      "rows": 32,
+      "cols": 32,
+      "weight_key": "weight_k96_n96",
+      "accumulate": true
+    }
+  ],
+  "constants": {
+    "bias_float": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32"
+    },
+    "weight_k0_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k0_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k32_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k64_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n0": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n32": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n64": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_k96_n96": {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "int8"
+    },
+    "weight_scales": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32"
+    }
+  },
+  "metadata": {
+    "source": {
+      "format": "tflite",
+      "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+      "op_index": 156,
+      "op_name": "CONV_2D",
+      "activation_tensor": {
+        "index": 399,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/torch.nn.modules.container.Sequential_m/ultralytics.nn.modules.block.PSABlock_0/ultralytics.nn.modules.block.Attention_attn;17",
+        "shape": [
+          1,
+          20,
+          20,
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "weight_tensor": {
+        "index": 192,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/torch.nn.modules.container.Sequential_m/ultralytics.nn.modules.block.PSABlock_0/ultralytics.nn.modules.block.Attention_attn/ultralytics.nn.modules.conv.Conv_proj/torch.nn.modules.conv.Conv2d_conv;1",
+        "shape": [
+          128,
+          1,
+          1,
+          128
+        ],
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [
+          0.00199131085537374,
+          0.0032618145924061537,
+          0.0023285553324967623,
+          0.0021781332325190306,
+          0.00217949110083282,
+          0.001983743393793702,
+          0.002098097000271082,
+          0.002396318828687072,
+          0.0023687744978815317,
+          0.004537035711109638,
+          0.001985791837796569,
+          0.0015963662881404161,
+          0.002086604479700327,
+          0.0028358774725347757,
+          0.0017992743523791432,
+          0.0024896259419620037,
+          0.002270038239657879,
+          0.0028080176562070847,
+          0.003112305887043476,
+          0.00265598576515913,
+          0.002302764682099223,
+          0.0026128203608095646,
+          0.0030547319911420345,
+          0.008433994837105274,
+          0.0031107820104807615,
+          0.0018607561942189932,
+          0.002635717624798417,
+          0.002066581742838025,
+          0.0021940728183835745,
+          0.0016624921699985862,
+          0.0023217787966132164,
+          0.0020625635515898466,
+          0.002080602338537574,
+          0.002719598589465022,
+          0.0023502393160015345,
+          0.003160429885610938,
+          0.002805376658216119,
+          0.004020462278276682,
+          0.0021141255274415016,
+          0.009427890181541443,
+          0.00735436100512743,
+          0.0031492875423282385,
+          0.0027287520933896303,
+          0.0029452075250446796,
+          0.0020507830195128918,
+          0.002431178465485573,
+          0.0022666919976472855,
+          0.00304873357526958,
+          0.0026008442509919405,
+          0.001286051352508366,
+          0.002107769949361682,
+          0.0020998038817197084,
+          0.0022294160444289446,
+          0.0030936014372855425,
+          0.0019424350466579199,
+          0.002142522484064102,
+          0.0020607959013432264,
+          0.002064646454527974,
+          0.0029273126274347305,
+          0.002128282329067588,
+          0.0014833541354164481,
+          0.0017202520975843072,
+          0.0022484175860881805,
+          0.0021031454671174288,
+          0.0029289780650287867,
+          0.0017849006690084934,
+          0.0026999367401003838,
+          0.0014408609131351113,
+          0.0021080414298921824,
+          0.0017819630447775126,
+          0.0022128864657133818,
+          0.0019132742891088128,
+          0.002000090666115284,
+          0.0018869786290451884,
+          0.0023519117385149,
+          0.002654358046129346,
+          0.0022510834969580173,
+          0.002030861098319292,
+          0.002537846565246582,
+          0.005179606378078461,
+          0.0031219872180372477,
+          0.0018461175495758653,
+          0.0024730698205530643,
+          0.0019950736314058304,
+          0.0024607304949313402,
+          0.0022555638570338488,
+          0.0021313554607331753,
+          0.0033690105192363262,
+          0.0023275185376405716,
+          0.002723037963733077,
+          0.002624470740556717,
+          0.002068886999040842,
+          0.0032151082996279,
+          0.002172949258238077,
+          0.0018139349995180964,
+          0.0021171821281313896,
+          0.0024143806658685207,
+          0.0016769225476309657,
+          0.003048429498448968,
+          0.002434378257021308,
+          0.002634987933561206,
+          0.0018157536396756768,
+          0.0048415688797831535,
+          0.0019046086817979813,
+          0.0029418685007840395,
+          0.0038087842985987663,
+          0.0021437611430883408,
+          0.0023241702001541853,
+          0.002027621027082205,
+          0.0024874908849596977,
+          0.0037872889079153538,
+          0.002756468951702118,
+          0.001836880692280829,
+          0.002120219636708498,
+          0.0030379469972103834,
+          0.002518889494240284,
+          0.0024245199747383595,
+          0.001813990413211286,
+          0.002110907342284918,
+          0.0021768049336969852,
+          0.0022792664822191,
+          0.0020404707174748182,
+          0.0021553896367549896,
+          0.0018300976371392608,
+          0.002019962528720498,
+          0.0019731824286282063,
+          0.003025857964530587,
+          0.001743060303851962
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      "bias_tensor": {
+        "index": 70,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/torch.nn.modules.container.Sequential_m/ultralytics.nn.modules.block.PSABlock_0/ultralytics.nn.modules.block.Attention_attn/ultralytics.nn.modules.conv.Conv_proj/torch.nn.modules.conv.Conv2d_conv;",
+        "shape": [
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      "output_tensor": {
+        "index": 400,
+        "name": "ultralytics.nn.tasks.DetectionModel/ultralytics.nn.modules.block.C2PSA_10/torch.nn.modules.container.Sequential_m/ultralytics.nn.modules.block.PSABlock_0/ultralytics.nn.modules.block.Attention_attn/ultralytics.nn.modules.conv.Conv_proj/torch.nn.modules.conv.Conv2d_conv;2",
+        "shape": [
+          1,
+          20,
+          20,
+          128
+        ],
+        "dtype": "float32",
+        "scale": 0.0,
+        "zero_point": 0,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    },
+    "activation_quantization": {
+      "mode": "static_symmetric",
+      "scale": 0.02779161047747755,
+      "zero_point": 0,
+      "allow_saturation": true
+    },
+    "conv2d": {
+      "input_shape_nhwc": [
+        1,
+        20,
+        20,
+        128
+      ],
+      "output_shape_nhwc": [
+        1,
+        20,
+        20,
+        128
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": "valid"
+    },
+    "bias_float_key": "bias_float",
+    "weight_scales_key": "weight_scales"
+  }
+}

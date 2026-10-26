@@ -1,0 +1,13 @@
+{
+  "noise": {
+    "enabled": true
+  },
+  "reliability": {
+    "enabled": false
+  },
+  "iv": {
+    "enabled": true,
+    "mode": "hard_clamp",
+    "linear_rows_before_clamp": 10
+  }
+}

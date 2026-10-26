@@ -1,0 +1,3 @@
+category,write_policy,programmed_elements,programmed_cells,observed_or_projected_cycles_per_cell,endurance_cycles,margin,status
+static_transformer_block_linears,program_once_then_read_for_inference,1409286144,5637144576,1,100000,100000.0,meets_inference_programming
+dynamic_kv_cache_for_executed_blocks,append_only_new_token,688128,688128,131400000.0,10000000,0.076103500761035,below_projection

@@ -1,0 +1,20 @@
+Not fully, no.
+
+It is now a fast functional hardware-style simulation, not a full cycle-level hardware simulation.
+
+What it still simulates:
+
+INT8 activation x INT8 weight MVMs
+64-row PE input limit
+crossbar-style weight tiling/channel grouping
+signed weight accumulation
+PE/crossbar Conv and DepthwiseConv outputs
+digital ops around the convs
+What it skips or abstracts:
+
+per-row serial timing
+FIFO/controller cycle behavior
+per-PE call-by-call execution
+detailed ADC timing
+programming latency per PE
+cycle-accurate scheduling events

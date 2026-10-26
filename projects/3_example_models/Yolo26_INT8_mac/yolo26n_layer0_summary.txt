@@ -1,0 +1,27 @@
+================================================================================
+YOLO26N FIRST LAYER SUMMARY
+================================================================================
+
+Configuration:
+  Layer: Conv2D
+  Mapping File: C:\Users\KannaSridhar\Desktop\YOLO26_INT8_MAC\Yolo26n.m
+  Weights File: C:\Users\KannaSridhar\Desktop\YOLO26_INT8_MAC\layer0_weights.txt
+  Padding File: C:\Users\KannaSridhar\Desktop\YOLO26_INT8_MAC\Layer0_padding.txt
+  Input Shape (padded): (642, 642, 3)
+  Output Shape: (320, 320, 16)
+
+Execution Stats:
+  Ops: 44236800
+  Weights: 432
+  Active PEs: 7/512
+  PE Utilization: 1.37%
+  L2 Writes: 16
+
+L2 Buffer Stats:
+  Capacity: 2,000,000
+  Utilization: 0.0%
+  Total Writes: 16
+  Total Reads: 16
+  Total Accesses: 32
+
+================================================================================

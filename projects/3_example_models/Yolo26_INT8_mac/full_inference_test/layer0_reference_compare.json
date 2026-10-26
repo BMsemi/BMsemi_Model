@@ -1,0 +1,17 @@
+{
+  "shape": [
+    1,
+    320,
+    320,
+    16
+  ],
+  "mse": 0.0016930958954617381,
+  "mae": 0.024277107790112495,
+  "max_abs": 0.45102882385253906,
+  "computed_min": -0.27846455574035645,
+  "computed_max": 62.04214859008789,
+  "reference_min": -0.27846455574035645,
+  "reference_max": 61.88618087768555,
+  "computed_tensor_path": "C:\\Users\\KannaSridhar\\Documents\\GitHub\\Neuromorphic_X1\\Benchmarking\\Yolo26_INT8_mac\\full_inference_test\\tensor_248.npy",
+  "reference_tensor_path": "C:\\Users\\KannaSridhar\\Downloads\\layer0_litert.txt"
+}

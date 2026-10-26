@@ -1,0 +1,8 @@
+flowchart TD
+    A["64 input rows"] --> B["Unsigned activation"]
+    C["Signed INT8 weights"] --> D["4-bit banks"]
+    D --> E["pos0 / pos1 / neg0 / neg1"]
+    B --> F["Row-serial equivalent MVM"]
+    E --> F
+    F --> G["INT32 partial sums"]
+    G --> H["Output channels"]

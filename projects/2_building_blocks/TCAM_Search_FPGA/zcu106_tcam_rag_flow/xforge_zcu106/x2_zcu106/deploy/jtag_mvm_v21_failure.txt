@@ -1,0 +1,16 @@
+case=builtin_3x2
+rows=3
+cols=2
+batch=1
+magic=0x58324D56
+version=0x00020021
+status=0x00000200
+error=0x00000000
+expected_words=3
+rx_words=1
+tx_words=0
+rd_count=1
+wr_count=0
+cycles=193585215
+output=117876133 2779096485
+expected=40 46

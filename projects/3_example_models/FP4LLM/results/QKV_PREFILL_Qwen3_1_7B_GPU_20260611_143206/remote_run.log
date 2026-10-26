@@ -1,0 +1,133 @@
+Requirement already satisfied: pip in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (26.1.2)
+Requirement already satisfied: wheel in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (0.47.0)
+Requirement already satisfied: setuptools in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (70.2.0)
+Collecting setuptools
+  Using cached setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: packaging>=24.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from wheel) (26.2)
+Using cached setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 70.2.0
+    Uninstalling setuptools-70.2.0:
+      Successfully uninstalled setuptools-70.2.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torch 2.12.0+cu126 requires setuptools<82, but you have setuptools 82.0.1 which is incompatible.
+Successfully installed setuptools-82.0.1
+Looking in indexes: https://download.pytorch.org/whl/cu126
+Requirement already satisfied: torch in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (2.12.0+cu126)
+Requirement already satisfied: filelock in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (3.29.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (4.15.0)
+Collecting setuptools<82 (from torch)
+  Using cached setuptools-70.2.0-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: sympy>=1.13.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (3.6.1)
+Requirement already satisfied: jinja2 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (2026.4.0)
+Requirement already satisfied: cuda-toolkit==12.6.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.3)
+Requirement already satisfied: cuda-bindings<13,>=12.9.4 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (12.9.4)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (9.10.2.21)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.29.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (2.29.3)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.4.5 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (3.4.5)
+Requirement already satisfied: triton==3.7.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch) (3.7.0)
+Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.4.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.77)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (11.3.0.4)
+Requirement already satisfied: nvidia-cufile-cu12==1.11.1.6.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (1.11.1.6)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.80)
+Requirement already satisfied: nvidia-curand-cu12==10.3.7.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (10.3.7.77)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (11.7.1.2)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.5.4.2)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.85)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.85.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.85)
+Requirement already satisfied: nvidia-nvtx-cu12==12.6.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch) (12.6.77)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-bindings<13,>=12.9.4->torch) (1.2.2)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from jinja2->torch) (3.0.3)
+Using cached setuptools-70.2.0-py3-none-any.whl (930 kB)
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 82.0.1
+    Uninstalling setuptools-82.0.1:
+      Successfully uninstalled setuptools-82.0.1
+Successfully installed setuptools-70.2.0
+Requirement already satisfied: huggingface_hub in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (1.18.0)
+Requirement already satisfied: safetensors in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (0.8.0)
+Requirement already satisfied: numpy in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (2.4.6)
+Requirement already satisfied: transformers in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (5.11.0)
+Requirement already satisfied: accelerate in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (1.13.0)
+Requirement already satisfied: sentencepiece in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (0.2.1)
+Requirement already satisfied: click>=8.4.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (8.4.1)
+Requirement already satisfied: filelock>=3.10.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (3.29.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (2026.4.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (0.28.1)
+Requirement already satisfied: packaging>=20.9 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (6.0.3)
+Requirement already satisfied: tqdm>=4.42.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (4.68.2)
+Requirement already satisfied: typer<0.26.0,>=0.20.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (0.25.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from huggingface_hub) (4.15.0)
+Requirement already satisfied: anyio in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub) (4.13.0)
+Requirement already satisfied: certifi in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub) (2026.5.20)
+Requirement already satisfied: httpcore==1.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub) (1.0.9)
+Requirement already satisfied: idna in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub) (3.18)
+Requirement already satisfied: h11>=0.16 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface_hub) (0.16.0)
+Requirement already satisfied: shellingham>=1.3.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from typer<0.26.0,>=0.20.0->huggingface_hub) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from typer<0.26.0,>=0.20.0->huggingface_hub) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from typer<0.26.0,>=0.20.0->huggingface_hub) (0.0.4)
+Requirement already satisfied: regex>=2025.10.22 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from transformers) (2026.5.9)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from transformers) (0.22.2)
+Requirement already satisfied: psutil in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from accelerate) (7.2.2)
+Requirement already satisfied: torch>=2.0.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from accelerate) (2.12.0+cu126)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface_hub) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface_hub) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface_hub) (0.1.2)
+Requirement already satisfied: setuptools<82 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (70.2.0)
+Requirement already satisfied: sympy>=1.13.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.6.1)
+Requirement already satisfied: jinja2 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.1.6)
+Requirement already satisfied: cuda-toolkit==12.6.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.3)
+Requirement already satisfied: cuda-bindings<13,>=12.9.4 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (12.9.4)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (9.10.2.21)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.29.3 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (2.29.3)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.4.5 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.4.5)
+Requirement already satisfied: triton==3.7.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.7.0)
+Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.4.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.77)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (11.3.0.4)
+Requirement already satisfied: nvidia-cufile-cu12==1.11.1.6.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (1.11.1.6)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.80)
+Requirement already satisfied: nvidia-curand-cu12==10.3.7.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (10.3.7.77)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (11.7.1.2)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.5.4.2)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.85)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.85.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.85)
+Requirement already satisfied: nvidia-nvtx-cu12==12.6.77.* in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.6.3; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.77)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from cuda-bindings<13,>=12.9.4->torch>=2.0.0->accelerate) (1.2.2)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/staff/elesamj2/venvs/fp4llm-qwen3/lib/python3.12/site-packages (from jinja2->torch>=2.0.0->accelerate) (3.0.3)
+root=/users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400
+venv=/users/staff/elesamj2/venvs/fp4llm-qwen3
+out_dir=/users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400/results/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206
+cache_dir=/users/staff/elesamj2/.cache/huggingface/hub
+local_root=/users/staff/elesamj2/hf_models
+DISPLAY is not set; running non-graphical GPU reference without --x11.
+run_name=QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206
+model=Qwen/Qwen3-1.7B
+cache_dir=/users/staff/elesamj2/.cache/huggingface/hub
+local_model_dir=/users/staff/elesamj2/hf_models/Qwen--Qwen3-1.7B
+out_dir=/users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400/results/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206
+Downloading (incomplete total...): 0.00B [00:00, ?B/s]
+Fetching 12 files:   0%|                                | 0/12 [00:00<?, ?it/s][AWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Downloading (incomplete total...):   0%|           | 0.00/1.67M [00:00<?, ?B/s]Downloading (incomplete total...):   0%|           | 0.00/1.68M [00:00<?, ?B/s]Downloading (incomplete total...):   0%|           | 0.00/1.68M [00:00<?, ?B/s]Downloading (incomplete total...):   0%|           | 0.00/1.70M [00:00<?, ?B/s]Downloading (incomplete total...):   1%|  | 11.3k/1.70M [00:00<00:55, 30.3kB/s]Downloading (incomplete total...):   1%|  | 11.3k/1.70M [00:00<00:55, 30.3kB/s]
+Fetching 12 files:   8%|██                      | 1/12 [00:00<00:04,  2.43it/s][ADownloading (incomplete total...): 100%|█▉| 1.70M/1.70M [00:00<00:00, 30.3kB/s]Downloading (incomplete total...):   0%| | 1.70M/624M [00:00<5:42:40, 30.3kB/s]Downloading (incomplete total...):   0%| | 1.70M/4.07G [00:00<37:17:32, 30.3kB/Downloading (incomplete total...):   0%| | 1.70M/4.08G [00:00<37:23:50, 30.3kB/Downloading (incomplete total...):   0%|  | 1.70M/4.08G [00:00<22:09, 3.06MB/s]Downloading (incomplete total...):   0%|  | 1.70M/4.08G [00:00<22:09, 3.06MB/s]Downloading (incomplete total...):   0%|  | 1.73M/4.08G [00:00<22:10, 3.06MB/s]Downloading (incomplete total...):   0%|  | 1.73M/4.08G [00:00<22:10, 3.06MB/s]Downloading (incomplete total...):   0%|  | 15.9M/4.08G [00:01<07:03, 9.59MB/s]Downloading (incomplete total...):   0%|  | 15.9M/4.08G [00:20<07:03, 9.59MB/s]Downloading (incomplete total...):   2%|  | 83.0M/4.08G [00:57<48:39, 1.37MB/s]Downloading (incomplete total...):  10%|▎  | 418M/4.08G [01:04<07:15, 8.41MB/s]Downloading (incomplete total...):  15%|▍  | 607M/4.08G [01:10<04:50, 11.9MB/s]Downloading (incomplete total...):  15%|▍  | 619M/4.08G [01:15<05:33, 10.4MB/s]Downloading (incomplete total...):  30%|▌ | 1.22G/4.08G [01:20<01:35, 30.1MB/s]Downloading (incomplete total...):  38%|▊ | 1.56G/4.08G [01:24<01:02, 40.5MB/s]Downloading (incomplete total...):  46%|▉ | 1.89G/4.08G [01:24<00:36, 60.3MB/s]Downloading (incomplete total...):  55%|█ | 2.23G/4.08G [01:24<00:20, 88.4MB/s]Downloading (incomplete total...):  64%|█▎| 2.59G/4.08G [01:32<00:22, 67.1MB/s]Downloading (incomplete total...):  67%|█▎| 2.72G/4.08G [01:32<00:17, 76.6MB/s]Downloading (incomplete total...):  72%|█▍| 2.92G/4.08G [01:40<00:22, 52.6MB/s]Downloading (incomplete total...):  75%|█▌| 3.07G/4.08G [01:40<00:15, 64.3MB/s]Downloading (incomplete total...):  92%|██▊| 3.75G/4.08G [01:41<00:02, 140MB/s]Downloading (incomplete total...): 100%|███| 4.08G/4.08G [01:41<00:00, 190MB/s]
+Fetching 12 files:  58%|██████████████          | 7/12 [01:41<01:15, 15.14s/it][AFetching 12 files: 100%|███████████████████████| 12/12 [01:41<00:00,  8.46s/it]
+Download complete: 100%|███████████████████| 4.08G/4.08G [01:41<00:00, 190MB/s]Download complete: 100%|██████████████████| 4.08G/4.08G [01:41<00:00, 40.1MB/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                                 | 0/311 [00:00<?, ?it/s]Loading weights: 100%|████████████████████| 311/311 [00:00<00:00, 29421.43it/s]
+wrote=/users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400/results/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206
+torch_artifact=/users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400/results/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206.pt
+elapsed_s=1.2468
+tcsetattr: Inappropriate ioctl for device
+wrote /users/staff/elesamj2/FP4LLM_QKV_PREFILL_20260611_142400/results/QKV_PREFILL_Qwen3_1_7B_GPU_20260611_143206

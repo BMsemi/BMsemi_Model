@@ -1,0 +1,111 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Aug 21 19:29:01 2026
+# Process ID: 14832
+# Current directory: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/xforge_zcu106
+# Command line: vivado.exe -mode batch -log program_v24.log -journal program_v24.jou -source x2_zcu106\scripts\program_axi_x2_mvm_jtag.tcl
+# Log file: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/xforge_zcu106/program_v24.log
+# Journal file: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/xforge_zcu106\program_v24.jou
+# Running On: H39SRK2-PC, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 4, Host memory: 17058 MB
+#-----------------------------------------------------------
+source {x2_zcu106\scripts\program_axi_x2_mvm_jtag.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root_dir [file dirname $script_dir]
+# set bit_file [file normalize [file join $root_dir deploy zcu106_axi_x2_mvm.bit]]
+# if {![file exists $bit_file]} {
+#     puts "ERROR: Missing bitstream: $bit_file"
+#     exit 2
+# }
+# open_hw_manager
+open_hw_manager: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 413.367 ; gain = 94.926
+# connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:18:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-07:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2026 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 438.207 ; gain = 24.840
+# set targets [get_hw_targets -quiet *]
+# if {[llength $targets] == 0} {
+#     puts "ERROR: No JTAG hardware targets found. Check USB/JTAG cable and board power."
+#     exit 3
+# }
+# open_hw_target [lindex $targets 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/49646
+open_hw_target: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 440.535 ; gain = 2.328
+# set devices [get_hw_devices -quiet]
+# puts "JTAG_DEVICES: $devices"
+JTAG_DEVICES: xczu7_0 arm_dap_1
+# set device ""
+# foreach d $devices {
+#     if {[string match -nocase "*xczu7ev*" $d] || [string match -nocase "*xcz?7ev*" $d]} {
+#         set device $d
+#         break
+#     }
+# }
+# if {$device eq ""} {
+#     foreach d $devices {
+#         set part_name [get_property PART $d]
+#         if {[string match -nocase "*xczu7ev*" $part_name]} {
+#             set device $d
+#             break
+#         }
+#     }
+# }
+# if {$device eq "" && [llength $devices] > 0} {
+#     set device [lindex $devices 0]
+#     puts "WARNING: Could not identify xczu7ev by name; using first JTAG device: $device"
+# }
+WARNING: Could not identify xczu7ev by name; using first JTAG device: xczu7_0
+# if {$device eq ""} {
+#     puts "ERROR: No programmable JTAG devices found."
+#     exit 4
+# }
+# current_hw_device $device
+# refresh_hw_device $device
+INFO: [Labtools 27-1434] Device xczu7 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2634.051 ; gain = 2193.516
+# set_property PROGRAM.FILE $bit_file $device
+# puts "PROGRAMMING_DEVICE: $device"
+PROGRAMMING_DEVICE: xczu7_0
+# puts "PROGRAM_FILE: $bit_file"
+PROGRAM_FILE: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/xforge_zcu106/x2_zcu106/deploy/zcu106_axi_x2_mvm.bit
+# program_hw_devices $device
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2634.648 ; gain = 0.598
+# refresh_hw_device $device
+INFO: [Labtools 27-1434] Device xczu7 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+# set programmed_file [get_property -quiet PROGRAM.FILE $device]
+# puts "JTAG_PROGRAM_FILE: $programmed_file"
+JTAG_PROGRAM_FILE: C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/xforge_zcu106/x2_zcu106/deploy/zcu106_axi_x2_mvm.bit
+# foreach property_name {
+#     REGISTER.IR.BIT5_DONE
+#     REGISTER.CONFIG_STATUS.BIT13_DONE_INTERNAL_SIGNAL
+# } {
+#     set property_value [get_property -quiet $property_name $device]
+#     if {$property_value ne ""} {
+#         puts "JTAG_STATUS: $property_name $property_value"
+#     }
+# }
+# puts "JTAG_PROGRAM_OK: $device"
+JTAG_PROGRAM_OK: xczu7_0
+# exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 21 19:30:24 2026...

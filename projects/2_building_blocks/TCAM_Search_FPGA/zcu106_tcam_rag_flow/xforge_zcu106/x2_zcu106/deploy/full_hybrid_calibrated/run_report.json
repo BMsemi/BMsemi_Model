@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "model": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\yolo26n_int8.tflite",
+  "compiler_artifacts": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\compiler_artifacts\\yolo26n_hybrid_calibrated",
+  "image": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\YOLO26n-TFLite-FPGA-Partner-Project\\bus.jpg",
+  "backend": "numpy",
+  "offloaded_conv2d_count": 94,
+  "preprocess": {
+    "mode": "resize",
+    "original_shape": [
+      640,
+      640
+    ],
+    "new_shape": [
+      640,
+      640
+    ],
+    "gain": null,
+    "pad_x": 0.0,
+    "pad_y": 0.0
+  },
+  "execution": {
+    "operator_count": 413,
+    "backend_counts": {
+      "cpu_depthwise": 8,
+      "cpu_digital": 311,
+      "x2": 94
+    },
+    "elapsed_ms": 3273.4280000440776,
+    "peak_cached_bytes": 13107200,
+    "x2_backend_calls": 99168,
+    "x2_input_words": 45140912,
+    "x2_output_words": 86248000,
+    "logical_macs": 2665292800,
+    "saturation_count": 1
+  },
+  "detection_count": 5,
+  "artifacts": {
+    "raw_output": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\raw_output.npy",
+    "execution_trace": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\execution_trace.json",
+    "annotated_image": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\detections.jpg",
+    "detections_json": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\detections.json",
+    "reference_output": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\reference_output.npy",
+    "run_report": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\deploy\\full_hybrid_calibrated\\run_report.json"
+  },
+  "reference_validation": {
+    "shape": [
+      1,
+      84,
+      8400
+    ],
+    "finite": true,
+    "mae": 0.13938848674297333,
+    "rmse": 1.389836311340332,
+    "max_abs_error": 163.95083618164062,
+    "reference_abs_mean": 9.28007698059082,
+    "cosine_similarity": 0.9997228384017944,
+    "detections": {
+      "candidate_count": 5,
+      "reference_count": 5,
+      "matched_count": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "mean_iou": 0.9655518624583573,
+      "mean_confidence_abs_error": 0.06104665994644165,
+      "match_iou_threshold": 0.5
+    }
+  }
+}

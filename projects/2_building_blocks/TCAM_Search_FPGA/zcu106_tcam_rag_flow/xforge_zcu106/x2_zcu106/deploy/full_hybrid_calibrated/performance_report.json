@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "artifact_directory": "C:\\Users\\elesamj\\OneDrive - National University of Singapore\\Documents\\FPGA_acceleration\\x2_zcu106\\compiler_artifacts\\yolo26n_hybrid_calibrated",
+  "clock_hz": 100000000.0,
+  "compiled_conv2d_count": 94,
+  "tile_count": 2458,
+  "hardware_launches": 99168,
+  "logical_macs": 2665292800,
+  "unique_weight_bytes": 2391664,
+  "input_words": 45140912,
+  "output_words": 86248000,
+  "physical_input_bytes": 722254592,
+  "physical_output_bytes": 344992000,
+  "no_stall_cycles": 783191312,
+  "empirical_stall_model": {
+    "input_cycles_per_word": 38.440366972477065,
+    "output_cycles_per_word": 12.339449541284404,
+    "calibration_points": [
+      {
+        "shape": [
+          3,
+          2,
+          1
+        ],
+        "measured_cycles": 219
+      },
+      {
+        "shape": [
+          27,
+          16,
+          32
+        ],
+        "measured_cycles": 24436
+      }
+    ]
+  },
+  "estimated_pl_cycles": 3582677378.788991,
+  "estimated_pl_seconds": 35.82677378788991,
+  "estimated_pl_fps_upper_bound": 0.02791208624925133,
+  "scope": "Analytical full-Conv2D PL estimate fitted to two physical JTAG measurements. It excludes Python/PYNQ allocation, MMIO launch, CPU fallback operators, preprocessing, and postprocessing.",
+  "bottleneck": "The prototype retransmits every weight tile on every spatial batch and performs 99k host launches. Persistent on-chip weights and a graph/command queue are required for realtime operation."
+}

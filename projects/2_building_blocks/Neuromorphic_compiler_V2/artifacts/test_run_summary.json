@@ -1,0 +1,67 @@
+{
+  "accuracy_threshold": 0.85,
+  "checkpoint_counts": {
+    "INFO": 7,
+    "PASS": 156
+  },
+  "checkpoint_path": "/tmp/nc_v2_maestro/checkpoints/tiny_mobilenetv2_digits_best.pt",
+  "checkpoint_report_path": "/tmp/nc_v2_maestro/artifacts/checkpoint_report.json",
+  "compiler_json_graph_path": "/tmp/nc_v2_maestro/artifacts/compiler_graph.json",
+  "confidence": 0.8552864193916321,
+  "dataset": "sklearn_digits",
+  "dispatch_report": {
+    "executed_entries": 24,
+    "total_cycles": 1256,
+    "unique_addresses": 24
+  },
+  "executorch_spec_path": "/tmp/nc_v2_maestro/artifacts/executorch_compile_spec.json",
+  "fx_export_path": "/tmp/nc_v2_maestro/artifacts/fx_graph.json",
+  "history_last": {
+    "epoch": 10.0,
+    "test_accuracy": 0.8916666666666667,
+    "test_loss": 0.3523946265379588,
+    "train_accuracy": 0.9498956158663883,
+    "train_loss": 0.2210500063834791
+  },
+  "maestro_dataflow_json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json",
+  "maestro_generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m",
+  "maestro_json_reference_matches_generated": true,
+  "maestro_layer_count": 17,
+  "maestro_reference_matches_generated": true,
+  "maestro_repo_json_reference_path": "/tmp/nc_v2_maestro/maestro/layer_dataflow_reference.json",
+  "maestro_repo_reference_path": "/tmp/nc_v2_maestro/maestro/MobilenetV2_clustered.m",
+  "maestro_schedule_path": "/tmp/nc_v2_maestro/artifacts/maestro_schedule.json",
+  "model_name": "TinyMobileNetV2",
+  "onnx_path": null,
+  "onnx_status": {
+    "reason": "No module named 'onnxscript'",
+    "requested_path": "/tmp/nc_v2_maestro/artifacts/model.onnx",
+    "status": "not_generated"
+  },
+  "onnx_status_path": "/tmp/nc_v2_maestro/artifacts/onnx_export_status.json",
+  "predicted_class": 5,
+  "sample_image_path": "/tmp/nc_v2_maestro/artifacts/sample_digit.png",
+  "schedule_entries": 24,
+  "test_accuracy": 0.9027777777777778,
+  "test_loss": 0.3305195583237542,
+  "tflite_status": {
+    "import_error": "No module named 'tensorflow'",
+    "input_shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "model_name": "TinyMobileNetV2",
+    "reason": "No supported PyTorch->TFLite converter is installed in this runtime.",
+    "requested_output": "/tmp/nc_v2_maestro/artifacts/model_int8.tflite",
+    "status": "not_generated",
+    "suggested_paths": {
+      "option_1": "Export ONNX first, then convert in a TensorFlow/TFLite environment.",
+      "option_2": "Rebuild the model in TensorFlow and run full integer quantization there.",
+      "option_3": "Use a dedicated bridge such as ai-edge/onnx-tf in a prepared environment."
+    },
+    "tensorflow_present": false
+  },
+  "true_class": 5
+}

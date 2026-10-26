@@ -1,0 +1,2 @@
+Layer,LoopOrder,K,C,R,S,Y,X,StrideY,StrideX,KTile,CTile,UsesCluster,ClusterSize,KGroups,Kwaves,Cfolds,Cwaves,RowFold,FoldProgram,FoldCompute,Reduction,Finalize,LatencyCycles,ActivePEs,UtilizationPct
+Conv2D,K->C->RSYX,16,3,3,3,640,640,2,2,8,3,False,1,2,1,1,1,27,1,56,0,3,6144000,2,0.3906

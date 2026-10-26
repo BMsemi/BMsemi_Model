@@ -1,0 +1,3570 @@
+{
+  "best_candidate": {
+    "fp4llm_tile_rows": 128,
+    "fp4llm_tile_cols": 64,
+    "token_block_size": null,
+    "pe_cluster_size": 4,
+    "k_map": "SpatialMap",
+    "c_map": "TemporalMap",
+    "y_map": "SpatialMap",
+    "resident_weights": null,
+    "noc_coalescing_tiles": 1,
+    "dma_window_cells": null,
+    "reduction_placement": "local"
+  },
+  "best_score": 2863.0524577586916,
+  "best_cost": {
+    "latency": {
+      "dma_load_cycles": 1073484156,
+      "x1_programming_cycles": 1056966848,
+      "pe_compute_cycles": 133708988,
+      "reduction_cycles": 526298195,
+      "sar_tdc_conversion_cycles": 7039705,
+      "noc_transfer_cycles": 30369252,
+      "total_cycles": 2827867144
+    },
+    "energy": {
+      "memory_read_pj": 3382286745.6000004,
+      "memory_write_pj": 60557400.0,
+      "x1_programming_pj": 4227858432.0,
+      "compute_read_pj": 27299414374.4,
+      "reduction_pj": 168396104.52,
+      "adc_sar_tdc_pj": 44860933.6,
+      "noc_pj": 1939768.572,
+      "total_pj": 35185313758.692
+    },
+    "counters": {
+      "weight_cells": 4227858432,
+      "weight_windows": 280,
+      "weight_bytes": 16911433728,
+      "mac_operations": 545988287488,
+      "compute_groups": 409640,
+      "compute_cycles": 133708988,
+      "reduction_values": 16839610452,
+      "reduction_groups": 30184,
+      "converted_values": 224304668,
+      "noc_values": 224304668,
+      "noc_payload_bits": 1937836796,
+      "noc_packets": 30184,
+      "noc_flits": 15154442,
+      "noc_wire_bits": 1939768572
+    }
+  },
+  "manifest_summary": {
+    "layers": 448,
+    "materialized_tasks": 20000,
+    "fp4llm_tile_tasks": 409640,
+    "x1_compute_commands": 409640,
+    "x1_noc_flits": 409640,
+    "weight_program_cells": 8455716864,
+    "weight_program_commands": 8257536,
+    "truncated_tasks": true,
+    "phase_layer_counts": {
+      "prefill": 224,
+      "decode": 224
+    },
+    "role_layer_counts": {
+      "q_proj": 56,
+      "k_proj": 56,
+      "v_proj": 56,
+      "attn_scores_qkt": 56,
+      "attn_av": 56,
+      "out_proj": 56,
+      "ffn_up": 56,
+      "ffn_down": 56
+    }
+  },
+  "stream_summary": {
+    "total_static_programmed_cells": 4227858432,
+    "die_cell_capacity": 20480000,
+    "total_cell_capacity": 20480000,
+    "windows": 280,
+    "descriptors": 1204,
+    "truncated_descriptors": false,
+    "requires_dma": true,
+    "requires_peer_die_protocol": false,
+    "resident_feasible": true,
+    "noc_coalescing_tiles": 1,
+    "reduction_placement": "local",
+    "cells_per_window": 20480000,
+    "descriptor_bytes": 77056
+  },
+  "evaluations": [
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3000.277019543268,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 270391240,
+          "reduction_cycles": 526478963,
+          "sar_tdc_conversion_cycles": 7130089,
+          "noc_transfer_cycles": 30640404,
+          "total_cycles": 2965091700
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1945553.148,
+          "total_pj": 35185319543.268005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276336,
+          "compute_cycles": 270391240,
+          "reduction_values": 16839610452,
+          "reduction_groups": 120568,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 120568,
+          "noc_flits": 15199634,
+          "noc_wire_bits": 1945553148
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.759485758692,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267416016,
+          "reduction_cycles": 526298195,
+          "sar_tdc_conversion_cycles": 7039705,
+          "noc_transfer_cycles": 30369252,
+          "total_cycles": 2961574172
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939768.572,
+          "total_pj": 35185313758.692
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819168,
+          "compute_cycles": 267416016,
+          "reduction_values": 16839610452,
+          "reduction_groups": 30184,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 30184,
+          "noc_flits": 15154442,
+          "noc_wire_bits": 1939768572
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 128,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2998.7641201725164,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 269194352,
+          "reduction_cycles": 526373627,
+          "sar_tdc_conversion_cycles": 7077421,
+          "noc_transfer_cycles": 30482400,
+          "total_cycles": 2963578804
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1942182.396,
+          "total_pj": 35185316172.516
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 2597448,
+          "compute_cycles": 269194352,
+          "reduction_values": 16839610452,
+          "reduction_groups": 67900,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 67900,
+          "noc_flits": 15173300,
+          "noc_wire_bits": 1942182396
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 256,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.56011841994,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268154656,
+          "reduction_cycles": 526318859,
+          "sar_tdc_conversion_cycles": 7050037,
+          "noc_transfer_cycles": 30400248,
+          "total_cycles": 2962374804
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1940429.82,
+          "total_pj": 35185314419.94
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1557752,
+          "compute_cycles": 268154656,
+          "reduction_values": 16839610452,
+          "reduction_groups": 40516,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 40516,
+          "noc_flits": 15159608,
+          "noc_wire_bits": 1940429820
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 512,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.9581175436524,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267634808,
+          "reduction_cycles": 526291475,
+          "sar_tdc_conversion_cycles": 7036345,
+          "noc_transfer_cycles": 30359172,
+          "total_cycles": 2961772804
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939553.5320000001,
+          "total_pj": 35185313543.652
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1037904,
+          "compute_cycles": 267634808,
+          "reduction_values": 16839610452,
+          "reduction_groups": 26824,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 26824,
+          "noc_flits": 15152762,
+          "noc_wire_bits": 1939553532
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 2,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 8,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "TemporalMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "SpatialMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "TemporalMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": false,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": true,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": null,
+      "cost": null,
+      "execution_mode": "resident_infeasible",
+      "valid": false,
+      "reason": "resident weight choice does not fit available X1 capacity"
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 4,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.578484792804,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7024613,
+          "noc_transfer_cycles": 30323976,
+          "total_cycles": 2962393172
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938802.6840000001,
+          "total_pj": 35185312792.804
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 15092,
+          "noc_flits": 15146896,
+          "noc_wire_bits": 1938802684
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 8,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.5483563107564,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7017081,
+          "noc_transfer_cycles": 30301380,
+          "total_cycles": 2962363044
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938320.636,
+          "total_pj": 35185312310.756004
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 7560,
+          "noc_flits": 15143130,
+          "noc_wire_bits": 1938320636
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 65536,
+        "reduction_placement": "local"
+      },
+      "score": 2999.3009356868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1074511868,
+          "x1_programming_cycles": 1057480704,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2964115620
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 64512,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 262144,
+        "reduction_placement": "local"
+      },
+      "score": 2998.1397196868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073737724,
+          "x1_programming_cycles": 1057093632,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962954404
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 16128,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "destination"
+      },
+      "score": 5827.917237480196,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 536523572,
+          "noc_transfer_cycles": 2323083576,
+          "total_cycles": 5784651731
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 4626509807.5,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 3412783024.0,
+          "noc_pj": 148257992.176,
+          "total_pj": 43265506480.196
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 17063915120,
+          "noc_values": 17063915120,
+          "noc_payload_bits": 148048313840,
+          "noc_packets": 3276224,
+          "noc_flits": 1158265564,
+          "noc_wire_bits": 148257992176
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3270.6657955432684,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 540780016,
+          "reduction_cycles": 526478963,
+          "sar_tdc_conversion_cycles": 7130089,
+          "noc_transfer_cycles": 30640404,
+          "total_cycles": 3235480476
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1945553.148,
+          "total_pj": 35185319543.268005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 6552224,
+          "compute_cycles": 540780016,
+          "reduction_values": 16839610452,
+          "reduction_groups": 120568,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 120568,
+          "noc_flits": 15199634,
+          "noc_wire_bits": 1945553148
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3264.173541758692,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 534830072,
+          "reduction_cycles": 526298195,
+          "sar_tdc_conversion_cycles": 7039705,
+          "noc_transfer_cycles": 30369252,
+          "total_cycles": 3228988228
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939768.572,
+          "total_pj": 35185313758.692
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 534830072,
+          "reduction_values": 16839610452,
+          "reduction_groups": 30184,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 30184,
+          "noc_flits": 15154442,
+          "noc_wire_bits": 1939768572
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2865.0826315432682,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 135196852,
+          "reduction_cycles": 526478963,
+          "sar_tdc_conversion_cycles": 7130089,
+          "noc_transfer_cycles": 30640404,
+          "total_cycles": 2829897312
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1945553.148,
+          "total_pj": 35185319543.268005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638392,
+          "compute_cycles": 135196852,
+          "reduction_values": 16839610452,
+          "reduction_groups": 120568,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 120568,
+          "noc_flits": 15199634,
+          "noc_wire_bits": 1945553148
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.0524577586916,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 133708988,
+          "reduction_cycles": 526298195,
+          "sar_tdc_conversion_cycles": 7039705,
+          "noc_transfer_cycles": 30369252,
+          "total_cycles": 2827867144
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939768.572,
+          "total_pj": 35185313758.692
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 409640,
+          "compute_cycles": 133708988,
+          "reduction_values": 16839610452,
+          "reduction_groups": 30184,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 30184,
+          "noc_flits": 15154442,
+          "noc_wire_bits": 1939768572
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 128,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3267.9560081725162,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 538386240,
+          "reduction_cycles": 526373627,
+          "sar_tdc_conversion_cycles": 7077421,
+          "noc_transfer_cycles": 30482400,
+          "total_cycles": 3232770692
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1942182.396,
+          "total_pj": 35185316172.516
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 5194336,
+          "compute_cycles": 538386240,
+          "reduction_values": 16839610452,
+          "reduction_groups": 67900,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 67900,
+          "noc_flits": 15173300,
+          "noc_wire_bits": 1942182396
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 256,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.71253441994,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536307072,
+          "reduction_cycles": 526318859,
+          "sar_tdc_conversion_cycles": 7050037,
+          "noc_transfer_cycles": 30400248,
+          "total_cycles": 3230527220
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1940429.82,
+          "total_pj": 35185314419.94
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3115168,
+          "compute_cycles": 536307072,
+          "reduction_values": 16839610452,
+          "reduction_groups": 40516,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 40516,
+          "noc_flits": 15159608,
+          "noc_wire_bits": 1940429820
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 512,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3264.590797543652,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 535267488,
+          "reduction_cycles": 526291475,
+          "sar_tdc_conversion_cycles": 7036345,
+          "noc_transfer_cycles": 30359172,
+          "total_cycles": 3229405484
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939553.5320000001,
+          "total_pj": 35185313543.652
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 2075584,
+          "compute_cycles": 535267488,
+          "reduction_values": 16839610452,
+          "reduction_groups": 26824,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 26824,
+          "noc_flits": 15152762,
+          "noc_wire_bits": 1939553532
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 128,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2864.1681761725163,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134598408,
+          "reduction_cycles": 526373627,
+          "sar_tdc_conversion_cycles": 7077421,
+          "noc_transfer_cycles": 30482400,
+          "total_cycles": 2828982860
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1942182.396,
+          "total_pj": 35185316172.516
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1299004,
+          "compute_cycles": 134598408,
+          "reduction_values": 16839610452,
+          "reduction_groups": 67900,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 67900,
+          "noc_flits": 15173300,
+          "noc_wire_bits": 1942182396
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 256,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.48391041994,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134078448,
+          "reduction_cycles": 526318859,
+          "sar_tdc_conversion_cycles": 7050037,
+          "noc_transfer_cycles": 30400248,
+          "total_cycles": 2828298596
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1940429.82,
+          "total_pj": 35185314419.94
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 779044,
+          "compute_cycles": 134078448,
+          "reduction_values": 16839610452,
+          "reduction_groups": 40516,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 40516,
+          "noc_flits": 15159608,
+          "noc_wire_bits": 1940429820
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": 512,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.141777543652,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 133818468,
+          "reduction_cycles": 526291475,
+          "sar_tdc_conversion_cycles": 7036345,
+          "noc_transfer_cycles": 30359172,
+          "total_cycles": 2827956464
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939553.5320000001,
+          "total_pj": 35185313543.652
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 519064,
+          "compute_cycles": 133818468,
+          "reduction_values": 16839610452,
+          "reduction_groups": 26824,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 26824,
+          "noc_flits": 15152762,
+          "noc_wire_bits": 1939553532
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 2,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 8,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 2,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 8,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "TemporalMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "TemporalMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "SpatialMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "SpatialMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "TemporalMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "TemporalMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": false,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.9923676868843,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3230807052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": true,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": null,
+      "cost": null,
+      "execution_mode": "resident_infeasible",
+      "valid": false,
+      "reason": "resident weight choice does not fit available X1 capacity"
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": false,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.642867686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828457552
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": true,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": null,
+      "cost": null,
+      "execution_mode": "resident_infeasible",
+      "valid": false,
+      "reason": "resident weight choice does not fit available X1 capacity"
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 4,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.811484792804,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7024613,
+          "noc_transfer_cycles": 30323976,
+          "total_cycles": 3230626172
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938802.6840000001,
+          "total_pj": 35185312792.804
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 15092,
+          "noc_flits": 15146896,
+          "noc_wire_bits": 1938802684
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 8,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3265.781356310756,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7017081,
+          "noc_transfer_cycles": 30301380,
+          "total_cycles": 3230596044
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938320.636,
+          "total_pj": 35185312310.756004
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 7560,
+          "noc_flits": 15143130,
+          "noc_wire_bits": 1938320636
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 4,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.461984792804,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7024613,
+          "noc_transfer_cycles": 30323976,
+          "total_cycles": 2828276672
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938802.6840000001,
+          "total_pj": 35185312792.804
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 15092,
+          "noc_flits": 15146896,
+          "noc_wire_bits": 1938802684
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 8,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2863.4318563107563,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7017081,
+          "noc_transfer_cycles": 30301380,
+          "total_cycles": 2828246544
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938320.636,
+          "total_pj": 35185312310.756004
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 7560,
+          "noc_flits": 15143130,
+          "noc_wire_bits": 1938320636
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 65536,
+        "reduction_placement": "local"
+      },
+      "score": 3267.5339356868844,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1074511868,
+          "x1_programming_cycles": 1057480704,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3232348620
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 64512,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 262144,
+        "reduction_placement": "local"
+      },
+      "score": 3266.372719686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073737724,
+          "x1_programming_cycles": 1057093632,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 3231187404
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 16128,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 65536,
+        "reduction_placement": "local"
+      },
+      "score": 2865.184435686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1074511868,
+          "x1_programming_cycles": 1057480704,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2829999120
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 64512,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": 262144,
+        "reduction_placement": "local"
+      },
+      "score": 2864.023219686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073737724,
+          "x1_programming_cycles": 1057093632,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2828837904
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 16128,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 32,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "destination"
+      },
+      "score": 6096.150237480196,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 536468128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 536523572,
+          "noc_transfer_cycles": 2323083576,
+          "total_cycles": 6052884731
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 4626509807.5,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 3412783024.0,
+          "noc_pj": 148257992.176,
+          "total_pj": 43265506480.196
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276224,
+          "compute_cycles": 536468128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 17063915120,
+          "noc_values": 17063915120,
+          "noc_payload_bits": 148048313840,
+          "noc_packets": 3276224,
+          "noc_flits": 1158265564,
+          "noc_wire_bits": 148257992176
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 128,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "destination"
+      },
+      "score": 5693.8007374801955,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 134118628,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 536523572,
+          "noc_transfer_cycles": 2323083576,
+          "total_cycles": 5650535231
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 4626509807.5,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 3412783024.0,
+          "noc_pj": 148257992.176,
+          "total_pj": 43265506480.196
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819224,
+          "compute_cycles": 134118628,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 17063915120,
+          "noc_values": 17063915120,
+          "noc_payload_bits": 148048313840,
+          "noc_packets": 3276224,
+          "noc_flits": 1158265564,
+          "noc_wire_bits": 148257992176
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": 128,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3002.285852509156,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 272309520,
+          "reduction_cycles": 526509147,
+          "sar_tdc_conversion_cycles": 7145181,
+          "noc_transfer_cycles": 30685680,
+          "total_cycles": 2967100532
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1946519.036,
+          "total_pj": 35185320509.156
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 5194616,
+          "compute_cycles": 272309520,
+          "reduction_values": 16839610452,
+          "reduction_groups": 135660,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 135660,
+          "noc_flits": 15207180,
+          "noc_wire_bits": 1946519036
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": 256,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2999.8782970075877,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 270230240,
+          "reduction_cycles": 526399723,
+          "sar_tdc_conversion_cycles": 7090469,
+          "noc_transfer_cycles": 30521544,
+          "total_cycles": 2964692980
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1943017.468,
+          "total_pj": 35185317007.588005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3115336,
+          "compute_cycles": 270230240,
+          "reduction_values": 16839610452,
+          "reduction_groups": 80948,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 80948,
+          "noc_flits": 15179824,
+          "noc_wire_bits": 1943017468
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": 512,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2998.674519256804,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 269190600,
+          "reduction_cycles": 526345011,
+          "sar_tdc_conversion_cycles": 7063113,
+          "noc_transfer_cycles": 30439476,
+          "total_cycles": 2963489204
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941266.6840000001,
+          "total_pj": 35185315256.804
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 2075696,
+          "compute_cycles": 269190600,
+          "reduction_values": 16839610452,
+          "reduction_groups": 53592,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 53592,
+          "noc_flits": 15166146,
+          "noc_wire_bits": 1941266684
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": 128,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.262198004196,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267895712,
+          "reduction_cycles": 526305867,
+          "sar_tdc_conversion_cycles": 7043541,
+          "noc_transfer_cycles": 30380760,
+          "total_cycles": 2962076884
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1940014.0760000001,
+          "total_pj": 35185314004.196
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1298864,
+          "compute_cycles": 267895712,
+          "reduction_values": 16839610452,
+          "reduction_groups": 34020,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 34020,
+          "noc_flits": 15156360,
+          "noc_wire_bits": 1940014076
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": 256,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.659973126116,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267375808,
+          "reduction_cycles": 526278427,
+          "sar_tdc_conversion_cycles": 7029821,
+          "noc_transfer_cycles": 30339600,
+          "total_cycles": 2961474660
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939135.996,
+          "total_pj": 35185313126.116005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 778960,
+          "compute_cycles": 267375808,
+          "reduction_values": 16839610452,
+          "reduction_groups": 20300,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 20300,
+          "noc_flits": 15149500,
+          "noc_wire_bits": 1939135996
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": 512,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.3588606870762,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267115856,
+          "reduction_cycles": 526264707,
+          "sar_tdc_conversion_cycles": 7022961,
+          "noc_transfer_cycles": 30319020,
+          "total_cycles": 2961173548
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1938696.956,
+          "total_pj": 35185312687.076004
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 519008,
+          "compute_cycles": 267115856,
+          "reduction_values": 16839610452,
+          "reduction_groups": 13440,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 13440,
+          "noc_flits": 15146070,
+          "noc_wire_bits": 1938696956
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": null,
+        "pe_cluster_size": 2,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3000.277019543268,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 270391240,
+          "reduction_cycles": 526478963,
+          "sar_tdc_conversion_cycles": 7130089,
+          "noc_transfer_cycles": 30640404,
+          "total_cycles": 2965091700
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1945553.148,
+          "total_pj": 35185319543.268005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276336,
+          "compute_cycles": 270391240,
+          "reduction_values": 16839610452,
+          "reduction_groups": 120568,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 120568,
+          "noc_flits": 15199634,
+          "noc_wire_bits": 1945553148
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 16,
+        "token_block_size": null,
+        "pe_cluster_size": 8,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 3000.277019543268,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 270391240,
+          "reduction_cycles": 526478963,
+          "sar_tdc_conversion_cycles": 7130089,
+          "noc_transfer_cycles": 30640404,
+          "total_cycles": 2965091700
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1945553.148,
+          "total_pj": 35185319543.268005
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 3276336,
+          "compute_cycles": 270391240,
+          "reduction_values": 16839610452,
+          "reduction_groups": 120568,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 120568,
+          "noc_flits": 15199634,
+          "noc_wire_bits": 1945553148
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": null,
+        "pe_cluster_size": 2,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.759485758692,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267416016,
+          "reduction_cycles": 526298195,
+          "sar_tdc_conversion_cycles": 7039705,
+          "noc_transfer_cycles": 30369252,
+          "total_cycles": 2961574172
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939768.572,
+          "total_pj": 35185313758.692
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819168,
+          "compute_cycles": 267416016,
+          "reduction_values": 16839610452,
+          "reduction_groups": 30184,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 30184,
+          "noc_flits": 15154442,
+          "noc_wire_bits": 1939768572
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    },
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 64,
+        "token_block_size": null,
+        "pe_cluster_size": 8,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2996.759485758692,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 267416016,
+          "reduction_cycles": 526298195,
+          "sar_tdc_conversion_cycles": 7039705,
+          "noc_transfer_cycles": 30369252,
+          "total_cycles": 2961574172
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1939768.572,
+          "total_pj": 35185313758.692
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 819168,
+          "compute_cycles": 267416016,
+          "reduction_values": 16839610452,
+          "reduction_groups": 30184,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 30184,
+          "noc_flits": 15154442,
+          "noc_wire_bits": 1939768572
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    }
+  ]
+}

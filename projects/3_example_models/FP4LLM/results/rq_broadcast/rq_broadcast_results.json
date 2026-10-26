@@ -1,0 +1,47 @@
+{
+  "Qwen/Qwen3-1.7B": {
+    "baseline": 19.777137756347656,
+    "broadcast_ffn_input_INT8": 20.11216163635254,
+    "broadcast_ffn_input_INT10": 19.8453426361084,
+    "broadcast_ffn_input_INT12": 19.818368911743164,
+    "broadcast_kv_output_INT8": 19.76455307006836,
+    "broadcast_kv_output_INT10": 19.80315589904785,
+    "broadcast_kv_output_INT12": 19.772838592529297,
+    "broadcast_qkv_input_INT8": 19.710689544677734,
+    "broadcast_qkv_input_INT10": 19.905866622924805,
+    "broadcast_qkv_input_INT12": 19.751602172851562,
+    "broadcast_all_INT8": 19.97041130065918,
+    "broadcast_all_INT10": 19.984718322753906,
+    "broadcast_all_INT12": 19.80466651916504
+  },
+  "Qwen/Qwen3-4B": {
+    "baseline": 16.164012908935547,
+    "broadcast_ffn_input_INT8": 16.67142105102539,
+    "broadcast_ffn_input_INT10": 16.240575790405273,
+    "broadcast_ffn_input_INT12": 16.1854305267334,
+    "broadcast_kv_output_INT8": 16.157947540283203,
+    "broadcast_kv_output_INT10": 16.150402069091797,
+    "broadcast_kv_output_INT12": 16.15079116821289,
+    "broadcast_qkv_input_INT8": 16.10474967956543,
+    "broadcast_qkv_input_INT10": 16.189973831176758,
+    "broadcast_qkv_input_INT12": 16.15894889831543,
+    "broadcast_all_INT8": 16.37497329711914,
+    "broadcast_all_INT10": 16.222274780273438,
+    "broadcast_all_INT12": 16.178192138671875
+  },
+  "Qwen/Qwen3-8B": {
+    "baseline": 11.657475471496582,
+    "broadcast_ffn_input_INT8": 11.959393501281738,
+    "broadcast_ffn_input_INT10": 11.783329010009766,
+    "broadcast_ffn_input_INT12": 11.678678512573242,
+    "broadcast_kv_output_INT8": 11.65555191040039,
+    "broadcast_kv_output_INT10": 11.665624618530273,
+    "broadcast_kv_output_INT12": 11.664322853088379,
+    "broadcast_qkv_input_INT8": 11.647746086120605,
+    "broadcast_qkv_input_INT10": 11.64111042022705,
+    "broadcast_qkv_input_INT12": 11.659635543823242,
+    "broadcast_all_INT8": 11.95750904083252,
+    "broadcast_all_INT10": 11.738224983215332,
+    "broadcast_all_INT12": 11.679993629455566
+  }
+}

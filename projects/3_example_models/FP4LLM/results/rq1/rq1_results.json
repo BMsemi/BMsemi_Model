@@ -1,0 +1,154 @@
+{
+  "Qwen/Qwen2.5-1.5B": {
+    "baseline": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.7533670033670034,
+        "acc_stderr,none": 0.008844984581934898,
+        "acc_norm,none": 0.7209595959595959,
+        "acc_norm_stderr,none": 0.009203588704032635
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.7562568008705114,
+        "acc_stderr,none": 0.010017199471500614,
+        "acc_norm,none": 0.7606093579978237,
+        "acc_norm_stderr,none": 0.009955884250291706
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 13.31015607170509,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 1.6226612613951148,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 0.6983618615551457,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    },
+    "W4A16": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.6986531986531986,
+        "acc_stderr,none": 0.009415259879351627,
+        "acc_norm,none": 0.664983164983165,
+        "acc_norm_stderr,none": 0.00968516076593236
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.7442872687704026,
+        "acc_stderr,none": 0.010178690109459862,
+        "acc_norm,none": 0.7470076169749728,
+        "acc_norm_stderr,none": 0.01014288869886246
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 16.39529368539665,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 1.6871689046711718,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 0.754604410930528,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    },
+    "WFP4AINT8": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.678030303030303,
+        "acc_stderr,none": 0.009587386696300394,
+        "acc_norm,none": 0.6494107744107744,
+        "acc_norm_stderr,none": 0.009791003829831564
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.7383025027203483,
+        "acc_stderr,none": 0.01025563077270823,
+        "acc_norm,none": 0.7377584330794341,
+        "acc_norm_stderr,none": 0.01026250256517245
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 16.834826876152025,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 1.6955365178856514,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 0.7617418569703518,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    },
+    "W4A4": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.3207070707070707,
+        "acc_stderr,none": 0.00957747457110883,
+        "acc_norm,none": 0.32407407407407407,
+        "acc_norm_stderr,none": 0.00960372885009539
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.5522306855277476,
+        "acc_stderr,none": 0.01160199979686681,
+        "acc_norm,none": 0.5560391730141458,
+        "acc_norm_stderr,none": 0.01159232216127783
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 3325.808783457693,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 4.556300882008469,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 2.1878630206739023,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    },
+    "MXFP4_W4A4_B16": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.6944444444444444,
+        "acc_stderr,none": 0.009452181213593472,
+        "acc_norm,none": 0.6818181818181818,
+        "acc_norm_stderr,none": 0.009557408782506374
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.7448313384113167,
+        "acc_stderr,none": 0.010171571592521822,
+        "acc_norm,none": 0.7453754080522307,
+        "acc_norm_stderr,none": 0.010164432237060482
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 15.98734547346178,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 1.6792377802640015,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 0.747806530524488,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    },
+    "NVFP4_W4A4_B16": {
+      "arc_easy": {
+        "alias": "arc_easy",
+        "acc,none": 0.7129629629629629,
+        "acc_stderr,none": 0.009282621598983064,
+        "acc_norm,none": 0.6914983164983165,
+        "acc_norm_stderr,none": 0.009477472342978114
+      },
+      "piqa": {
+        "alias": "piqa",
+        "acc,none": 0.7421109902067464,
+        "acc_stderr,none": 0.010206956662056257,
+        "acc_norm,none": 0.7475516866158868,
+        "acc_norm_stderr,none": 0.010135665547362362
+      },
+      "wikitext": {
+        "alias": "wikitext",
+        "word_perplexity,none": 15.353450747640775,
+        "word_perplexity_stderr,none": "N/A",
+        "byte_perplexity,none": 1.6665810968944106,
+        "byte_perplexity_stderr,none": "N/A",
+        "bits_per_byte,none": 0.7368915216130281,
+        "bits_per_byte_stderr,none": "N/A"
+      }
+    }
+  }
+}

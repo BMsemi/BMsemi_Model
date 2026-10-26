@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/rtl/axi_tcam_rag_accel.sv,1787293271,systemVerilog,,C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim/tb_tcam_rag_core.sv,,axi_tcam_rag_accel,,,,,,,,
+C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/rtl/tcam_rag_core.sv,1787293342,systemVerilog,,C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/rtl/axi_tcam_rag_accel.sv,,tcam_rag_core,,,,,,,,
+C:/Users/elesamj/OneDrive - National University of Singapore/Documents/FPGA_acceleration/tcam_rag_zcu106/sim/tb_tcam_rag_core.sv,1787293450,systemVerilog,,,,tb_tcam_rag_core,,,,,,,,

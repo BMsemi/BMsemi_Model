@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "modules": {
+    "core": "Core mapping & PE model",
+    "blocks": "Building blocks (schedule, energy)",
+    "deepgate": "Deep Gate anomaly detection",
+    "yolo26": "YOLO26n INT8",
+    "mnist": "MNIST multi-PE demo",
+    "tcam": "TCAM search"
+  },
+  "operations": [
+    {
+      "name": "core.map_layer",
+      "module": "core",
+      "summary": "Tile one conv/linear layer onto PEs (pe_rows, pe_cols configurable)",
+      "status": "available",
+      "defaults": {
+        "K": 64,
+        "C": 32,
+        "R": 3,
+        "S": 3,
+        "Y": 16,
+        "X": 16,
+        "pe_rows": 64,
+        "pe_cols": 32
+      },
+      "source": "neuromorphic.core",
+      "entrypoint": "bm_models.entrypoints:map_layer"
+    },
+    {
+      "name": "models.deepgate.infer",
+      "module": "deepgate",
+      "summary": "Deep_gate INT8 autoencoder: reconstruction error / anomaly flag (case 0-4 or 640-int8 input)",
+      "status": "available",
+      "defaults": {
+        "case": 0,
+        "threshold": null,
+        "layers": false
+      },
+      "source": "projects/3_example_models/Deep_gate",
+      "entrypoint": "bm_models.models.deepgate:infer"
+    },
+    {
+      "name": "models.mnist.edge_filter",
+      "module": "mnist",
+      "summary": "MNIST 5x5 column-differential edge filter (digit 5/9 or your 0/1 image)",
+      "status": "available",
+      "defaults": {
+        "digit": 5,
+        "output": "map"
+      },
+      "source": "projects/2_building_blocks/Neuromorphic_compiler",
+      "entrypoint": "bm_models.models.mnist:edge_filter"
+    },
+    {
+      "name": "blocks.schedule_layer",
+      "module": "blocks",
+      "summary": "Schedule summary for a layer: PEs, K chunks, CRS folds, program/compute op counts",
+      "status": "available",
+      "defaults": {
+        "K": 32,
+        "C": 1,
+        "R": 1,
+        "S": 1,
+        "Y": 1,
+        "X": 1,
+        "xy_tile": 1
+      },
+      "source": "projects/2_building_blocks/Neuromorphic_compiler (Mapper, Scheduler)",
+      "entrypoint": "bm_models.models.blocks:schedule_layer"
+    },
+    {
+      "name": "blocks.energy_estimate",
+      "module": "blocks",
+      "summary": "Expected program/read/compute energy and cycle counts (binary weights/inputs of given density)",
+      "status": "available",
+      "defaults": {
+        "K": 32,
+        "C": 1,
+        "R": 1,
+        "S": 1,
+        "Y": 1,
+        "X": 1,
+        "xy_tile": 1,
+        "weight_density": 0.5,
+        "input_density": 0.5
+      },
+      "source": "projects/2_building_blocks/Neuromorphic_compiler (energy.py, Latency.py)",
+      "entrypoint": "bm_models.models.blocks:energy_estimate"
+    },
+    {
+      "name": "models.tcam.search",
+      "module": "tcam",
+      "summary": "Ternary 16-bit TCAM lookup over up to 32 entries (query or image_base64) - software PE emulation",
+      "status": "available",
+      "defaults": {
+        "entries": [
+          {
+            "key": "0x36C8",
+            "chunk_id": 1
+          }
+        ],
+        "query": "0x36C8",
+        "top_k": 4,
+        "max_hamming": 0
+      },
+      "source": "projects/2_building_blocks/TCAM_Search_FPGA/zcu106_tcam_rag_flow",
+      "entrypoint": "bm_models.models.tcam:search"
+    },
+    {
+      "name": "models.yolo26.detect",
+      "module": "yolo26",
+      "summary": "YOLO26n INT8 object detection on an image (image_base64) - TFLite CPU reference path",
+      "status": "available",
+      "defaults": {
+        "image_base64": "$image",
+        "conf": 0.25,
+        "iou": 0.45,
+        "max_detections": 100,
+        "return_image": true
+      },
+      "source": "projects/3_example_models/Yolo26_INT8_mac",
+      "entrypoint": "bm_models.models.yolo26:detect"
+    },
+    {
+      "name": "core.pe_self_test",
+      "module": "core",
+      "summary": "ZCU106 physical PE self-test: four LPC and two NLPC engines (FPGA target only)",
+      "status": "available",
+      "defaults": {},
+      "source": "tools/zcu106_runner.py",
+      "entrypoint": "bm_models.entrypoints:pe_self_test"
+    }
+  ]
+}

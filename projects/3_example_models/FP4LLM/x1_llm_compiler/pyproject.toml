@@ -1,0 +1,6 @@
+[project]
+name = "x1-llm-compiler"
+version = "0.1.0"
+description = "FP4LLM to X1 memory compiler NoC mapping and verification harness"
+requires-python = ">=3.10"
+dependencies = []

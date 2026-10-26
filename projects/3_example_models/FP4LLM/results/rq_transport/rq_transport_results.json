@@ -1,0 +1,86 @@
+{
+  "Qwen/Qwen2.5-0.5B": {
+    "load_error": "Qwen/Qwen2.5-0.5B does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack."
+  },
+  "Qwen/Qwen2.5-1.5B": {
+    "baseline": 11.256756782531738,
+    "layer_to_layer_INT8": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "layer_to_layer_INT10": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "layer_to_layer_INT12": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "layer_to_layer_INT14": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "layer_to_layer_INT16": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "attn_to_mlp_INT8": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "attn_to_mlp_INT10": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "attn_to_mlp_INT12": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "attn_to_mlp_INT14": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    },
+    "attn_to_mlp_INT16": {
+      "error": "can only concatenate tuple (not \"Tensor\") to tuple"
+    }
+  },
+  "Qwen/Qwen2.5-7B": {
+    "load_error": "Qwen/Qwen2.5-7B does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack."
+  },
+  "Qwen/Qwen3-1.7B": {
+    "baseline": 19.777137756347656,
+    "layer_to_layer_INT8": 20.197589874267578,
+    "layer_to_layer_INT10": 19.60083770751953,
+    "layer_to_layer_INT12": 19.811811447143555,
+    "layer_to_layer_INT14": 19.781028747558594,
+    "layer_to_layer_INT16": 19.77068328857422,
+    "attn_to_mlp_INT8": 19.938392639160156,
+    "attn_to_mlp_INT10": 19.845121383666992,
+    "attn_to_mlp_INT12": 19.78171157836914,
+    "attn_to_mlp_INT14": 19.795289993286133,
+    "attn_to_mlp_INT16": 19.773866653442383
+  },
+  "Qwen/Qwen3-4B": {
+    "baseline": 16.164012908935547,
+    "layer_to_layer_INT8": 16.70362663269043,
+    "layer_to_layer_INT10": 16.33612060546875,
+    "layer_to_layer_INT12": 16.090621948242188,
+    "layer_to_layer_INT14": 16.15934944152832,
+    "layer_to_layer_INT16": 16.18396759033203,
+    "attn_to_mlp_INT8": 16.445783615112305,
+    "attn_to_mlp_INT10": 16.199838638305664,
+    "attn_to_mlp_INT12": 16.16695785522461,
+    "attn_to_mlp_INT14": 16.14972496032715,
+    "attn_to_mlp_INT16": 16.166913986206055
+  },
+  "Qwen/Qwen3-8B": {
+    "baseline": 11.657475471496582,
+    "layer_to_layer_INT8": 12.497386932373047,
+    "layer_to_layer_INT10": 11.72978687286377,
+    "layer_to_layer_INT12": 11.62501049041748,
+    "layer_to_layer_INT14": 11.63668441772461,
+    "layer_to_layer_INT16": 11.658851623535156,
+    "attn_to_mlp_INT8": 12.029080390930176,
+    "attn_to_mlp_INT10": 11.69983196258545,
+    "attn_to_mlp_INT12": 11.659399032592773,
+    "attn_to_mlp_INT14": 11.658445358276367,
+    "attn_to_mlp_INT16": 11.6581392288208
+  },
+  "meta-llama/Meta-Llama-3.1-8B": {
+    "load_error": "Can't find a checkpoint index (/users/grad/zhangjintao/.cache/huggingface/hub/models--meta-llama--Meta-Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b/model.safetensors.index.json) in meta-llama/Meta-Llama-3.1-8B."
+  },
+  "mistralai/Mistral-7B-v0.1": {
+    "load_error": "Can't find a checkpoint index (/users/grad/zhangjintao/.cache/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/27d67f1b5f57dc0953326b2601d68371d40ea8da/model.safetensors.index.json) in mistralai/Mistral-7B-v0.1."
+  }
+}

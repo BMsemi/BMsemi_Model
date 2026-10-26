@@ -1,0 +1,85 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 15794.22it/s]
+software_block_ready=1
+software_block_ready=2
+software_block_ready=3
+software_block_ready=4
+software_block_ready=5
+software_block_ready=6
+software_block_ready=7
+software_block_ready=8
+software_block_ready=9
+software_block_ready=10
+software_block_ready=11
+software_block_ready=12
+software_block_ready=13
+software_block_ready=14
+software_block_ready=15
+software_block_ready=16
+software_block_ready=17
+software_block_ready=18
+software_block_ready=19
+software_block_ready=20
+software_block_ready=21
+software_block_ready=22
+software_block_ready=23
+software_block_ready=24
+software_block_ready=25
+software_block_ready=26
+software_block_ready=27
+crossbar_block_active=2 phase=prefill
+software_block_complete=1 seconds=94.742178
+crossbar_block_active=3 phase=prefill
+software_block_complete=2 seconds=89.241086
+crossbar_block_active=4 phase=prefill
+software_block_complete=3 seconds=95.507693
+crossbar_block_active=5 phase=prefill
+software_block_complete=4 seconds=96.314575
+crossbar_block_active=6 phase=prefill
+software_block_complete=5 seconds=96.656136
+crossbar_block_active=7 phase=prefill
+software_block_complete=6 seconds=95.598370
+crossbar_block_active=8 phase=prefill
+software_block_complete=7 seconds=79.387875
+crossbar_block_active=9 phase=prefill
+software_block_complete=8 seconds=96.855487
+crossbar_block_active=10 phase=prefill
+software_block_complete=9 seconds=94.119140
+crossbar_block_active=11 phase=prefill
+software_block_complete=10 seconds=96.280574
+crossbar_block_active=12 phase=prefill
+software_block_complete=11 seconds=96.145104
+crossbar_block_active=13 phase=prefill
+software_block_complete=12 seconds=96.611002
+crossbar_block_active=14 phase=prefill
+software_block_complete=13 seconds=96.591070
+crossbar_block_active=15 phase=prefill
+software_block_complete=14 seconds=95.131133
+crossbar_block_active=16 phase=prefill
+software_block_complete=15 seconds=94.380384
+crossbar_block_active=17 phase=prefill
+software_block_complete=16 seconds=93.600260
+crossbar_block_active=18 phase=prefill
+software_block_complete=17 seconds=94.204053
+crossbar_block_active=19 phase=prefill
+software_block_complete=18 seconds=82.036732
+crossbar_block_active=20 phase=prefill
+software_block_complete=19 seconds=81.195743
+crossbar_block_active=21 phase=prefill
+software_block_complete=20 seconds=81.757768
+crossbar_block_active=22 phase=prefill
+software_block_complete=21 seconds=89.460935
+crossbar_block_active=23 phase=prefill
+software_block_complete=22 seconds=87.596288
+crossbar_block_active=24 phase=prefill
+software_block_complete=23 seconds=85.724079
+crossbar_block_active=25 phase=prefill
+software_block_complete=24 seconds=84.067120
+crossbar_block_active=26 phase=prefill
+software_block_complete=25 seconds=81.499746
+crossbar_block_active=27 phase=prefill
+software_block_complete=26 seconds=77.693815
+crossbar_block_active=28 phase=prefill
+software_block_complete=27 seconds=74.290176
+status=complete out_dir=/users/staff/elesamj2/FP4LLM_7f8bcee_20261008/results/qwen_model_execution_x2
+next_token_id=25 next_token_text=':'
+total_seconds=2463.979441

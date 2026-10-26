@@ -1,0 +1,17 @@
+phase,role,layers,pe_count,maestro_spatial_pe_count,macs,weight_elements,max_layer_pe_count,max_layer_name,roles
+decode,attn_av,28,1008,3584,943197696,1838592,36,L05_Attn_AV,attn_av
+decode,attn_scores_qkt,28,952,14364,943197696,1838592,34,L04_Attn_Scores_QKt,attn_scores_qkt
+decode,ffn_down,28,172032,11010048,352321536,352321536,6144,L08_FFN_2,ffn_down
+decode,ffn_up,28,172032,11010048,352321536,352321536,6144,L07_FFN_1,ffn_up
+decode,k_proj,28,28672,917504,58720256,58720256,1024,L02_K_Proj,k_proj
+decode,out_proj,28,57344,1835008,117440512,117440512,2048,L06_Out_Proj,out_proj
+decode,q_proj,28,57344,1835008,117440512,117440512,2048,L01_Q_Proj,q_proj
+decode,v_proj,28,28672,917504,58720256,58720256,1024,L03_V_Proj,v_proj
+prefill,attn_av,28,896,3584,939524096,1835008,32,L05_Attn_AV,attn_av
+prefill,attn_scores_qkt,28,896,14336,939524096,1835008,32,L04_Attn_Scores_QKt,attn_scores_qkt
+prefill,ffn_down,28,172032,114688,180388626432,352321536,6144,L08_FFN_2,ffn_down
+prefill,ffn_up,28,172032,344064,180388626432,352321536,6144,L07_FFN_1,ffn_up
+prefill,k_proj,28,28672,57344,30064771072,58720256,1024,L02_K_Proj,k_proj
+prefill,out_proj,28,57344,114688,60129542144,117440512,2048,L06_Out_Proj,out_proj
+prefill,q_proj,28,57344,114688,60129542144,117440512,2048,L01_Q_Proj,q_proj
+prefill,v_proj,28,28672,57344,30064771072,58720256,1024,L03_V_Proj,v_proj

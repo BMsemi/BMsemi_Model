@@ -1,0 +1,4 @@
+variant,vram_loaded_gb,vram_prefill_gb,vram_decode_gb,prefill_ms,prefill_std_ms,prefill_tps,ttft_ms,decode_tps,prompt_len_tok
+baseline,3.087,3.193,3.105,15.75,0.04,18351.7,15.46,68.9,289
+WFP4AINT8,3.096,3.193,3.105,31.25,0.08,9248.1,31.11,33.4,289
+NVFP4_W4A4_B16,3.096,3.239,3.105,60.52,0.07,4775.2,61.89,17.6,289

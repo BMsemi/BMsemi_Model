@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qwen3 on X1 — 3D mapping explorer</title>
+<meta name="description" content="Explore Qwen3 prefill and decode mapping, transformer operations, and crossbar execution in 3D.">
+<link rel="stylesheet" href="explorer.css">
+<link rel="stylesheet" href="mapping-view.css">
+<link rel="stylesheet" href="token-weight-view.css">
+<link rel="stylesheet" href="mac-view.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<header><a class="brand" href="./"><span class="brand-icon">X1</span><span>Qwen3 <span class="muted">/ mapping explorer</span></span></a><div class="phase" aria-label="Inference phase"><button data-phase="prefill" aria-pressed="true">Prefill</button><button data-phase="decode" aria-pressed="false">Decode</button></div><span class="header-meta">1.7B · 28 blocks · FP4LLM</span></header>
+<main>
+<aside class="left">
+  <div class="eyebrow">MODEL → HARDWARE</div>
+  <h1>Follow the computation.</h1>
+  <div class="views" aria-label="Scene"><button data-view="model" aria-pressed="true"><span>01</span> Transformer <b>↗</b></button><button data-view="crossbar" aria-pressed="false"><span>02</span> Inside a PE <b>↗</b></button></div>
+  <label class="field">Transformer block<select id="block"></select></label>
+  <div class="section-label">MAPPED OPERATIONS</div><nav id="operations" aria-label="Transformer operations"></nav>
+  <div class="context-note"><span class="status-dot"></span>Source-backed dimensions<p>Physical arrangement and animation timing are illustrative.</p></div>
+</aside>
+<section id="viewport" aria-label="Interactive 3D mapping view">
+  <div class="scene-heading"><div class="eyebrow" id="scene-kicker">01 / TRANSFORMER</div><h2 id="scene-title">One block, expanded.</h2><p id="scene-subtitle">28 blocks at left. Select a tensor to inspect its mapping.</p></div>
+  <div id="canvas-host"></div><div id="labels" aria-hidden="true"></div>
+  <div class="scene-tools"><button id="reset-camera" aria-label="Reset camera">↺ Reset view</button><span>Drag to orbit · scroll to zoom · click to inspect</span></div>
+  <div class="legend"><span><i class="weights"></i>Weights</span><span><i class="activations"></i>Activations</span><span><i class="cache"></i>KV cache</span><span><i class="partials"></i>Partial sums</span></div>
+  <div id="scene-error" role="alert" hidden>3D could not initialize. Try opening this page in Chrome or Edge with hardware acceleration enabled.</div>
+</section>
+<aside class="inspector">
+  <div class="eyebrow">SELECTED OPERATION</div><h2 id="op-title">Query projection</h2><div class="mono muted" id="layer-name"></div>
+  <div class="matrix-equation"><div><span id="input-shape"></span><small id="input-label">Input</small></div><b>×</b><div><span id="weight-shape"></span><small id="weight-label">Weight</small></div><b>→</b><div><span id="output-shape"></span><small>Output</small></div></div>
+  <label class="field">Workload<select id="scope"><option value="capacity">Mapping capacity</option><option value="run">Saved run · block 1</option></select></label>
+  <p class="description" id="op-description"></p>
+  <dl class="metrics"><div><dt>Logical tile</dt><dd>64 × 32</dd></div><div><dt>Tile grid · C × K</dt><dd id="tile-grid"></dd></div><div><dt>Token blocks</dt><dd id="token-blocks"></dd></div><div><dt id="tasks-label">Compiled tile tasks</dt><dd id="task-count"></dd></div></dl>
+  <div class="tile-selection"><label>Reduction tile <output id="row-value"></output><input aria-label="Reduction tile" id="row" type="range" min="0" max="31" value="0"></label><label>Output tile <output id="col-value"></output><input aria-label="Output tile" id="col" type="range" min="0" max="63" value="0"></label><label>Token block <output id="token-value"></output><input aria-label="Token block" id="token" type="range" min="0" max="1" value="0"></label></div>
+  <div class="selection-readout mono" id="selected-range"></div>
+  <button class="primary" id="inspect-pe">Inspect this tile in a PE ↗</button>
+  <details><summary>Mapping & evidence</summary><pre id="directives"></pre><p id="evidence"></p><p>64 × 32 compiler tiles use two 32-row shards. Four macro lanes per endpoint; four stored cell banks per weight. A bank-to-lane placement is not supplied.</p><p>Software execution evidence covers block 1: 11 prefill tokens, one decode query, and 12 cached positions. This is not a silicon execution trace.</p><p id="decode-note"></p><a href="mapping-data.json" target="_blank" rel="noopener">View source-derived data ↗</a></details>
+</aside>
+</main>
+<footer>
+ <div class="playback"><button id="play" class="play" aria-label="Play execution">▶</button><button id="step" aria-label="Next execution stage">Step →</button><div><b id="stage-name">Ready to execute</b><span id="stage-detail">Select Play to follow one logical tile.</span></div></div>
+ <div class="stages" id="stages" aria-label="Execution stage"></div>
+ <div class="timing-note">Illustrative sequence<br><span>No measured cycle timing</span></div>
+</footer>
+<script type="module" src="explorer.js"></script>
+</body></html>
+

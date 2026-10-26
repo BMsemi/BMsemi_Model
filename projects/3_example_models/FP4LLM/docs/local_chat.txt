@@ -1,0 +1,35 @@
+Local Qwen chat
+==============
+FPGA chat mode: physical block-0 prefill via COM17 at 115200 baud, followed
+by CPU BF16 layers 1–27 and CPU autoregressive decode. This is a hybrid path,
+not a full FPGA LLM and not the noisy ReRAM simulation. Board block-0 weights
+are SHA256-checked against the local checkpoint before every hardware run.
+Fresh prompt embeddings/positions are sent to the board. Returned hardware
+hidden states and K/V seed the model's first forward pass and KV cache.
+Hardware failures are reported without silently substituting CPU prefill.
+Evidence is saved under results/fpga_chat/<run-id>/ and shown in /logs.
+The existing board runtime at /home/xilinx/qwen6_20261005 is required.
+Requires pyserial in the llmqwen environment. Do not share COM17 with another
+terminal while a request is running. Stop waits for an active FPGA run to finish.
+
+To start independently of a terminal session: python -B start_chat.py
+using the llmqwen environment. Server output: results/chat_server.log.
+
+From the FP4LLM folder run: .\run_chat.ps1
+Open http://127.0.0.1:7860
+
+The model loads from D:\hf_models\Qwen--Qwen3-1.7B on the first message.
+Standard chat uses BF16 Qwen on CPU, without ReRAM simulation.
+ReRAM clean and ReRAM noise + reliability use qwen_frontend's all:crossbar
+mapping with configs/qwen_crossbar_noise.json. Clean disables both noise
+and reliability; noisy enables both. These modes are CPU simulations,
+not FPGA execution. They are capped at eight output tokens and 128 input
+tokens because full crossbar simulation can take tens of minutes.
+Standard chat supports 2048 input tokens and generates up to 128 tokens
+from the UI. Start a new chat when the context limit is reached.
+
+Only one request runs at a time. Switching inference mode reloads the
+model to keep memory use bounded. Stop takes effect between output tokens;
+model loading and a running crossbar operation finish before it can stop.
+Chat history is kept in the browser tab and disappears on reload.
+Keep the server terminal running; Ctrl+C stops the server.

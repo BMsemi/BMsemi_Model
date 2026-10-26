@@ -1,0 +1,2095 @@
+{
+  "counts": {
+    "INFO": 7,
+    "PASS": 156
+  },
+  "records": [
+    {
+      "details": "Initialized deterministic runtime settings.",
+      "name": "runtime_seed",
+      "payload": {
+        "seed": 7,
+        "torch_threads": 1
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:13.402318+00:00"
+    },
+    {
+      "details": "Loaded sklearn digits dataset for a real image classification task.",
+      "name": "dataset_loaded",
+      "payload": {
+        "mean": 0.3059433698654175,
+        "num_test": 360,
+        "num_train": 1437,
+        "std": 0.37632375955581665
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.424117+00:00"
+    },
+    {
+      "details": "Saved a real sample digit image used for inference verification.",
+      "name": "sample_image_saved",
+      "payload": {
+        "sample_image_path": "/tmp/nc_v2_maestro/artifacts/sample_digit.png",
+        "sample_label": 5
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.440086+00:00"
+    },
+    {
+      "details": "Constructed a real TinyMobileNetV2 model for the digits task.",
+      "name": "real_tiny_model_built",
+      "payload": {
+        "num_parameters": 5114
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.445309+00:00"
+    },
+    {
+      "details": "Loaded previously trained tiny MobileNetV2 checkpoint.",
+      "name": "training_checkpoint_loaded",
+      "payload": {
+        "checkpoint_path": "/tmp/nc_v2_maestro/checkpoints/tiny_mobilenetv2_digits_best.pt",
+        "epochs_recorded": 10
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:13.462638+00:00"
+    },
+    {
+      "details": "Verified test accuracy against threshold 0.85.",
+      "name": "model_accuracy_threshold",
+      "payload": {
+        "test_accuracy": 0.9027777777777778,
+        "test_loss": 0.3305195583237542
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.503878+00:00"
+    },
+    {
+      "details": "Ran inference on a real sample image through the trained model.",
+      "name": "sample_inference_completed",
+      "payload": {
+        "confidence": 0.8552864193916321,
+        "predicted_class": 5,
+        "true_class": 5
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.511070+00:00"
+    },
+    {
+      "details": "Generated a compile spec from traced graph.",
+      "name": "executorch_spec_has_nodes",
+      "payload": {
+        "fx_node_count": 51,
+        "num_parameters": 5114
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.521812+00:00"
+    },
+    {
+      "details": "Inserted delegate preprocess metadata for supported op classes.",
+      "name": "executorch_delegate_tags_present",
+      "payload": {
+        "bmsemi_partition_tags": [
+          "conv",
+          "depthwise",
+          "linear"
+        ],
+        "edge_transform_applied": true,
+        "lane": "executorch"
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.521900+00:00"
+    },
+    {
+      "details": "Lowered compile spec to a runtime-ready metadata blob.",
+      "name": "executorch_runtime_has_debug_handles",
+      "payload": {
+        "debug_handles": true,
+        "delegate_runtime": "runtime_dispatcher",
+        "serialized_program": "artifacts/executorch_program.pte"
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:13.521947+00:00"
+    },
+    {
+      "details": "Captured a real compiler graph from the trained model.",
+      "name": "fx_capture_nonempty",
+      "payload": {
+        "json_export_path": "/tmp/nc_v2_maestro/artifacts/fx_graph.json",
+        "num_nodes": 51
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.531376+00:00"
+    },
+    {
+      "details": "Attempted ONNX export and wrote status manifest.",
+      "name": "onnx_export_attempted",
+      "payload": {
+        "onnx_status_path": "/tmp/nc_v2_maestro/artifacts/onnx_export_status.json",
+        "requested_path": "/tmp/nc_v2_maestro/artifacts/model.onnx",
+        "status": "not_generated"
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:14.531434+00:00"
+    },
+    {
+      "details": "Initialized FX-backed compiler IR.",
+      "name": "ir_initialized",
+      "payload": {
+        "num_named_modules": 68,
+        "num_nodes": 51
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:14.531594+00:00"
+    },
+    {
+      "details": "Graph contains real compute nodes ready for downstream passes.",
+      "name": "graph_optimizer_compute_nodes_present",
+      "payload": {
+        "call_module_nodes": 45,
+        "compute_nodes": 17,
+        "conv_bn_relu_triplets": 11,
+        "note": "Analysis-only optimization report; no graph rewrite applied."
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.531667+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.0.0.",
+      "name": "weights_finite::features.0.0",
+      "payload": {
+        "max": 0.35447385907173157,
+        "mean_abs": 0.15108026564121246,
+        "min": -0.30975085496902466,
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532130+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.1.conv.0.0.",
+      "name": "weights_finite::features.1.conv.0.0",
+      "payload": {
+        "max": 0.3610262870788574,
+        "mean_abs": 0.1607317179441452,
+        "min": -0.3588728904724121,
+        "shape": [
+          8,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532253+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.1.conv.1.",
+      "name": "weights_finite::features.1.conv.1",
+      "payload": {
+        "max": 0.37802383303642273,
+        "mean_abs": 0.17593663930892944,
+        "min": -0.3545971214771271,
+        "shape": [
+          8,
+          8,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532330+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.2.conv.0.0.",
+      "name": "weights_finite::features.2.conv.0.0",
+      "payload": {
+        "max": 0.3952723443508148,
+        "mean_abs": 0.1827121078968048,
+        "min": -0.4347473680973053,
+        "shape": [
+          16,
+          8,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532436+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.2.conv.1.0.",
+      "name": "weights_finite::features.2.conv.1.0",
+      "payload": {
+        "max": 0.4430454969406128,
+        "mean_abs": 0.16937704384326935,
+        "min": -0.37411901354789734,
+        "shape": [
+          16,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532531+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.2.conv.2.",
+      "name": "weights_finite::features.2.conv.2",
+      "payload": {
+        "max": 0.29062458872795105,
+        "mean_abs": 0.1330394297838211,
+        "min": -0.30068761110305786,
+        "shape": [
+          12,
+          16,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532617+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.3.conv.0.0.",
+      "name": "weights_finite::features.3.conv.0.0",
+      "payload": {
+        "max": 0.38126400113105774,
+        "mean_abs": 0.14954528212547302,
+        "min": -0.3262673020362854,
+        "shape": [
+          24,
+          12,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532717+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.3.conv.1.0.",
+      "name": "weights_finite::features.3.conv.1.0",
+      "payload": {
+        "max": 0.4294396936893463,
+        "mean_abs": 0.17637427151203156,
+        "min": -0.3747091293334961,
+        "shape": [
+          24,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532816+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.3.conv.2.",
+      "name": "weights_finite::features.3.conv.2",
+      "payload": {
+        "max": 0.27617552876472473,
+        "mean_abs": 0.10807744413614273,
+        "min": -0.26897963881492615,
+        "shape": [
+          12,
+          24,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532883+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.4.conv.0.0.",
+      "name": "weights_finite::features.4.conv.0.0",
+      "payload": {
+        "max": 0.35774797201156616,
+        "mean_abs": 0.1377333551645279,
+        "min": -0.35000747442245483,
+        "shape": [
+          24,
+          12,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.532946+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.4.conv.1.0.",
+      "name": "weights_finite::features.4.conv.1.0",
+      "payload": {
+        "max": 0.42207854986190796,
+        "mean_abs": 0.17296937108039856,
+        "min": -0.3785865008831024,
+        "shape": [
+          24,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533010+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.4.conv.2.",
+      "name": "weights_finite::features.4.conv.2",
+      "payload": {
+        "max": 0.24773217737674713,
+        "mean_abs": 0.1075206771492958,
+        "min": -0.2883625626564026,
+        "shape": [
+          16,
+          24,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533078+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.5.conv.0.0.",
+      "name": "weights_finite::features.5.conv.0.0",
+      "payload": {
+        "max": 0.33275750279426575,
+        "mean_abs": 0.1281813681125641,
+        "min": -0.31292909383773804,
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533142+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.5.conv.1.0.",
+      "name": "weights_finite::features.5.conv.1.0",
+      "payload": {
+        "max": 0.38066160678863525,
+        "mean_abs": 0.17097258567810059,
+        "min": -0.3359045386314392,
+        "shape": [
+          32,
+          1,
+          3,
+          3
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533204+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.5.conv.2.",
+      "name": "weights_finite::features.5.conv.2",
+      "payload": {
+        "max": 0.3238251507282257,
+        "mean_abs": 0.09439072012901306,
+        "min": -0.27417513728141785,
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533267+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module features.6.0.",
+      "name": "weights_finite::features.6.0",
+      "payload": {
+        "max": 0.40510857105255127,
+        "mean_abs": 0.12862230837345123,
+        "min": -0.3774692118167877,
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533328+00:00"
+    },
+    {
+      "details": "Weight tensor is finite for module classifier.",
+      "name": "weights_finite::classifier",
+      "payload": {
+        "max": 0.39836782217025757,
+        "mean_abs": 0.18138132989406586,
+        "min": -0.39475783705711365,
+        "shape": [
+          10,
+          32
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.533394+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.0.0.",
+      "name": "weight_clusters_nonempty::features.0.0",
+      "payload": {
+        "first_centroid": -0.30975085496902466,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.534160+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.1.conv.0.0.",
+      "name": "weight_clusters_nonempty::features.1.conv.0.0",
+      "payload": {
+        "first_centroid": -0.3588728904724121,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.534411+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.1.conv.1.",
+      "name": "weight_clusters_nonempty::features.1.conv.1",
+      "payload": {
+        "first_centroid": -0.3545971214771271,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.534622+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.2.conv.0.0.",
+      "name": "weight_clusters_nonempty::features.2.conv.0.0",
+      "payload": {
+        "first_centroid": -0.4347473680973053,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.534871+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.2.conv.1.0.",
+      "name": "weight_clusters_nonempty::features.2.conv.1.0",
+      "payload": {
+        "first_centroid": -0.37411901354789734,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.535114+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.2.conv.2.",
+      "name": "weight_clusters_nonempty::features.2.conv.2",
+      "payload": {
+        "first_centroid": -0.30068761110305786,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.535310+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.3.conv.0.0.",
+      "name": "weight_clusters_nonempty::features.3.conv.0.0",
+      "payload": {
+        "first_centroid": -0.3262673020362854,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.535497+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.3.conv.1.0.",
+      "name": "weight_clusters_nonempty::features.3.conv.1.0",
+      "payload": {
+        "first_centroid": -0.3747091293334961,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.535682+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.3.conv.2.",
+      "name": "weight_clusters_nonempty::features.3.conv.2",
+      "payload": {
+        "first_centroid": -0.26897963881492615,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.535924+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.4.conv.0.0.",
+      "name": "weight_clusters_nonempty::features.4.conv.0.0",
+      "payload": {
+        "first_centroid": -0.35000747442245483,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.536774+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.4.conv.1.0.",
+      "name": "weight_clusters_nonempty::features.4.conv.1.0",
+      "payload": {
+        "first_centroid": -0.3785865008831024,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.537097+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.4.conv.2.",
+      "name": "weight_clusters_nonempty::features.4.conv.2",
+      "payload": {
+        "first_centroid": -0.2883625626564026,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.537384+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.5.conv.0.0.",
+      "name": "weight_clusters_nonempty::features.5.conv.0.0",
+      "payload": {
+        "first_centroid": -0.31292909383773804,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.537724+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.5.conv.1.0.",
+      "name": "weight_clusters_nonempty::features.5.conv.1.0",
+      "payload": {
+        "first_centroid": -0.3359045386314392,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.538044+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.5.conv.2.",
+      "name": "weight_clusters_nonempty::features.5.conv.2",
+      "payload": {
+        "first_centroid": -0.27417513728141785,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.538330+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for features.6.0.",
+      "name": "weight_clusters_nonempty::features.6.0",
+      "payload": {
+        "first_centroid": -0.3774692118167877,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.538656+00:00"
+    },
+    {
+      "details": "Generated weight cluster summary for classifier.",
+      "name": "weight_clusters_nonempty::classifier",
+      "payload": {
+        "first_centroid": -0.39475783705711365,
+        "num_clusters": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.538928+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.0.0.",
+      "name": "weight_quant_valid::features.0.0",
+      "payload": {
+        "max_abs": 0.35447385907173157,
+        "max_int8": 127,
+        "min_int8": -111,
+        "mse": 5.72267708776053e-07,
+        "scale": 0.0027911327485963117
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.539369+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.1.conv.0.0.",
+      "name": "weight_quant_valid::features.1.conv.0.0",
+      "payload": {
+        "max_abs": 0.3610262870788574,
+        "max_int8": 127,
+        "min_int8": -126,
+        "mse": 6.681208901682112e-07,
+        "scale": 0.002842726669912263
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.539567+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.1.conv.1.",
+      "name": "weight_quant_valid::features.1.conv.1",
+      "payload": {
+        "max_abs": 0.37802383303642273,
+        "max_int8": 127,
+        "min_int8": -119,
+        "mse": 7.193686428763613e-07,
+        "scale": 0.0029765656144600215
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.539747+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.2.conv.0.0.",
+      "name": "weight_quant_valid::features.2.conv.0.0",
+      "payload": {
+        "max_abs": 0.4347473680973053,
+        "max_int8": 115,
+        "min_int8": -127,
+        "mse": 1.0611767038426478e-06,
+        "scale": 0.0034232076228134277
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.539898+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.2.conv.1.0.",
+      "name": "weight_quant_valid::features.2.conv.1.0",
+      "payload": {
+        "max_abs": 0.4430454969406128,
+        "max_int8": 127,
+        "min_int8": -107,
+        "mse": 9.203698141391214e-07,
+        "scale": 0.003488547220004825
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540034+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.2.conv.2.",
+      "name": "weight_quant_valid::features.2.conv.2",
+      "payload": {
+        "max_abs": 0.30068761110305786,
+        "max_int8": 123,
+        "min_int8": -127,
+        "mse": 4.5956150529491424e-07,
+        "scale": 0.0023676189850634476
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540196+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.3.conv.0.0.",
+      "name": "weight_quant_valid::features.3.conv.0.0",
+      "payload": {
+        "max_abs": 0.38126400113105774,
+        "max_int8": 127,
+        "min_int8": -109,
+        "mse": 7.899646448095154e-07,
+        "scale": 0.0030020787490634467
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540337+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.3.conv.1.0.",
+      "name": "weight_quant_valid::features.3.conv.1.0",
+      "payload": {
+        "max_abs": 0.4294396936893463,
+        "max_int8": 127,
+        "min_int8": -111,
+        "mse": 9.592645255906973e-07,
+        "scale": 0.003381414910939735
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540474+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.3.conv.2.",
+      "name": "weight_quant_valid::features.3.conv.2",
+      "payload": {
+        "max_abs": 0.27617552876472473,
+        "max_int8": 127,
+        "min_int8": -124,
+        "mse": 3.7699413724112674e-07,
+        "scale": 0.002174610462714368
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540603+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.4.conv.0.0.",
+      "name": "weight_quant_valid::features.4.conv.0.0",
+      "payload": {
+        "max_abs": 0.35774797201156616,
+        "max_int8": 127,
+        "min_int8": -124,
+        "mse": 6.370659093590803e-07,
+        "scale": 0.002816913165445403
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540743+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.4.conv.1.0.",
+      "name": "weight_quant_valid::features.4.conv.1.0",
+      "payload": {
+        "max_abs": 0.42207854986190796,
+        "max_int8": 127,
+        "min_int8": -114,
+        "mse": 9.339426583210297e-07,
+        "scale": 0.0033234531485189602
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.540870+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.4.conv.2.",
+      "name": "weight_quant_valid::features.4.conv.2",
+      "payload": {
+        "max_abs": 0.2883625626564026,
+        "max_int8": 109,
+        "min_int8": -127,
+        "mse": 4.013353134268982e-07,
+        "scale": 0.0022705713594992328
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541006+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.5.conv.0.0.",
+      "name": "weight_quant_valid::features.5.conv.0.0",
+      "payload": {
+        "max_abs": 0.33275750279426575,
+        "max_int8": 127,
+        "min_int8": -119,
+        "mse": 5.368482902667893e-07,
+        "scale": 0.002620137817277683
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541140+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.5.conv.1.0.",
+      "name": "weight_quant_valid::features.5.conv.1.0",
+      "payload": {
+        "max_abs": 0.38066160678863525,
+        "max_int8": 127,
+        "min_int8": -112,
+        "mse": 7.961980941217917e-07,
+        "scale": 0.002997335486524687
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541256+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.5.conv.2.",
+      "name": "weight_quant_valid::features.5.conv.2",
+      "payload": {
+        "max_abs": 0.3238251507282257,
+        "max_int8": 127,
+        "min_int8": -108,
+        "mse": 5.009835604141699e-07,
+        "scale": 0.002549804336442722
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541385+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for features.6.0.",
+      "name": "weight_quant_valid::features.6.0",
+      "payload": {
+        "max_abs": 0.40510857105255127,
+        "max_int8": 127,
+        "min_int8": -118,
+        "mse": 8.587581987740123e-07,
+        "scale": 0.003189831268130325
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541487+00:00"
+    },
+    {
+      "details": "Symmetric int8 quantization computed for classifier.",
+      "name": "weight_quant_valid::classifier",
+      "payload": {
+        "max_abs": 0.39836782217025757,
+        "max_int8": 127,
+        "min_int8": -126,
+        "mse": 8.054360591813747e-07,
+        "scale": 0.0031367545052776186
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.541611+00:00"
+    },
+    {
+      "details": "Collected activation range for classifier.",
+      "name": "activation_quant_valid::classifier",
+      "payload": {
+        "max": 6.737490177154541,
+        "min": -5.56058406829834,
+        "scale": 0.05305110375712237
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580118+00:00"
+    },
+    {
+      "details": "Collected activation range for features.0.0.",
+      "name": "activation_quant_valid::features.0.0",
+      "payload": {
+        "max": 2.154555320739746,
+        "min": -1.6789135932922363,
+        "scale": 0.016965002525509813
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580204+00:00"
+    },
+    {
+      "details": "Collected activation range for features.0.1.",
+      "name": "activation_quant_valid::features.0.1",
+      "payload": {
+        "max": 3.5579729080200195,
+        "min": -3.4887495040893555,
+        "scale": 0.02801553470881905
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580234+00:00"
+    },
+    {
+      "details": "Collected activation range for features.0.2.",
+      "name": "activation_quant_valid::features.0.2",
+      "payload": {
+        "max": 3.5579729080200195,
+        "min": 0.0,
+        "scale": 0.02801553470881905
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580259+00:00"
+    },
+    {
+      "details": "Collected activation range for features.1.conv.0.0.",
+      "name": "activation_quant_valid::features.1.conv.0.0",
+      "payload": {
+        "max": 1.2057756185531616,
+        "min": -1.9706560373306274,
+        "scale": 0.015516976671894705
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580277+00:00"
+    },
+    {
+      "details": "Collected activation range for features.1.conv.0.1.",
+      "name": "activation_quant_valid::features.1.conv.0.1",
+      "payload": {
+        "max": 4.079777717590332,
+        "min": -4.443540096282959,
+        "scale": 0.034988504695141406
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580291+00:00"
+    },
+    {
+      "details": "Collected activation range for features.1.conv.0.2.",
+      "name": "activation_quant_valid::features.1.conv.0.2",
+      "payload": {
+        "max": 4.079777717590332,
+        "min": 0.0,
+        "scale": 0.03212423399677427
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580304+00:00"
+    },
+    {
+      "details": "Collected activation range for features.1.conv.1.",
+      "name": "activation_quant_valid::features.1.conv.1",
+      "payload": {
+        "max": 1.7382209300994873,
+        "min": -1.9814586639404297,
+        "scale": 0.015602036723940392
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580329+00:00"
+    },
+    {
+      "details": "Collected activation range for features.1.conv.2.",
+      "name": "activation_quant_valid::features.1.conv.2",
+      "payload": {
+        "max": 4.210909366607666,
+        "min": -5.002712249755859,
+        "scale": 0.039391435037447714
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580350+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.0.0.",
+      "name": "activation_quant_valid::features.2.conv.0.0",
+      "payload": {
+        "max": 4.000396251678467,
+        "min": -4.329792022705078,
+        "scale": 0.03409285057248093
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580371+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.0.1.",
+      "name": "activation_quant_valid::features.2.conv.0.1",
+      "payload": {
+        "max": 4.22271203994751,
+        "min": -4.393668174743652,
+        "scale": 0.034595812399556315
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580383+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.0.2.",
+      "name": "activation_quant_valid::features.2.conv.0.2",
+      "payload": {
+        "max": 4.22271203994751,
+        "min": 0.0,
+        "scale": 0.03324970110194889
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580395+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.1.0.",
+      "name": "activation_quant_valid::features.2.conv.1.0",
+      "payload": {
+        "max": 1.562403678894043,
+        "min": -1.4791001081466675,
+        "scale": 0.01230239117239404
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580614+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.1.1.",
+      "name": "activation_quant_valid::features.2.conv.1.1",
+      "payload": {
+        "max": 4.836920738220215,
+        "min": -4.512564182281494,
+        "scale": 0.0380859900647261
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580647+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.1.2.",
+      "name": "activation_quant_valid::features.2.conv.1.2",
+      "payload": {
+        "max": 4.836920738220215,
+        "min": 0.0,
+        "scale": 0.0380859900647261
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580698+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.2.",
+      "name": "activation_quant_valid::features.2.conv.2",
+      "payload": {
+        "max": 1.5828839540481567,
+        "min": -2.035942554473877,
+        "scale": 0.01603104373601478
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580713+00:00"
+    },
+    {
+      "details": "Collected activation range for features.2.conv.3.",
+      "name": "activation_quant_valid::features.2.conv.3",
+      "payload": {
+        "max": 3.4639244079589844,
+        "min": -5.2969441413879395,
+        "scale": 0.04170822158573181
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580725+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.0.0.",
+      "name": "activation_quant_valid::features.3.conv.0.0",
+      "payload": {
+        "max": 3.486485004425049,
+        "min": -3.8551125526428223,
+        "scale": 0.030355216949943482
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580738+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.0.1.",
+      "name": "activation_quant_valid::features.3.conv.0.1",
+      "payload": {
+        "max": 4.491823673248291,
+        "min": -4.965003967285156,
+        "scale": 0.03909451942744217
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580749+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.0.2.",
+      "name": "activation_quant_valid::features.3.conv.0.2",
+      "payload": {
+        "max": 4.491823673248291,
+        "min": 0.0,
+        "scale": 0.035368690340537724
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580761+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.1.0.",
+      "name": "activation_quant_valid::features.3.conv.1.0",
+      "payload": {
+        "max": 1.3834316730499268,
+        "min": -1.2565555572509766,
+        "scale": 0.010893162779920683
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580773+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.1.1.",
+      "name": "activation_quant_valid::features.3.conv.1.1",
+      "payload": {
+        "max": 5.936792850494385,
+        "min": -4.334107398986816,
+        "scale": 0.046746400397593584
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580785+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.1.2.",
+      "name": "activation_quant_valid::features.3.conv.1.2",
+      "payload": {
+        "max": 5.936792850494385,
+        "min": 0.0,
+        "scale": 0.046746400397593584
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580796+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.2.",
+      "name": "activation_quant_valid::features.3.conv.2",
+      "payload": {
+        "max": 2.8748528957366943,
+        "min": -2.5329487323760986,
+        "scale": 0.02263663697430468
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580807+00:00"
+    },
+    {
+      "details": "Collected activation range for features.3.conv.3.",
+      "name": "activation_quant_valid::features.3.conv.3",
+      "payload": {
+        "max": 5.115548610687256,
+        "min": -4.614479064941406,
+        "scale": 0.04027991032037209
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580818+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.0.0.",
+      "name": "activation_quant_valid::features.4.conv.0.0",
+      "payload": {
+        "max": 4.413232803344727,
+        "min": -3.5666682720184326,
+        "scale": 0.03474986459326556
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580829+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.0.1.",
+      "name": "activation_quant_valid::features.4.conv.0.1",
+      "payload": {
+        "max": 4.079222679138184,
+        "min": -4.1482696533203125,
+        "scale": 0.0326635405773253
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580840+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.0.2.",
+      "name": "activation_quant_valid::features.4.conv.0.2",
+      "payload": {
+        "max": 4.079222679138184,
+        "min": 0.0,
+        "scale": 0.032119863615261285
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580851+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.1.0.",
+      "name": "activation_quant_valid::features.4.conv.1.0",
+      "payload": {
+        "max": 1.594333291053772,
+        "min": -1.522106409072876,
+        "scale": 0.012553805441368283
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580868+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.1.1.",
+      "name": "activation_quant_valid::features.4.conv.1.1",
+      "payload": {
+        "max": 3.918855905532837,
+        "min": -3.9695420265197754,
+        "scale": 0.03125623642928957
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580880+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.1.2.",
+      "name": "activation_quant_valid::features.4.conv.1.2",
+      "payload": {
+        "max": 3.918855905532837,
+        "min": 0.0,
+        "scale": 0.030857133114431785
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580891+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.2.",
+      "name": "activation_quant_valid::features.4.conv.2",
+      "payload": {
+        "max": 1.8643218278884888,
+        "min": -1.7047845125198364,
+        "scale": 0.014679699432192824
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580902+00:00"
+    },
+    {
+      "details": "Collected activation range for features.4.conv.3.",
+      "name": "activation_quant_valid::features.4.conv.3",
+      "payload": {
+        "max": 3.0037736892700195,
+        "min": -3.384739398956299,
+        "scale": 0.026651491330364558
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580917+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.0.0.",
+      "name": "activation_quant_valid::features.5.conv.0.0",
+      "payload": {
+        "max": 2.5445053577423096,
+        "min": -2.1603338718414307,
+        "scale": 0.020035475257813462
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580928+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.0.1.",
+      "name": "activation_quant_valid::features.5.conv.0.1",
+      "payload": {
+        "max": 3.4482154846191406,
+        "min": -3.636255979537964,
+        "scale": 0.02863193684675562
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580939+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.0.2.",
+      "name": "activation_quant_valid::features.5.conv.0.2",
+      "payload": {
+        "max": 3.4482154846191406,
+        "min": 0.0,
+        "scale": 0.02715130302849717
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580950+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.1.0.",
+      "name": "activation_quant_valid::features.5.conv.1.0",
+      "payload": {
+        "max": 1.2392133474349976,
+        "min": -0.8214265704154968,
+        "scale": 0.009757585412873996
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580960+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.1.1.",
+      "name": "activation_quant_valid::features.5.conv.1.1",
+      "payload": {
+        "max": 4.698504447937012,
+        "min": -4.712833881378174,
+        "scale": 0.03710892819982814
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580970+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.1.2.",
+      "name": "activation_quant_valid::features.5.conv.1.2",
+      "payload": {
+        "max": 4.698504447937012,
+        "min": 0.0,
+        "scale": 0.03699609801525206
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.580985+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.2.",
+      "name": "activation_quant_valid::features.5.conv.2",
+      "payload": {
+        "max": 2.248946189880371,
+        "min": -2.0784528255462646,
+        "scale": 0.01770823771559347
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581000+00:00"
+    },
+    {
+      "details": "Collected activation range for features.5.conv.3.",
+      "name": "activation_quant_valid::features.5.conv.3",
+      "payload": {
+        "max": 3.970115900039673,
+        "min": -3.979311943054199,
+        "scale": 0.03133316490593858
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581010+00:00"
+    },
+    {
+      "details": "Collected activation range for features.6.0.",
+      "name": "activation_quant_valid::features.6.0",
+      "payload": {
+        "max": 4.13371467590332,
+        "min": -2.7659666538238525,
+        "scale": 0.032548934455931655
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581028+00:00"
+    },
+    {
+      "details": "Collected activation range for features.6.1.",
+      "name": "activation_quant_valid::features.6.1",
+      "payload": {
+        "max": 4.73096227645874,
+        "min": -3.0027964115142822,
+        "scale": 0.03725167146817906
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581047+00:00"
+    },
+    {
+      "details": "Collected activation range for features.6.2.",
+      "name": "activation_quant_valid::features.6.2",
+      "payload": {
+        "max": 4.73096227645874,
+        "min": 0.0,
+        "scale": 0.03725167146817906
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581064+00:00"
+    },
+    {
+      "details": "Partitioned compute ops into hardware-sized tiles.",
+      "name": "op_tiler_tiles_created",
+      "payload": {
+        "num_tiles": 24,
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581244+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.0.0",
+      "payload": {
+        "C": 1,
+        "K": 8,
+        "R": 3,
+        "S": 3,
+        "X": 4,
+        "Y": 4,
+        "expected_tile_count": 1,
+        "layer_name": "features_0_0",
+        "layer_type": "CONV",
+        "tile_width": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581335+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.1.conv.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.1.conv.0.0",
+      "payload": {
+        "C": 8,
+        "K": 8,
+        "R": 3,
+        "S": 3,
+        "X": 4,
+        "Y": 4,
+        "expected_tile_count": 1,
+        "layer_name": "features_1_conv_0_0",
+        "layer_type": "DEPTHWISE_CONV",
+        "tile_width": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581371+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.1.conv.1.",
+      "name": "maestro_layer_dimensions_valid::features.1.conv.1",
+      "payload": {
+        "C": 8,
+        "K": 8,
+        "R": 1,
+        "S": 1,
+        "X": 4,
+        "Y": 4,
+        "expected_tile_count": 1,
+        "layer_name": "features_1_conv_1",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 8
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581396+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.2.conv.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.2.conv.0.0",
+      "payload": {
+        "C": 8,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 4,
+        "Y": 4,
+        "expected_tile_count": 1,
+        "layer_name": "features_2_conv_0_0",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581416+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.2.conv.1.0.",
+      "name": "maestro_layer_dimensions_valid::features.2.conv.1.0",
+      "payload": {
+        "C": 16,
+        "K": 16,
+        "R": 3,
+        "S": 3,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 1,
+        "layer_name": "features_2_conv_1_0",
+        "layer_type": "DEPTHWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581437+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.2.conv.2.",
+      "name": "maestro_layer_dimensions_valid::features.2.conv.2",
+      "payload": {
+        "C": 16,
+        "K": 12,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 1,
+        "layer_name": "features_2_conv_2",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 12
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581599+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.3.conv.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.3.conv.0.0",
+      "payload": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 2,
+        "layer_name": "features_3_conv_0_0",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581684+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.3.conv.1.0.",
+      "name": "maestro_layer_dimensions_valid::features.3.conv.1.0",
+      "payload": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 2,
+        "layer_name": "features_3_conv_1_0",
+        "layer_type": "DEPTHWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581718+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.3.conv.2.",
+      "name": "maestro_layer_dimensions_valid::features.3.conv.2",
+      "payload": {
+        "C": 24,
+        "K": 12,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 1,
+        "layer_name": "features_3_conv_2",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 12
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581741+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.4.conv.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.4.conv.0.0",
+      "payload": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2,
+        "expected_tile_count": 2,
+        "layer_name": "features_4_conv_0_0",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581761+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.4.conv.1.0.",
+      "name": "maestro_layer_dimensions_valid::features.4.conv.1.0",
+      "payload": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 2,
+        "layer_name": "features_4_conv_1_0",
+        "layer_type": "DEPTHWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581782+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.4.conv.2.",
+      "name": "maestro_layer_dimensions_valid::features.4.conv.2",
+      "payload": {
+        "C": 24,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 1,
+        "layer_name": "features_4_conv_2",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581806+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.5.conv.0.0.",
+      "name": "maestro_layer_dimensions_valid::features.5.conv.0.0",
+      "payload": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 2,
+        "layer_name": "features_5_conv_0_0",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581824+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.5.conv.1.0.",
+      "name": "maestro_layer_dimensions_valid::features.5.conv.1.0",
+      "payload": {
+        "C": 32,
+        "K": 32,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 2,
+        "layer_name": "features_5_conv_1_0",
+        "layer_type": "DEPTHWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581847+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.5.conv.2.",
+      "name": "maestro_layer_dimensions_valid::features.5.conv.2",
+      "payload": {
+        "C": 32,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 1,
+        "layer_name": "features_5_conv_2",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581868+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for features.6.0.",
+      "name": "maestro_layer_dimensions_valid::features.6.0",
+      "payload": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 2,
+        "layer_name": "features_6_0",
+        "layer_type": "POINTWISE_CONV",
+        "tile_width": 16
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581896+00:00"
+    },
+    {
+      "details": "Built MAESTRO per-layer dataflow descriptor for classifier.",
+      "name": "maestro_layer_dimensions_valid::classifier",
+      "payload": {
+        "C": 32,
+        "K": 10,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1,
+        "expected_tile_count": 1,
+        "layer_name": "classifier",
+        "layer_type": "GEMM",
+        "tile_width": 10
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581939+00:00"
+    },
+    {
+      "details": "Built one MAESTRO descriptor per compute layer.",
+      "name": "maestro_descriptor_count_matches_compute_modules",
+      "payload": {
+        "compute_modules": 17,
+        "num_descriptors": 17
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.581959+00:00"
+    },
+    {
+      "details": "Wrote MAESTRO per-layer JSON and .m dataflow artifacts.",
+      "name": "maestro_artifacts_written",
+      "payload": {
+        "generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m",
+        "json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json",
+        "manifest_path": "/tmp/nc_v2_maestro/artifacts/maestro_integration_status.json"
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584304+00:00"
+    },
+    {
+      "details": "Repo MAESTRO reference file matches generated per-layer dataflow description.",
+      "name": "maestro_repo_reference_matches_generated",
+      "payload": {
+        "generated_m_path": "/tmp/nc_v2_maestro/artifacts/MobilenetV2_clustered_generated.m",
+        "repo_reference_path": "/tmp/nc_v2_maestro/maestro/MobilenetV2_clustered.m"
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584350+00:00"
+    },
+    {
+      "details": "Repo MAESTRO JSON reference matches generated per-layer dataflow description.",
+      "name": "maestro_repo_json_reference_matches_generated",
+      "payload": {
+        "json_path": "/tmp/nc_v2_maestro/artifacts/maestro_layer_dataflow.json",
+        "repo_json_reference_path": "/tmp/nc_v2_maestro/maestro/layer_dataflow_reference.json"
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584365+00:00"
+    },
+    {
+      "details": "Assigned every tile to a PE and memory bank.",
+      "name": "mapping_assignments_cover_all_tiles",
+      "payload": {
+        "num_assignments": 24,
+        "num_tiles": 24
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584442+00:00"
+    },
+    {
+      "details": "Initialized MAESTRO mapper with tile assignments and per-layer descriptors.",
+      "name": "maestro_mapper_init",
+      "payload": {
+        "num_descriptors": 17,
+        "num_tiles": 24
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:14.584484+00:00"
+    },
+    {
+      "details": "Every compiler tile matched a MAESTRO per-layer descriptor.",
+      "name": "maestro_mapper_all_tiles_have_descriptors",
+      "payload": {
+        "missing_modules": []
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584550+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.0.0",
+      "payload": {
+        "covered_channels": 8,
+        "expected_k": 8,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584567+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.1.conv.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.1.conv.0.0",
+      "payload": {
+        "covered_channels": 8,
+        "expected_k": 8,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584580+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.1.conv.1.",
+      "name": "maestro_tile_coverage_matches_k::features.1.conv.1",
+      "payload": {
+        "covered_channels": 8,
+        "expected_k": 8,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584591+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.2.conv.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.2.conv.0.0",
+      "payload": {
+        "covered_channels": 16,
+        "expected_k": 16,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584599+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.2.conv.1.0.",
+      "name": "maestro_tile_coverage_matches_k::features.2.conv.1.0",
+      "payload": {
+        "covered_channels": 16,
+        "expected_k": 16,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584608+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.2.conv.2.",
+      "name": "maestro_tile_coverage_matches_k::features.2.conv.2",
+      "payload": {
+        "covered_channels": 12,
+        "expected_k": 12,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584616+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.3.conv.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.3.conv.0.0",
+      "payload": {
+        "covered_channels": 24,
+        "expected_k": 24,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584625+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.3.conv.1.0.",
+      "name": "maestro_tile_coverage_matches_k::features.3.conv.1.0",
+      "payload": {
+        "covered_channels": 24,
+        "expected_k": 24,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584633+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.3.conv.2.",
+      "name": "maestro_tile_coverage_matches_k::features.3.conv.2",
+      "payload": {
+        "covered_channels": 12,
+        "expected_k": 12,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584642+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.4.conv.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.4.conv.0.0",
+      "payload": {
+        "covered_channels": 24,
+        "expected_k": 24,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584651+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.4.conv.1.0.",
+      "name": "maestro_tile_coverage_matches_k::features.4.conv.1.0",
+      "payload": {
+        "covered_channels": 24,
+        "expected_k": 24,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584659+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.4.conv.2.",
+      "name": "maestro_tile_coverage_matches_k::features.4.conv.2",
+      "payload": {
+        "covered_channels": 16,
+        "expected_k": 16,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584671+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.5.conv.0.0.",
+      "name": "maestro_tile_coverage_matches_k::features.5.conv.0.0",
+      "payload": {
+        "covered_channels": 32,
+        "expected_k": 32,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584680+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.5.conv.1.0.",
+      "name": "maestro_tile_coverage_matches_k::features.5.conv.1.0",
+      "payload": {
+        "covered_channels": 32,
+        "expected_k": 32,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584688+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.5.conv.2.",
+      "name": "maestro_tile_coverage_matches_k::features.5.conv.2",
+      "payload": {
+        "covered_channels": 16,
+        "expected_k": 16,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584749+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for features.6.0.",
+      "name": "maestro_tile_coverage_matches_k::features.6.0",
+      "payload": {
+        "covered_channels": 32,
+        "expected_k": 32,
+        "expected_tile_count": 2
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584759+00:00"
+    },
+    {
+      "details": "Tile channel coverage matches K dimension for classifier.",
+      "name": "maestro_tile_coverage_matches_k::classifier",
+      "payload": {
+        "covered_channels": 10,
+        "expected_k": 10,
+        "expected_tile_count": 1
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584768+00:00"
+    },
+    {
+      "details": "Mapped compiler tiles into MAESTRO work items with attached dataflow directives.",
+      "name": "maestro_mapper_output_nonempty",
+      "payload": {
+        "num_mapped": 24
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584778+00:00"
+    },
+    {
+      "details": "Initialized MAESTRO scheduler with mapped work items.",
+      "name": "maestro_scheduler_init",
+      "payload": {
+        "num_layers": 17,
+        "num_mapped_ops": 24
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:14.584803+00:00"
+    },
+    {
+      "details": "Every scheduled MAESTRO work item references a valid per-layer descriptor.",
+      "name": "maestro_schedule_entries_have_valid_layers",
+      "payload": {
+        "invalid_layers": []
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584856+00:00"
+    },
+    {
+      "details": "Every MAESTRO layer descriptor appears in the generated schedule.",
+      "name": "maestro_schedule_layer_coverage_complete",
+      "payload": {
+        "descriptor_layers": [
+          "classifier",
+          "features_0_0",
+          "features_1_conv_0_0",
+          "features_1_conv_1",
+          "features_2_conv_0_0",
+          "features_2_conv_1_0",
+          "features_2_conv_2",
+          "features_3_conv_0_0",
+          "features_3_conv_1_0",
+          "features_3_conv_2",
+          "features_4_conv_0_0",
+          "features_4_conv_1_0",
+          "features_4_conv_2",
+          "features_5_conv_0_0",
+          "features_5_conv_1_0",
+          "features_5_conv_2",
+          "features_6_0"
+        ],
+        "scheduled_layers": [
+          "classifier",
+          "features_0_0",
+          "features_1_conv_0_0",
+          "features_1_conv_1",
+          "features_2_conv_0_0",
+          "features_2_conv_1_0",
+          "features_2_conv_2",
+          "features_3_conv_0_0",
+          "features_3_conv_1_0",
+          "features_3_conv_2",
+          "features_4_conv_0_0",
+          "features_4_conv_1_0",
+          "features_4_conv_2",
+          "features_5_conv_0_0",
+          "features_5_conv_1_0",
+          "features_5_conv_2",
+          "features_6_0"
+        ]
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584876+00:00"
+    },
+    {
+      "details": "Created a serial MAESTRO schedule with per-layer cycle accounting.",
+      "name": "maestro_schedule_created",
+      "payload": {
+        "per_layer_cycles": {
+          "classifier": 40,
+          "features_0_0": 32,
+          "features_1_conv_0_0": 32,
+          "features_1_conv_1": 32,
+          "features_2_conv_0_0": 64,
+          "features_2_conv_1_0": 64,
+          "features_2_conv_2": 48,
+          "features_3_conv_0_0": 96,
+          "features_3_conv_1_0": 96,
+          "features_3_conv_2": 48,
+          "features_4_conv_0_0": 96,
+          "features_4_conv_1_0": 96,
+          "features_4_conv_2": 64,
+          "features_5_conv_0_0": 128,
+          "features_5_conv_1_0": 128,
+          "features_5_conv_2": 64,
+          "features_6_0": 128
+        },
+        "per_layer_entries": {
+          "classifier": 1,
+          "features_0_0": 1,
+          "features_1_conv_0_0": 1,
+          "features_1_conv_1": 1,
+          "features_2_conv_0_0": 1,
+          "features_2_conv_1_0": 1,
+          "features_2_conv_2": 1,
+          "features_3_conv_0_0": 2,
+          "features_3_conv_1_0": 2,
+          "features_3_conv_2": 1,
+          "features_4_conv_0_0": 2,
+          "features_4_conv_1_0": 2,
+          "features_4_conv_2": 1,
+          "features_5_conv_0_0": 2,
+          "features_5_conv_1_0": 2,
+          "features_5_conv_2": 1,
+          "features_6_0": 2
+        },
+        "schedule_entries": 24,
+        "total_cycles": 1256
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.584903+00:00"
+    },
+    {
+      "details": "Wrote MAESTRO schedule artifact for inspection.",
+      "name": "maestro_schedule_artifact_written",
+      "payload": {
+        "maestro_schedule_path": "/tmp/nc_v2_maestro/artifacts/maestro_schedule.json",
+        "schedule_entries": 24
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.585787+00:00"
+    },
+    {
+      "details": "Verified that memory plan entry count matches schedule length.",
+      "name": "memory_plan_matches_schedule",
+      "payload": {
+        "num_entries": 24,
+        "schedule_entries": 24
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.585864+00:00"
+    },
+    {
+      "details": "Wrote TFLite deployment status manifest.",
+      "name": "tflite_export_status_written",
+      "payload": {
+        "status": "not_generated",
+        "status_path": "/tmp/nc_v2_maestro/artifacts/tflite_export_status.json"
+      },
+      "status": "INFO",
+      "timestamp_utc": "2026-03-24T18:02:14.586679+00:00"
+    },
+    {
+      "details": "Verification harness accepted model accuracy.",
+      "name": "verification_harness_accuracy",
+      "payload": {
+        "accuracy_ok": true,
+        "dispatch_ok": true,
+        "maestro_ok": true,
+        "schedule_ok": true
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.586754+00:00"
+    },
+    {
+      "details": "Verification harness accepted generated schedule.",
+      "name": "verification_harness_schedule",
+      "payload": {
+        "accuracy_ok": true,
+        "dispatch_ok": true,
+        "maestro_ok": true,
+        "schedule_ok": true
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.586782+00:00"
+    },
+    {
+      "details": "Verification harness accepted runtime dispatch results.",
+      "name": "verification_harness_dispatch",
+      "payload": {
+        "accuracy_ok": true,
+        "dispatch_ok": true,
+        "maestro_ok": true,
+        "schedule_ok": true
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.586793+00:00"
+    },
+    {
+      "details": "Verification harness accepted MAESTRO per-layer integration outputs.",
+      "name": "verification_harness_maestro",
+      "payload": {
+        "accuracy_ok": true,
+        "dispatch_ok": true,
+        "maestro_ok": true,
+        "schedule_ok": true
+      },
+      "status": "PASS",
+      "timestamp_utc": "2026-03-24T18:02:14.586804+00:00"
+    }
+  ],
+  "total": 163
+}

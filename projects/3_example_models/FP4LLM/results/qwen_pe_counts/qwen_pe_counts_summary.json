@@ -1,0 +1,47 @@
+{
+  "inputs": {
+    "prefill": "mappings\\Qwen3_1_7B_prefill.m",
+    "decode": "mappings\\Qwen3_1_7B_decode.m",
+    "prefill_network": "Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P",
+    "decode_network": "Qwen3_1_7B_28L_Seq512_UserPattern_Cluster4P_Decode"
+  },
+  "pe_definition": {
+    "pe_count": "ceil((C*R*S) / tile_rows) * ceil(K / tile_cols)",
+    "tile_rows": 64,
+    "tile_cols": 32,
+    "maestro_spatial_pe_count": "product of ceil(dimension / SpatialMap offset) across SpatialMap directives"
+  },
+  "layers_per_transformer_block": 8,
+  "transformer_blocks": 28,
+  "phase_totals": {
+    "decode": {
+      "blocks": 28,
+      "layers": 224,
+      "pe_count": 518056,
+      "maestro_spatial_pe_count": 27543068,
+      "macs": 2943360000,
+      "weight_elements": 1060641792
+    },
+    "prefill": {
+      "blocks": 28,
+      "layers": 224,
+      "pe_count": 517888,
+      "maestro_spatial_pe_count": 820736,
+      "macs": 543044927488,
+      "weight_elements": 1060634624
+    }
+  },
+  "combined_totals": {
+    "blocks": 28,
+    "pe_count": 1035944,
+    "maestro_spatial_pe_count": 28363804,
+    "macs": 545988287488
+  },
+  "outputs": {
+    "by_layer_csv": "results\\qwen_pe_counts\\qwen_pe_counts_by_layer.csv",
+    "by_block_phase_csv": "results\\qwen_pe_counts\\qwen_pe_counts_by_block_phase.csv",
+    "by_block_csv": "results\\qwen_pe_counts\\qwen_pe_counts_by_block.csv",
+    "by_phase_role_csv": "results\\qwen_pe_counts\\qwen_pe_counts_by_phase_role.csv",
+    "summary_json": "results\\qwen_pe_counts\\qwen_pe_counts_summary.json"
+  }
+}

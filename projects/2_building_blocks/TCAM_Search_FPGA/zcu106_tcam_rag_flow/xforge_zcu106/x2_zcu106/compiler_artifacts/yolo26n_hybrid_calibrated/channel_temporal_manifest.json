@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "name": "yolo_first_four_layer_channel_temporal_schedule",
+  "target": "zcu106 six-engine shared PE fabric",
+  "tcam_engines": [
+    0,
+    1
+  ],
+  "yolo_tile_engines": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "channel_tile_size": 16,
+  "layers_on_fpga": [
+    {
+      "logical_layer": 0,
+      "op_index": 2,
+      "output_channels": 16,
+      "time_steps": 1,
+      "tiles": [
+        {
+          "tile_id": 0,
+          "op_index": 2,
+          "logical_layer": 0,
+          "time_step": 0,
+          "engine": 2,
+          "oc_start": 0,
+          "oc_end": 16,
+          "channel_count": 16,
+          "output_offset": 0
+        }
+      ]
+    },
+    {
+      "logical_layer": 1,
+      "op_index": 6,
+      "output_channels": 32,
+      "time_steps": 1,
+      "tiles": [
+        {
+          "tile_id": 0,
+          "op_index": 6,
+          "logical_layer": 1,
+          "time_step": 0,
+          "engine": 2,
+          "oc_start": 0,
+          "oc_end": 16,
+          "channel_count": 16,
+          "output_offset": 0
+        },
+        {
+          "tile_id": 1,
+          "op_index": 6,
+          "logical_layer": 1,
+          "time_step": 0,
+          "engine": 3,
+          "oc_start": 16,
+          "oc_end": 32,
+          "channel_count": 16,
+          "output_offset": 16
+        }
+      ]
+    },
+    {
+      "logical_layer": 2,
+      "op_index": 9,
+      "output_channels": 32,
+      "time_steps": 1,
+      "tiles": [
+        {
+          "tile_id": 0,
+          "op_index": 9,
+          "logical_layer": 2,
+          "time_step": 0,
+          "engine": 2,
+          "oc_start": 0,
+          "oc_end": 16,
+          "channel_count": 16,
+          "output_offset": 0
+        },
+        {
+          "tile_id": 1,
+          "op_index": 9,
+          "logical_layer": 2,
+          "time_step": 0,
+          "engine": 3,
+          "oc_start": 16,
+          "oc_end": 32,
+          "channel_count": 16,
+          "output_offset": 16
+        }
+      ]
+    },
+    {
+      "logical_layer": 3,
+      "op_index": 13,
+      "output_channels": 8,
+      "time_steps": 1,
+      "tiles": [
+        {
+          "tile_id": 0,
+          "op_index": 13,
+          "logical_layer": 3,
+          "time_step": 0,
+          "engine": 2,
+          "oc_start": 0,
+          "oc_end": 8,
+          "channel_count": 8,
+          "output_offset": 0
+        }
+      ]
+    }
+  ],
+  "remaining_layers": "legacy neuromorphic simulator / CPU path",
+  "contract": "TCAM hit skips MLIR/YOLO. TCAM miss runs the first four Conv2D layers using spatial output-channel tiles and temporal rounds, then stores merged layer embeddings in DDR/L2 for the simulator."
+}

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="890" viewBox="0 0 1500 890">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="70" y="55.0" font-size="20" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="70" dy="0">BF16 x BF16 SAR-TDC transformer dataflow</tspan></text>
+<rect x="70" y="100" width="250" height="105" rx="8" ry="8" fill="#e6e6e9" stroke="none" stroke-width="1"/>
+<text x="95" y="143.0" font-size="15" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="start"><tspan x="95" dy="0">Token</tspan><tspan x="95" dy="18.0">embedding</tspan></text>
+<polygon points="230,115 262,135 262,170 230,190" fill="#38548c" stroke="none" stroke-width="1"/>
+<polygon points="300,115 268,135 268,170 300,190" fill="#38548c" stroke="none" stroke-width="1"/>
+<rect x="415" y="92" width="315" height="120" rx="10" ry="10" fill="#e6e6e9" stroke="none" stroke-width="1"/>
+<rect x="451" y="117" width="36" height="70" rx="5" ry="5" fill="black" stroke="none" stroke-width="1"/>
+<text x="469.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 469.0 152.0)">Input</text>
+<polygon points="521,152 512.0,148.5 512.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="487" y1="152" x2="521" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="521" y="117" width="36" height="70" rx="5" ry="5" fill="#37528a" stroke="none" stroke-width="1"/>
+<text x="539.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 539.0 152.0)">Attention</text>
+<polygon points="591,152 582.0,148.5 582.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="557" y1="152" x2="591" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="591" y="117" width="36" height="70" rx="5" ry="5" fill="#f26c2c" stroke="none" stroke-width="1"/>
+<text x="609.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 609.0 152.0)">MLP</text>
+<polygon points="661,152 652.0,148.5 652.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="627" y1="152" x2="661" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="661" y="117" width="36" height="70" rx="5" ry="5" fill="#43a436" stroke="none" stroke-width="1"/>
+<text x="679.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 679.0 152.0)">Norm</text>
+<rect x="840" y="92" width="315" height="120" rx="10" ry="10" fill="#e6e6e9" stroke="none" stroke-width="1"/>
+<rect x="876" y="117" width="36" height="70" rx="5" ry="5" fill="black" stroke="none" stroke-width="1"/>
+<text x="894.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 894.0 152.0)">Input</text>
+<polygon points="946,152 937.0,148.5 937.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="912" y1="152" x2="946" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="946" y="117" width="36" height="70" rx="5" ry="5" fill="#37528a" stroke="none" stroke-width="1"/>
+<text x="964.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 964.0 152.0)">Attention</text>
+<polygon points="1016,152 1007.0,148.5 1007.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="982" y1="152" x2="1016" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1016" y="117" width="36" height="70" rx="5" ry="5" fill="#f26c2c" stroke="none" stroke-width="1"/>
+<text x="1034.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 1034.0 152.0)">MLP</text>
+<polygon points="1086,152 1077.0,148.5 1077.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1052" y1="152" x2="1086" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1086" y="117" width="36" height="70" rx="5" ry="5" fill="#43a436" stroke="none" stroke-width="1"/>
+<text x="1104.0" y="152.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 1104.0 152.0)">Norm</text>
+<polygon points="415,152 406.0,148.5 406.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="320" y1="152" x2="415" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="840,152 831.0,148.5 831.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="730" y1="152" x2="840" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="1220,152 1211.0,148.5 1211.0,155.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1155" y1="152" x2="1220" y2="152" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="500" y1="212" x2="395" y2="295" stroke="#999999" stroke-width="1.2" stroke-dasharray="7 5"/>
+<line x1="1000" y1="212" x2="1240" y2="295" stroke="#999999" stroke-width="1.2" stroke-dasharray="7 5"/>
+<rect x="60" y="310" width="350" height="500" rx="10" ry="10" fill="#f4f5f7" stroke="none" stroke-width="1"/>
+<text x="80" y="334.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="80" dy="0">BF16 weight path for Q/K/V/O</tspan></text>
+<rect x="90" y="375" width="46" height="350" rx="8" ry="8" fill="black" stroke="none" stroke-width="1"/>
+<text x="113.0" y="550.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 113.0 550.0)">BF16
+weight
+bits</text>
+<rect x="158" y="375" width="56" height="350" rx="8" ry="8" fill="#8a1977" stroke="none" stroke-width="1"/>
+<text x="186.0" y="550.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 186.0 550.0)">component split</text>
+<polygon points="158,550 149.0,546.5 149.0,553.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="136" y1="550" x2="158" y2="550" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="245" y="365" width="120" height="56" rx="8" ry="8" fill="#f5d5e9" stroke="#b96aa7" stroke-width="1"/>
+<text x="305.0" y="393.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="305.0" dy="0">sign</tspan></text>
+<rect x="245" y="440" width="120" height="56" rx="8" ry="8" fill="#efe8ff" stroke="#9c7adb" stroke-width="1"/>
+<text x="305.0" y="468.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="305.0" dy="0">8-bit exponent</tspan></text>
+<rect x="245" y="515" width="120" height="74" rx="8" ry="8" fill="#cfe1f9" stroke="#52708a" stroke-width="1"/>
+<text x="305.0" y="545.4" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="305.0" dy="0">8-bit significand</tspan><tspan x="305.0" dy="13.2">(hidden 1 + frac)</tspan></text>
+<rect x="245" y="620" width="120" height="92" rx="8" ry="8" fill="#fff1bf" stroke="#d0a43b" stroke-width="1"/>
+<text x="305.0" y="648.0" font-size="10" fill="black" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="305.0" dy="0">conservative</tspan><tspan x="305.0" dy="12.0">storage: 4 BF16</tspan><tspan x="305.0" dy="12.0">nibbles x 2 polarity</tspan><tspan x="305.0" dy="12.0">= 8 banks</tspan></text>
+<polygon points="245,393 236.0,389.5 236.0,396.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="214" y1="393" x2="245" y2="393" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="245,468 236.0,464.5 236.0,471.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="214" y1="468" x2="245" y2="468" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="245,552 236.0,548.5 236.0,555.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="214" y1="552" x2="245" y2="552" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="430" y="310" width="500" height="500" rx="10" ry="10" fill="#f4f5f7" stroke="none" stroke-width="1"/>
+<rect x="480" y="335" width="380" height="32" rx="8" ry="8" fill="black" stroke="none" stroke-width="1"/>
+<text x="670.0" y="351.0" font-size="14" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="670.0" dy="0">BF16 activation input</tspan></text>
+<polygon points="670,392 673.5,383.0 666.5,383.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="670" y1="367" x2="670" y2="392" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="500" y="392" width="340" height="48" rx="6" ry="6" fill="#49b7df" stroke="#52708a" stroke-width="1"/>
+<text x="670.0" y="416.0" font-size="13" fill="white" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="670.0" dy="0">extract sign, exponent, 8-bit significand</tspan></text>
+<polygon points="670,482 673.5,473.0 666.5,473.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="670" y1="440" x2="670" y2="482" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="475" y="482" width="160" height="62" rx="8" ry="8" fill="#cfe1f9" stroke="#52708a" stroke-width="1"/>
+<text x="555.0" y="505.8" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="555.0" dy="0">activation chunks:</tspan><tspan x="555.0" dy="14.399999999999999">A_lo, A_hi</tspan></text>
+<rect x="700" y="482" width="160" height="62" rx="8" ry="8" fill="#cfe1f9" stroke="#52708a" stroke-width="1"/>
+<text x="780.0" y="505.8" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="780.0" dy="0">weight chunks: W_lo,</tspan><tspan x="780.0" dy="14.399999999999999">W_hi</tspan></text>
+<rect x="505" y="590" width="330" height="70" rx="8" ry="8" fill="#155c24" stroke="none" stroke-width="1"/>
+<text x="670.0" y="617.2" font-size="13" fill="white" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="670.0" dy="0">RRAM reads 4-bit significand chunk products</tspan><tspan x="670.0" dy="15.6">(A_lo/A_hi) x (W_lo/W_hi)</tspan></text>
+<polygon points="555,590 558.5,581.0 551.5,581.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="555" y1="544" x2="555" y2="590" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="780,590 783.5,581.0 776.5,581.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="780" y1="544" x2="780" y2="590" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="505" y="700" width="330" height="42" rx="8" ry="8" fill="#d45a1a" stroke="none" stroke-width="1"/>
+<text x="670.0" y="721.0" font-size="13" fill="white" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="670.0" dy="0">SAR-TDC digitizes column partial sums</tspan></text>
+<polygon points="670,700 673.5,691.0 666.5,691.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="670" y1="660" x2="670" y2="700" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="445" y="763.4" font-size="11" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="445" dy="0">RRAM cells sense chunk currents;</tspan><tspan x="445" dy="13.2">they do not store or multiply a whole BF16 value in one read.</tspan></text>
+<rect x="890" y="330" width="45" height="430" rx="8" ry="8" fill="#8a1977" stroke="none" stroke-width="1"/>
+<text x="912.5" y="545.0" font-size="12" fill="white" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(90 912.5 545.0)">sign/exponent sideband</text>
+<line x1="365" y1="393" x2="405" y2="393" stroke="#8a1977" stroke-width="1.0" stroke-dasharray="7 5"/>
+<line x1="405" y1="393" x2="405" y2="332" stroke="#8a1977" stroke-width="1.0" stroke-dasharray="7 5"/>
+<polygon points="890,332 881.0,328.5 881.0,335.5" fill="#8a1977" stroke="#8a1977" stroke-width="1"/>
+<line x1="405" y1="332" x2="890" y2="332" stroke="#8a1977" stroke-width="1.0" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="878" y="386.6" font-size="9" fill="#8a1977" font-family="Arial, sans-serif" font-weight="400" text-anchor="middle"><tspan x="878" dy="0">metadata</tspan><tspan x="878" dy="10.799999999999999">bus</tspan></text>
+<rect x="878" y="405" width="12" height="22" rx="3" ry="3" fill="#f5d5e9" stroke="#8a1977" stroke-width="1"/>
+<polygon points="878,416 869.0,412.5 869.0,419.5" fill="#8a1977" stroke="#8a1977" stroke-width="1"/>
+<line x1="840" y1="416" x2="878" y2="416" stroke="#8a1977" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="965" y="310" width="475" height="500" rx="10" ry="10" fill="#f4f5f7" stroke="none" stroke-width="1"/>
+<rect x="1005" y="345" width="395" height="44" rx="6" ry="6" fill="#8a1977" stroke="#52708a" stroke-width="1"/>
+<text x="1202.5" y="367.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1202.5" dy="0">bucket by product exponent: E_a + E_w</tspan></text>
+<polygon points="1202.5,425 1206.0,416.0 1199.0,416.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1202.5" y1="389" x2="1202.5" y2="425" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1005" y="425" width="395" height="54" rx="6" ry="6" fill="#fff1bf" stroke="#52708a" stroke-width="1"/>
+<text x="1202.5" y="444.8" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1202.5" dy="0">32 read passes in demo: 2 act chunks x 2 weight chunks x 8</tspan><tspan x="1202.5" dy="14.399999999999999">exponent buckets</tspan></text>
+<polygon points="1202.5,515 1206.0,506.0 1199.0,506.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1202.5" y1="479" x2="1202.5" y2="515" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1005" y="515" width="395" height="44" rx="6" ry="6" fill="#d8ecd5" stroke="#52708a" stroke-width="1"/>
+<text x="1202.5" y="537.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1202.5" dy="0">digital shift by exponent + chunk offset</tspan></text>
+<polygon points="1202.5,595 1206.0,586.0 1199.0,586.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1202.5" y1="559" x2="1202.5" y2="595" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1005" y="595" width="395" height="44" rx="6" ry="6" fill="#d8ecd5" stroke="#52708a" stroke-width="1"/>
+<text x="1202.5" y="617.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1202.5" dy="0">accumulate aligned partials</tspan></text>
+<polygon points="1202.5,675 1206.0,666.0 1199.0,666.0" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="1202.5" y1="639" x2="1202.5" y2="675" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="1005" y="675" width="395" height="54" rx="6" ry="6" fill="#cfe1f9" stroke="#52708a" stroke-width="1"/>
+<text x="1202.5" y="702.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle"><tspan x="1202.5" dy="0">round/recombine to BF16 output</tspan></text>
+<line x1="670" y1="742" x2="670" y2="762" stroke="#222222" stroke-width="1.2"/>
+<line x1="670" y1="762" x2="965" y2="762" stroke="#222222" stroke-width="1.2"/>
+<line x1="965" y1="762" x2="965" y2="537" stroke="#222222" stroke-width="1.2"/>
+<polygon points="1005,537 996.0,533.5 996.0,540.5" fill="#222222" stroke="#222222" stroke-width="1"/>
+<line x1="965" y1="537" x2="1005" y2="537" stroke="#222222" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polygon points="1005,367 996.0,363.5 996.0,370.5" fill="#8a1977" stroke="#8a1977" stroke-width="1"/>
+<line x1="935" y1="367" x2="1005" y2="367" stroke="#8a1977" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="75" y="850.0" font-size="12" fill="black" font-family="Arial, sans-serif" font-weight="700" text-anchor="start"><tspan x="75" dy="0">Correct BF16 interpretation: BF16xBF16 is realized by chunked significand reads plus digital exponent scheduling, not by replacing INT8 with a one-pass BF16 analog MAC.</tspan></text>
+</svg>

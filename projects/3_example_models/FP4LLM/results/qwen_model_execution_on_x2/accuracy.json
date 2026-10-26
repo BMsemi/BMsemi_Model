@@ -1,0 +1,55 @@
+{
+  "physical_hardware": true,
+  "scope": "Qwen3-1.7B block index 0, prefill only",
+  "tokens": 1,
+  "output_shape": [
+    1,
+    2048
+  ],
+  "all_finite": true,
+  "block_wall_seconds": 178.33181709703058,
+  "block_prefill_tokens_per_second": 0.0056075243121416676,
+  "timing_note": "One block only; excludes bundle loading and FPGA programming. Not generation throughput.",
+  "error_vs_int8_reference": {
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "exact_match": true
+  },
+  "error_vs_bf16_reference": {
+    "relative_l2": 0.06468156312964553,
+    "max_abs": 0.25,
+    "exact_match": false
+  },
+  "error_vs_host_kernel_output": {
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "exact_match": true
+  },
+  "key_cache_vs_host": {
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "exact_match": true
+  },
+  "value_cache_vs_host": {
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "exact_match": true
+  },
+  "engine_operations": {
+    "engine_4_op_0": 1,
+    "engine_5_op_0": 1,
+    "engine_4_op_2": 4,
+    "engine_0_mvm": 12368,
+    "engine_1_mvm": 12304,
+    "engine_2_mvm": 12304,
+    "engine_3_mvm": 12304,
+    "engine_4_op_1": 24304,
+    "engine_5_op_1": 24256,
+    "engine_5_op_2": 2,
+    "engine_4_op_3": 2,
+    "engine_5_op_3": 2,
+    "engine_4_op_4": 16,
+    "engine_4_op_6": 2,
+    "engine_4_op_5": 1
+  }
+}

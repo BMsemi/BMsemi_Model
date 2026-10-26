@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/users/grad/zhangjintao/env-eDRAMLM/bin/pip list *)",
+      "Bash(conda info *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python rq3_rram_mapping.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python rq3_rram_mapping.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/pip show *)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python inspect_nvfp4.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python3)",
+      "Bash(python -c \"import vllm; print\\(vllm.__version__\\)\")",
+      "Bash(python -c \"import torch; print\\('CUDA:', torch.cuda.get_device_name\\(0\\), '| VRAM:', round\\(torch.cuda.get_device_properties\\(0\\).total_memory/1e9,1\\), 'GB'\\)\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -c \"import vllm; print\\(vllm.__version__\\)\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -c \"import torch; print\\('CUDA:', torch.cuda.get_device_name\\(0\\), '| VRAM:', round\\(torch.cuda.get_device_properties\\(0\\).total_memory/1e9,1\\), 'GB'\\)\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/pip list *)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -c \"import torch; print\\('CUDA devices:', torch.cuda.device_count\\(\\)\\); [print\\(f'  GPU{i}:', torch.cuda.get_device_name\\(i\\), round\\(torch.cuda.get_device_properties\\(i\\).total_memory/1e9,1\\), 'GB'\\) for i in range\\(torch.cuda.device_count\\(\\)\\)]\")",
+      "Bash(python3 -)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -c ' *)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python rq9c_fp16_decoder.py)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('=== Sweep ==='\\); [print\\(r\\) for r in d['sweep']]; print\\('=== Psum summary ==='\\); print\\(json.dumps\\(d['psum_summary'], indent=2\\)\\)\")",
+      "Bash(sed -i 's/\"MXFP4_W4A4\"/\"MXFP4_W4A4_B16\"/g; s/MXFP4_W4A4:/MXFP4_W4A4_B16:/g; s/NVFP4_W4A4/MXFP4_W4A4_B16/g' /users/grad/zhangjintao/FP4LLM/rq9_overflow.py /users/grad/zhangjintao/FP4LLM/rq9b_partial_sum_growth.py /users/grad/zhangjintao/FP4LLM/rq10_subarray_k_sweep.py)",
+      "Bash(sed -i \"s/'MXFP4-W4A4'/'MXFP4-W4A4-B16'/g; s/MXFP4-W4A4 /MXFP4-W4A4-B16 /g; s/NVFP4-W4A4/NVFP4-W4A4-B16/g\" /users/grad/zhangjintao/FP4LLM/rq11_scale_format_comparison.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python rq4_rram_tolerance.py)",
+      "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('/users/grad/zhangjintao/FP4LLM/results/rq4/rq4_results.csv'\\); print\\(df\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(f'{v}: PPL={r.get\\(\\\\\"wikitext\\\\\",{}\\).get\\(\\\\\"word_perplexity,none\\\\\",\\\\\"?\\\\\"\\)}'\\) for m,vs in d.items\\(\\) for v,r in vs.items\\(\\)]\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python photonic_bandwidth.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python /users/grad/zhangjintao/FP4LLM/photonic_bandwidth.py)",
+      "Bash(cp /tmp/photonic_bw_new.py /users/grad/zhangjintao/FP4LLM/photonic_bandwidth.py && echo \"copied\")",
+      "WebSearch",
+      "Bash(ls /users/grad/zhangjintao/.cache/huggingface/hub/ | grep \"models--\" | sed 's/models--//' | sed 's/--/\\\\//g')",
+      "Read(//users/grad/zhangjintao/.cache/huggingface/hub/**)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python --version)",
+      "Bash(nohup /users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python rq_transport.py)",
+      "Bash(echo \"PID=$!\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python make_summary_report.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python /users/grad/zhangjintao/FP4LLM/make_summary_report.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python /tmp/make_summary_report.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python /tmp/photonic_bw_new.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python3 -)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python3 -c ' *)",
+      "Bash(python make_summary_report.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python -c \"import ast; ast.parse\\(open\\('/users/grad/zhangjintao/FP4LLM/rq_compute.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python /users/grad/zhangjintao/FP4LLM/_smoke_test.py)",
+      "Bash(/users/grad/zhangjintao/.conda/envs/env-eDRAMLM/bin/python test_crossbar_wrapper.py)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

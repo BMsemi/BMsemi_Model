@@ -1,0 +1,161 @@
+{
+  "conductance_table": {
+    "magnitudes": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      6.0
+    ],
+    "g_normalized": [
+      0.0,
+      0.08333333333333333,
+      0.16666666666666666,
+      0.25,
+      0.3333333333333333,
+      0.5,
+      0.6666666666666666,
+      1.0
+    ],
+    "int_equiv": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12
+    ],
+    "spacings": [
+      0.08333333333333333,
+      0.08333333333333333,
+      0.08333333333333334,
+      0.08333333333333331,
+      0.16666666666666669,
+      0.16666666666666663,
+      0.33333333333333337
+    ],
+    "spacing_ratios": [
+      Infinity,
+      2.0,
+      1.5,
+      1.3333333333333333,
+      1.5,
+      1.3333333333333333,
+      1.5
+    ],
+    "note": "Integer equivalents are {0,1,2,3,4,6,8,12} \u2014 NOT contiguous. Gaps at {5,7,9,10,11}. Non-uniform conductance spacing required."
+  },
+  "gemm_equivalence": [
+    {
+      "N": 64,
+      "K": 128,
+      "max_abs_error": 3.814697265625e-06,
+      "mean_abs_error": 1.02166086435318e-06,
+      "relative_error": 2.6722219104158285e-07,
+      "scale_W": 0.6387552817662557,
+      "scale_A": 0.4735625584920247,
+      "scale_product_used": 0.07562264637088055
+    },
+    {
+      "N": 256,
+      "K": 512,
+      "max_abs_error": 1.52587890625e-05,
+      "mean_abs_error": 3.169639967381954e-06,
+      "relative_error": 6.592741783606471e-07,
+      "scale_W": 0.7715129057566324,
+      "scale_A": 0.6987659931182861,
+      "scale_product_used": 0.13477674544865198
+    },
+    {
+      "N": 1024,
+      "K": 4096,
+      "max_abs_error": 0.0001354217529296875,
+      "mean_abs_error": 2.382448292337358e-05,
+      "relative_error": 0.0009788069874048233,
+      "scale_W": 0.850841760635376,
+      "scale_A": 0.6581066846847534,
+      "scale_product_used": 0.13998616257077146
+    },
+    {
+      "N": 4096,
+      "K": 4096,
+      "max_abs_error": 0.0001678466796875,
+      "mean_abs_error": 2.657089862623252e-05,
+      "relative_error": 0.0007338423165492713,
+      "scale_W": 0.8746558825174967,
+      "scale_A": 0.659132162729899,
+      "scale_product_used": 0.14412845587204653
+    }
+  ],
+  "precision_vs_K": [
+    {
+      "K": 64,
+      "max_partial_sum": 2304.0,
+      "dynamic_range": 9216.0,
+      "required_bits": 15,
+      "enob": 13.17,
+      "sigma_conductance_budget": 0.00010850694444444444
+    },
+    {
+      "K": 128,
+      "max_partial_sum": 4608.0,
+      "dynamic_range": 18432.0,
+      "required_bits": 16,
+      "enob": 14.17,
+      "sigma_conductance_budget": 5.425347222222222e-05
+    },
+    {
+      "K": 256,
+      "max_partial_sum": 9216.0,
+      "dynamic_range": 36864.0,
+      "required_bits": 17,
+      "enob": 15.17,
+      "sigma_conductance_budget": 2.712673611111111e-05
+    },
+    {
+      "K": 512,
+      "max_partial_sum": 18432.0,
+      "dynamic_range": 73728.0,
+      "required_bits": 18,
+      "enob": 16.17,
+      "sigma_conductance_budget": 1.3563368055555555e-05
+    },
+    {
+      "K": 1024,
+      "max_partial_sum": 36864.0,
+      "dynamic_range": 147456.0,
+      "required_bits": 19,
+      "enob": 17.17,
+      "sigma_conductance_budget": 6.781684027777777e-06
+    },
+    {
+      "K": 2048,
+      "max_partial_sum": 73728.0,
+      "dynamic_range": 294912.0,
+      "required_bits": 20,
+      "enob": 18.17,
+      "sigma_conductance_budget": 3.3908420138888887e-06
+    },
+    {
+      "K": 4096,
+      "max_partial_sum": 147456.0,
+      "dynamic_range": 589824.0,
+      "required_bits": 21,
+      "enob": 19.17,
+      "sigma_conductance_budget": 1.6954210069444444e-06
+    },
+    {
+      "K": 8192,
+      "max_partial_sum": 294912.0,
+      "dynamic_range": 1179648.0,
+      "required_bits": 22,
+      "enob": 20.17,
+      "sigma_conductance_budget": 8.477105034722222e-07
+    }
+  ]
+}

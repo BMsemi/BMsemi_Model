@@ -1,0 +1,6 @@
+flowchart LR
+    A["Crossbar request"] --> B{"YOLO_CROSSBAR_SLOW?"}
+    B -->|"not set"| C["Vectorized NumPy MVM"]
+    B -->|"1 / true / yes"| D["Per-PE row-serial debug"]
+    C --> E["Fast functional hardware math"]
+    D --> F["Slow detailed PE calls"]

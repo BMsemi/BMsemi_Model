@@ -1,0 +1,34 @@
+{
+  "Qwen/Qwen3-1.7B": {
+    "baseline": 19.777137756347656,
+    "quant_only": 20.491785049438477,
+    "transport_only": 19.7716121673584,
+    "full_ideal": 20.702192306518555,
+    "full_s001": 20.506046295166016,
+    "full_s003": 22.45395851135254
+  },
+  "Qwen/Qwen3-4B": {
+    "baseline": 16.164012908935547,
+    "quant_only": 16.317739486694336,
+    "transport_only": 16.260520935058594,
+    "full_ideal": 16.406530380249023,
+    "full_s001": 16.78829002380371,
+    "full_s003": 18.854167938232422
+  },
+  "Qwen/Qwen3-8B": {
+    "baseline": 11.657475471496582,
+    "quant_only": {
+      "error": "CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 44.39 GiB of which 145.94 MiB is free. Process 558640 has 16.93 GiB memory in use. Process 558660 has 27.31 GiB memory in use. Of the allocated memory 16.37 GiB is allocated by PyTorch, and 59.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    },
+    "transport_only": 11.897183418273926,
+    "full_ideal": {
+      "error": "CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 44.39 GiB of which 161.94 MiB is free. Process 558640 has 16.50 GiB memory in use. Process 558660 has 27.73 GiB memory in use. Of the allocated memory 15.92 GiB is allocated by PyTorch, and 83.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    },
+    "full_s001": {
+      "error": "CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 44.39 GiB of which 141.94 MiB is free. Process 558640 has 16.52 GiB memory in use. Process 558660 has 27.73 GiB memory in use. Of the allocated memory 15.92 GiB is allocated by PyTorch, and 103.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    },
+    "full_s003": {
+      "error": "CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 44.39 GiB of which 121.94 MiB is free. Process 558640 has 16.54 GiB memory in use. Process 558660 has 27.73 GiB memory in use. Of the allocated memory 15.92 GiB is allocated by PyTorch, and 123.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    }
+  }
+}

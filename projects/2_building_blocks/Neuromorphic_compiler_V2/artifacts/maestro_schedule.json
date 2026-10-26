@@ -1,0 +1,1254 @@
+{
+  "maestro_layers": 17,
+  "num_entries": 24,
+  "schedule": [
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 1,
+        "K": 8,
+        "R": 3,
+        "S": 3,
+        "X": 4,
+        "Y": 4
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 32,
+      "estimated_cycles": 32,
+      "layer_name": "features_0_0",
+      "layer_type": "CONV",
+      "module_name": "features.0.0",
+      "op_index": 0,
+      "pe": "PE_0",
+      "start_cycle": 0,
+      "tile_channels": 8,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 8,
+        "K": 8,
+        "R": 3,
+        "S": 3,
+        "X": 4,
+        "Y": 4
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 64,
+      "estimated_cycles": 32,
+      "layer_name": "features_1_conv_0_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.1.conv.0.0",
+      "op_index": 1,
+      "pe": "PE_1",
+      "start_cycle": 32,
+      "tile_channels": 8,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 8,
+        "K": 8,
+        "R": 1,
+        "S": 1,
+        "X": 4,
+        "Y": 4
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 96,
+      "estimated_cycles": 32,
+      "layer_name": "features_1_conv_1",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.1.conv.1",
+      "op_index": 2,
+      "pe": "PE_2",
+      "start_cycle": 64,
+      "tile_channels": 8,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 8,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 4,
+        "Y": 4
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 160,
+      "estimated_cycles": 64,
+      "layer_name": "features_2_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.2.conv.0.0",
+      "op_index": 3,
+      "pe": "PE_3",
+      "start_cycle": 96,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 16,
+        "K": 16,
+        "R": 3,
+        "S": 3,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 224,
+      "estimated_cycles": 64,
+      "layer_name": "features_2_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.2.conv.1.0",
+      "op_index": 4,
+      "pe": "PE_0",
+      "start_cycle": 160,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 16,
+        "K": 12,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 272,
+      "estimated_cycles": 48,
+      "layer_name": "features_2_conv_2",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.2.conv.2",
+      "op_index": 5,
+      "pe": "PE_1",
+      "start_cycle": 224,
+      "tile_channels": 12,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 336,
+      "estimated_cycles": 64,
+      "layer_name": "features_3_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.3.conv.0.0",
+      "op_index": 6,
+      "pe": "PE_2",
+      "start_cycle": 272,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 368,
+      "estimated_cycles": 32,
+      "layer_name": "features_3_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.3.conv.0.0",
+      "op_index": 6,
+      "pe": "PE_3",
+      "start_cycle": 336,
+      "tile_channels": 8,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 432,
+      "estimated_cycles": 64,
+      "layer_name": "features_3_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.3.conv.1.0",
+      "op_index": 7,
+      "pe": "PE_0",
+      "start_cycle": 368,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 464,
+      "estimated_cycles": 32,
+      "layer_name": "features_3_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.3.conv.1.0",
+      "op_index": 7,
+      "pe": "PE_1",
+      "start_cycle": 432,
+      "tile_channels": 8,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 24,
+        "K": 12,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 512,
+      "estimated_cycles": 48,
+      "layer_name": "features_3_conv_2",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.3.conv.2",
+      "op_index": 8,
+      "pe": "PE_2",
+      "start_cycle": 464,
+      "tile_channels": 12,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 576,
+      "estimated_cycles": 64,
+      "layer_name": "features_4_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.4.conv.0.0",
+      "op_index": 9,
+      "pe": "PE_3",
+      "start_cycle": 512,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 12,
+        "K": 24,
+        "R": 1,
+        "S": 1,
+        "X": 2,
+        "Y": 2
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 12,
+          "size": 12
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 608,
+      "estimated_cycles": 32,
+      "layer_name": "features_4_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.4.conv.0.0",
+      "op_index": 9,
+      "pe": "PE_0",
+      "start_cycle": 576,
+      "tile_channels": 8,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 672,
+      "estimated_cycles": 64,
+      "layer_name": "features_4_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.4.conv.1.0",
+      "op_index": 10,
+      "pe": "PE_1",
+      "start_cycle": 608,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 24,
+        "K": 24,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 704,
+      "estimated_cycles": 32,
+      "layer_name": "features_4_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.4.conv.1.0",
+      "op_index": 10,
+      "pe": "PE_2",
+      "start_cycle": 672,
+      "tile_channels": 8,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 24,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 768,
+      "estimated_cycles": 64,
+      "layer_name": "features_4_conv_2",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.4.conv.2",
+      "op_index": 11,
+      "pe": "PE_3",
+      "start_cycle": 704,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 832,
+      "estimated_cycles": 64,
+      "layer_name": "features_5_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.5.conv.0.0",
+      "op_index": 12,
+      "pe": "PE_0",
+      "start_cycle": 768,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 896,
+      "estimated_cycles": 64,
+      "layer_name": "features_5_conv_0_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.5.conv.0.0",
+      "op_index": 12,
+      "pe": "PE_1",
+      "start_cycle": 832,
+      "tile_channels": 16,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 32,
+        "K": 32,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 960,
+      "estimated_cycles": 64,
+      "layer_name": "features_5_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.5.conv.1.0",
+      "op_index": 13,
+      "pe": "PE_2",
+      "start_cycle": 896,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 32,
+        "K": 32,
+        "R": 3,
+        "S": 3,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 3,
+          "size": 3
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 1024,
+      "estimated_cycles": 64,
+      "layer_name": "features_5_conv_1_0",
+      "layer_type": "DEPTHWISE_CONV",
+      "module_name": "features.5.conv.1.0",
+      "op_index": 13,
+      "pe": "PE_3",
+      "start_cycle": 960,
+      "tile_channels": 16,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 32,
+        "K": 16,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 1088,
+      "estimated_cycles": 64,
+      "layer_name": "features_5_conv_2",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.5.conv.2",
+      "op_index": 14,
+      "pe": "PE_0",
+      "start_cycle": 1024,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 1152,
+      "estimated_cycles": 64,
+      "layer_name": "features_6_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.6.0",
+      "op_index": 15,
+      "pe": "PE_1",
+      "start_cycle": 1088,
+      "tile_channels": 16,
+      "tile_index": 0
+    },
+    {
+      "bank": "BANK_0",
+      "dimensions": {
+        "C": 16,
+        "K": 32,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 2
+        }
+      ],
+      "end_cycle": 1216,
+      "estimated_cycles": 64,
+      "layer_name": "features_6_0",
+      "layer_type": "POINTWISE_CONV",
+      "module_name": "features.6.0",
+      "op_index": 15,
+      "pe": "PE_2",
+      "start_cycle": 1152,
+      "tile_channels": 16,
+      "tile_index": 1
+    },
+    {
+      "bank": "BANK_1",
+      "dimensions": {
+        "C": 32,
+        "K": 10,
+        "R": 1,
+        "S": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "directives": [
+        {
+          "dim": "K",
+          "directive": "SpatialMap",
+          "offset": 10,
+          "size": 10
+        },
+        {
+          "dim": "C",
+          "directive": "TemporalMap",
+          "offset": 16,
+          "size": 16
+        },
+        {
+          "dim": "R",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "S",
+          "directive": "TemporalMap",
+          "offset": 1,
+          "size": 1
+        },
+        {
+          "dim": "P",
+          "directive": "Cluster",
+          "size": 1
+        }
+      ],
+      "end_cycle": 1256,
+      "estimated_cycles": 40,
+      "layer_name": "classifier",
+      "layer_type": "GEMM",
+      "module_name": "classifier",
+      "op_index": 16,
+      "pe": "PE_3",
+      "start_cycle": 1216,
+      "tile_channels": 10,
+      "tile_index": 0
+    }
+  ]
+}

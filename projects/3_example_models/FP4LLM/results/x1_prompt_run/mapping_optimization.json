@@ -1,0 +1,150 @@
+{
+  "best_candidate": {
+    "fp4llm_tile_rows": 64,
+    "fp4llm_tile_cols": 32,
+    "token_block_size": null,
+    "pe_cluster_size": 4,
+    "k_map": "SpatialMap",
+    "c_map": "TemporalMap",
+    "y_map": "SpatialMap",
+    "resident_weights": null,
+    "noc_coalescing_tiles": 1,
+    "dma_window_cells": null,
+    "reduction_placement": "local"
+  },
+  "best_score": 2997.759367686884,
+  "best_cost": {
+    "latency": {
+      "dma_load_cycles": 1073484156,
+      "x1_programming_cycles": 1056966848,
+      "pe_compute_cycles": 268235128,
+      "reduction_cycles": 526358451,
+      "sar_tdc_conversion_cycles": 7069833,
+      "noc_transfer_cycles": 30459636,
+      "total_cycles": 2962574052
+    },
+    "energy": {
+      "memory_read_pj": 3382286745.6000004,
+      "memory_write_pj": 60557400.0,
+      "x1_programming_pj": 4227858432.0,
+      "compute_read_pj": 27299414374.4,
+      "reduction_pj": 168396104.52,
+      "adc_sar_tdc_pj": 44860933.6,
+      "noc_pj": 1941696.764,
+      "total_pj": 35185315686.884
+    },
+    "counters": {
+      "weight_cells": 4227858432,
+      "weight_windows": 280,
+      "weight_bytes": 16911433728,
+      "mac_operations": 545988287488,
+      "compute_groups": 1638224,
+      "compute_cycles": 268235128,
+      "reduction_values": 16839610452,
+      "reduction_groups": 60312,
+      "converted_values": 224304668,
+      "noc_values": 224304668,
+      "noc_payload_bits": 1937836796,
+      "noc_packets": 60312,
+      "noc_flits": 15169506,
+      "noc_wire_bits": 1941696764
+    }
+  },
+  "manifest_summary": {
+    "layers": 448,
+    "materialized_tasks": 20000,
+    "fp4llm_tile_tasks": 1638224,
+    "x1_compute_commands": 1638224,
+    "x1_noc_flits": 1638224,
+    "weight_program_cells": 8455716864,
+    "weight_program_commands": 8257536,
+    "truncated_tasks": true,
+    "phase_layer_counts": {
+      "prefill": 224,
+      "decode": 224
+    },
+    "role_layer_counts": {
+      "q_proj": 56,
+      "k_proj": 56,
+      "v_proj": 56,
+      "attn_scores_qkt": 56,
+      "attn_av": 56,
+      "out_proj": 56,
+      "ffn_up": 56,
+      "ffn_down": 56
+    }
+  },
+  "stream_summary": {
+    "total_static_programmed_cells": 4227858432,
+    "die_cell_capacity": 20480000,
+    "total_cell_capacity": 20480000,
+    "windows": 280,
+    "descriptors": 1148,
+    "truncated_descriptors": false,
+    "requires_dma": true,
+    "requires_peer_die_protocol": false,
+    "resident_feasible": true,
+    "noc_coalescing_tiles": 1,
+    "reduction_placement": "local",
+    "cells_per_window": 20480000,
+    "descriptor_bytes": 73472
+  },
+  "evaluations": [
+    {
+      "candidate": {
+        "fp4llm_tile_rows": 64,
+        "fp4llm_tile_cols": 32,
+        "token_block_size": null,
+        "pe_cluster_size": 4,
+        "k_map": "SpatialMap",
+        "c_map": "TemporalMap",
+        "y_map": "SpatialMap",
+        "resident_weights": null,
+        "noc_coalescing_tiles": 1,
+        "dma_window_cells": null,
+        "reduction_placement": "local"
+      },
+      "score": 2997.759367686884,
+      "cost": {
+        "latency": {
+          "dma_load_cycles": 1073484156,
+          "x1_programming_cycles": 1056966848,
+          "pe_compute_cycles": 268235128,
+          "reduction_cycles": 526358451,
+          "sar_tdc_conversion_cycles": 7069833,
+          "noc_transfer_cycles": 30459636,
+          "total_cycles": 2962574052
+        },
+        "energy": {
+          "memory_read_pj": 3382286745.6000004,
+          "memory_write_pj": 60557400.0,
+          "x1_programming_pj": 4227858432.0,
+          "compute_read_pj": 27299414374.4,
+          "reduction_pj": 168396104.52,
+          "adc_sar_tdc_pj": 44860933.6,
+          "noc_pj": 1941696.764,
+          "total_pj": 35185315686.884
+        },
+        "counters": {
+          "weight_cells": 4227858432,
+          "weight_windows": 280,
+          "weight_bytes": 16911433728,
+          "mac_operations": 545988287488,
+          "compute_groups": 1638224,
+          "compute_cycles": 268235128,
+          "reduction_values": 16839610452,
+          "reduction_groups": 60312,
+          "converted_values": 224304668,
+          "noc_values": 224304668,
+          "noc_payload_bits": 1937836796,
+          "noc_packets": 60312,
+          "noc_flits": 15169506,
+          "noc_wire_bits": 1941696764
+        }
+      },
+      "execution_mode": "peripheral_streaming",
+      "valid": true,
+      "reason": ""
+    }
+  ]
+}
