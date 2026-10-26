@@ -53,6 +53,8 @@ def _load():
 
 
 def infer(params: dict) -> dict:
+    if "audio_dataset" in params or "audio_base64" in params:
+        return infer_audio(params)
     fwd, layers, cases = _load()
     if "mfcc" in params:
         m = np.asarray(params["mfcc"], dtype=np.float64).reshape(-1)
@@ -98,3 +100,43 @@ def infer(params: dict) -> dict:
     if params.get("layers"):
         res["layer_outputs_int8"] = [o.tolist() for o in outs]
     return res
+
+
+def infer_audio(params):
+    """WAV dataset -> mono MFCC(20x32) -> existing INT8 autoencoder."""
+    import base64, binascii, io
+    import soundfile as sf
+    import librosa
+    items = params.get("audio_dataset")
+    if items is None:
+        items = [{"name": "audio.wav", "audio_base64": params.get("audio_base64")}]
+    if not isinstance(items, list) or not 1 <= len(items) <= 20:
+        raise ValueError("audio_dataset must contain 1..20 WAV files")
+    records = []; total = 0
+    for i, item in enumerate(items):
+        if not isinstance(item, dict): raise ValueError("Each audio item needs name and audio_base64")
+        encoded = item.get("audio_base64")
+        if not isinstance(encoded, str) or len(encoded) > 14_000_000: raise ValueError("WAV file must be base64, maximum 10 MB")
+        try: raw=base64.b64decode(encoded, validate=True)
+        except (ValueError, binascii.Error): raise ValueError("Invalid audio_base64")
+        total += len(raw)
+        if len(raw)>10_000_000 or total>20_000_000: raise ValueError("Audio limit: 10 MB per file and 20 MB per dataset")
+        try:
+            with sf.SoundFile(io.BytesIO(raw)) as audio:
+                sr=audio.samplerate
+                if audio.format not in ("WAV", "WAVEX") or not 8000 <= sr <= 96000 or audio.channels not in (1,2):
+                    raise ValueError("Use mono/stereo WAV at 8..96 kHz")
+                if not 1 <= len(audio) <= sr*30: raise ValueError("WAV duration must be greater than 0 and at most 30 seconds")
+                y=audio.read(dtype="float32",always_2d=True).mean(axis=1)
+        except (RuntimeError, sf.LibsndfileError): raise ValueError("Cannot decode WAV audio")
+        if not np.all(np.isfinite(y)): raise ValueError("Audio contains invalid samples")
+        mfcc=librosa.feature.mfcc(y=y,sr=sr,n_mfcc=20,n_fft=2048,hop_length=512,n_mels=128)
+        mfcc=np.pad(mfcc,((0,0),(0,max(0,32-mfcc.shape[1]))))[:,:32]
+        result=infer({"mfcc":mfcc.tolist(),"threshold":params.get("threshold"),"layers":bool(params.get("layers",False))})
+        records.append({"name":str(item.get("name",f"audio_{i+1}.wav"))[:200],"sample_rate":sr,
+                        "duration_seconds":round(len(y)/sr,4),"result":result})
+    return {"count":len(records),"samples":records,"preprocessing":{
+        "mono":"stereo channels averaged", "sample_rate":"original; no resampling",
+        "n_mfcc":20,"n_fft":2048,"hop_length":512,"n_mels":128,
+        "frames":32,"selection":"first 32 frames, zero-padded if shorter",
+        "scope":"MFCC reconstruction score; not transcription, classification or audio denoising"}}

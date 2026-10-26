@@ -30,27 +30,43 @@
     {
       "name": "models.deepgate.infer",
       "module": "deepgate",
-      "summary": "Deep_gate INT8 autoencoder: reconstruction error / anomaly flag (case 0-4 or 640-int8 input)",
+      "summary": "Deepgate audio dataset - Select 1-20 WAV files: mono/stereo, 8-96 kHz, up to 30 seconds and 10 MB each, 20 MB total. Stereo is averaged; original sample rate is kept. MFCCs: 20 coefficients, FFT 2048, hop 512, 128 mel bands; first 32 frames, zero-padded when shorter. Returns a reconstruction score per recording; is_anomaly appears only when you provide a calibrated threshold. This is not speech transcription or whole-recording anomaly detection.",
       "status": "available",
       "defaults": {
-        "case": 0,
+        "audio_dataset": [],
         "threshold": null,
         "layers": false
       },
       "source": "projects/3_example_models/Deep_gate",
-      "entrypoint": "bm_models.models.deepgate:infer"
+      "entrypoint": "bm_models.models.deepgate:infer",
+      "input_spec": {
+        "kind": "audio",
+        "label": "Deepgate audio dataset",
+        "accept": ".wav",
+        "multiple": true,
+        "help": "Select 1-20 WAV files: mono/stereo, 8-96 kHz, up to 30 seconds and 10 MB each, 20 MB total. Stereo is averaged; original sample rate is kept. MFCCs: 20 coefficients, FFT 2048, hop 512, 128 mel bands; first 32 frames, zero-padded when shorter. Returns a reconstruction score per recording; is_anomaly appears only when you provide a calibrated threshold. This is not speech transcription or whole-recording anomaly detection.",
+        "param": "audio_dataset"
+      }
     },
     {
       "name": "models.mnist.edge_filter",
       "module": "mnist",
-      "summary": "MNIST 5x5 column-differential edge filter (digit 5/9 or your 0/1 image)",
+      "summary": "MNIST 28 x 28 text data - Upload or paste exactly 28 rows with 28 space- or comma-separated pixel values per row. Any handwritten digit 0-9 is accepted. Use 0 for background and 1 for foreground, or grayscale 0-255 (thresholded at 128). Returns an edge map and summary, not a predicted digit. Only built-in demo samples 5 and 9 exist; use your own text for other digits.",
       "status": "available",
       "defaults": {
-        "digit": 5,
+        "text_data": "",
         "output": "map"
       },
       "source": "projects/2_building_blocks/Neuromorphic_compiler",
-      "entrypoint": "bm_models.models.mnist:edge_filter"
+      "entrypoint": "bm_models.models.mnist:edge_filter",
+      "input_spec": {
+        "kind": "text",
+        "label": "MNIST 28 x 28 text data",
+        "accept": ".txt,.csv",
+        "multiple": false,
+        "help": "Upload or paste exactly 28 rows with 28 space- or comma-separated pixel values per row. Any handwritten digit 0-9 is accepted. Use 0 for background and 1 for foreground, or grayscale 0-255 (thresholded at 128). Returns an edge map and summary, not a predicted digit. Only built-in demo samples 5 and 9 exist; use your own text for other digits.",
+        "param": "text_data"
+      }
     },
     {
       "name": "blocks.schedule_layer",
@@ -91,7 +107,7 @@
     {
       "name": "models.tcam.search",
       "module": "tcam",
-      "summary": "Ternary 16-bit TCAM lookup over up to 32 entries (query or image_base64) - software PE emulation",
+      "summary": "TCAM search image - Upload one PNG/JPEG image, up to 5 MB. The image becomes a 16-bit visual fingerprint and is searched against your entries (1-32 key/chunk_id records). Example entries are placeholders, not a trained image database. Returns query, matches, hit and chunk_id. Current API uses software PE emulation, not the physical TCAM FPGA runner.",
       "status": "available",
       "defaults": {
         "entries": [
@@ -100,17 +116,25 @@
             "chunk_id": 1
           }
         ],
-        "query": "0x36C8",
         "top_k": 4,
-        "max_hamming": 0
+        "max_hamming": 0,
+        "image_base64": "$image"
       },
       "source": "projects/2_building_blocks/TCAM_Search_FPGA/zcu106_tcam_rag_flow",
-      "entrypoint": "bm_models.models.tcam:search"
+      "entrypoint": "bm_models.models.tcam:search",
+      "input_spec": {
+        "kind": "image",
+        "label": "TCAM search image",
+        "accept": ".png,.jpg,.jpeg",
+        "multiple": false,
+        "help": "Upload one PNG/JPEG image, up to 5 MB. The image becomes a 16-bit visual fingerprint and is searched against your entries (1-32 key/chunk_id records). Example entries are placeholders, not a trained image database. Returns query, matches, hit and chunk_id. Current API uses software PE emulation, not the physical TCAM FPGA runner.",
+        "param": "image_base64"
+      }
     },
     {
       "name": "models.yolo26.detect",
       "module": "yolo26",
-      "summary": "YOLO26n INT8 object detection on an image (image_base64) - TFLite CPU reference path",
+      "summary": "YOLO image - Upload one PNG/JPEG image, up to 5 MB. Returns object labels, confidence scores, bounding boxes and optionally an annotated image. Software CPU inference; this is not the FPGA PE replay.",
       "status": "available",
       "defaults": {
         "image_base64": "$image",
@@ -120,7 +144,15 @@
         "return_image": true
       },
       "source": "projects/3_example_models/Yolo26_INT8_mac",
-      "entrypoint": "bm_models.models.yolo26:detect"
+      "entrypoint": "bm_models.models.yolo26:detect",
+      "input_spec": {
+        "kind": "image",
+        "label": "YOLO image",
+        "accept": ".png,.jpg,.jpeg",
+        "multiple": false,
+        "help": "Upload one PNG/JPEG image, up to 5 MB. Returns object labels, confidence scores, bounding boxes and optionally an annotated image. Software CPU inference; this is not the FPGA PE replay.",
+        "param": "image_base64"
+      }
     },
     {
       "name": "core.pe_self_test",
