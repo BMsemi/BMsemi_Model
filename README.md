@@ -72,3 +72,8 @@ For YOLO use `paths=["photo.jpg"]`, `operation="models.yolo26.detect"`, and `par
 Existing `POST /v1/run/<operation>` accepts `{"params": {...}}`. Images use `image_base64`; Deepgate uses `audio_dataset: [{"name":"a.wav","audio_base64":"..."}]` or a single `audio_base64`; MNIST uses `text_data` containing the grid string. Supply actual base64 file contents, without a data-URL prefix. Use these same fields inside each node's `params` for JSON graph API calls. The existing multipart graph API binds only `$image`; audio/text graphs should use JSON node parameters. Uploaded audio takes precedence over advanced Deepgate reference inputs; keep only the intended input type.
 
 Invalid dimensions, malformed data and incompatible formats produce HTTP 422; oversized multipart files produce HTTP 413. Missing model dependencies produce HTTP 503. Empty datasets and a bare digit label are not valid uploads.
+
+## PE behavioral simulator
+
+The updated Neuromorphic_X1 kanna PE implementation is available as core.pe_simulate (software). See [PE simulator inputs, cycles and energy](docs/PE_SIMULATOR.md). The physical ZCU106 self-test remains core.pe_self_test.
+

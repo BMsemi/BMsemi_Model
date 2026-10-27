@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/BMsemi/Neuromorphic_X1",
+  "branch": "kanna",
+  "commit": "ab32cbdd01702ff41e9567c5c1152b2b860cb50f",
+  "path": "Benchmarking/Neuromorphic_complier",
+  "adaptations": "Sibling imports changed to package-relative imports only. Original sources preserved in projects/2_building_blocks/Neuromorphic_X1_kanna."
+}
+

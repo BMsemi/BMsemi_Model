@@ -1,0 +1,10 @@
+
+# Local simulator caches and generated reports
+__pycache__/
+data/
+models/
+pe_outputs_used.txt
+pe_outputs_first.txt
+pe_firstcol_details.txt
+outputs/
+

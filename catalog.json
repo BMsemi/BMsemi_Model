@@ -162,6 +162,20 @@
       "defaults": {},
       "source": "tools/zcu106_runner.py",
       "entrypoint": "bm_models.entrypoints:pe_self_test"
+    },
+    {
+      "name": "core.pe_simulate",
+      "module": "core",
+      "summary": "512x512 PE behavioral simulator from Neuromorphic_X1/kanna. Default: identity weights and ones input. Set rows/cols (1-512), input, weights or weight_mode, iterations (0-8), and optional timing. Returns output vector, PROGRAM/COMPUTE/STORE/FEEDBACK/READ cycles and modeled energy. Software only; this does not program the FPGA. Buffer energy is unknown until configured.",
+      "status": "available",
+      "defaults": {
+        "rows": 512,
+        "cols": 512,
+        "weight_mode": "identity",
+        "iterations": 0
+      },
+      "source": "Neuromorphic_X1/kanna/Benchmarking/Neuromorphic_complier",
+      "entrypoint": "bm_models.core.pe:simulate"
     }
   ]
 }
