@@ -75,5 +75,80 @@ Invalid dimensions, malformed data and incompatible formats produce HTTP 422; ov
 
 ## PE behavioral simulator
 
-The updated Neuromorphic_X1 kanna PE implementation is available as core.pe_simulate (software). See [PE simulator inputs, cycles and energy](docs/PE_SIMULATOR.md). The physical ZCU106 self-test remains core.pe_self_test.
+The processing element (PE) simulator runs a matrix/vector calculation and reports its modeled clock cycles and energy. `core.pe_simulate` uses the [Neuromorphic_X1 compiler source](https://github.com/BMsemi/Neuromorphic_X1/tree/ab32cbdd01702ff41e9567c5c1152b2b860cb50f/Benchmarking/Neuromorphic_complier), pinned from branch `kanna` at commit `ab32cbdd01702ff41e9567c5c1152b2b860cb50f`.
+
+| Operation | Run target | Purpose |
+| --- | --- | --- |
+| `core.pe_simulate` | Software simulator | Experiment with PE weights, input vectors, feedback, cycles and modeled energy |
+| `core.pe_self_test` | FPGA (ZCU106) | Run the installed physical board self-test with empty parameters `{}` |
+
+### Run PE on the canvas
+
+1. Refresh the platform and add **core.pe_simulate** from **Core** to the canvas.
+2. Select **Software simulator** and enter the parameters below.
+3. Run the graph and inspect `output`, `stage_cycles`, `total_cycles` and `energy` in the result.
+
+```json
+{
+  "rows": 2,
+  "cols": 2,
+  "weights": [[1, 0], [0, 1]],
+  "input": [1, 0],
+  "iterations": 0
+}
+```
+
+This identity-matrix example returns `output: [1.0, 0.0]` and `total_cycles: 492`. PE input is a numeric vector and a weight matrix; image, audio and digit-text uploads belong to the separate model operations described above.
+
+| Parameter | What to supply |
+| --- | --- |
+| `rows`, `cols` | Matrix dimensions, each 1-512; defaults to 512 each |
+| `weights` | Optional matrix with `rows` rows and `cols` columns; calculation is `input @ weights` |
+| `weight_mode` | `identity` (default), `ones`, or `zeros` when no explicit weights are supplied |
+| `input` | Finite numeric vector of length `rows`; defaults to all ones |
+| `iterations` | 0-8 feedback passes; values above 0 require a square matrix |
+| `timing` | Optional programming and buffer-transfer timing overrides; see the detailed guide |
+| `output_buffer_store_energy_J`, `output_buffer_read_energy_J` | Optional energy in joules per full buffer fill/drain; omitted values mean unknown |
+
+With default parameters, the 512x512 identity PE returns 512 ones and models 13,108,512 cycles. Requests are limited to 15 million modeled ticks. These cycles are simulation results, not elapsed server time or measured board timing.
+
+### Call PE through the API
+
+Create an API key with the **core** module enabled and set it in `NEURO_API_KEY`.
+
+```python
+import os
+import requests
+
+response = requests.post(
+    "https://neuro.bmsemiconnect.com/v1/run/core.pe_simulate",
+    headers={"X-API-Key": os.environ["NEURO_API_KEY"]},
+    json={"params": {
+        "rows": 2, "cols": 2,
+        "weights": [[1, 0], [0, 1]], "input": [1, 0]
+    }},
+    timeout=120,
+)
+response.raise_for_status()
+print(response.json()["result"])
+```
+
+In a platform notebook, use the same model and parameters:
+
+```python
+from platform_models import run_model
+
+result = await run_model("core.pe_simulate", {
+    "rows": 2, "cols": 2, "input": [1, 0]
+})
+print(result["output"])  # [1.0, 0.0]
+```
+
+Results include the initial and final output vectors, per-stage cycles, total cycles, buffer word counts, energy estimates and the source commit. `physical_hardware: false` identifies the behavioral simulator. Array energy is available for binary weights and inputs with no feedback; unsupported energy cases remain unknown. If buffer costs are missing, `modeled_total_J` is `null` and `configured_subtotal_J` contains only known costs. Energy estimates are uncalibrated and are not measured hardware power.
+
+### Run the physical ZCU106 PE test
+
+Use a canvas containing **exactly one** `core.pe_self_test` node, parameters `{}`, and **no links**, then select **FPGA**. Remove other nodes even if they are unconnected: the graph runs all nodes. The installed runner supports this standalone board test only. `core.pe_simulate` and the current YOLO, TCAM, Deepgate and MNIST adapters must use **Software simulator**; this source update does not install their FPGA adapters. The `/v1/run/core.pe_simulate` example above runs software, not the board test.
+
+Existing mapping, scheduling and energy-summary operations retain their separate implementations. For the new upstream PE state machine, use `core.pe_simulate`. See [PE simulator inputs, cycles and energy](docs/PE_SIMULATOR.md) for timing controls, energy limitations and source layout.
 
